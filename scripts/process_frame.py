@@ -2,7 +2,7 @@ import cv2
 import os
 
 # Path to your input video
-video_path = os.path.join( 'input_videos', 'test2.mp4')
+video_path = os.path.join( 'input_videos', 'test.mp4')
 print(f"Video path: {video_path}")
 # Path to save the extracted frame
 output_path = os.path.join( 'output_images', 'frame_0.jpg')

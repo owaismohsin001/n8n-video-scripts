@@ -94,11 +94,7 @@ def extract_lines_with_boxes(image_path):
 # Example usage
 image_path = "output_images/frame_0.jpg"
 lines = extract_lines_with_boxes(image_path)
-# cleaned_lines = []
-# for text, box in lines:
-#     cleaned_text = text.replace(" ", "")  # remove spaces between characters
-#     cleaned_lines.append((cleaned_text, box))
-translated_lines = translate_lines(lines, target_language="English")
+translated_lines = translate_lines(lines, target_language="French")
 print(translated_lines)
 
 result_img = overlay_translated_lines("output_images/frame_0.jpg", translated_lines, font_path="fonts/PlaywriteFRModerne-Regular.ttf", font_size=20)
