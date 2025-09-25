@@ -74,7 +74,7 @@ def overlay_translated_lines(image_path, translated_lines, font_path=None, font_
 def extract_lines_with_boxes(image_path):
     """Return a list of (text, (x,y,w,h)) for each detected line."""
     img = cv2.imread(image_path)
-    data = pytesseract.image_to_data(img,lang="chi_tra", output_type=Output.DICT)
+    data = pytesseract.image_to_data(img, output_type=Output.DICT)
 
     # Put into a DataFrame for easy grouping
     df = pd.DataFrame(data)
@@ -95,7 +95,5 @@ def extract_lines_with_boxes(image_path):
 image_path = "output_images/frame_0.jpg"
 lines = extract_lines_with_boxes(image_path)
 translated_lines = translate_lines(lines, target_language="French")
-print(translated_lines)
-
 result_img = overlay_translated_lines("output_images/frame_0.jpg", translated_lines, font_path="fonts/PlaywriteFRModerne-Regular.ttf", font_size=20)
 result_img.save("output_images/frame_0_translated.jpg")
