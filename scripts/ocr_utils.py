@@ -3,11 +3,11 @@ from dotenv import load_dotenv
 import cv2
 from pytesseract import Output
 import pandas as pd
-from overlay_utils import overlay_translated_lines
+from overlay_utils import overlay_translated_lines_on_frame
 from translate_utils import translate_lines
+from process_frame import extract_frame_from_video
 
 load_dotenv()
-
 # def extract_lines_with_boxes(image_path, min_confidence=70, min_width=20, min_height=20):
 #     """
 #     Return a list of (text, (x,y,w,h)) for each detected line, 
@@ -46,18 +46,62 @@ load_dotenv()
 
 #     return lines
 
-def extract_lines_with_boxes(image_path, min_confidence=70, min_width=20, min_height=20, min_characters=2):
+# step 2
+# def extract_lines_with_boxes(image_path, min_confidence=70, min_width=20, min_height=20, min_characters=2):
+#     """
+#     Return a list of (text, (x,y,w,h)) for each detected line, 
+#     filtering by confidence, minimum box size, and meaningful length.
+#     """
+#     img = cv2.imread(image_path)
+#     data = pytesseract.image_to_data(img, lang='chi_sim', output_type=Output.DICT)
+
+#     # Put into a DataFrame for easy grouping
+#     df = pd.DataFrame(data)
+
+#     # Convert confidence to numeric, ignore invalid entries
+#     df['conf'] = pd.to_numeric(df['conf'], errors='coerce')
+#     lines = []
+
+#     for (block_num, par_num, line_num), group in df.groupby(['block_num','par_num','line_num']):
+#         # Filter words by confidence
+#         group = group[group['conf'] >= min_confidence]
+#         if group.empty:
+#             continue
+
+#         # Combine all remaining words in this line
+#         line_text = " ".join(word for word in group['text'] if word.strip() != "")
+#         if not line_text.strip():
+#             continue
+
+#         # Skip lines that are too short or likely meaningless
+#         if len(line_text.replace(" ", "")) < min_characters:
+#             continue
+
+#         # Compute bounding box covering the whole line
+#         x = group['left'].min()
+#         y = group['top'].min()
+#         w = (group['left'] + group['width']).max() - x
+#         h = (group['top'] + group['height']).max() - y
+
+#         # Filter by size
+#         if w >= min_width and h >= min_height:
+#             lines.append((line_text, (x, y, w, h)))
+
+#     return lines
+
+
+#step 3
+def extract_lines_with_boxes(frame_bgr, min_confidence=70, min_width=20, min_height=20, min_characters=2):
     """
-    Return a list of (text, (x,y,w,h)) for each detected line, 
-    filtering by confidence, minimum box size, and meaningful length.
+    Accepts a BGR frame (NumPy array) directly instead of an image path.
+    Returns a list of (text, (x,y,w,h)) for each detected line.
     """
-    img = cv2.imread(image_path)
+    # frame_bgr is already a NumPy array from cv2.VideoCapture
+    img = frame_bgr  # already BGR
+
     data = pytesseract.image_to_data(img, lang='chi_sim', output_type=Output.DICT)
 
-    # Put into a DataFrame for easy grouping
     df = pd.DataFrame(data)
-
-    # Convert confidence to numeric, ignore invalid entries
     df['conf'] = pd.to_numeric(df['conf'], errors='coerce')
     lines = []
 
@@ -67,26 +111,25 @@ def extract_lines_with_boxes(image_path, min_confidence=70, min_width=20, min_he
         if group.empty:
             continue
 
-        # Combine all remaining words in this line
         line_text = " ".join(word for word in group['text'] if word.strip() != "")
         if not line_text.strip():
             continue
 
-        # Skip lines that are too short or likely meaningless
         if len(line_text.replace(" ", "")) < min_characters:
             continue
 
-        # Compute bounding box covering the whole line
         x = group['left'].min()
         y = group['top'].min()
         w = (group['left'] + group['width']).max() - x
         h = (group['top'] + group['height']).max() - y
 
-        # Filter by size
         if w >= min_width and h >= min_height:
             lines.append((line_text, (x, y, w, h)))
 
     return lines
+
+
+
 
 
 
@@ -111,17 +154,19 @@ def extract_lines_with_boxes(image_path, min_confidence=70, min_width=20, min_he
 #     return lines
 
 # Example usage
-image_path = "output_images/frame_0.jpg"
-lines = extract_lines_with_boxes(image_path)
-translated_lines = translate_lines(lines, target_language="English")
-print(translated_lines)
-result_img = overlay_translated_lines("output_images/frame_0.jpg", translated_lines, font_path="fonts/NotoSans-Regular.ttf", font_size=45)
-result_img.save("output_images/frame_0_translated.jpg")
+# image_path = "output_images/frame_0.jpg"
+
+# image_path=extract_frame_from_video(video_filename='test2.mp4', frame_number=7, output_dir='output_images')
+# lines = extract_lines_with_boxes(image_path)
+# translated_lines = translate_lines(lines, target_language="English")
+# print(translated_lines)
+# result_img = overlay_translated_lines(image_path, translated_lines, font_path="fonts/NotoSans-Regular.ttf", font_size=45)
+# result_img.save(image_path)
 
 
-image_path = "output_images/frame_1.png"
-lines = extract_lines_with_boxes(image_path)
-translated_lines = translate_lines(lines, target_language="English")
-print(translated_lines)
-result_img = overlay_translated_lines("output_images/frame_1.png", translated_lines, font_path="fonts/NotoSans-Regular.ttf", font_size=45)
-result_img.save("output_images/frame_1_translated.png")
+# image_path = "output_images/frame_1.png"
+# lines = extract_lines_with_boxes(image_path)
+# translated_lines = translate_lines(lines, target_language="English")
+# print(translated_lines)
+# result_img = overlay_translated_lines("output_images/frame_1.png", translated_lines, font_path="fonts/NotoSans-Regular.ttf", font_size=45)
+# result_img.save("output_images/frame_1_translated.png")
