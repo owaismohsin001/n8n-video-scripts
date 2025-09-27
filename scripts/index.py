@@ -178,9 +178,9 @@ def is_similar(texts1, texts2, threshold=0.80):
     """Return True if the joined texts are at least threshold similar."""
     joined1 = ' '.join(texts1)
     joined2 = ' '.join(texts2)
-    print(texts1, texts2, threshold)
+    # print(texts1, texts2, threshold)
     ratio = difflib.SequenceMatcher(None, joined1, joined2).ratio()
-    print(ratio,ratio >= threshold)
+    # print(ratio,ratio >= threshold)
     return ratio >= threshold
 
 
@@ -339,7 +339,7 @@ skip = 30  # process every 30th frame
 
 
 skip = 30  # process every 30th frame
-frame_number = 7200
+frame_number = 9990
 last_text_extracted = None
 last_overlay = None
 cap.set(cv2.CAP_PROP_POS_FRAMES, frame_number)
@@ -347,19 +347,32 @@ while True:
     ret, frame = cap.read()
     if not ret:
         break
-    
+    current_frame_index = int(cap.get(cv2.CAP_PROP_POS_FRAMES))-1 
+    print(current_frame_index,"current_frame_index")
     # do OCR every skip frames
-    if frame_number % skip == 0 or frame_number == 7200:
-        
+    if current_frame_index % skip == 0 or current_frame_index == 9990:
         lines = extract_lines_with_boxes(frame)  # <-- now frame, not path
-        print(lines,"lines")
+        # print(lines,"lines")
         text_only = get_text_only(lines)
         if lines:
             if last_text_extracted is None or not is_similar(text_only, last_text_extracted):
                 translated_lines = translate_lines(lines, target_language="English")
-                print(translated_lines)
+                # print(translated_lines,"translated_lines")
+                print(last_overlay,"last_overlay before update")
+                print(last_text_extracted,"last_text_extracted before update")
                 last_overlay = translated_lines
                 last_text_extracted = text_only
+                print(last_overlay,"last_overlay after update")
+                print(last_text_extracted,"last_text_extracted after update")
+                frame_with_overlay = overlay_translated_lines_on_frame(
+                frame,
+                last_overlay,
+                font_path="fonts/NotoSans-Regular.ttf",
+                font_size=45
+                )
+                debug_path = os.path.join("empty_frames", f"frame_{frame_number}_new_overlay.jpg")
+                cv2.imwrite(debug_path, frame_with_overlay)
+                out.write(frame_with_overlay)
             # else reuse last_overlay
             else:
                 frame_with_overlay = overlay_translated_lines_on_frame(
@@ -370,6 +383,16 @@ while True:
                 )
                 out.write(frame_with_overlay)
         else:
+            last_overlay=None
+            last_text_extracted=None
+            # frame_without_overlay = overlay_translated_lines_on_frame(
+            #     frame,
+            #     last_overlay,
+            #     font_path="fonts/NotoSans-Regular.ttf",
+            #     font_size=45
+            # )
+            # out.write(frame_without_overlay)
+
             out.write(frame)
     else:
         if last_overlay is not None:
@@ -379,23 +402,12 @@ while True:
                 font_path="fonts/NotoSans-Regular.ttf",
                 font_size=45
             )
+            # print(frame_number,"frame_number")
+            # # if(frame_number==10649):
+            #       debug_path = os.path.join("empty_frames", f"frame_{frame_number}_new_overlay.jpg")
+            #       cv2.imwrite(debug_path, frame_with_overlay)
             out.write(frame_with_overlay)
-        # else:
-        #     out.write(frame)
-    # Always draw overlay if we have it
-    # if last_overlay is not None:
-    #     # overlay_translated_lines_on_frame must return np.ndarray (BGR)
-    #     frame_with_overlay = overlay_translated_lines_on_frame(
-    #         frame,
-    #         last_overlay,
-    #         font_path="fonts/NotoSans-Regular.ttf",
-    #         font_size=45
-    #     )
-    #     out.write(frame_with_overlay)
-    # else:
-    #     out.write(frame)
-
-    frame_number += 1
+    # frame_number += 1
 
 cap.release()
 out.release()

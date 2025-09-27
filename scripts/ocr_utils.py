@@ -122,18 +122,19 @@ def extract_lines_with_boxes(frame_bgr, min_confidence=10, min_width=20, min_hei
     Returns a list of (text, (x,y,w,h)) for each detected line.
     """
     # frame_bgr is already a NumPy array from cv2.VideoCapture
-    gray = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2GRAY)
+    # gray = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2GRAY)
     # img = gray 
 
      # 1. Grayscale
-    gray = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2GRAY)
+    # gray = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2GRAY)
 
-    img = gray
+    # img = gray
+    img=frame_bgr
     data = pytesseract.image_to_data(img, lang='chi_sim', output_type=Output.DICT)
-    print(data)
+    # print(data)
 
     df = pd.DataFrame(data)
-    print(df.head(20))
+    # print(df.head(20))
     df['conf'] = pd.to_numeric(df['conf'], errors='coerce')
     lines = []
 
