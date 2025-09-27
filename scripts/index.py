@@ -174,7 +174,7 @@ def get_text_only(lines):
     return [' '.join(text.split()) for text, _ in lines]
 
 
-def is_similar(texts1, texts2, threshold=0.95):
+def is_similar(texts1, texts2, threshold=0.80):
     """Return True if the joined texts are at least threshold similar."""
     joined1 = ' '.join(texts1)
     joined2 = ' '.join(texts2)
@@ -241,48 +241,163 @@ skip = 30  # process every 30th frame
 
 # print(f"Done. Translated video saved to: {output_path}")
 
+#step 4 not handled grace frames
+# last_text_extracted = None
+# last_overlay = None
+# frame_number = 8000
 
+# while True:
+#     ret, frame = cap.read()
+#     if not ret:
+#         break
+
+#     # do OCR every skip frames
+#     if frame_number % skip == 0 or frame_number == 9200:
+#         lines = extract_lines_with_boxes(frame)  # frame not path
+#         print(lines, "lines")
+
+#         if lines:  # only process when OCR saw something
+#             text_only = get_text_only(lines)
+
+#             if (last_text_extracted is None) or (not is_similar(text_only, last_text_extracted)):
+#                 translated_lines = translate_lines(lines, target_language="English")
+#                 print(translated_lines)
+#                 last_overlay = translated_lines
+#                 last_text_extracted = text_only
+#             # else reuse last_overlay silently
+
+#         # if lines == [] just keep last_overlay/last_text_extracted as they are
+
+#     # Always draw overlay if we have it
+#     if last_overlay is not None:
+#         # overlay_translated_lines_on_frame must return np.ndarray (BGR)
+#         frame_with_overlay = overlay_translated_lines_on_frame(
+#             frame,
+#             last_overlay,
+#             font_path="fonts/NotoSans-Regular.ttf",
+#             font_size=45
+#         )
+#         out.write(frame_with_overlay)
+#     else:
+#         out.write(frame)
+
+#     frame_number += 1
+
+# cap.release()
+# out.release()
+# print(f"Done. Translated video saved to: {output_path}")
+
+# step 5- grace frames handled
+# last_text_extracted = None
+# last_overlay = None
+# frame_number = 10000
+# grace_counter = 0
+# GRACE_FRAMES = 3  # keep overlay for up to 3 frames if OCR fails
+
+# while True:
+#     ret, frame = cap.read()
+#     if not ret:
+#         break
+
+#     # OCR every `skip` frames
+#     if frame_number % skip == 0 or frame_number == 10000:
+#         lines = extract_lines_with_boxes(frame)  # frame input
+#         print(lines, "lines")
+
+#         if lines:
+#             text_only = get_text_only(lines)
+#             if last_text_extracted is None or not is_similar(text_only, last_text_extracted):
+#                 translated_lines = translate_lines(lines, target_language="English")
+#                 last_overlay = translated_lines
+#                 last_text_extracted = text_only
+#             grace_counter = 0  # reset grace counter
+#         else:
+#             # No text detected → increment grace counter
+#             grace_counter += 1
+#             if grace_counter > GRACE_FRAMES:
+#                 last_overlay = None
+#                 last_text_extracted = None
+
+#     # Draw overlay if available
+#     if last_overlay is not None:
+#         frame_with_overlay = overlay_translated_lines_on_frame(
+#             frame,
+#             last_overlay,
+#             font_path="fonts/NotoSans-Regular.ttf",
+#             font_size=45
+#         )
+#         out.write(frame_with_overlay)
+#     else:
+#         out.write(frame)
+
+#     frame_number += 1
+
+# cap.release()
+# out.release()
+
+
+
+
+skip = 30  # process every 30th frame
+frame_number = 7200
 last_text_extracted = None
 last_overlay = None
-frame_number = 8000
-
+cap.set(cv2.CAP_PROP_POS_FRAMES, frame_number)
 while True:
     ret, frame = cap.read()
     if not ret:
         break
-
+    
     # do OCR every skip frames
-    if frame_number % skip == 0 or frame_number == 9200:
-        lines = extract_lines_with_boxes(frame)  # frame not path
-        print(lines, "lines")
-
-        if lines:  # only process when OCR saw something
-            text_only = get_text_only(lines)
-
-            if (last_text_extracted is None) or (not is_similar(text_only, last_text_extracted)):
+    if frame_number % skip == 0 or frame_number == 7200:
+        
+        lines = extract_lines_with_boxes(frame)  # <-- now frame, not path
+        print(lines,"lines")
+        text_only = get_text_only(lines)
+        if lines:
+            if last_text_extracted is None or not is_similar(text_only, last_text_extracted):
                 translated_lines = translate_lines(lines, target_language="English")
                 print(translated_lines)
                 last_overlay = translated_lines
                 last_text_extracted = text_only
-            # else reuse last_overlay silently
-
-        # if lines == [] just keep last_overlay/last_text_extracted as they are
-
-    # Always draw overlay if we have it
-    if last_overlay is not None:
-        # overlay_translated_lines_on_frame must return np.ndarray (BGR)
-        frame_with_overlay = overlay_translated_lines_on_frame(
-            frame,
-            last_overlay,
-            font_path="fonts/NotoSans-Regular.ttf",
-            font_size=45
-        )
-        out.write(frame_with_overlay)
+            # else reuse last_overlay
+            else:
+                frame_with_overlay = overlay_translated_lines_on_frame(
+                frame,
+                last_overlay,
+                font_path="fonts/NotoSans-Regular.ttf",
+                font_size=45
+                )
+                out.write(frame_with_overlay)
+        else:
+            out.write(frame)
     else:
-        out.write(frame)
+        if last_overlay is not None:
+            frame_with_overlay = overlay_translated_lines_on_frame(
+                frame,
+                last_overlay,
+                font_path="fonts/NotoSans-Regular.ttf",
+                font_size=45
+            )
+            out.write(frame_with_overlay)
+        # else:
+        #     out.write(frame)
+    # Always draw overlay if we have it
+    # if last_overlay is not None:
+    #     # overlay_translated_lines_on_frame must return np.ndarray (BGR)
+    #     frame_with_overlay = overlay_translated_lines_on_frame(
+    #         frame,
+    #         last_overlay,
+    #         font_path="fonts/NotoSans-Regular.ttf",
+    #         font_size=45
+    #     )
+    #     out.write(frame_with_overlay)
+    # else:
+    #     out.write(frame)
 
     frame_number += 1
 
 cap.release()
 out.release()
+
 print(f"Done. Translated video saved to: {output_path}")
