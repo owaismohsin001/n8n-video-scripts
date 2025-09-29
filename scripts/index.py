@@ -162,9 +162,11 @@ from dotenv import load_dotenv
 from pytesseract import Output
 import pandas as pd
 from overlay_utils import overlay_translated_lines_on_frame  # returns np array frame
+from helpers import fuzzy_get
 from translate_utils import translate_lines
 from ocr_utils import extract_lines_with_boxes  # modified to accept np array
 import difflib
+
 
 load_dotenv()
 
@@ -336,80 +338,208 @@ skip = 30  # process every 30th frame
 # out.release()
 
 
+# step 5 after some saturday working
+
+# skip = 30  # process every 30th frame
+# frame_number = 9990
+# last_text_extracted = None
+# last_overlay = None
+# cap.set(cv2.CAP_PROP_POS_FRAMES, frame_number)
+# while True:
+#     ret, frame = cap.read()
+#     if not ret:
+#         break
+#     current_frame_index = int(cap.get(cv2.CAP_PROP_POS_FRAMES))-1 
+#     print(current_frame_index,"current_frame_index")
+#     # do OCR every skip frames
+#     if current_frame_index % skip == 0 or current_frame_index == 9990:
+#         lines = extract_lines_with_boxes(frame)  # <-- now frame, not path
+#         # print(lines,"lines")
+#         text_only = get_text_only(lines)
+#         if lines:
+#             if last_text_extracted is None or not is_similar(text_only, last_text_extracted):
+#                 translated_lines = translate_lines(lines, target_language="English")
+#                 # print(translated_lines,"translated_lines")
+#                 print(last_overlay,"last_overlay before update")
+#                 print(last_text_extracted,"last_text_extracted before update")
+#                 last_overlay = translated_lines
+#                 last_text_extracted = text_only
+#                 print(last_overlay,"last_overlay after update")
+#                 print(last_text_extracted,"last_text_extracted after update")
+#                 frame_with_overlay = overlay_translated_lines_on_frame(
+#                 frame,
+#                 last_overlay,
+#                 font_path="fonts/NotoSans-Regular.ttf",
+#                 font_size=45
+#                 )
+#                 debug_path = os.path.join("empty_frames", f"frame_{frame_number}_new_overlay.jpg")
+#                 cv2.imwrite(debug_path, frame_with_overlay)
+#                 out.write(frame_with_overlay)
+#             # else reuse last_overlay
+#             else:
+#                 frame_with_overlay = overlay_translated_lines_on_frame(
+#                 frame,
+#                 last_overlay,
+#                 font_path="fonts/NotoSans-Regular.ttf",
+#                 font_size=45
+#                 )
+#                 out.write(frame_with_overlay)
+#         else:
+#             last_overlay=None
+#             last_text_extracted=None
+#             # frame_without_overlay = overlay_translated_lines_on_frame(
+#             #     frame,
+#             #     last_overlay,
+#             #     font_path="fonts/NotoSans-Regular.ttf",
+#             #     font_size=45
+#             # )
+#             # out.write(frame_without_overlay)
+
+#             out.write(frame)
+#     else:
+#         if last_overlay is not None:
+#             frame_with_overlay = overlay_translated_lines_on_frame(
+#                 frame,
+#                 last_overlay,
+#                 font_path="fonts/NotoSans-Regular.ttf",
+#                 font_size=45
+#             )
+#             # print(frame_number,"frame_number")
+#             # # if(frame_number==10649):
+#             #       debug_path = os.path.join("empty_frames", f"frame_{frame_number}_new_overlay.jpg")
+#             #       cv2.imwrite(debug_path, frame_with_overlay)
+#             out.write(frame_with_overlay)
+#     # frame_number += 1
+
+# cap.release()
+# out.release()
+
+# print(f"Done. Translated video saved to: {output_path}")
 
 
-skip = 30  # process every 30th frame
-frame_number = 9990
-last_text_extracted = None
-last_overlay = None
+
+# step 6 on monday using the object method for translation and processing every frame
+frame_number = 4
+translation_obj={}
 cap.set(cv2.CAP_PROP_POS_FRAMES, frame_number)
+
+def get_frame_at_index(video_path, frame_index):
+    """Extract a specific frame from video"""
+    cap = cv2.VideoCapture(video_path)
+    cap.set(cv2.CAP_PROP_POS_FRAMES, frame_index)
+    ret, frame = cap.read()
+    cap.release()
+    return frame if ret else None
+
+
 while True:
     ret, frame = cap.read()
     if not ret:
         break
     current_frame_index = int(cap.get(cv2.CAP_PROP_POS_FRAMES))-1 
-    print(current_frame_index,"current_frame_index")
-    # do OCR every skip frames
-    if current_frame_index % skip == 0 or current_frame_index == 9990:
-        lines = extract_lines_with_boxes(frame)  # <-- now frame, not path
-        # print(lines,"lines")
-        text_only = get_text_only(lines)
-        if lines:
-            if last_text_extracted is None or not is_similar(text_only, last_text_extracted):
-                translated_lines = translate_lines(lines, target_language="English")
-                # print(translated_lines,"translated_lines")
-                print(last_overlay,"last_overlay before update")
-                print(last_text_extracted,"last_text_extracted before update")
-                last_overlay = translated_lines
-                last_text_extracted = text_only
-                print(last_overlay,"last_overlay after update")
-                print(last_text_extracted,"last_text_extracted after update")
-                frame_with_overlay = overlay_translated_lines_on_frame(
-                frame,
-                last_overlay,
-                font_path="fonts/NotoSans-Regular.ttf",
-                font_size=45
-                )
-                debug_path = os.path.join("empty_frames", f"frame_{frame_number}_new_overlay.jpg")
-                cv2.imwrite(debug_path, frame_with_overlay)
-                out.write(frame_with_overlay)
-            # else reuse last_overlay
-            else:
-                frame_with_overlay = overlay_translated_lines_on_frame(
-                frame,
-                last_overlay,
-                font_path="fonts/NotoSans-Regular.ttf",
-                font_size=45
-                )
-                out.write(frame_with_overlay)
-        else:
-            last_overlay=None
-            last_text_extracted=None
-            # frame_without_overlay = overlay_translated_lines_on_frame(
-            #     frame,
-            #     last_overlay,
-            #     font_path="fonts/NotoSans-Regular.ttf",
-            #     font_size=45
-            # )
-            # out.write(frame_without_overlay)
-
-            out.write(frame)
+    lines = extract_lines_with_boxes(frame)
+    if(lines==[]):
+        # save the image in empty_frames folder
+        os.makedirs("empty_frames", exist_ok=True)
+        cv2.imwrite(f"empty_frames/frame_{current_frame_index}.png", frame)
+    text_lines = ' '.join(get_text_only(lines))
+    print(text_lines,"text_lines")
+    key, value, score = fuzzy_get(translation_obj, text_lines, threshold=80)
+    if key is not None:
+        translated_lines = value
+        print("Using cached translation")
     else:
-        if last_overlay is not None:
-            frame_with_overlay = overlay_translated_lines_on_frame(
-                frame,
-                last_overlay,
-                font_path="fonts/NotoSans-Regular.ttf",
-                font_size=45
-            )
-            # print(frame_number,"frame_number")
-            # # if(frame_number==10649):
-            #       debug_path = os.path.join("empty_frames", f"frame_{frame_number}_new_overlay.jpg")
-            #       cv2.imwrite(debug_path, frame_with_overlay)
-            out.write(frame_with_overlay)
-    # frame_number += 1
+        translated_lines = translate_lines(lines, target_language="English")
+        translation_obj[text_lines] = translated_lines
+
+    print(translation_obj,"translation_obj")
+    frame_with_overlay = overlay_translated_lines_on_frame(
+    frame,
+    translated_lines,
+    font_path="fonts/NotoSans-Regular.ttf",
+    font_size=45           
+    )
+    out.write(frame_with_overlay)
 
 cap.release()
 out.release()
 
 print(f"Done. Translated video saved to: {output_path}")
+
+
+
+
+
+
+
+
+
+# did not work step 6
+# skip = 30  # process every 30th frame
+# frame_number = 9990
+# last_text_extracted = None
+# last_overlay = None
+# cap.set(cv2.CAP_PROP_POS_FRAMES, frame_number)
+# while True:
+#     ret, frame = cap.read()
+#     if not ret:
+#         break
+#     current_frame_index = int(cap.get(cv2.CAP_PROP_POS_FRAMES))-1 
+#     print(current_frame_index,"current_frame_index")
+#     # do OCR every skip frames
+#     lines = extract_lines_with_boxes(frame)  # <-- now frame, not path
+#     text_only = get_text_only(lines)
+#     print(last_text_extracted,text_only)
+#     # print(is_similar(text_only, last_text_extracted))
+#     check=last_text_extracted is None or not is_similar(text_only, last_text_extracted)
+   
+#     if current_frame_index % skip == 0:
+#         lines = extract_lines_with_boxes(frame)  # <-- now frame, not path
+#         text_only = get_text_only(lines)
+#         print(last_text_extracted,text_only)
+#         if lines:
+#             if last_text_extracted is None or not is_similar(text_only, last_text_extracted):
+#                 translated_lines = translate_lines(lines, target_language="English")
+#                 # print(translated_lines,"translated_lines")
+#                 print(last_overlay,"last_overlay before update")
+#                 print(last_text_extracted,"last_text_extracted before update")
+#                 last_overlay = translated_lines
+#                 last_text_extracted = text_only
+#                 print(last_overlay,"last_overlay after update")
+#                 print(last_text_extracted,"last_text_extracted after update")
+#                 frame_with_overlay = overlay_translated_lines_on_frame(
+#                 frame,
+#                 last_overlay,
+#                 font_path="fonts/NotoSans-Regular.ttf",
+#                 font_size=45
+#                 )
+#                 debug_path = os.path.join("empty_frames", f"frame_{frame_number}_new_overlay.jpg")
+#                 cv2.imwrite(debug_path, frame_with_overlay)
+#                 out.write(frame_with_overlay)
+#             # else reuse last_overlay
+#             else:
+#                 frame_with_overlay = overlay_translated_lines_on_frame(
+#                 frame,
+#                 last_overlay,
+#                 font_path="fonts/NotoSans-Regular.ttf",
+#                 font_size=45
+#                 )
+#                 out.write(frame_with_overlay)
+#         else:
+#             last_overlay=None
+#             last_text_extracted=None
+#             out.write(frame)
+#     else:
+#         if last_overlay is not None:
+#             frame_with_overlay = overlay_translated_lines_on_frame(
+#                 frame,
+#                 last_overlay,
+#                 font_path="fonts/NotoSans-Regular.ttf",
+#                 font_size=45
+#             )
+#             out.write(frame_with_overlay)
+
+# cap.release()
+# out.release()
+
+# print(f"Done. Translated video saved to: {output_path}")

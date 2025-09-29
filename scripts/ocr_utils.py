@@ -115,51 +115,104 @@ def preprocess_for_ocr(frame_bgr):
 #     return lines
 
 
-# step 3 latest working
-def extract_lines_with_boxes(frame_bgr, min_confidence=10, min_width=20, min_height=20, min_characters=2):
+# step 3 latest working  using pytesseract
+# def extract_lines_with_boxes(frame_bgr, min_confidence=10, min_width=20, min_height=20, min_characters=2):
+#     """
+#     Accepts a BGR frame (NumPy array) directly instead of an image path.
+#     Returns a list of (text, (x,y,w,h)) for each detected line.
+#     """
+#     # frame_bgr is already a NumPy array from cv2.VideoCapture
+#     # gray = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2GRAY)
+#     # img = gray 
+
+#      # 1. Grayscale
+#     # gray = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2GRAY)
+
+#     # img = gray
+#     img=frame_bgr
+#     data = pytesseract.image_to_data(img, lang='chi_sim', output_type=Output.DICT)
+#     # print(data)
+
+#     df = pd.DataFrame(data)
+#     # print(df.head(20))
+#     df['conf'] = pd.to_numeric(df['conf'], errors='coerce')
+#     lines = []
+
+#     for (block_num, par_num, line_num), group in df.groupby(['block_num','par_num','line_num']):
+#         # Filter words by confidence
+#         group = group[group['conf'] >= min_confidence]
+#         if group.empty:
+#             continue
+
+#         line_text = " ".join(word for word in group['text'] if word.strip() != "")
+#         if not line_text.strip():
+#             continue
+
+#         if len(line_text.replace(" ", "")) < min_characters:
+#             continue
+
+#         x = group['left'].min()
+#         y = group['top'].min()
+#         w = (group['left'] + group['width']).max() - x
+#         h = (group['top'] + group['height']).max() - y
+
+#         if w >= min_width and h >= min_height:
+#             lines.append((line_text, (x, y, w, h)))
+
+#     return lines
+# frame_bgr = cv2.imread("empty_frames/frame_7100.png")
+# print(extract_lines_with_boxes(frame_bgr))
+
+import cv2
+import easyocr
+
+# Initialize the EasyOCR reader once (outside the function for performance)
+reader = easyocr.Reader(['ch_sim'])  # or ['en', 'chi_sim'] if multiple langs
+
+def extract_lines_with_boxes(
+    frame_bgr,
+    min_confidence=0.1,  # EasyOCR confidence is between 0 and 1
+    min_width=20,
+    min_height=20,
+    min_characters=2
+):
     """
-    Accepts a BGR frame (NumPy array) directly instead of an image path.
-    Returns a list of (text, (x,y,w,h)) for each detected line.
+    Accepts a BGR frame (NumPy array) directly.
+    Returns a list of (text, (x,y,w,h)) for each detected line using EasyOCR.
     """
-    # frame_bgr is already a NumPy array from cv2.VideoCapture
-    # gray = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2GRAY)
-    # img = gray 
-
-     # 1. Grayscale
-    # gray = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2GRAY)
-
-    # img = gray
-    img=frame_bgr
-    data = pytesseract.image_to_data(img, lang='chi_sim', output_type=Output.DICT)
-    # print(data)
-
-    df = pd.DataFrame(data)
-    # print(df.head(20))
-    df['conf'] = pd.to_numeric(df['conf'], errors='coerce')
+    # EasyOCR expects RGB
+    frame_rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
+    
+    results = reader.readtext(frame_rgb)  # returns list of (bbox, text, confidence)
     lines = []
 
-    for (block_num, par_num, line_num), group in df.groupby(['block_num','par_num','line_num']):
-        # Filter words by confidence
-        group = group[group['conf'] >= min_confidence]
-        if group.empty:
+    for bbox, text, conf in results:
+        if conf < min_confidence:
             continue
 
-        line_text = " ".join(word for word in group['text'] if word.strip() != "")
-        if not line_text.strip():
+        clean_text = text.strip()
+        if len(clean_text.replace(" ", "")) < min_characters:
             continue
 
-        if len(line_text.replace(" ", "")) < min_characters:
-            continue
-
-        x = group['left'].min()
-        y = group['top'].min()
-        w = (group['left'] + group['width']).max() - x
-        h = (group['top'] + group['height']).max() - y
+        # bbox is 4 points [[x1,y1],[x2,y2],[x3,y3],[x4,y4]]
+        x_coords = [p[0] for p in bbox]
+        y_coords = [p[1] for p in bbox]
+        x = int(min(x_coords))
+        y = int(min(y_coords))
+        w = int(max(x_coords) - x)
+        h = int(max(y_coords) - y)
 
         if w >= min_width and h >= min_height:
-            lines.append((line_text, (x, y, w, h)))
+            lines.append((clean_text, (x, y, w, h)))
 
     return lines
+# frame_bgr = cv2.imread("empty_frames/frame_7100.png")
+# print(extract_lines_with_boxes(frame_bgr))
+
+
+
+
+
 #testing step 4 - save empty frames
 # import cv2
 # import pandas as pd
