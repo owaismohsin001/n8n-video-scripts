@@ -78,7 +78,8 @@ RUN /opt/venv/bin/pip install --upgrade pip \
        --extra-index-url https://download.pytorch.org/whl/cpu
 
 # 9. Ensure the venv is first in PATH
-ENV PATH="/opt/venv/bin:$PATH"
+# ENV PATH="/opt/venv/bin:$PATH"
+ENV PATH="/usr/local/bin:$PATH:/opt/venv/bin"
 
 # 8. Expose n8n default port
 EXPOSE 5678
