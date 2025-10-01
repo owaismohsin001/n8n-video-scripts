@@ -82,6 +82,5 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 # 8. Expose n8n default port
 EXPOSE 5678
-
-# 9. Default command (can be overridden)
-CMD ["n8n"]
+# Set the correct CMD to run n8n
+CMD ["n8n", "start"]
