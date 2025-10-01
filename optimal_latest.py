@@ -236,7 +236,7 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
 
 
 def function_overlaying_continuous():
-    video_path = "input_videos/test2.mp4"
+    video_path = "input_videos/test_cut.mp4"
     
     # Open video for reading
     cap = cv2.VideoCapture(video_path)
@@ -248,7 +248,7 @@ def function_overlaying_continuous():
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # or 'XVID'
     out = cv2.VideoWriter("output/translated.mp4", fourcc, fps, (width, height))
     
-    start_frame = 22800
+    start_frame = 0
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     
     while start_frame < total_frames:

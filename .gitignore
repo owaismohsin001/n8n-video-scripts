@@ -1,7 +1,6 @@
 .env
 venv/
 output_videos/
-input_videos/
 node_modules/
 output/
 empty_frames/

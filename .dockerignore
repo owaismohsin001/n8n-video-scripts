@@ -1,0 +1,55 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Input/Output directories (mounted as volumes)
+input_videos/*
+output_videos/*
+
+# Keep directory structure
+!input_videos/.gitkeep
+!input_videos/test_cut.mp4
+!output_videos/.gitkeep
+
+# Documentation
+README.md
+*.md
+docs/
+
+# Docker files
+docker-compose.yml
+.dockerignore
+
+# Logs
+*.log
+logs/
+
+# Testing
+tests/
+test_*.py
+*_test.py
