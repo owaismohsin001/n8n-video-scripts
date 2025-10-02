@@ -281,7 +281,7 @@ def function_overlaying_continuous():
             )
             out.write(frame_with_overlay)
         
-        # print(f"Processed frames {start_frame} to {change_frame - 1}")
+        print(f"Processed frames {start_frame} to {change_frame - 1}")
         start_frame = change_frame  # Move to next segment
     
     cap.release()
