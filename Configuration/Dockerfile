@@ -137,4 +137,4 @@ ENV N8N_PORT=5678
 EXPOSE 5678
 
 # Run n8n directly from local node_modules using npx
-CMD ["npx", "n8n"]
+CMD ["npx", "n8n"] 
