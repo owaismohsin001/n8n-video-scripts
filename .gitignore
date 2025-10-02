@@ -1,8 +1,6 @@
 .env
 venv/
 output_videos/
-output/*
-!output/.gitkeep
 node_modules/
 empty_frames/
 optimal_output/
