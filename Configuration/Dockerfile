@@ -127,11 +127,14 @@ RUN /opt/venv/bin/pip install --upgrade pip \
     && /opt/venv/bin/pip install --no-cache-dir -r Configuration/requirements.txt \
        --extra-index-url https://download.pytorch.org/whl/cpu
 
-# Ensure the venv is first in PATH, and npm global bin is included
-ENV PATH="/opt/venv/bin:/usr/local/bin:$PATH"
+ENV PATH="/opt/venv/bin:/home/node/app/node_modules/.bin:/usr/local/bin:$PATH"
+
+# Set n8n environment variables
+ENV N8N_HOST=0.0.0.0
+ENV N8N_PORT=5678
 
 # Expose n8n default port
 EXPOSE 5678
 
-# CRITICAL FIX: Use just "n8n" without "start"
-CMD ["node", "/usr/local/lib/node_modules/n8n/bin/n8n"]
+# Use the startup script
+CMD ["/home/node/app/start-n8n.sh"]
