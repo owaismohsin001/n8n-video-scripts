@@ -136,5 +136,5 @@ ENV N8N_PORT=5678
 # Expose n8n default port
 EXPOSE 5678
 
-# Use the startup script
-CMD ["/home/node/app/start-n8n.sh"]
+# Run n8n directly from local node_modules using npx
+CMD ["npx", "n8n"]
