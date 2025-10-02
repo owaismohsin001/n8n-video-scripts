@@ -35,14 +35,14 @@ def get_frame_at_index(video_path, frame_index):
     cap = cv2.VideoCapture(video_path)
     
     if not cap.isOpened():
-        print(f"Error: Could not open video file: {video_path}")
+        # print(f"Error: Could not open video file: {video_path}")
         cap.release()
         return None
     
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     
     if frame_index < 0 or frame_index >= total_frames:
-        print(f"Error: Frame index {frame_index} out of range (0-{total_frames-1})")
+        # print(f"Error: Frame index {frame_index} out of range (0-{total_frames-1})")
         cap.release()
         return None
     
@@ -51,7 +51,7 @@ def get_frame_at_index(video_path, frame_index):
     cap.release()
     
     if not ret:
-        print(f"Error: Could not read frame {frame_index}")
+        # print(f"Error: Could not read frame {frame_index}")
         return None
     
     return frame
@@ -92,7 +92,7 @@ def find_text_change_bidirectional(video_path, start_frame_index, similarity_thr
         return -1
     
     start_text = extract_text_easyocr(start_frame)
-    print(f"Reference text (frame {start_frame_index}): {start_text[:80]}...")
+    # print(f"Reference text (frame {start_frame_index}): {start_text[:80]}...")
     
     # Bidirectional search steps: (step_size, direction)
     # direction: 1 = forward (find DIFFERENT), -1 = backward (find SAME)
@@ -108,14 +108,14 @@ def find_text_change_bidirectional(video_path, start_frame_index, similarity_thr
     frame_checks = 0
     
     for phase_num, (step_size, direction, target_state) in enumerate(search_phases, 1):
-        print(f"\n=== Phase {phase_num}: Step {step_size} {'FORWARD' if direction == 1 else 'BACKWARD'} (find {target_state}) ===")
+        # print(f"\n=== Phase {phase_num}: Step {step_size} {'FORWARD' if direction == 1 else 'BACKWARD'} (find {target_state}) ===")
         
         while True:
             next_index = current_index + (step_size * direction)
             
             # Boundary checks
             if next_index < start_frame_index or next_index >= total_frames:
-                print(f"Reached boundary at frame {current_index}")
+                # print(f"Reached boundary at frame {current_index}")
                 break
             
             # Check frame
@@ -128,15 +128,15 @@ def find_text_change_bidirectional(video_path, start_frame_index, similarity_thr
             is_same = result
             similarity = text_similarity(start_text, extract_text_easyocr(get_frame_at_index(video_path, next_index)))
             
-            print(f"Frame {next_index}: {'SAME' if is_same else 'DIFFERENT'} (similarity={similarity:.3f})")
+            # print(f"Frame {next_index}: {'SAME' if is_same else 'DIFFERENT'} (similarity={similarity:.3f})")
             
             # Check if we found what we're looking for
             if target_state == "DIFFERENT" and not is_same:
                 # Found different text
                 if step_size == 1:
                     # This is the exact frame!
-                    print(f"\n✓ Exact text change frame: {next_index}")
-                    print(f"Total frames checked: {frame_checks}")
+                    # print(f"\n✓ Exact text change frame: {next_index}")
+                    # print(f"Total frames checked: {frame_checks}")
                     return next_index
                 else:
                     # Move to next phase
@@ -150,7 +150,7 @@ def find_text_change_bidirectional(video_path, start_frame_index, similarity_thr
                 # Keep searching
                 current_index = next_index
     
-    print(f"\nNo text change found. Total frames checked: {frame_checks}")
+    # print(f"\nNo text change found. Total frames checked: {frame_checks}")
     return -1
 
 
@@ -175,12 +175,12 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
         return -1
     
     start_text = extract_text_easyocr(start_frame)
-    print(f"Reference text (frame {start_frame_index}): {start_text[:80]}...")
+    # print(f"Reference text (frame {start_frame_index}): {start_text[:80]}...")
     
     frame_checks = 0
     
     # Phase 1: Exponential search to find upper bound
-    print("\n=== Phase 1: Exponential Search ===")
+    # print("\n=== Phase 1: Exponential Search ===")
     step = 1
     current_index = start_frame_index + step
     
@@ -192,13 +192,13 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
             break
         
         similarity = text_similarity(start_text, extract_text_easyocr(get_frame_at_index(video_path, current_index)))
-        print(f"Frame {current_index} (step={step}): {'SAME' if result else 'DIFFERENT'} (similarity={similarity:.3f})")
+        # print(f"Frame {current_index} (step={step}): {'SAME' if result else 'DIFFERENT'} (similarity={similarity:.3f})")
         
         if not result:  # Found different text
             # The change is between (current_index - step) and current_index
             left = current_index - step + 1
             right = current_index
-            print(f"Change detected between frames {left-1} and {right}")
+            # print(f"Change detected between frames {left-1} and {right}")
             break
         
         # Double the step size
@@ -206,11 +206,11 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
         current_index = start_frame_index + step
     else:
         # No change found
-        print(f"No text change found. Total frames checked: {frame_checks}")
+        # print(f"No text change found. Total frames checked: {frame_checks}")
         return -1
     
     # Phase 2: Binary search within the range
-    print(f"\n=== Phase 2: Binary Search [{left}, {right}] ===")
+    # print(f"\n=== Phase 2: Binary Search [{left}, {right}] ===")
     
     while left < right:
         mid = (left + right) // 2
@@ -281,11 +281,11 @@ def function_overlaying_continuous():
             )
             out.write(frame_with_overlay)
         
-        print(f"Processed frames {start_frame} to {change_frame - 1}")
+        # print(f"Processed frames {start_frame} to {change_frame - 1}")
         start_frame = change_frame  # Move to next segment
     
     cap.release()
     out.release()
-    print("✅ Translation overlay completed for the entire video.")
+    # print("✅ Translation overlay completed for the entire video.")
 
 function_overlaying_continuous()
