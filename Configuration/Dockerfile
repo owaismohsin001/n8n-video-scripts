@@ -134,4 +134,4 @@ ENV PATH="/opt/venv/bin:/usr/local/bin:$PATH"
 EXPOSE 5678
 
 # CRITICAL FIX: Use just "n8n" without "start"
-CMD ["n8n"]
+CMD ["node", "/usr/local/lib/node_modules/n8n/bin/n8n"]
