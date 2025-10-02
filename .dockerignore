@@ -30,11 +30,12 @@ Thumbs.db
 # Input/Output directories (mounted as volumes)
 input_videos/*
 output_videos/*
+output/*
 
 # Keep directory structure
 !input_videos/.gitkeep
 !input_videos/test_cut.mp4
-!output_videos/.gitkeep
+!output/.gitkeep
 
 # Documentation
 README.md
