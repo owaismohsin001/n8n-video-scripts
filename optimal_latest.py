@@ -221,15 +221,15 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
             break
         
         similarity = text_similarity(start_text, extract_text_easyocr(get_frame_at_index(video_path, mid)))
-        print(f"Frame {mid}: {'SAME' if result else 'DIFFERENT'} (similarity={similarity:.3f})")
+        # print(f"Frame {mid}: {'SAME' if result else 'DIFFERENT'} (similarity={similarity:.3f})")
         
         if result:  # Still same text
             left = mid + 1
         else:  # Different text
             right = mid
     
-    print(f"\n✓ Exact text change frame: {left}")
-    print(f"Total frames checked: {frame_checks}")
+    # print(f"\n✓ Exact text change frame: {left}")
+    # print(f"Total frames checked: {frame_checks}")
     return left
 
 
@@ -281,7 +281,7 @@ def function_overlaying_continuous():
             )
             out.write(frame_with_overlay)
         
-        # print(f"Processed frames {start_frame} to {change_frame - 1}")
+        print(f"Processed frames {start_frame} to {change_frame - 1}")
         start_frame = change_frame  # Move to next segment
     
     cap.release()
