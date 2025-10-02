@@ -270,7 +270,7 @@ def function_overlaying_continuous():
         # Overlay translated text for all frames in this segment
         for i in range(start_frame, change_frame):
             frame =  get_frame_at_index(video_path, i)
-            print(f"Overlaying frame {i}/{total_frames}")
+            # print(f"Overlaying frame {i}/{total_frames}")
             if frame is None:
                 continue
             frame_with_overlay = overlay_translated_lines_on_frame(
@@ -281,7 +281,7 @@ def function_overlaying_continuous():
             )
             out.write(frame_with_overlay)
         
-        print(f"Processed frames {start_frame} to {change_frame - 1}")
+        # print(f"Processed frames {start_frame} to {change_frame - 1}")
         start_frame = change_frame  # Move to next segment
     
     cap.release()
