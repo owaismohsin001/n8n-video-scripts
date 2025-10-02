@@ -63,7 +63,7 @@ RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
 # RUN npm config set prefix /usr/local && npm install -g n8n
 # RUN ln -sf /usr/local/bin/n8n /usr/bin/n8n
 RUN npm config set prefix /usr/local && npm install -g n8n
-RUN ln -sf /usr/local/bin/n8n /usr/bin/n8n
+RUN ln -sf /usr/local/bin/n8n /usr/bin/n8n
 
 
 ENV OCLIF_AUTOCOMPLETIONS=false
