@@ -60,9 +60,10 @@ RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
 # # 4. Install n8n globally with npm
 # RUN npm install -g n8n
 
-RUN npm config set prefix /usr/local && npm install -g n8n
-RUN ln -sf /usr/local/bin/n8n /usr/bin/n8n
-
+# RUN npm config set prefix /usr/local && npm install -g n8n
+# RUN ln -sf /usr/local/bin/n8n /usr/bin/n8n
+RUN npm config set prefix /usr/local && npm install -g n8n@1.75.1
+RUN ln -sf /usr/local/bin/n8n /usr/bin/n8n
 
 # 5. Set working directory
 WORKDIR /home/node/app
