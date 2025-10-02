@@ -89,6 +89,7 @@ RUN /opt/venv/bin/pip install --upgrade pip \
 # 9. Ensure the venv is first in PATH
 # ENV PATH="/opt/venv/bin:$PATH"
 ENV PATH="/usr/local/bin:/opt/venv/bin:$PATH"
+ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
 
 # 8. Expose n8n default port
 EXPOSE 5678
