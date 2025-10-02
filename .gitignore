@@ -2,7 +2,6 @@
 venv/
 output_videos/
 node_modules/
-output/
 empty_frames/
 optimal_output/
 
