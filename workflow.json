@@ -1,0 +1,95 @@
+{
+  "name": "Font Selector Form to JSON",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "font-form",
+        "formTitle": "Font Selector",
+        "formDescription": "",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Choose Font Family",
+              "fieldType": "dropdown",
+              "requiredField": true,
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Arial"
+                  },
+                  {
+                    "option": "Times New Roman"
+                  },
+                  {
+                    "option": "Courier New"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "Choose Font Size",
+              "fieldType": "dropdown",
+              "requiredField": true,
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "12px"
+                  },
+                  {
+                    "option": "14px"
+                  },
+                  {
+                    "option": "16px"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "respondWithOptions": {
+          "values": {
+            "respondWith": "text",
+            "formSubmittedText": "Your font selection has been saved!"
+          }
+        }
+      },
+      "id": "1",
+      "name": "Form Trigger",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2,
+      "position": [250, 300],
+      "webhookId": "font-form"
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "/data/font-selection.json",
+        "data": "={{ JSON.stringify($json, null, 2) }}"
+      },
+      "id": "2",
+      "name": "Write File",
+      "type": "n8n-nodes-base.writeFile",
+      "typeVersion": 1,
+      "position": [600, 300]
+    }
+  ],
+  "connections": {
+    "Form Trigger": {
+      "main": [
+        [
+          {
+            "node": "Write File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
+
+
+
+
+
+

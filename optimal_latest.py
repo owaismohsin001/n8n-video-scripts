@@ -35,14 +35,14 @@ def get_frame_at_index(video_path, frame_index):
     cap = cv2.VideoCapture(video_path)
     
     if not cap.isOpened():
-        # print(f"Error: Could not open video file: {video_path}")
+        print(f"Error: Could not open video file: {video_path}")
         cap.release()
         return None
     
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     
     if frame_index < 0 or frame_index >= total_frames:
-        # print(f"Error: Frame index {frame_index} out of range (0-{total_frames-1})")
+        print(f"Error: Frame index {frame_index} out of range (0-{total_frames-1})")
         cap.release()
         return None
     
@@ -51,7 +51,7 @@ def get_frame_at_index(video_path, frame_index):
     cap.release()
     
     if not ret:
-        # print(f"Error: Could not read frame {frame_index}")
+        print(f"Error: Could not read frame {frame_index}")
         return None
     
     return frame
@@ -175,12 +175,12 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
         return -1
     
     start_text = extract_text_easyocr(start_frame)
-    # print(f"Reference text (frame {start_frame_index}): {start_text[:80]}...")
+    print(f"Reference text (frame {start_frame_index}): {start_text[:80]}...")
     
     frame_checks = 0
     
     # Phase 1: Exponential search to find upper bound
-    # print("\n=== Phase 1: Exponential Search ===")
+    print("\n=== Phase 1: Exponential Search ===")
     step = 1
     current_index = start_frame_index + step
     
@@ -198,7 +198,7 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
             # The change is between (current_index - step) and current_index
             left = current_index - step + 1
             right = current_index
-            # print(f"Change detected between frames {left-1} and {right}")
+            print(f"Change detected between frames {left-1} and {right}")
             break
         
         # Double the step size
@@ -206,11 +206,11 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
         current_index = start_frame_index + step
     else:
         # No change found
-        # print(f"No text change found. Total frames checked: {frame_checks}")
+        print(f"No text change found. Total frames checked: {frame_checks}")
         return -1
     
     # Phase 2: Binary search within the range
-    # print(f"\n=== Phase 2: Binary Search [{left}, {right}] ===")
+    print(f"\n=== Phase 2: Binary Search [{left}, {right}] ===")
     
     while left < right:
         mid = (left + right) // 2
@@ -221,15 +221,15 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
             break
         
         similarity = text_similarity(start_text, extract_text_easyocr(get_frame_at_index(video_path, mid)))
-        # print(f"Frame {mid}: {'SAME' if result else 'DIFFERENT'} (similarity={similarity:.3f})")
+        print(f"Frame {mid}: {'SAME' if result else 'DIFFERENT'} (similarity={similarity:.3f})")
         
         if result:  # Still same text
             left = mid + 1
         else:  # Different text
             right = mid
     
-    # print(f"\n✓ Exact text change frame: {left}")
-    # print(f"Total frames checked: {frame_checks}")
+    print(f"\n✓ Exact text change frame: {left}")
+    print(f"Total frames checked: {frame_checks}")
     return left
 
 
@@ -270,7 +270,7 @@ def function_overlaying_continuous():
         # Overlay translated text for all frames in this segment
         for i in range(start_frame, change_frame):
             frame =  get_frame_at_index(video_path, i)
-            # print(f"Overlaying frame {i}/{total_frames}")
+            print(f"Overlaying frame {i}/{total_frames}")
             if frame is None:
                 continue
             frame_with_overlay = overlay_translated_lines_on_frame(
@@ -286,6 +286,6 @@ def function_overlaying_continuous():
     
     cap.release()
     out.release()
-    # print("✅ Translation overlay completed for the entire video.")
+    print("✅ Translation overlay completed for the entire video.")
 
 function_overlaying_continuous()
