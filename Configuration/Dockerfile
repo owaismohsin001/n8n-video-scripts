@@ -42,6 +42,11 @@ FROM node:18-bookworm
 
 USER root
 
+
+ENV OCLIF_AUTOCOMPLETIONS=false
+ENV NODE_OPTIONS="--no-warnings"
+ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+
 # Install Python + venv + build tools
 RUN apt-get update && apt-get install -y \
     python3.11 python3.11-dev python3.11-venv python3-pip \
@@ -62,7 +67,7 @@ RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
 
 # RUN npm config set prefix /usr/local && npm install -g n8n
 # RUN ln -sf /usr/local/bin/n8n /usr/bin/n8n
-RUN npm config set prefix /usr/local && npm install -g n8n@1.75.1
+RUN npm config set prefix /usr/local && npm install -g n8n
 RUN ln -sf /usr/local/bin/n8n /usr/bin/n8n
 
 # 5. Set working directory
