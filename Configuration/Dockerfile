@@ -152,34 +152,20 @@
 
 
 
-FROM node:18-bookworm
+FROM n8nio/n8n:latest
 
 USER root
 
-ENV OCLIF_AUTOCOMPLETIONS=false
-ENV NODE_OPTIONS="--no-warnings"
-ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
-
-# Render.com requires binding to 0.0.0.0 and the PORT env variable
-ENV N8N_HOST=0.0.0.0
-ENV N8N_PORT=5678
-ENV N8N_PROTOCOL=http
-
 # Install Python + venv + build tools
-RUN apt-get update && apt-get install -y \
-    python3.11 python3.11-dev python3.11-venv python3-pip \
-    build-essential \
-    tesseract-ocr tesseract-ocr-eng tesseract-ocr-ara \
-    libsm6 libxext6 libxrender-dev \
-    ffmpeg \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk update && apk add --no-cache \
+    python3 python3-dev py3-pip \
+    build-base \
+    tesseract-ocr tesseract-ocr-data-eng tesseract-ocr-data-ara \
+    libsm libxext libxrender-dev \
+    ffmpeg
 
-# Make python3 point to python3.11
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
-
-# Install n8n globally with npm
-RUN npm config set prefix /usr/local && npm install -g n8n
-RUN ln -sf /usr/local/bin/n8n /usr/bin/n8n
+# Create symbolic link for python3
+RUN ln -sf /usr/bin/python3 /usr/bin/python
 
 # Set working directory
 WORKDIR /home/node/app
@@ -199,20 +185,15 @@ RUN /opt/venv/bin/pip install --upgrade pip \
        --extra-index-url https://download.pytorch.org/whl/cpu
 
 # Ensure the venv is first in PATH
-ENV PATH="/usr/local/bin:/opt/venv/bin:$PATH"
+ENV PATH="/opt/venv/bin:$PATH"
 
-# Create necessary directories for n8n with proper permissions
-RUN mkdir -p /home/node/.n8n && chown -R node:node /home/node/.n8n
+# Set proper permissions
 RUN chown -R node:node /home/node/app
 
-# Switch to node user for security
+# Switch back to node user
 USER node
-
-# Set n8n data directory
-ENV N8N_USER_FOLDER=/home/node/.n8n
 
 # Expose n8n default port
 EXPOSE 5678
 
-# Run n8n (no 'start' command needed)
-CMD ["/usr/local/bin/n8n"]
+# The base image already has the correct entrypoint and CMD
