@@ -151,6 +151,79 @@
 # CMD ["npx", "n8n"] 
 
 
+# latest working
+# FROM node:20-bookworm
+
+# USER root
+
+# ENV OCLIF_AUTOCOMPLETIONS=false
+# ENV NODE_OPTIONS="--no-warnings"
+# ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+# ENV N8N_HOST=0.0.0.0
+# ENV N8N_PORT=5678
+# ENV N8N_PROTOCOL=http
+
+# # Install system dependencies
+# RUN apt-get update && apt-get install -y \
+#     python3.11 python3.11-dev python3.11-venv python3-pip \
+#     build-essential \
+#     tesseract-ocr tesseract-ocr-eng tesseract-ocr-ara \
+#     libsm6 libxext6 libxrender-dev \
+#     ffmpeg \
+#     && rm -rf /var/lib/apt/lists/*
+
+# # Make python3 point to python3.11
+# RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
+
+# # Install latest n8n globally
+# RUN npm install -g n8n
+
+# # Verify n8n installation
+# RUN which n8n && n8n --version
+
+# # Set working directory
+# WORKDIR /home/node/app
+
+# # Copy requirements.txt first for better Docker layer caching
+# COPY Configuration/requirements.txt /tmp/requirements.txt
+
+# # Create Python virtual environment
+# RUN python3 -m venv /opt/venv
+
+# # Upgrade pip and install wheel support
+# RUN /opt/venv/bin/pip install --no-cache-dir --upgrade pip setuptools wheel
+
+# # Install Python packages with optimizations
+# RUN /opt/venv/bin/pip install --no-cache-dir \
+#     --prefer-binary \
+#     --extra-index-url https://download.pytorch.org/whl/cpu \
+#     -r /tmp/requirements.txt || \
+#     /opt/venv/bin/pip install --no-cache-dir \
+#     -r /tmp/requirements.txt
+
+# # Copy all project files
+# COPY . .
+
+# # Copy test video (use || true to not fail if file doesn't exist)
+# COPY input_videos/test_cut.mp4 /home/node/app/input_videos/test_cut.mp4
+# # Set PATH to include venv
+# ENV PATH="/usr/local/bin:/opt/venv/bin:$PATH"
+
+# # Create n8n directories with proper permissions
+# RUN mkdir -p /home/node/.n8n && chown -R node:node /home/node/.n8n
+# RUN chown -R node:node /home/node/app
+
+# # Switch to node user
+# USER node
+
+# # Set n8n data directory
+# ENV N8N_USER_FOLDER=/home/node/.n8n
+
+# EXPOSE 5678
+
+# # Use simple n8n command
+# CMD ["n8n"]
+
 
 FROM node:20-bookworm
 
@@ -205,7 +278,8 @@ RUN /opt/venv/bin/pip install --no-cache-dir \
 COPY . .
 
 # Copy test video (use || true to not fail if file doesn't exist)
-COPY input_videos/test_cut.mp4 /home/node/app/input_videos/test_cut.mp4
+COPY input_videos/test_cut.mp4 /home/node/app/input_videos/test_cut.mp4 2>/dev/null || true
+
 # Set PATH to include venv
 ENV PATH="/usr/local/bin:/opt/venv/bin:$PATH"
 
@@ -218,6 +292,9 @@ USER node
 
 # Set n8n data directory
 ENV N8N_USER_FOLDER=/home/node/.n8n
+
+# Declare volume for persistent data (Render will mount disk here)
+VOLUME ["/home/node/.n8n"]
 
 EXPOSE 5678
 
