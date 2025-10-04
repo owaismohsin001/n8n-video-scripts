@@ -215,4 +215,4 @@ ENV N8N_USER_FOLDER=/home/node/.n8n
 EXPOSE 5678
 
 # Run n8n (no 'start' command needed)
-CMD ["n8n"]
+CMD ["/usr/local/bin/n8n"]
