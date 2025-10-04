@@ -205,8 +205,7 @@ RUN /opt/venv/bin/pip install --no-cache-dir \
 COPY . .
 
 # Copy test video (use || true to not fail if file doesn't exist)
-COPY input_videos/test_cut.mp4 /home/node/app/input_videos/test_cut.mp4 2>/dev/null || true
-
+COPY input_videos/test_cut.mp4 /home/node/app/input_videos/test_cut.mp4
 # Set PATH to include venv
 ENV PATH="/usr/local/bin:/opt/venv/bin:$PATH"
 
