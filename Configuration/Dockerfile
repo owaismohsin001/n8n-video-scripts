@@ -294,7 +294,7 @@ USER node
 ENV N8N_USER_FOLDER=/home/node/.n8n
 
 # Declare volume for persistent data (Render will mount disk here)
-VOLUME ["/home/node/.n8n"]
+VOLUME ["/home/node/.n8n"]  
 
 EXPOSE 5678
 
