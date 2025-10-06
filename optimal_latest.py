@@ -1,6 +1,7 @@
 # First, install easyocr if not already installed
 # Run this in a cell: !pip install easyocr
 
+import os
 import cv2
 import easyocr
 from difflib import SequenceMatcher # returns np array frame
@@ -8,6 +9,7 @@ from difflib import SequenceMatcher # returns np array frame
 from overlay_utils import overlay_translated_lines_on_frame  
 from translate_utils import translate_lines
 from ocr_utils import extract_lines_with_boxes  
+import argparse
 
 
 
@@ -92,7 +94,7 @@ def find_text_change_bidirectional(video_path, start_frame_index, similarity_thr
         return -1
     
     start_text = extract_text_easyocr(start_frame)
-    # print(f"Reference text (frame {start_frame_index}): {start_text[:80]}...")
+    print(f"Reference text (frame {start_frame_index}): {start_text[:80]}...")
     
     # Bidirectional search steps: (step_size, direction)
     # direction: 1 = forward (find DIFFERENT), -1 = backward (find SAME)
@@ -108,7 +110,7 @@ def find_text_change_bidirectional(video_path, start_frame_index, similarity_thr
     frame_checks = 0
     
     for phase_num, (step_size, direction, target_state) in enumerate(search_phases, 1):
-        # print(f"\n=== Phase {phase_num}: Step {step_size} {'FORWARD' if direction == 1 else 'BACKWARD'} (find {target_state}) ===")
+        print(f"\n=== Phase {phase_num}: Step {step_size} {'FORWARD' if direction == 1 else 'BACKWARD'} (find {target_state}) ===")
         
         while True:
             next_index = current_index + (step_size * direction)
@@ -128,15 +130,15 @@ def find_text_change_bidirectional(video_path, start_frame_index, similarity_thr
             is_same = result
             similarity = text_similarity(start_text, extract_text_easyocr(get_frame_at_index(video_path, next_index)))
             
-            # print(f"Frame {next_index}: {'SAME' if is_same else 'DIFFERENT'} (similarity={similarity:.3f})")
+            print(f"Frame {next_index}: {'SAME' if is_same else 'DIFFERENT'} (similarity={similarity:.3f})")
             
             # Check if we found what we're looking for
             if target_state == "DIFFERENT" and not is_same:
                 # Found different text
                 if step_size == 1:
                     # This is the exact frame!
-                    # print(f"\n✓ Exact text change frame: {next_index}")
-                    # print(f"Total frames checked: {frame_checks}")
+                    print(f"\n✓ Exact text change frame: {next_index}")
+                    print(f"Total frames checked: {frame_checks}")
                     return next_index
                 else:
                     # Move to next phase
@@ -150,7 +152,7 @@ def find_text_change_bidirectional(video_path, start_frame_index, similarity_thr
                 # Keep searching
                 current_index = next_index
     
-    # print(f"\nNo text change found. Total frames checked: {frame_checks}")
+    print(f"\nNo text change found. Total frames checked: {frame_checks}")
     return -1
 
 
@@ -192,7 +194,7 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
             break
         
         similarity = text_similarity(start_text, extract_text_easyocr(get_frame_at_index(video_path, current_index)))
-        # print(f"Frame {current_index} (step={step}): {'SAME' if result else 'DIFFERENT'} (similarity={similarity:.3f})")
+        print(f"Frame {current_index} (step={step}): {'SAME' if result else 'DIFFERENT'} (similarity={similarity:.3f})")
         
         if not result:  # Found different text
             # The change is between (current_index - step) and current_index
@@ -235,9 +237,9 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
 
 
 
-def function_overlaying_continuous():
-    video_path = "input_videos/test_cut.mp4"
-    
+def function_overlaying_continuous(video_path, font_path, font_size, out_path="output/translated.mp4"):
+    # video_path = "input_videos/test_cut.mp4"
+    print(f"Processing video: {video_path}")
     # Open video for reading
     cap = cv2.VideoCapture(video_path)
     fps = cap.get(cv2.CAP_PROP_FPS)
@@ -253,7 +255,7 @@ def function_overlaying_continuous():
     
     while start_frame < total_frames:
         # Find frame where text changes
-        change_frame = find_text_change_bidirectional(video_path, start_frame)
+        change_frame = find_text_change_optimal(video_path=video_path,start_frame_index=start_frame)
         if change_frame == -1:
             change_frame = total_frames  # process till end
         
@@ -276,8 +278,8 @@ def function_overlaying_continuous():
             frame_with_overlay = overlay_translated_lines_on_frame(
                 frame,
                 translated_lines,
-                font_path="fonts/NotoSans-Regular.ttf",
-                font_size=35
+                font_path=font_path,
+                font_size=font_size,
             )
             out.write(frame_with_overlay)
         
@@ -287,5 +289,27 @@ def function_overlaying_continuous():
     cap.release()
     out.release()
     print("✅ Translation overlay completed for the entire video.")
+    try:
+        if os.path.exists(video_path):
+            os.remove(video_path)
+            print(f"🗑️ Deleted input video: {video_path}")
+        else:
+            print(f"⚠️ Input video not found for deletion: {video_path}")
+    except Exception as e:
+        print(f"⚠️ Could not delete input video: {e}")
 
-function_overlaying_continuous()
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Overlay translations on video frames.")
+    parser.add_argument("--video", dest="video_path", required=True, help="Path to input video")
+    parser.add_argument("--font", dest="font_path", default=None, help="Path to TTF font (optional)")
+    parser.add_argument("--fontSize", dest="font_size", default="35", help="Font size (int)")
+    parser.add_argument("--out", dest="out_path", default="output/translated.mp4", help="Output video path")
+    args = parser.parse_args()
+    function_overlaying_continuous(
+        video_path=args.video_path,
+        font_path=args.font_path,
+        font_size=int(args.font_size),
+        out_path=args.out_path
+    )
+  
