@@ -36,6 +36,7 @@ def translate_text(text, target_language="English"):
 
 # 2. Whole-lines translator
 def translate_lines(lines, target_language="English"):
+    print("target_language",target_language)
     """
     Translate a list of (text, box) tuples and return
     a list of (translated_text, box) tuples.

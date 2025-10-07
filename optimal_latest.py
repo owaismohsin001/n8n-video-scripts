@@ -237,7 +237,7 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
 
 
 
-def function_overlaying_continuous(video_path, font_path, font_size, out_path="output/translated.mp4"):
+def function_overlaying_continuous(video_path, font_path, font_size, out_path="output/translated.mp4",target_language="English"):
     # video_path = "input_videos/test_cut.mp4"
     print(f"Processing video: {video_path}")
     # Open video for reading
@@ -267,8 +267,8 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
         
         # Extract lines and translate
         lines = extract_lines_with_boxes(frame)
-        translated_lines = translate_lines(lines, target_language="English")
-        
+        translated_lines = translate_lines(lines,target_language=target_language)
+        print(translated_lines)
         # Overlay translated text for all frames in this segment
         for i in range(start_frame, change_frame):
             frame =  get_frame_at_index(video_path, i)
@@ -279,7 +279,7 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
                 frame,
                 translated_lines,
                 font_path=font_path,
-                font_size=font_size,
+                font_size=font_size
             )
             out.write(frame_with_overlay)
         
@@ -305,11 +305,13 @@ if __name__ == "__main__":
     parser.add_argument("--font", dest="font_path", default=None, help="Path to TTF font (optional)")
     parser.add_argument("--fontSize", dest="font_size", default="35", help="Font size (int)")
     parser.add_argument("--out", dest="out_path", default="output/translated.mp4", help="Output video path")
+    parser.add_argument("--targetLang", dest="target_language", default="ch_sim", help="Target language for translation")
     args = parser.parse_args()
     function_overlaying_continuous(
         video_path=args.video_path,
         font_path=args.font_path,
         font_size=int(args.font_size),
-        out_path=args.out_path
+        out_path=args.out_path,
+        target_language=args.target_language
     )
-  
+#   "en", "de", "es
