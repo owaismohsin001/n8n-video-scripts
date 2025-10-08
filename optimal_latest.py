@@ -9,6 +9,7 @@ from difflib import SequenceMatcher # returns np array frame
 from overlay_utils import overlay_translated_lines_on_frame  
 from translate_utils import translate_lines
 from ocr_utils import extract_lines_with_boxes  
+from ocr_utils import extract_lines_with_boxes_tesseract
 import argparse
 
 
@@ -267,6 +268,9 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
         
         # Extract lines and translate
         lines = extract_lines_with_boxes(frame)
+        # if(lines==[]):
+        #     lines=extract_lines_with_boxes_tesseract(frame)
+        print("Extracted lines:", lines)
         translated_lines = translate_lines(lines,target_language=target_language)
         print(translated_lines)
         # Overlay translated text for all frames in this segment

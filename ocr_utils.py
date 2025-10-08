@@ -210,6 +210,69 @@ def extract_lines_with_boxes(
 # print(extract_lines_with_boxes(frame_bgr))
 
 
+import cv2
+import re
+import pytesseract
+from pytesseract import Output
+
+def extract_lines_with_boxes_tesseract(
+    frame_bgr,
+    lang="chi_sim",           # change to 'spa', 'deu', 'chi_sim', etc. as needed
+    min_confidence=40,    # pytesseract conf is 0–100
+    min_width=20,
+    min_height=20,
+    min_characters=2,
+    pad=2
+):
+    """
+    Accepts a BGR frame (NumPy array) directly.
+    Returns a list of (text, (x, y, w, h)) for each detected line using pytesseract.
+    """
+    # Convert to grayscale for better OCR
+    # gray = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2GRAY)
+    # Simple binarization (OTSU)
+    # _, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+
+    # # Configure tesseract: oem 3 (LSTM), psm 6 (block of text)
+    # config = f"--oem 3 --psm 6 -l {lang}"
+
+    data = pytesseract.image_to_data(frame_bgr, output_type=Output.DICT)
+
+    lines = []
+    n_boxes = len(data["text"])
+
+    for i in range(n_boxes):
+        text = re.sub(r"\s+", " ", data["text"][i]).strip()
+        if not text or len(text.replace(" ", "")) < min_characters:
+            continue
+
+        try:
+            conf = float(data["conf"][i])
+        except ValueError:
+            conf = -1
+        if conf < min_confidence:
+            continue
+
+        x, y, w, h = int(data["left"][i]), int(data["top"][i]), int(data["width"][i]), int(data["height"][i])
+        if w < min_width or h < min_height:
+            continue
+
+        # Add small padding
+        x = max(0, x - pad)
+        y = max(0, y - pad)
+        w = w + 2 * pad
+        h = h + 2 * pad
+
+        lines.append((text, (x, y, w, h)))
+
+    # Sort lines top-to-bottom, left-to-right
+    lines.sort(key=lambda item: (item[1][1], item[1][0]))
+
+    return lines
+
+
+
+
 
 
 
