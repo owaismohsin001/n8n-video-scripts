@@ -227,9 +227,10 @@ def extract_lines_with_boxes(
 
         if w >= min_width and h >= min_height:
             lines.append((clean_text, (x, y, w, h)))
-        print("lines before cleaning",lines)
-        lines = clean_detected_lines(lines)   
-        print("lines after cleaning",lines)
+        
+    print("lines before cleaning",lines)
+    lines = clean_detected_lines(lines)   
+    print("lines after cleaning",lines)
 
     return lines
 # frame_bgr = cv2.imread("empty_frames/frame_7100.png")
@@ -292,6 +293,9 @@ def extract_lines_with_boxes_tesseract(
         lines.append((text, (x, y, w, h)))
 
     # Sort lines top-to-bottom, left-to-right
+    print("In Tesseract lines before cleaning",lines)
+    lines = clean_detected_lines(lines)   
+    print("In Tesseract lines after cleaning",lines)
     lines.sort(key=lambda item: (item[1][1], item[1][0]))
 
     return lines

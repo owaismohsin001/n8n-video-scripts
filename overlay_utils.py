@@ -72,7 +72,7 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-def overlay_translated_lines_on_frame(frame_bgr, translated_lines, font_path=None, font_size=20):
+def overlay_translated_lines_on_frame(frame_bgr, translated_lines, font_path=None, font_size=20,font_color="black"):
     """
     Draw each translated line on a cv2 frame (BGR).
     translated_lines: list of (translated_text, (x, y, w, h))
@@ -99,7 +99,7 @@ def overlay_translated_lines_on_frame(frame_bgr, translated_lines, font_path=Non
         text_y = y + (h - text_height) / 2
 
         # Draw translated text
-        draw.text((text_x, text_y), str(translated_text), fill="black", font=font)
+        draw.text((text_x, text_y), str(translated_text), fill=font_color, font=font)
 
     # Convert back to BGR for OpenCV
     frame_out = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2BGR)
