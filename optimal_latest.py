@@ -10,7 +10,22 @@ from overlay_utils import overlay_translated_lines_on_frame
 from translate_utils import translate_lines
 from ocr_utils import extract_lines_with_boxes  
 from ocr_utils import extract_lines_with_boxes_tesseract
+from audioUtils import extract_audio,combine_audio_with_video
 import argparse
+import re
+
+def clean_extracted_text(text):
+    """
+    Cleans OCR-extracted text.
+    - Keeps only Chinese characters (and spaces)
+    - Removes English letters, digits, and symbols
+    - Normalizes whitespace
+    """
+    # Remove everything except Chinese characters and spaces
+    clean_text = re.sub(r'[^\u4e00-\u9fff\s]', '', text)
+    # Normalize multiple spaces
+    clean_text = re.sub(r'\s+', ' ', clean_text).strip()
+    return clean_text
 
 
 
@@ -20,14 +35,16 @@ def get_reader():
     """Get or create EasyOCR reader instance"""
     global reader
     if reader is None:
-        reader = easyocr.Reader(["ch_sim", "en"], gpu=False)  # CPU mode
+        reader = easyocr.Reader(["ch_sim","en"], gpu=False)  # CPU mode
     return reader
 
 def extract_text_easyocr(image):
     """Extract text from image using EasyOCR"""
     ocr_reader = get_reader()
     results = ocr_reader.readtext(image)
-    return " ".join([res[1] for res in results])
+    results=clean_extracted_text(" ".join([res[1] for res in results]))
+    # return " ".join([res[1] for res in results])
+    return results
 
 def text_similarity(text1, text2):
     """Calculate similarity between two texts (0 to 1)"""
@@ -241,6 +258,7 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
 def function_overlaying_continuous(video_path, font_path, font_size, out_path="output/translated.mp4",target_language="English"):
     # video_path = "input_videos/test_cut.mp4"
     print(f"Processing video: {video_path}")
+    extract_audio(video_path, "input_videos/audio.mp3")
     # Open video for reading
     cap = cv2.VideoCapture(video_path)
     fps = cap.get(cv2.CAP_PROP_FPS)
@@ -270,6 +288,7 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
         lines = extract_lines_with_boxes(frame)
         # if(lines==[]):
         #     lines=extract_lines_with_boxes_tesseract(frame)
+        #     print(lines)
         print("Extracted lines:", lines)
         translated_lines = translate_lines(lines,target_language=target_language)
         print(translated_lines)
@@ -289,9 +308,11 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
         
         print(f"Processed frames {start_frame} to {change_frame - 1}")
         start_frame = change_frame  # Move to next segment
-    
+        
+
     cap.release()
     out.release()
+    combine_audio_with_video("output/translated.mp4", "input_videos/audio.mp3", "output/translated_final.mp4")
     print("✅ Translation overlay completed for the entire video.")
     try:
         if os.path.exists(video_path):
@@ -301,6 +322,22 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
             print(f"⚠️ Input video not found for deletion: {video_path}")
     except Exception as e:
         print(f"⚠️ Could not delete input video: {e}")
+    try:
+        if os.path.exists("input_videos/audio.mp3"):
+            os.remove("input_videos/audio.mp3")
+            print(f"🗑️ Deleted input audio: input_videos/audio.mp3")
+        else:
+            print(f"⚠️ Input audio not found for deletion:input_videos/audio.mp3")
+    except Exception as e:
+        print(f"⚠️ Could not delete audio: {e}")
+    try:
+        if os.path.exists("output/translated.mp4"):
+            os.remove("output/translated.mp4")
+            print(f"🗑️ Deleted output video: output/translated.mp4")
+        else:
+            print(f"⚠️ Output video not found for deletion: output/translated.mp4")
+    except Exception as e:
+        print(f"⚠️ Could not delete output video: {e}")
 
 
 if __name__ == "__main__":

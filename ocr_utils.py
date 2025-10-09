@@ -165,9 +165,32 @@ def preprocess_for_ocr(frame_bgr):
 
 import cv2
 import easyocr
+import re
+
+def clean_detected_lines(lines):
+    """
+    Takes a list of (text, (x, y, w, h)) and returns cleaned lines.
+    Removes English, digits, and symbols — keeps only valid Chinese text.
+    """
+    cleaned = []
+    for text, box in lines:
+        # Remove everything except Chinese characters and spaces
+        clean_text = re.sub(r'[^\u4e00-\u9fff\s]', '', text).strip()
+
+        # Skip empty or very short strings
+        if len(clean_text) < 2:
+            continue
+
+        cleaned.append((clean_text, box))
+
+    return cleaned
+
+
+
+
 
 # Initialize the EasyOCR reader once (outside the function for performance)
-reader = easyocr.Reader(['ch_sim'])  # or ['en', 'chi_sim'] if multiple langs
+reader = easyocr.Reader(['ch_sim',"en"])  # or ['en', 'chi_sim'] if multiple langs
 
 def extract_lines_with_boxes(
     frame_bgr,
@@ -204,6 +227,9 @@ def extract_lines_with_boxes(
 
         if w >= min_width and h >= min_height:
             lines.append((clean_text, (x, y, w, h)))
+        print("lines before cleaning",lines)
+        lines = clean_detected_lines(lines)   
+        print("lines after cleaning",lines)
 
     return lines
 # frame_bgr = cv2.imread("empty_frames/frame_7100.png")

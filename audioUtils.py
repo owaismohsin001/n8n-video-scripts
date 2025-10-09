@@ -69,6 +69,6 @@ def remove_audio_from_video(video_path: str, output_video_path: str):
 
 
 
-extract_audio("/content/test_cut.mp4", "/content/audio.mp3")
-combine_audio_with_video("/content/silent_video.mp4", "/content/audio.mp3", "/content/combined_audio_video.mp4")
+# extract_audio("/content/test_cut.mp4", "/content/audio.mp3")
+# combine_audio_with_video("/content/silent_video.mp4", "/content/audio.mp3", "/content/combined_audio_video.mp4")
 # remove_audio_from_video("/content/test_cut.mp4", "/content/silent_video.mp4")
