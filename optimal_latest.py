@@ -313,7 +313,7 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
 
     cap.release()
     out.release()
-    combine_audio_with_video(out_path, "input_videos/audio.mp3", out_path)
+    combine_audio_with_video(silent_video_path=out_path, audio_path="input_videos/audio.mp3", combined_audio_video_path=out_path)
     print("✅ Translation overlay completed for the entire video.")
     # try:
     #     if os.path.exists(video_path):

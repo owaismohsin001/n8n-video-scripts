@@ -1,0 +1,1 @@
+mkdir -p /output && curl -L "https://drive.google.com/uc?export=download&id=1uj2nm5AZRFeO3Y9TaVfYX4QKOQPSDVy9" -o "/input_videos/name.mp4"

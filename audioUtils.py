@@ -28,6 +28,7 @@ def combine_audio_with_video(silent_video_path: str, audio_path: str, combined_a
     Replaces a silent video with a version that includes the provided audio.
     The output overwrites the original file.
     """
+    print(f"Combining audio {audio_path} with video {silent_video_path} into {combined_audio_video_path}")
     try:
         output_path = combined_audio_video_path  # overwrite with same name
         temp_output = "temp_combined.mp4"
