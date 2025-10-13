@@ -1,5 +1,5 @@
 {
-  "name": "Video Translation Workflow - Fixed",
+  "name": "Video Translation Workflow - Fixed with tmp",
   "nodes": [
     {
       "parameters": {
@@ -111,7 +111,7 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [800, 300],
+      "position": [850, 300],
       "id": "restore-data",
       "name": "Restore Original Data"
     },
@@ -122,7 +122,7 @@
             {
               "id": "font-path",
               "name": "fontPath",
-              "value": "={{ $json.preservedData.fontFamily ? '/home/node/app/Resources/fonts/' + $json.preservedData.fontFamily : '/home/node/app/Resources/fonts/NotoSans-Regular.ttf' }}",
+              "value": "={{ $json.preservedData.fontFamily ? '/home/node/app/fonts/' + $json.preservedData.fontFamily : '/home/node/app/Resources/fonts/NotoSans-Regular.ttf' }}",
               "type": "string"
             },
             {
@@ -161,40 +161,53 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [850, 300],
+      "position": [1050, 300],
       "id": "prepare-params",
       "name": "Prepare Processing Parameters"
     },
     {
       "parameters": {
-        "command": "=/opt/venv/bin/python3 /home/node/app/optimal_latest.py --video \"{{ $json.videoInput }}\" --font \"{{ $json.fontPath }}\" --fontSize {{ $json.fontSize }} --targetLang \"{{ $json.targetLang }}\" --fontColor \"{{ $json.fontColor }}\" --output \"{{ $json.videoOutput }}\" 2>&1 | tee /home/node/.n8n/.n8n/binaryData/process_log_{{ $('Extract File ID & Setup Paths').item.json.timestamp }}.txt"
+        "command": "=/opt/venv/bin/python3 /home/node/app/optimal_latest.py --video \"{{ $json.videoInput }}\" --font \"{{ $json.fontPath }}\" --fontSize {{ $json.fontSize }} --targetLang \"{{ $json.targetLang }}\" --fontColor \"{{ $json.fontColor }}\" --out \"{{ $json.videoOutput }}\" 2>&1 | tee /tmp/process_log.txt",
+        "options": {}
       },
       "type": "n8n-nodes-base.executeCommand",
       "typeVersion": 1,
-      "position": [1050, 300],
+      "position": [1250, 300],
       "id": "process-video",
       "name": "Process Video with Python"
     },
     {
       "parameters": {
-        "fileSelector": "={{ $json.videoOutput }}",
+        "command": "=cp \"{{ $('Extract File ID & Setup Paths').item.json.outputPath }}\" /tmp/translated_output.mp4 && ls -lh /tmp/translated_output.mp4 && echo \"File copied to /tmp successfully\"",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1450, 300],
+      "id": "copy-to-tmp",
+      "name": "Copy to /tmp Directory"
+    },
+    {
+      "parameters": {
+        "fileSelector": "/tmp/translated_output.mp4",
         "options": {}
       },
       "type": "n8n-nodes-base.readWriteFile",
       "typeVersion": 1,
-      "position": [1250, 300],
+      "position": [1650, 300],
       "id": "read-output",
       "name": "Read Translated Video"
     },
     {
       "parameters": {
-        "command": "=rm -f \"{{ $('Extract File ID & Setup Paths').item.json.inputPath }}\" && echo \"Cleaned up input file\""
+        "command": "=rm -f \"{{ $('Extract File ID & Setup Paths').item.json.inputPath }}\" \"{{ $('Extract File ID & Setup Paths').item.json.outputPath }}\" /tmp/translated_output.mp4 && echo \"Cleanup completed\"",
+        "options": {}
       },
       "type": "n8n-nodes-base.executeCommand",
       "typeVersion": 1,
-      "position": [1450, 300],
-      "id": "cleanup-input",
-      "name": "Cleanup Input File"
+      "position": [1850, 300],
+      "id": "cleanup",
+      "name": "Cleanup Files"
     },
     {
       "parameters": {
@@ -203,7 +216,7 @@
       },
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1,
-      "position": [1650, 300],
+      "position": [2050, 300],
       "id": "respond",
       "name": "Return Translated Video"
     }
@@ -268,6 +281,17 @@
       "main": [
         [
           {
+            "node": "Copy to /tmp Directory",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Copy to /tmp Directory": {
+      "main": [
+        [
+          {
             "node": "Read Translated Video",
             "type": "main",
             "index": 0
@@ -279,14 +303,14 @@
       "main": [
         [
           {
-            "node": "Cleanup Input File",
+            "node": "Cleanup Files",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Cleanup Input File": {
+    "Cleanup Files": {
       "main": [
         [
           {
