@@ -90,7 +90,7 @@ def is_text_same(video_path, frame_index, reference_text, similarity_threshold):
 # ============================================================================
 # METHOD 1: YOUR BIDIRECTIONAL APPROACH [500, 100, 20, 5, 1]
 # ============================================================================
-def find_text_change_bidirectional(video_path, start_frame_index, similarity_threshold=0.85):
+def find_text_change_bidirectional(video_path, start_frame_index, similarity_threshold=0.7):
     """
     Find text change using bidirectional search: forward until different, 
     back until same, repeat with smaller steps.
@@ -267,7 +267,7 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
     
     # Open video writer for output
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # or 'XVID'
-    out = cv2.VideoWriter("output/translated.mp4", fourcc, fps, (width, height))
+    out = cv2.VideoWriter(out_path, fourcc, fps, (width, height))
     
     start_frame = 0
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -313,16 +313,16 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
 
     cap.release()
     out.release()
-    combine_audio_with_video("output/translated.mp4", "input_videos/audio.mp3", "output/translated_final.mp4")
+    combine_audio_with_video(out_path, "input_videos/audio.mp3", out_path)
     print("✅ Translation overlay completed for the entire video.")
-    try:
-        if os.path.exists(video_path):
-            os.remove(video_path)
-            print(f"🗑️ Deleted input video: {video_path}")
-        else:
-            print(f"⚠️ Input video not found for deletion: {video_path}")
-    except Exception as e:
-        print(f"⚠️ Could not delete input video: {e}")
+    # try:
+    #     if os.path.exists(video_path):
+    #         os.remove(video_path)
+    #         print(f"🗑️ Deleted input video: {video_path}")
+    #     else:
+    #         print(f"⚠️ Input video not found for deletion: {video_path}")
+    # except Exception as e:
+    #     print(f"⚠️ Could not delete input video: {e}")
     try:
         if os.path.exists("input_videos/audio.mp3"):
             os.remove("input_videos/audio.mp3")
@@ -331,14 +331,6 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
             print(f"⚠️ Input audio not found for deletion:input_videos/audio.mp3")
     except Exception as e:
         print(f"⚠️ Could not delete audio: {e}")
-    try:
-        if os.path.exists("output/translated.mp4"):
-            os.remove("output/translated.mp4")
-            print(f"🗑️ Deleted output video: output/translated.mp4")
-        else:
-            print(f"⚠️ Output video not found for deletion: output/translated.mp4")
-    except Exception as e:
-        print(f"⚠️ Could not delete output video: {e}")
 
 
 if __name__ == "__main__":
@@ -358,4 +350,6 @@ if __name__ == "__main__":
         target_language=args.target_language,
         font_color=args.font_color
     )
-#   "en", "de", "es
+#   "en", "de", "es"
+
+

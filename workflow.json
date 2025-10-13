@@ -1,95 +1,305 @@
 {
-  "name": "Font Selector Form to JSON",
+  "name": "Video Translation Workflow - Fixed",
   "nodes": [
     {
       "parameters": {
-        "path": "font-form",
-        "formTitle": "Font Selector",
-        "formDescription": "",
+        "formTitle": "Video Translation Settings",
         "formFields": {
           "values": [
             {
-              "fieldLabel": "Choose Font Family",
-              "fieldType": "dropdown",
-              "requiredField": true,
-              "fieldOptions": {
-                "values": [
-                  {
-                    "option": "Arial"
-                  },
-                  {
-                    "option": "Times New Roman"
-                  },
-                  {
-                    "option": "Courier New"
-                  }
-                ]
-              }
+              "fieldLabel": "google_drive_url",
+              "placeholder": "Paste Google Drive link or File ID",
+              "requiredField": true
             },
             {
-              "fieldLabel": "Choose Font Size",
+              "fieldLabel": "font_family",
               "fieldType": "dropdown",
-              "requiredField": true,
               "fieldOptions": {
                 "values": [
                   {
-                    "option": "12px"
+                    "option": "NotoSans-RegularEnglish.ttf"
                   },
                   {
-                    "option": "14px"
+                    "option": "NotoSansSC-RegularChinese.ttf"
                   },
                   {
-                    "option": "16px"
+                    "option": "Roboto-RegularSpanish.ttf"
+                  },
+                  {
+                    "option": "ZalandoSans-RegularGerman.ttf"
                   }
                 ]
-              }
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "font_size",
+              "placeholder": "Enter the font size",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "target_Language",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "English"
+                  },
+                  {
+                    "option": "Spanish"
+                  },
+                  {
+                    "option": "German"
+                  },
+                  {
+                    "option": "Chinese"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "font_Color",
+              "placeholder": "Enter the font color (e.g., white, black)",
+              "requiredField": true
             }
           ]
         },
-        "respondWithOptions": {
-          "values": {
-            "respondWith": "text",
-            "formSubmittedText": "Your font selection has been saved!"
-          }
-        }
+        "options": {}
       },
-      "id": "1",
-      "name": "Form Trigger",
       "type": "n8n-nodes-base.formTrigger",
-      "typeVersion": 2,
+      "typeVersion": 2.3,
       "position": [250, 300],
-      "webhookId": "font-form"
+      "id": "form-trigger",
+      "name": "On form submission",
+      "webhookId": "video-translation-form"
     },
     {
       "parameters": {
-        "operation": "write",
-        "fileName": "/data/font-selection.json",
-        "data": "={{ JSON.stringify($json, null, 2) }}"
+        "functionCode": "// Extract File ID from Google Drive URL\nconst url = $input.item.json.google_drive_url || '';\nlet fileId = null;\n\nif (url.includes('drive.google.com')) {\n  // Format: https://drive.google.com/file/d/FILE_ID/view\n  const match1 = url.match(/\\/d\\/([a-zA-Z0-9_-]+)/);\n  if (match1) fileId = match1[1];\n  \n  // Format: https://drive.google.com/open?id=FILE_ID\n  if (!fileId) {\n    const match2 = url.match(/[?&]id=([a-zA-Z0-9_-]+)/);\n    if (match2) fileId = match2[1];\n  }\n} else if (url.length > 20 && url.length < 100 && !url.includes('/')) {\n  // Assume it's already just the file ID\n  fileId = url.trim();\n}\n\nif (!fileId) {\n  throw new Error('Invalid Google Drive URL or File ID');\n}\n\nconst timestamp = Date.now();\nconst inputPath = `/home/node/.n8n/.n8n/binaryData/input_${timestamp}.mp4`;\nconst outputPath = `/home/node/.n8n/.n8n/binaryData/output_${timestamp}.mp4`;\n\nreturn {\n  json: {\n    fileId: fileId,\n    timestamp: timestamp,\n    inputPath: inputPath,\n    outputPath: outputPath,\n    fontFamily: $input.item.json.font_family,\n    fontSize: $input.item.json.font_size,\n    targetLanguage: $input.item.json.target_Language,\n    fontColor: $input.item.json.font_Color\n  }\n};"
       },
-      "id": "2",
-      "name": "Write File",
-      "type": "n8n-nodes-base.writeFile",
+      "type": "n8n-nodes-base.function",
       "typeVersion": 1,
-      "position": [600, 300]
+      "position": [450, 300],
+      "id": "extract-file-id",
+      "name": "Extract File ID & Setup Paths"
+    },
+    {
+      "parameters": {
+        "command": "=mkdir -p /home/node/.n8n/.n8n/binaryData && curl -L \"https://drive.google.com/uc?export=download&id={{ $json.fileId }}\" -o \"{{ $json.inputPath }}\" && echo \"Downloaded to: {{ $json.inputPath }}\" && ls -lh \"{{ $json.inputPath }}\"",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [650, 300],
+      "id": "download-video",
+      "name": "Download Video to Persistent Disk"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "preserve-data",
+              "name": "preservedData",
+              "value": "={{ $('Extract File ID & Setup Paths').item.json }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [800, 300],
+      "id": "restore-data",
+      "name": "Restore Original Data"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "font-path",
+              "name": "fontPath",
+              "value": "={{ $json.preservedData.fontFamily ? '/home/node/app/Resources/fonts/' + $json.preservedData.fontFamily : '/home/node/app/Resources/fonts/NotoSans-Regular.ttf' }}",
+              "type": "string"
+            },
+            {
+              "id": "font-size",
+              "name": "fontSize",
+              "value": "={{ Number($json.preservedData.fontSize) || 24 }}",
+              "type": "number"
+            },
+            {
+              "id": "video-input",
+              "name": "videoInput",
+              "value": "={{ $json.preservedData.inputPath }}",
+              "type": "string"
+            },
+            {
+              "id": "video-output",
+              "name": "videoOutput",
+              "value": "={{ $json.preservedData.outputPath }}",
+              "type": "string"
+            },
+            {
+              "id": "target-lang",
+              "name": "targetLang",
+              "value": "={{ $json.preservedData.targetLanguage || 'English' }}",
+              "type": "string"
+            },
+            {
+              "id": "font-color",
+              "name": "fontColor",
+              "value": "={{ $json.preservedData.fontColor || 'white' }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [850, 300],
+      "id": "prepare-params",
+      "name": "Prepare Processing Parameters"
+    },
+    {
+      "parameters": {
+        "command": "=/opt/venv/bin/python3 /home/node/app/optimal_latest.py --video \"{{ $json.videoInput }}\" --font \"{{ $json.fontPath }}\" --fontSize {{ $json.fontSize }} --targetLang \"{{ $json.targetLang }}\" --fontColor \"{{ $json.fontColor }}\" --output \"{{ $json.videoOutput }}\" 2>&1 | tee /home/node/.n8n/.n8n/binaryData/process_log_{{ $('Extract File ID & Setup Paths').item.json.timestamp }}.txt"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1050, 300],
+      "id": "process-video",
+      "name": "Process Video with Python"
+    },
+    {
+      "parameters": {
+        "fileSelector": "={{ $json.videoOutput }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [1250, 300],
+      "id": "read-output",
+      "name": "Read Translated Video"
+    },
+    {
+      "parameters": {
+        "command": "=rm -f \"{{ $('Extract File ID & Setup Paths').item.json.inputPath }}\" && echo \"Cleaned up input file\""
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1450, 300],
+      "id": "cleanup-input",
+      "name": "Cleanup Input File"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1650, 300],
+      "id": "respond",
+      "name": "Return Translated Video"
     }
   ],
   "connections": {
-    "Form Trigger": {
+    "On form submission": {
       "main": [
         [
           {
-            "node": "Write File",
+            "node": "Extract File ID & Setup Paths",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract File ID & Setup Paths": {
+      "main": [
+        [
+          {
+            "node": "Download Video to Persistent Disk",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Video to Persistent Disk": {
+      "main": [
+        [
+          {
+            "node": "Restore Original Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Restore Original Data": {
+      "main": [
+        [
+          {
+            "node": "Prepare Processing Parameters",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Processing Parameters": {
+      "main": [
+        [
+          {
+            "node": "Process Video with Python",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Video with Python": {
+      "main": [
+        [
+          {
+            "node": "Read Translated Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Translated Video": {
+      "main": [
+        [
+          {
+            "node": "Cleanup Input File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cleanup Input File": {
+      "main": [
+        [
+          {
+            "node": "Return Translated Video",
             "type": "main",
             "index": 0
           }
         ]
       ]
     }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
   }
 }
-
-
-
-
-
-

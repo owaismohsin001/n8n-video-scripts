@@ -167,6 +167,7 @@ import cv2
 import easyocr
 import re
 
+
 def clean_detected_lines(lines):
     """
     Takes a list of (text, (x, y, w, h)) and returns cleaned lines.
@@ -205,7 +206,6 @@ def extract_lines_with_boxes(
     """
     # EasyOCR expects RGB
     frame_rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
-    
     results = reader.readtext(frame_rgb)  # returns list of (bbox, text, confidence)
     lines = []
 
