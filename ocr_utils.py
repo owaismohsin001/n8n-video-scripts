@@ -187,11 +187,27 @@ def clean_detected_lines(lines):
     return cleaned
 
 
+def get_reader():
+    """
+    Lazy load EasyOCR reader only once.
+    This prevents reloading the model on every function call.
+    """
+    global reader
+    if reader is None:
+        print("Initializing EasyOCR reader (this may take a moment on first run)...", flush=True)
+        try:
+            reader = easyocr.Reader(['ch_sim', 'en'], gpu=False)
+            print("EasyOCR reader loaded successfully", flush=True)
+        except Exception as e:
+            print(f"Error loading EasyOCR: {e}", flush=True)
+            raise
+    return reader
+
 
 
 
 # Initialize the EasyOCR reader once (outside the function for performance)
-reader = easyocr.Reader(['ch_sim',"en"])  # or ['en', 'chi_sim'] if multiple langs
+# reader = easyocr.Reader(['ch_sim',"en"])  # or ['en', 'chi_sim'] if multiple langs
 
 def extract_lines_with_boxes(
     frame_bgr,
@@ -205,6 +221,7 @@ def extract_lines_with_boxes(
     Returns a list of (text, (x,y,w,h)) for each detected line using EasyOCR.
     """
     # EasyOCR expects RGB
+    reader=get_reader()
     frame_rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
     results = reader.readtext(frame_rgb)  # returns list of (bbox, text, confidence)
     lines = []
