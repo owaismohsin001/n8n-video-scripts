@@ -228,9 +228,9 @@ def extract_lines_with_boxes(
         if w >= min_width and h >= min_height:
             lines.append((clean_text, (x, y, w, h)))
         
-    print("lines before cleaning",lines)
-    lines = clean_detected_lines(lines)   
-    print("lines after cleaning",lines)
+    # print("lines before cleaning",lines)
+    # lines = clean_detected_lines(lines)   
+    # print("lines after cleaning",lines)
 
     return lines
 # frame_bgr = cv2.imread("empty_frames/frame_7100.png")

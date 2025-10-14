@@ -42,9 +42,9 @@ def extract_text_easyocr(image):
     """Extract text from image using EasyOCR"""
     ocr_reader = get_reader()
     results = ocr_reader.readtext(image)
-    results=clean_extracted_text(" ".join([res[1] for res in results]))
-    # return " ".join([res[1] for res in results])
-    return results
+    # results=clean_extracted_text(" ".join([res[1] for res in results]))
+    return " ".join([res[1] for res in results])
+    # return results
 
 def text_similarity(text1, text2):
     """Calculate similarity between two texts (0 to 1)"""
