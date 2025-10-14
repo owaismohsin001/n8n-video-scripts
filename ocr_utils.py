@@ -227,7 +227,7 @@ def extract_lines_with_boxes(
 
         if w >= min_width and h >= min_height:
             lines.append((clean_text, (x, y, w, h)))
-        
+    print("In EasyOCR lines before cleaning",lines)
     # print("lines before cleaning",lines)
     # lines = clean_detected_lines(lines)   
     # print("lines after cleaning",lines)

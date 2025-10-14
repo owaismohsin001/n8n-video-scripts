@@ -40,11 +40,19 @@ def get_reader():
 
 def extract_text_easyocr(image):
     """Extract text from image using EasyOCR"""
-    ocr_reader = get_reader()
-    results = ocr_reader.readtext(image)
+    # ocr_reader = get_reader()
+    # frame_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    # results = ocr_reader.readtext(frame_rgb)
+    results=extract_lines_with_boxes(image)
+    text=[' '.join(text.split()) for text, _ in results]
+
+    if len(text) == 0:
+        print(text)
+        return ""   
+    else:
+        print(text)
+        return text[0]
     # results=clean_extracted_text(" ".join([res[1] for res in results]))
-    return " ".join([res[1] for res in results])
-    # return results
 
 def text_similarity(text1, text2):
     """Calculate similarity between two texts (0 to 1)"""
@@ -90,7 +98,7 @@ def is_text_same(video_path, frame_index, reference_text, similarity_threshold):
 # ============================================================================
 # METHOD 1: YOUR BIDIRECTIONAL APPROACH [500, 100, 20, 5, 1]
 # ============================================================================
-def find_text_change_bidirectional(video_path, start_frame_index, similarity_threshold=0.7):
+def find_text_change_bidirectional(video_path, start_frame_index, similarity_threshold=0.95):
     """
     Find text change using bidirectional search: forward until different, 
     back until same, repeat with smaller steps.
