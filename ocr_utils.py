@@ -9,6 +9,11 @@ from process_frame import extract_frame_from_video
 
 load_dotenv()
 
+
+
+
+reader = None
+
 def preprocess_for_ocr(frame_bgr):
     """
     Preprocess BGR frame for better OCR detection.
