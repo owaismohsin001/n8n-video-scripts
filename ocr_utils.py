@@ -36,92 +36,8 @@ def preprocess_for_ocr(frame_bgr):
     return enhanced
 
 
-
-
-# def extract_lines_with_boxes(image_path, min_confidence=70, min_width=20, min_height=20):
-#     """
-#     Return a list of (text, (x,y,w,h)) for each detected line, 
-#     filtering by confidence and minimum box size.
-#     """
-#     img = cv2.imread(image_path)
-#     data = pytesseract.image_to_data(img, lang='chi_sim', output_type=Output.DICT)
-
-#     # Put into a DataFrame for easy grouping
-#     df = pd.DataFrame(data)
-
-#     # Convert confidence to numeric, ignore invalid entries
-#     df['conf'] = pd.to_numeric(df['conf'], errors='coerce')
-#     lines = []
-
-#     for (block_num, par_num, line_num), group in df.groupby(['block_num','par_num','line_num']):
-#         # Filter words by confidence
-#         group = group[group['conf'] >= min_confidence]
-#         if group.empty:
-#             continue
-
-#         # Combine all remaining words in this line
-#         line_text = " ".join(word for word in group['text'] if word.strip() != "")
-#         if not line_text.strip():
-#             continue
-
-#         # Compute bounding box covering the whole line
-#         x = group['left'].min()
-#         y = group['top'].min()
-#         w = (group['left'] + group['width']).max() - x
-#         h = (group['top'] + group['height']).max() - y
-
-#         # Filter by size
-#         if w >= min_width and h >= min_height:
-#             lines.append((line_text, (x, y, w, h)))
-
-#     return lines
-
-# step 2
-# def extract_lines_with_boxes(image_path, min_confidence=70, min_width=20, min_height=20, min_characters=2):
-#     """
-#     Return a list of (text, (x,y,w,h)) for each detected line, 
-#     filtering by confidence, minimum box size, and meaningful length.
-#     """
-#     img = cv2.imread(image_path)
-#     data = pytesseract.image_to_data(img, lang='chi_sim', output_type=Output.DICT)
-
-#     # Put into a DataFrame for easy grouping
-#     df = pd.DataFrame(data)
-
-#     # Convert confidence to numeric, ignore invalid entries
-#     df['conf'] = pd.to_numeric(df['conf'], errors='coerce')
-#     lines = []
-
-#     for (block_num, par_num, line_num), group in df.groupby(['block_num','par_num','line_num']):
-#         # Filter words by confidence
-#         group = group[group['conf'] >= min_confidence]
-#         if group.empty:
-#             continue
-
-#         # Combine all remaining words in this line
-#         line_text = " ".join(word for word in group['text'] if word.strip() != "")
-#         if not line_text.strip():
-#             continue
-
-#         # Skip lines that are too short or likely meaningless
-#         if len(line_text.replace(" ", "")) < min_characters:
-#             continue
-
-#         # Compute bounding box covering the whole line
-#         x = group['left'].min()
-#         y = group['top'].min()
-#         w = (group['left'] + group['width']).max() - x
-#         h = (group['top'] + group['height']).max() - y
-
-#         # Filter by size
-#         if w >= min_width and h >= min_height:
-#             lines.append((line_text, (x, y, w, h)))
-
-#     return lines
-
-
 # step 3 latest working  using pytesseract
-# def extract_lines_with_boxes(frame_bgr, min_confidence=10, min_width=20, min_height=20, min_characters=2):
+# def extract_lines_with_boxes_tesseract(frame_bgr, min_confidence=90, min_width=60, min_height=60, min_characters=2):
 #     """
 #     Accepts a BGR frame (NumPy array) directly instead of an image path.
 #     Returns a list of (text, (x,y,w,h)) for each detected line.
@@ -163,7 +79,7 @@ def preprocess_for_ocr(frame_bgr):
 
 #         if w >= min_width and h >= min_height:
 #             lines.append((line_text, (x, y, w, h)))
-
+#         print("Detected lines (Tesseract):", lines)
 #     return lines
 # frame_bgr = cv2.imread("empty_frames/frame_7100.png")
 # print(extract_lines_with_boxes(frame_bgr))
@@ -171,6 +87,29 @@ def preprocess_for_ocr(frame_bgr):
 import cv2
 import easyocr
 import re
+import numpy as np
+
+def preprocess_for_easyocr_frame(frame: np.ndarray) -> np.ndarray:
+    """Preprocess a video frame for optimal EasyOCR text detection."""
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    gray = cv2.bilateralFilter(gray, 9, 75, 75)
+
+    # Normalize contrast with CLAHE
+    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    gray = clahe.apply(gray)
+
+    # Adaptive threshold for variable backgrounds
+    thresh = cv2.adaptiveThreshold(
+        gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+        cv2.THRESH_BINARY, 31, 2
+    )
+
+    # Morphological cleanup
+    kernel = np.ones((1, 1), np.uint8)
+    processed = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, kernel)
+
+    return processed
+
 
 
 def clean_detected_lines(lines):
@@ -208,18 +147,13 @@ def get_reader():
             raise
     return reader
 
-
-
-
-# Initialize the EasyOCR reader once (outside the function for performance)
-# reader = easyocr.Reader(['ch_sim',"en"])  # or ['en', 'chi_sim'] if multiple langs
-
 def extract_lines_with_boxes(
     frame_bgr,
     min_confidence=0.1,  # EasyOCR confidence is between 0 and 1
     min_width=20,
     min_height=20,
-    min_characters=2
+    min_characters=2,
+    source_language="english"
 ):
     """
     Accepts a BGR frame (NumPy array) directly.
@@ -227,8 +161,9 @@ def extract_lines_with_boxes(
     """
     # EasyOCR expects RGB
     reader=get_reader()
-    frame_rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
-    results = reader.readtext(frame_rgb)  # returns list of (bbox, text, confidence)
+    processed_frame = preprocess_for_easyocr_frame(frame_bgr)
+    # frame_rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
+    results = reader.readtext(processed_frame)  # returns list of (bbox, text, confidence)
     lines = []
 
     for bbox, text, conf in results:
@@ -239,7 +174,6 @@ def extract_lines_with_boxes(
         if len(clean_text.replace(" ", "")) < min_characters:
             continue
 
-        # bbox is 4 points [[x1,y1],[x2,y2],[x3,y3],[x4,y4]]
         x_coords = [p[0] for p in bbox]
         y_coords = [p[1] for p in bbox]
         x = int(min(x_coords))
@@ -249,184 +183,7 @@ def extract_lines_with_boxes(
 
         if w >= min_width and h >= min_height:
             lines.append((clean_text, (x, y, w, h)))
-    print("In EasyOCR lines before cleaning",lines)
-    # print("lines before cleaning",lines)
-    # lines = clean_detected_lines(lines)   
-    # print("lines after cleaning",lines)
-
-    return lines
-# frame_bgr = cv2.imread("empty_frames/frame_7100.png")
-# print(extract_lines_with_boxes(frame_bgr))
-
-
-import cv2
-import re
-import pytesseract
-from pytesseract import Output
-
-def extract_lines_with_boxes_tesseract(
-    frame_bgr,
-    lang="chi_sim",           # change to 'spa', 'deu', 'chi_sim', etc. as needed
-    min_confidence=40,    # pytesseract conf is 0–100
-    min_width=20,
-    min_height=20,
-    min_characters=2,
-    pad=2
-):
-    """
-    Accepts a BGR frame (NumPy array) directly.
-    Returns a list of (text, (x, y, w, h)) for each detected line using pytesseract.
-    """
-    # Convert to grayscale for better OCR
-    # gray = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2GRAY)
-    # Simple binarization (OTSU)
-    # _, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-
-    # # Configure tesseract: oem 3 (LSTM), psm 6 (block of text)
-    # config = f"--oem 3 --psm 6 -l {lang}"
-
-    data = pytesseract.image_to_data(frame_bgr, output_type=Output.DICT)
-
-    lines = []
-    n_boxes = len(data["text"])
-
-    for i in range(n_boxes):
-        text = re.sub(r"\s+", " ", data["text"][i]).strip()
-        if not text or len(text.replace(" ", "")) < min_characters:
-            continue
-
-        try:
-            conf = float(data["conf"][i])
-        except ValueError:
-            conf = -1
-        if conf < min_confidence:
-            continue
-
-        x, y, w, h = int(data["left"][i]), int(data["top"][i]), int(data["width"][i]), int(data["height"][i])
-        if w < min_width or h < min_height:
-            continue
-
-        # Add small padding
-        x = max(0, x - pad)
-        y = max(0, y - pad)
-        w = w + 2 * pad
-        h = h + 2 * pad
-
-        lines.append((text, (x, y, w, h)))
-
-    # Sort lines top-to-bottom, left-to-right
-    print("In Tesseract lines before cleaning",lines)
-    lines = clean_detected_lines(lines)   
-    print("In Tesseract lines after cleaning",lines)
-    lines.sort(key=lambda item: (item[1][1], item[1][0]))
 
     return lines
 
 
-
-
-
-
-
-#testing step 4 - save empty frames
-# import cv2
-# import pandas as pd
-# import pytesseract
-# from pytesseract import Output
-# import os
-
-# def extract_lines_with_boxes(frame_bgr,
-#                              min_confidence=30,
-#                              save_empty_path="empty_frames",
-#                              frame_number=None):
-#     """
-#     Extract lines or single words from a BGR frame.
-#     Saves the frame if no valid text found.
-#     """
-
-#     img = frame_bgr
-#     data = pytesseract.image_to_data(img, lang='chi_sim', output_type=Output.DICT)
-#     df = pd.DataFrame(data)
-#     df['conf'] = pd.to_numeric(df['conf'], errors='coerce')
-
-#     lines = []
-
-#     # Try grouping by line
-#     if 'line_num' in df.columns:
-#         grouped = df.groupby(['block_num', 'par_num', 'line_num'])
-#     else:
-#         grouped = [(None, df)]
-
-#     for _, group in grouped:
-#         words = [w for i, w in enumerate(group['text'])
-#                  if w.strip() != "" and group['conf'].iloc[i] >= min_confidence]
-#         if words:
-#             # bounding box covering all words
-#             x = group['left'].min()
-#             y = group['top'].min()
-#             w = (group['left'] + group['width']).max() - x
-#             h = (group['top'] + group['height']).max() - y
-#             lines.append((" ".join(words), (x, y, w, h)))
-
-#     # If still no lines, fallback to any single words above confidence
-#     if not lines:
-#         for i, w in enumerate(df['text']):
-#             if w.strip() != "" and df['conf'].iloc[i] >= min_confidence:
-#                 x = int(df['left'].iloc[i])
-#                 y = int(df['top'].iloc[i])
-#                 w_box = int(df['width'].iloc[i])
-#                 h_box = int(df['height'].iloc[i])
-#                 lines.append((w, (x, y, w_box, h_box)))
-
-#     # Save empty frame if no lines at all
-#     if not lines :
-#         os.makedirs(save_empty_path, exist_ok=True)
-#         filename = os.path.join(save_empty_path, f"frame_{frame_number}.png")
-#         cv2.imwrite(filename, frame_bgr)
-#         print(f"No lines detected — saved frame: {filename}")
-
-#     return lines
-
-
-
-
-
-
-
-# def extract_lines_with_boxes(image_path):
-#     """Return a list of (text, (x,y,w,h)) for each detected line."""
-#     img = cv2.imread(image_path)
-#     data = pytesseract.image_to_data(img, lang='chi_sim', output_type=Output.DICT)
-
-#     # Put into a DataFrame for easy grouping
-#     df = pd.DataFrame(data)
-#     lines = []
-#     for (block_num, par_num, line_num), group in df.groupby(['block_num','par_num','line_num']):
-#         # Combine all words in this line
-#         line_text = " ".join(word for word in group['text'] if word.strip() != "")
-#         if line_text.strip():
-#             # Compute bounding box covering the whole line
-#             x = group['left'].min()
-#             y = group['top'].min()
-#             w = (group['left'] + group['width']).max() - x
-#             h = (group['top'] + group['height']).max() - y
-#             lines.append((line_text, (x,y,w,h)))
-#     return lines
-
-# Example usage
-# image_path = "output_images/frame_0.jpg"
-
-# image_path=extract_frame_from_video(video_filename='test2.mp4', frame_number=7, output_dir='output_images')
-# lines = extract_lines_with_boxes(image_path)
-# translated_lines = translate_lines(lines, target_language="English")
-# print(translated_lines)
-# result_img = overlay_translated_lines(image_path, translated_lines, font_path="fonts/NotoSans-Regular.ttf", font_size=45)
-# result_img.save(image_path)
-
-
-# image_path = "output_images/frame_1.png"
-# lines = extract_lines_with_boxes(image_path)
-# translated_lines = translate_lines(lines, target_language="English")
-# print(translated_lines)
-# result_img = overlay_translated_lines("output_images/frame_1.png", translated_lines, font_path="fonts/NotoSans-Regular.ttf", font_size=45)
-# result_img.save("output_images/frame_1_translated.png")

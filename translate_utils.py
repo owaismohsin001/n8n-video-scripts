@@ -70,4 +70,5 @@ def translate_lines(lines, target_language="English"):
         # convert np.int64 to int for safety
         x, y, w, h = [int(v) for v in box]
         translated_lines.append((translated_text, (x, y, w, h)))
+    print("translated_lines",translated_lines)
     return translated_lines

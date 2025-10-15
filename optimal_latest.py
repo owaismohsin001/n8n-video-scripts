@@ -9,7 +9,6 @@ from difflib import SequenceMatcher # returns np array frame
 from overlay_utils import overlay_translated_lines_on_frame  
 from translate_utils import translate_lines
 from ocr_utils import extract_lines_with_boxes  
-from ocr_utils import extract_lines_with_boxes_tesseract
 from audioUtils import extract_audio,combine_audio_with_video
 import argparse
 import re
@@ -38,11 +37,12 @@ def get_reader():
         reader = easyocr.Reader(["ch_sim","en"], gpu=False)  # CPU mode
     return reader
 
-def extract_text_easyocr(image):
+def extract_text_easyocr(image,source_language="english"):
     """Extract text from image using EasyOCR"""
     # ocr_reader = get_reader()
     # frame_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     # results = ocr_reader.readtext(frame_rgb)
+    # results=extract_lines_with_boxes(image,source_language=source_language)
     results=extract_lines_with_boxes(image)
     text=[' '.join(text.split()) for text, _ in results]
 
@@ -81,7 +81,6 @@ def get_frame_at_index(video_path, frame_index):
     if not ret:
         print(f"Error: Could not read frame {frame_index}")
         return None
-    
     return frame
 
 def is_text_same(video_path, frame_index, reference_text, similarity_threshold):
@@ -185,7 +184,7 @@ def find_text_change_bidirectional(video_path, start_frame_index, similarity_thr
 # ============================================================================
 # METHOD 2: EXPONENTIAL SEARCH + BINARY SEARCH (OPTIMAL)
 # ============================================================================
-def find_text_change_optimal(video_path, start_frame_index, similarity_threshold=0.85):
+def find_text_change_optimal(video_path, start_frame_index, source_language="english", similarity_threshold=0.85):
     """
     Find text change using exponential search + binary search.
     This is mathematically optimal with O(log n) complexity.
@@ -201,8 +200,8 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
     start_frame = get_frame_at_index(video_path, start_frame_index)
     if start_frame is None:
         return -1
-    
-    start_text = extract_text_easyocr(start_frame)
+
+    start_text = extract_text_easyocr(start_frame, source_language=source_language)
     print(f"Reference text (frame {start_frame_index}): {start_text[:80]}...")
     
     frame_checks = 0
@@ -218,8 +217,8 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
         
         if result is None:
             break
-        
-        similarity = text_similarity(start_text, extract_text_easyocr(get_frame_at_index(video_path, current_index)))
+
+        similarity = text_similarity(start_text, extract_text_easyocr(get_frame_at_index(video_path, current_index), source_language=source_language))
         print(f"Frame {current_index} (step={step}): {'SAME' if result else 'DIFFERENT'} (similarity={similarity:.3f})")
         
         if not result:  # Found different text
@@ -248,7 +247,7 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
         if result is None:
             break
         
-        similarity = text_similarity(start_text, extract_text_easyocr(get_frame_at_index(video_path, mid)))
+        similarity = text_similarity(start_text, extract_text_easyocr(get_frame_at_index(video_path, mid),source_language=source_language))
         print(f"Frame {mid}: {'SAME' if result else 'DIFFERENT'} (similarity={similarity:.3f})")
         
         if result:  # Still same text
@@ -263,7 +262,7 @@ def find_text_change_optimal(video_path, start_frame_index, similarity_threshold
 
 
 
-def function_overlaying_continuous(video_path, font_path, font_size, out_path="output/translated.mp4",target_language="English", font_color="black"):
+def function_overlaying_continuous(video_path, font_path, font_size, out_path="output/translated.mp4",target_language="English", font_color="black",source_language="english"):
     # video_path = "input_videos/test_cut.mp4"
     print(f"Processing video: {video_path}")
     extract_audio(video_path, "input_videos/audio.mp3")
@@ -282,7 +281,7 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
     
     while start_frame < total_frames:
         # Find frame where text changes
-        change_frame = find_text_change_optimal(video_path=video_path,start_frame_index=start_frame)
+        change_frame = find_text_change_optimal(video_path=video_path,start_frame_index=start_frame,source_language=source_language)
         if change_frame == -1:
             change_frame = total_frames  # process till end
         
@@ -349,6 +348,7 @@ if __name__ == "__main__":
     parser.add_argument("--out", dest="out_path", default="output/translated.mp4", help="Output video path")
     parser.add_argument("--targetLang", dest="target_language", default="ch_sim", help="Target language for translation")
     parser.add_argument("--fontColor", dest="font_color", default="black", help="Font color for translation overlay")
+    parser.add_argument("--sourceLang",dest="source_language",default="english",help="Source language of the video")
     args = parser.parse_args()
     function_overlaying_continuous(
         video_path=args.video_path,
@@ -356,7 +356,8 @@ if __name__ == "__main__":
         font_size=int(args.font_size),
         out_path=args.out_path,
         target_language=args.target_language,
-        font_color=args.font_color
+        font_color=args.font_color,
+        source_language=args.source_language
     )
 #   "en", "de", "es"
 
