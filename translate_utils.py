@@ -8,6 +8,7 @@ from pytesseract import Output
 import pandas as pd
 import arabic_reshaper
 from bidi.algorithm import get_display
+from sympy import re
 
 
 # Load .env variables into environment
@@ -15,6 +16,7 @@ load_dotenv()
 
 import os
 from openai import OpenAI
+
 
 # 1. Single line translator
 def translate_text(text, target_language="English"):
@@ -44,6 +46,7 @@ def translate_text(text, target_language="English"):
                 "- Do NOT add explanations, notes, or formatting.\n"
                 "- Do NOT output the original text, labels, or extra commentary.\n"
                 "- Return only the translated text, preserving line breaks if multiple lines are given."
+                "- If the input text consists only of symbols or punctuation (e.g., '+?', '...', '--', '@#$%', etc.), output an empty string instead of translating it."
             ),
             },
             {
