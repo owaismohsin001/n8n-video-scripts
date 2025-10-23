@@ -39,37 +39,33 @@ def get_reader():
 
 def extract_text_easyocr(image,source_language="english"):
     """Extract text from image using EasyOCR"""
-    # ocr_reader = get_reader()
-    # frame_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    # results = ocr_reader.readtext(frame_rgb)
-    # results=extract_lines_with_boxes(image,source_language=source_language)
     results=extract_lines_with_boxes(image)
     print(results,"results")
-    # text=[' '.join(text.split()) for text, _ in results]
     text = ''.join(''.join(text.split()) for text, _ in results)
+    print(len(text),"length of text")
     if len(text) == 0:
-        print(text)
+        print("hidden text:", text)
         return ""   
     else:
-        print(text)
+        print("text:",text)
         return text
-    # results=clean_extracted_text(" ".join([res[1] for res in results]))
-
-# def text_similarity(text1, text2):
-#     """Calculate similarity between two texts (0 to 1)"""
-#     return SequenceMatcher(None, text1, text2).ratio()
 
 def text_similarity(a, b):
-    # print("a",a,len(a))
-    # print("b",b,len(b))
+    a = a or ""
+    b = b or ""
+    print(f"Comparing texts:\nA: {a}\nB: {b}")
+    total = len(a) + len(b)
+    if total == 0:
+        return 1.0  # nothing to compare
     matcher = SequenceMatcher(None, a, b)
-    # print("matcher",matcher)
+    print("Matcher :", matcher)
     match = matcher.find_longest_match(0, len(a), 0, len(b))
-    # print("match",match)
+    print(match)
     common = match.size
-    # print("common",common)
-    # print("ratio",2 * common / (len(a) + len(b)))
-    return 2 * common / (len(a) + len(b))
+    print(common,"common")
+    print(2 * common / total)
+    return 2 * common / total
+
 
 
 def get_frame_at_index(video_path, frame_index):
@@ -290,7 +286,7 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # or 'XVID'
     out = cv2.VideoWriter(out_path, fourcc, fps, (width, height))
     
-    start_frame = 508
+    start_frame = 0
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     
     while start_frame < total_frames:
