@@ -44,19 +44,33 @@ def extract_text_easyocr(image,source_language="english"):
     # results = ocr_reader.readtext(frame_rgb)
     # results=extract_lines_with_boxes(image,source_language=source_language)
     results=extract_lines_with_boxes(image)
-    text=[' '.join(text.split()) for text, _ in results]
-
+    print(results,"results")
+    # text=[' '.join(text.split()) for text, _ in results]
+    text = ''.join(''.join(text.split()) for text, _ in results)
     if len(text) == 0:
         print(text)
         return ""   
     else:
         print(text)
-        return text[0]
+        return text
     # results=clean_extracted_text(" ".join([res[1] for res in results]))
 
-def text_similarity(text1, text2):
-    """Calculate similarity between two texts (0 to 1)"""
-    return SequenceMatcher(None, text1, text2).ratio()
+# def text_similarity(text1, text2):
+#     """Calculate similarity between two texts (0 to 1)"""
+#     return SequenceMatcher(None, text1, text2).ratio()
+
+def text_similarity(a, b):
+    # print("a",a,len(a))
+    # print("b",b,len(b))
+    matcher = SequenceMatcher(None, a, b)
+    # print("matcher",matcher)
+    match = matcher.find_longest_match(0, len(a), 0, len(b))
+    # print("match",match)
+    common = match.size
+    # print("common",common)
+    # print("ratio",2 * common / (len(a) + len(b)))
+    return 2 * common / (len(a) + len(b))
+
 
 def get_frame_at_index(video_path, frame_index):
     """Extract a specific frame from video"""
@@ -276,7 +290,7 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # or 'XVID'
     out = cv2.VideoWriter(out_path, fourcc, fps, (width, height))
     
-    start_frame = 0
+    start_frame = 508
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     
     while start_frame < total_frames:
