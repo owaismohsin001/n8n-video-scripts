@@ -1,15 +1,11 @@
-# First, install easyocr if not already installed
-# Run this in a cell: !pip install easyocr
 
 import os
 import cv2
-import easyocr
 from difflib import SequenceMatcher # returns np array frame
-# Initialize reader once globally to avoid reloading models
-from overlay_utils import overlay_translated_lines_on_frame  
-from translate_utils import translate_lines
-from ocr_utils import extract_lines_with_boxes  
-from audioUtils import extract_audio,combine_audio_with_video
+from utils.overlay_utils import overlay_translated_lines_on_frame  
+from utils.translate_utils import translate_lines
+from utils.ocr_utils import extract_lines_with_boxes  
+from utils.audioUtils import extract_audio,combine_audio_with_video
 import argparse
 import re
 
@@ -32,8 +28,8 @@ reader = None
 
 
 
-def extract_text_easyocr(image,source_language="english"):
-    """Extract text from image using EasyOCR"""
+def extract_text_from_image(image,source_language="english"):
+    """Extract text from image"""
     results=extract_lines_with_boxes(image)
     print(results,"results")
     text = ''.join(''.join(text.split()) for text, _ in results)
@@ -94,7 +90,7 @@ def is_text_same(video_path, frame_index, reference_text, similarity_threshold):
     if frame is None:
         return None
     
-    current_text = extract_text_easyocr(frame)
+    current_text = extract_text_from_image(frame)
     similarity = text_similarity(reference_text, current_text)
     return similarity >= similarity_threshold
 
@@ -123,7 +119,7 @@ def find_text_change_bidirectional(video_path, start_frame_index, similarity_thr
     if start_frame is None:
         return -1
     
-    start_text = extract_text_easyocr(start_frame)
+    start_text = extract_text_from_image(start_frame)
     print(f"Reference text (frame {start_frame_index}): {start_text[:80]}...")
     
     # Bidirectional search steps: (step_size, direction)
@@ -158,7 +154,10 @@ def find_text_change_bidirectional(video_path, start_frame_index, similarity_thr
                 break
             
             is_same = result
-            similarity = text_similarity(start_text, extract_text_easyocr(get_frame_at_index(video_path, next_index)))
+
+            # extract text from image, to find similarity
+            current_text = extract_text_from_image(get_frame_at_index(video_path, next_index))
+            similarity = text_similarity(start_text, current_text)
             
             print(f"Frame {next_index}: {'SAME' if is_same else 'DIFFERENT'} (similarity={similarity:.3f})")
             
@@ -206,7 +205,7 @@ def find_text_change_optimal(video_path, start_frame_index, source_language="eng
     if start_frame is None:
         return -1
 
-    start_text = extract_text_easyocr(start_frame, source_language=source_language)
+    start_text = extract_text_from_image(start_frame, source_language=source_language)
     print(f"Reference text (frame {start_frame_index}): {start_text[:80]}...")
     
     frame_checks = 0
@@ -223,7 +222,8 @@ def find_text_change_optimal(video_path, start_frame_index, source_language="eng
         if result is None:
             break
 
-        similarity = text_similarity(start_text, extract_text_easyocr(get_frame_at_index(video_path, current_index), source_language=source_language))
+        current_text = extract_text_from_image(get_frame_at_index(video_path, current_index), source_language=source_language)
+        similarity = text_similarity(start_text, current_text)
         print(f"Frame {current_index} (step={step}): {'SAME' if result else 'DIFFERENT'} (similarity={similarity:.3f})")
         
         if not result:  # Found different text
@@ -252,7 +252,9 @@ def find_text_change_optimal(video_path, start_frame_index, source_language="eng
         if result is None:
             break
         
-        similarity = text_similarity(start_text, extract_text_easyocr(get_frame_at_index(video_path, mid),source_language=source_language))
+
+        current_text = extract_text_from_image(get_frame_at_index(video_path, mid),source_language=source_language)
+        similarity = text_similarity(start_text, current_text)
         print(f"Frame {mid}: {'SAME' if result else 'DIFFERENT'} (similarity={similarity:.3f})")
         
         if result:  # Still same text

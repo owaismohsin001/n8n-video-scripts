@@ -1,133 +1,24 @@
-import os
-import pytesseract
+
 from dotenv import load_dotenv
-import cv2
-from pytesseract import Output
-import pandas as pd
-from overlay_utils import overlay_translated_lines_on_frame
-from translate_utils import translate_lines
-from process_frame import extract_frame_from_video
 
-load_dotenv()
-
-
-
-
-reader = None
-
-def preprocess_for_ocr(frame_bgr):
-    """
-    Preprocess BGR frame for better OCR detection.
-    This version:
-    1. Converts to grayscale.
-    2. Uses CLAHE on grayscale (before threshold).
-    3. Skips threshold unless absolutely needed.
-    """
-    # 1. Grayscale
-    gray = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2GRAY)
-
-    # 2. Optional: slight denoise
-    blurred = cv2.GaussianBlur(gray, (1, 1), 0)  # very small blur
-
-    # 3. Enhance contrast BEFORE threshold
-    clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
-    enhanced = clahe.apply(blurred)
-
-    # 4. Don’t threshold yet; Tesseract works best on this
-    return enhanced
-
-
-# step 3 latest working  using pytesseract
-# def extract_lines_with_boxes_tesseract(frame_bgr, min_confidence=90, min_width=60, min_height=60, min_characters=2):
-#     """
-#     Accepts a BGR frame (NumPy array) directly instead of an image path.
-#     Returns a list of (text, (x,y,w,h)) for each detected line.
-#     """
-#     # frame_bgr is already a NumPy array from cv2.VideoCapture
-#     # gray = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2GRAY)
-#     # img = gray 
-
-#      # 1. Grayscale
-#     # gray = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2GRAY)
-
-#     # img = gray
-#     img=frame_bgr
-#     data = pytesseract.image_to_data(img, lang='chi_sim', output_type=Output.DICT)
-#     # print(data)
-
-#     df = pd.DataFrame(data)
-#     # print(df.head(20))
-#     df['conf'] = pd.to_numeric(df['conf'], errors='coerce')
-#     lines = []
-
-#     for (block_num, par_num, line_num), group in df.groupby(['block_num','par_num','line_num']):
-#         # Filter words by confidence
-#         group = group[group['conf'] >= min_confidence]
-#         if group.empty:
-#             continue
-
-#         line_text = " ".join(word for word in group['text'] if word.strip() != "")
-#         if not line_text.strip():
-#             continue
-
-#         if len(line_text.replace(" ", "")) < min_characters:
-#             continue
-
-#         x = group['left'].min()
-#         y = group['top'].min()
-#         w = (group['left'] + group['width']).max() - x
-#         h = (group['top'] + group['height']).max() - y
-
-#         if w >= min_width and h >= min_height:
-#             lines.append((line_text, (x, y, w, h)))
-#         print("Detected lines (Tesseract):", lines)
-#     return lines
-# frame_bgr = cv2.imread("empty_frames/frame_7100.png")
-# print(extract_lines_with_boxes(frame_bgr))
-
-import cv2
+from utils.overlay_utils import overlay_translated_lines_on_frame
+from utils.translate_utils import translate_lines
+from utils.process_frame import extract_frame_from_video
 import easyocr
 import re
-import numpy as np
-
-def preprocess_for_easyocr_frame(frame: np.ndarray) -> np.ndarray:
-    """Preprocess a video frame for optimal EasyOCR text detection."""
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    gray = cv2.bilateralFilter(gray, 9, 75, 75)
-
-    # Normalize contrast with CLAHE
-    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-    gray = clahe.apply(gray)
-
-    # os.makedirs("output_images", exist_ok=True)
-    # path = os.path.join("output_images", f"gray.png")
-    # cv2.imwrite(path, img=gray)
-    
-
-    # # Adaptive threshold for variable backgrounds
-    # thresh = cv2.adaptiveThreshold(
-    #     gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
-    #     cv2.THRESH_BINARY, 31, 2
-    # )
-
-    # # Morphological cleanup
-    # kernel = np.ones((1, 1), np.uint8)
-    # processed = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, kernel)
-
-    return gray
-
-
+from constants.ocr import HAN_RE, LATIN_LETTER_RE, VOWEL_RE, ALNUM_OR_HAN_RE, SYMBOL_ONLY_RE, PUNCT_SIMPLE_RE
 import re
 from dataclasses import dataclass
 from typing import List, Tuple
+from utils.vision import preprocess_frame_for_better_precision, preprocess_for_ocr
+
+load_dotenv()
+
+reader = None
+
+
 
 # ------------- Script / char classes -------------
-HAN_RE = re.compile(r"[\u4e00-\u9fff]")            # CJK Unified Ideographs
-LATIN_LETTER_RE = re.compile(r"[A-Za-z]")
-VOWEL_RE = re.compile(r"[AEIOUaeiou]")
-ALNUM_OR_HAN_RE = re.compile(r"[A-Za-z0-9\u4e00-\u9fff]")
-SYMBOL_ONLY_RE = re.compile(r"^\s*[\W_]+\s*$")     # only punctuation/symbols/underscores/space
-PUNCT_SIMPLE_RE = re.compile(r"[^\w\s\u4e00-\u9fff]", re.UNICODE)
 
 # ------------- Config -------------
 @dataclass
@@ -287,12 +178,12 @@ def get_reader():
     """
     global reader
     if reader is None:
-        print("Initializing EasyOCR reader (this may take a moment on first run)...", flush=True)
+        print("Initializing OCR reader (this may take a moment on first run)...", flush=True)
         try:
             reader = easyocr.Reader(['ch_sim','en'], gpu=False)
-            print("EasyOCR reader loaded successfully", flush=True)
+            print("OCR reader loaded successfully", flush=True) 
         except Exception as e:
-            print(f"Error loading EasyOCR: {e}", flush=True)
+            print(f"Error loading OCR: {e}", flush=True)
             raise
     return reader
 
@@ -306,11 +197,11 @@ def extract_lines_with_boxes(
 ):
     """
     Accepts a BGR frame (NumPy array) directly.
-    Returns a list of (text, (x,y,w,h)) for each detected line using EasyOCR.
+    Returns a list of (text, (x,y,w,h)) for each detected line using OCR.
     """
     # EasyOCR expects RGB
     reader=get_reader()
-    processed_frame = preprocess_for_easyocr_frame(frame_bgr)
+    processed_frame = preprocess_frame_for_better_precision(frame_bgr)
     # frame_rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
     results = reader.readtext(processed_frame)  # returns list of (bbox, text, confidence)
     lines = []
