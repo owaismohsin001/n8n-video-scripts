@@ -30,12 +30,7 @@ def clean_extracted_text(text):
 
 reader = None
 
-def get_reader():
-    """Get or create EasyOCR reader instance"""
-    global reader
-    if reader is None:
-        reader = easyocr.Reader(["ch_sim","en"], gpu=False)  # CPU mode
-    return reader
+
 
 def extract_text_easyocr(image,source_language="english"):
     """Extract text from image using EasyOCR"""
