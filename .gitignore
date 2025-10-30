@@ -4,5 +4,7 @@ output_videos/
 node_modules/
 empty_frames/
 optimal_output/
-
-
+data/
+input_videos/
+output/
+# __pycache__/
