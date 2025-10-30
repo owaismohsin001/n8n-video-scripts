@@ -31,8 +31,8 @@ def combine_audio_with_video(silent_video_path: str, audio_path: str, combined_a
     print(f"Combining audio {audio_path} with video {silent_video_path} into {combined_audio_video_path}")
     try:
         output_path = combined_audio_video_path  # overwrite with same name
-        temp_output = "/home/node/.n8n/.n8n/binaryData/temp_combined.mp4"
-        # temp_output="temp_combined.mp4"
+        # temp_output = "/home/node/.n8n/.n8n/binaryData/temp_combined.mp4"
+        temp_output="temp_combined.mp4" # server todo : remove this and use the above path
 
         cmd = [
             "ffmpeg", "-y",
