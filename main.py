@@ -1,11 +1,12 @@
 
 import os
 import cv2
-from difflib import SequenceMatcher # returns np array frame
 from utils.overlay_utils import overlay_translated_lines_on_frame  
 from utils.translate_utils import translate_lines
 from utils.ocr_utils import extract_lines_with_boxes  
 from utils.audioUtils import extract_audio,combine_audio_with_video
+from utils.vision import get_frame_at_index
+from utils.pattern import text_similarity
 import argparse
 import re
 
@@ -41,48 +42,8 @@ def extract_text_from_image(image,source_language="english"):
         print("text:",text)
         return text
 
-def text_similarity(a, b):
-    a = a or ""
-    b = b or ""
-    print(f"Comparing texts:\nA: {a}\nB: {b}")
-    total = len(a) + len(b)
-    if total == 0:
-        return 1.0  # nothing to compare
-    matcher = SequenceMatcher(None, a, b)
-    print("Matcher :", matcher)
-    match = matcher.find_longest_match(0, len(a), 0, len(b))
-    print(match)
-    common = match.size
-    print(common,"common")
-    print(2 * common / total)
-    return 2 * common / total
 
 
-
-def get_frame_at_index(video_path, frame_index):
-    """Extract a specific frame from video"""
-    cap = cv2.VideoCapture(video_path)
-    
-    if not cap.isOpened():
-        print(f"Error: Could not open video file: {video_path}")
-        cap.release()
-        return None
-    
-    total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    
-    if frame_index < 0 or frame_index >= total_frames:
-        print(f"Error: Frame index {frame_index} out of range (0-{total_frames-1})")
-        cap.release()
-        return None
-    
-    cap.set(cv2.CAP_PROP_POS_FRAMES, frame_index)
-    ret, frame = cap.read()
-    cap.release()
-    
-    if not ret:
-        print(f"Error: Could not read frame {frame_index}")
-        return None
-    return frame
 
 def is_text_same(video_path, frame_index, reference_text, similarity_threshold):
     """Check if text at frame_index is similar to reference_text"""
@@ -90,13 +51,14 @@ def is_text_same(video_path, frame_index, reference_text, similarity_threshold):
     if frame is None:
         return None
     
+    # This function extracts the text from the frame using the OCR model like easy ocr, this take lot of time to extract the text from the frame.
     current_text = extract_text_from_image(frame)
-    similarity = text_similarity(reference_text, current_text)
+    similarity = text_similarity(reference_text, current_text) # this function is used to compare the text similarity between the reference text and the current text.
     return similarity >= similarity_threshold
 
 
 # ============================================================================
-# METHOD 2: EXPONENTIAL SEARCH + BINARY SEARCH (OPTIMAL)
+# METHOD 2: EXPONENTIAL SEARCH + BINARY SEARCH (OPTIMAL)  for finding the frame where the text changes
 # ============================================================================
 def find_text_change_optimal(video_path, start_frame_index, source_language="english", similarity_threshold=0.85):
     """
@@ -133,7 +95,7 @@ def find_text_change_optimal(video_path, start_frame_index, source_language="eng
             break
 
         current_text = extract_text_from_image(get_frame_at_index(video_path, current_index), source_language=source_language)
-        similarity = text_similarity(start_text, current_text)
+        similarity = text_similarity(start_text, current_text) # this function is used to compare the text similarity between the reference text and the current text.
         print(f"Frame {current_index} (step={step}): {'SAME' if result else 'DIFFERENT'} (similarity={similarity:.3f})")
         
         if not result:  # Found different text
@@ -164,7 +126,7 @@ def find_text_change_optimal(video_path, start_frame_index, source_language="eng
         
 
         current_text = extract_text_from_image(get_frame_at_index(video_path, mid),source_language=source_language)
-        similarity = text_similarity(start_text, current_text)
+        similarity = text_similarity(start_text, current_text) # this function is used to compare the text similarity between the reference text and the current text.
         print(f"Frame {mid}: {'SAME' if result else 'DIFFERENT'} (similarity={similarity:.3f})")
         
         if result:  # Still same text
@@ -210,9 +172,7 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
         
         # Extract lines and translate
         lines = extract_lines_with_boxes(frame)
-        # if(lines==[]):
-        #     lines=extract_lines_with_boxes_tesseract(frame)
-        #     print(lines)
+       
         print("Extracted lines:", lines)
         translated_lines = translate_lines(lines,target_language=target_language)
         print(translated_lines)
