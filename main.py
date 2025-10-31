@@ -3,7 +3,7 @@ import os
 import cv2
 from utils.overlay_utils import overlay_translated_lines_on_frame  
 from utils.translate_utils import translate_lines
-from utils.ocr_utils import extract_lines_with_boxes  
+from utils.ocr.ocr_utils import extract_lines_with_boxes  
 from utils.audioUtils import extract_audio,combine_audio_with_video
 from utils.vision import get_frame_at_index
 from utils.pattern import text_similarity

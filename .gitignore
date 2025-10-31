@@ -8,3 +8,4 @@ data/
 input_videos/
 output/
 # __pycache__/
+test/
