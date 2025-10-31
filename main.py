@@ -10,8 +10,10 @@ from utils.pattern import text_similarity
 import argparse
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import multiprocessing
 from typing import Dict, Tuple, Optional
+from constants.index import SIMILARITY_THRESHOLD
+from constants.paths import OUTPUT_PATH, AUDIO_PATH
+from utils.system_resources import calculate_optimal_batch_config
 
 def clean_extracted_text(text):
     """
@@ -62,7 +64,7 @@ def extract_text_from_frame_cached(video_path: str, frame_index: int, source_lan
         return ocr_cache[cache_key]
     
     # Cache miss - perform OCR
-    print(f"⚙ Cache MISS for frame {frame_index} - performing OCR...")
+    print(f"⚙ Cache MISS for frame {frame_index} - performing OCR and cache...")
     frame = get_frame_at_index(video_path, frame_index)
     if frame is None:
         ocr_cache[cache_key] = ""
@@ -101,7 +103,7 @@ def is_text_same(video_path: str, frame_index: int, reference_text: str,
 # ============================================================================
 # METHOD 2: EXPONENTIAL SEARCH + BINARY SEARCH (OPTIMAL)  for finding the frame where the text changes
 # ============================================================================
-def find_text_change_optimal(video_path, start_frame_index, source_language="english", similarity_threshold=0.85):
+def find_text_change_optimal(video_path, start_frame_index, source_language="english", similarity_threshold=SIMILARITY_THRESHOLD):
     """
     Find text change using exponential search + binary search.
     This is mathematically optimal with O(log n) complexity.
@@ -187,44 +189,6 @@ def find_text_change_optimal(video_path, start_frame_index, source_language="eng
 # BATCH PROCESSING WITH MULTITHREADING
 # ============================================================================
 
-def calculate_optimal_batch_config(total_frames: int) -> Tuple[int, int]:
-    """
-    Calculate optimal batch size and number of workers based on:
-    - Total frames in video
-    - Available CPU cores
-    - Memory considerations
-    
-    Returns:
-        (batch_size, num_workers)
-    """
-    # Get CPU count (leave 1-2 cores for system)
-    cpu_count = multiprocessing.cpu_count()
-    num_workers = max(1, min(cpu_count - 1, 10))  # Cap at 10 workers
-    
-    # Dynamic batch sizing based on video length
-    if total_frames < 500:
-        batch_size = 50  # Small videos: smaller batches
-    elif total_frames < 3000:
-        batch_size = 100  # Medium videos
-    elif total_frames < 10000:
-        batch_size = 300  # Large videos
-    else:
-        batch_size = 500  # Very large videos
-    
-    # Ensure we have enough batches to utilize workers
-    num_batches = (total_frames + batch_size - 1) // batch_size
-    if num_batches < num_workers:
-        # Reduce batch size to create more batches
-        batch_size = max(50, total_frames // (num_workers * 2))
-    
-    print(f"📊 Batch Configuration:")
-    print(f"   Total frames: {total_frames}")
-    print(f"   Batch size: {batch_size} frames per batch")
-    print(f"   Number of batches: {(total_frames + batch_size - 1) // batch_size}")
-    print(f"   Workers: {num_workers} parallel threads")
-    print(f"   CPU cores available: {cpu_count}")
-    
-    return batch_size, num_workers
 
 
 def process_batch_segment(
@@ -233,7 +197,7 @@ def process_batch_segment(
     end_frame: int,
     batch_id: int,
     source_language: str,
-    similarity_threshold: float = 0.85
+    similarity_threshold: float = SIMILARITY_THRESHOLD
 ) -> list:
     """
     Process a batch of frames to find text change points.
@@ -277,7 +241,7 @@ def find_all_text_segments_parallel(
     video_path: str,
     total_frames: int,
     source_language: str = "english",
-    similarity_threshold: float = 0.85
+    similarity_threshold: float = SIMILARITY_THRESHOLD
 ) -> list:
     """
     Find all text change segments in the video using parallel batch processing.
@@ -357,7 +321,7 @@ def merge_adjacent_segments(segments: list, video_path: str, source_language: st
             
             similarity = text_similarity(last_text, current_text)
             
-            if similarity >= 0.85:  # Same text, merge
+            if similarity >= SIMILARITY_THRESHOLD:  # Same text, merge
                 merged[-1] = (last_merged[0], current[1])
             else:
                 merged.append(current)
@@ -367,13 +331,13 @@ def merge_adjacent_segments(segments: list, video_path: str, source_language: st
     return merged
 
 
-def function_overlaying_continuous_legacy(video_path, font_path, font_size, out_path="output/translated.mp4",target_language="English", font_color="black",source_language="english"):
+def function_overlaying_continuous_legacy(video_path, font_path, font_size, out_path=OUTPUT_PATH,target_language="English", font_color="black",source_language="english"):
     """
     LEGACY VERSION: Sequential processing (kept for reference)
     Use function_overlaying_continuous() for the new parallel version.
     """
     print(f"Processing video: {video_path}")
-    extract_audio(video_path, "input_videos/audio.mp3")
+    extract_audio(video_path, AUDIO_PATH)
     # Open video for reading
     cap = cv2.VideoCapture(video_path)
     fps = cap.get(cv2.CAP_PROP_FPS)
@@ -426,20 +390,20 @@ def function_overlaying_continuous_legacy(video_path, font_path, font_size, out_
 
     cap.release()
     out.release()
-    combine_audio_with_video(silent_video_path=out_path, audio_path="input_videos/audio.mp3", combined_audio_video_path=out_path)
+    combine_audio_with_video(silent_video_path=out_path, audio_path=AUDIO_PATH, combined_audio_video_path=out_path)
     print("✅ Translation overlay completed for the entire video.")
     
     try:
-        if os.path.exists("input_videos/audio.mp3"):
-            os.remove("input_videos/audio.mp3")
-            print(f"🗑️ Deleted input audio: input_videos/audio.mp3")
+        if os.path.exists(AUDIO_PATH):
+            os.remove(AUDIO_PATH)
+            print(f"🗑️ Deleted input audio: {AUDIO_PATH}")
         else:
-            print(f"⚠️ Input audio not found for deletion:input_videos/audio.mp3")
+            print(f"⚠️ Input audio not found for deletion: {AUDIO_PATH}")
     except Exception as e:
         print(f"⚠️ Could not delete audio: {e}")
 
 
-def function_overlaying_continuous(video_path, font_path, font_size, out_path="output/translated.mp4", 
+def function_overlaying_continuous(video_path, font_path, font_size, out_path=OUTPUT_PATH, 
                                    target_language="English", font_color="black", source_language="english",
                                    use_parallel=True):
     """
@@ -461,7 +425,7 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
     print(f"🚀 Using PARALLEL processing mode")
     
     # Extract audio first
-    extract_audio(video_path, "input_videos/audio.mp3")
+    extract_audio(video_path, AUDIO_PATH)
     
     # Get video properties
     cap = cv2.VideoCapture(video_path)
@@ -482,7 +446,7 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
         video_path=video_path,
         total_frames=total_frames,
         source_language=source_language,
-        similarity_threshold=0.85
+        similarity_threshold=SIMILARITY_THRESHOLD
     )
     
     if not segments:
@@ -545,14 +509,14 @@ def function_overlaying_continuous(video_path, font_path, font_size, out_path="o
     print("="*60)
     combine_audio_with_video(
         silent_video_path=out_path, 
-        audio_path="input_videos/audio.mp3", 
+        audio_path=AUDIO_PATH, 
         combined_audio_video_path=out_path
     )
     
     # Cleanup
     try:
-        if os.path.exists("input_videos/audio.mp3"):
-            os.remove("input_videos/audio.mp3")
+        if os.path.exists(AUDIO_PATH):
+            os.remove(AUDIO_PATH)
             print(f"🗑️ Cleaned up temporary audio file")
     except Exception as e:
         print(f"⚠️ Could not delete audio: {e}")
@@ -574,7 +538,7 @@ if __name__ == "__main__":
     parser.add_argument("--video", dest="video_path", required=True, help="Path to input video")
     parser.add_argument("--font", dest="font_path", default=None, help="Path to TTF font (optional)")
     parser.add_argument("--fontSize", dest="font_size", default="35", help="Font size (int)")
-    parser.add_argument("--out", dest="out_path", default="output/translated.mp4", help="Output video path")
+    parser.add_argument("--out", dest="out_path", default=OUTPUT_PATH, help="Output video path")
     parser.add_argument("--targetLang", dest="target_language", default="ch_sim", help="Target language for translation")
     parser.add_argument("--fontColor", dest="font_color", default="black", help="Font color for translation overlay")
     parser.add_argument("--sourceLang", dest="source_language", default="english", help="Source language of the video")
