@@ -42,7 +42,7 @@ import cv2
 # Import lightweight utilities immediately
 from utils.overlay_utils import overlay_translated_lines_on_frame
 from utils.translate_utils import translate_lines
-from utils.audioUtils import extract_audio, combine_audio_with_video
+from audioUtils import extract_audio, combine_audio_with_video
 from utils.vision import get_frame_at_index
 from utils.pattern import text_similarity
 from constants.index import SIMILARITY_THRESHOLD

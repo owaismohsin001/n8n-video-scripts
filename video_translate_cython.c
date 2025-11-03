@@ -1545,7 +1545,7 @@ struct __pyx_obj_22video_translate_cython___pyx_scope_struct_1_find_all_text_seg
 struct __pyx_obj_22video_translate_cython___pyx_scope_struct_2_genexpr;
 struct __pyx_obj_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process;
 
-/* "video_translate_cython.pyx":203
+/* "video_translate_cython.pyx":204
  * 
  * # ------------------ Search algorithm (exponential + binary) ------------------
  * @cython.locals(cap=object, total_frames=int, start_text=object, frame_checks=int)             # <<<<<<<<<<<<<<
@@ -1558,7 +1558,7 @@ struct __pyx_defaults {
 };
 
 
-/* "video_translate_cython.pyx":448
+/* "video_translate_cython.pyx":449
  * 
  * # ------------------ Overlaying / Main functions ------------------
  * @cython.locals(cap=object, fps=float, width=int, height=int, fourcc=int, out=object, start_frame=int, total_frames=int)             # <<<<<<<<<<<<<<
@@ -1571,7 +1571,7 @@ struct __pyx_defaults1 {
 };
 
 
-/* "video_translate_cython.pyx":156
+/* "video_translate_cython.pyx":157
  *     results = extract_lines_with_boxes(image)
  *     # Join lines removing whitespace in each text piece
  *     text = ''.join(''.join(text.split()) for text, _ in results)             # <<<<<<<<<<<<<<
@@ -1587,7 +1587,7 @@ struct __pyx_obj_22video_translate_cython___pyx_scope_struct__genexpr {
 };
 
 
-/* "video_translate_cython.pyx":328
+/* "video_translate_cython.pyx":329
  * 
  * 
  * @cython.locals(batch_size=int, num_workers=int)             # <<<<<<<<<<<<<<
@@ -1600,7 +1600,7 @@ struct __pyx_obj_22video_translate_cython___pyx_scope_struct_1_find_all_text_seg
 };
 
 
-/* "video_translate_cython.pyx":731
+/* "video_translate_cython.pyx":732
  *         from utils.ocr.ocr_utils import extract_lines_with_boxes
  *         lines = extract_lines_with_boxes(frame)
  *         text = ''.join(''.join(t.split()) for t, _ in lines)             # <<<<<<<<<<<<<<
@@ -1615,7 +1615,7 @@ struct __pyx_obj_22video_translate_cython___pyx_scope_struct_2_genexpr {
 };
 
 
-/* "video_translate_cython.pyx":742
+/* "video_translate_cython.pyx":743
  * 
  * # Convenience function: batch OCR frames using processes (safe, no GIL issues)
  * def batch_ocr_process(video_path: str, frame_indices: list, source_language: str = "english", max_workers: int = None) -> dict:             # <<<<<<<<<<<<<<
@@ -3068,6 +3068,7 @@ static const char __pyx_k_start_ptr[] = "start_ptr";
 static const char __pyx_k_1_oXQ_e1_1[] = "\200\001\360\010\000\005\006\330\004\007\320\007\030\230\003\2301\340\010\036\230o\250X\260Q\330\010\033\320\033.\250e\2601\330\004\013\2101";
 static const char __pyx_k_AUDIO_PATH[] = "AUDIO_PATH";
 static const char __pyx_k_args_tuple[] = "args_tuple";
+static const char __pyx_k_audioUtils[] = "audioUtils";
 static const char __pyx_k_audio_path[] = "audio_path";
 static const char __pyx_k_batch_info[] = "batch_info";
 static const char __pyx_k_batch_size[] = "batch_size";
@@ -3138,7 +3139,6 @@ static const char __pyx_k_translate_lines[] = "translate_lines";
 static const char __pyx_k_max_safe_workers[] = "max_safe_workers";
 static const char __pyx_k_probe_bytes_list[] = "probe_bytes_list";
 static const char __pyx_k_translated_lines[] = "translated_lines";
-static const char __pyx_k_utils_audioUtils[] = "utils.audioUtils";
 static const char __pyx_k_Output_video_path[] = "Output video path";
 static const char __pyx_k_batch_ocr_process[] = "batch_ocr_process";
 static const char __pyx_k_frames_in_segment[] = "frames_in_segment";
@@ -3146,7 +3146,6 @@ static const char __pyx_k_get_ocr_extractor[] = "_get_ocr_extractor";
 static const char __pyx_k_silent_video_path[] = "silent_video_path";
 static const char __pyx_k_start_frame_index[] = "start_frame_index";
 static const char __pyx_k_FutureTimeoutError[] = "FutureTimeoutError";
-static const char __pyx_k_ThreadPoolExecutor[] = "ThreadPoolExecutor";
 static const char __pyx_k_VideoWriter_fourcc[] = "VideoWriter_fourcc";
 static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
@@ -3310,7 +3309,7 @@ typedef struct {
   __Pyx_CachedCFunction __pyx_umethod_PyDict_Type_pop;
   PyObject *__pyx_tuple[4];
   PyObject *__pyx_codeobj_tab[24];
-  PyObject *__pyx_string_tab[292];
+  PyObject *__pyx_string_tab[291];
   PyObject *__pyx_float_0_2;
   PyObject *__pyx_float_0_5;
   PyObject *__pyx_int_0;
@@ -3412,32 +3411,32 @@ static __pyx_mstatetype * const __pyx_mstate_global = &__pyx_mstate_global_stati
 #define __pyx_n_u_SIMILARITY_THRESHOLD __pyx_string_tab[28]
 #define __pyx_kp_u_Source_language_of_the_video __pyx_string_tab[29]
 #define __pyx_kp_u_Target_language_for_translation __pyx_string_tab[30]
-#define __pyx_n_u_ThreadPoolExecutor __pyx_string_tab[31]
-#define __pyx_n_u_TimeoutError __pyx_string_tab[32]
-#define __pyx_n_u_Tuple __pyx_string_tab[33]
-#define __pyx_kp_u_Use_parallel_batch_processing_de __pyx_string_tab[34]
-#define __pyx_kp_u_Use_sequential_processing_legacy __pyx_string_tab[35]
-#define __pyx_n_u_VideoCapture __pyx_string_tab[36]
-#define __pyx_n_u_VideoWriter __pyx_string_tab[37]
-#define __pyx_n_u_VideoWriter_fourcc __pyx_string_tab[38]
-#define __pyx_kp_u__2 __pyx_string_tab[39]
-#define __pyx_kp_u__3 __pyx_string_tab[40]
-#define __pyx_kp_u__4 __pyx_string_tab[41]
-#define __pyx_n_u__6 __pyx_string_tab[42]
-#define __pyx_n_u_a __pyx_string_tab[43]
-#define __pyx_n_u_action __pyx_string_tab[44]
-#define __pyx_n_u_add_argument __pyx_string_tab[45]
-#define __pyx_kp_u_add_note __pyx_string_tab[46]
-#define __pyx_n_u_alen __pyx_string_tab[47]
-#define __pyx_n_u_all_segments __pyx_string_tab[48]
-#define __pyx_n_u_apa __pyx_string_tab[49]
-#define __pyx_n_u_append __pyx_string_tab[50]
-#define __pyx_n_u_argparse __pyx_string_tab[51]
-#define __pyx_n_u_args __pyx_string_tab[52]
-#define __pyx_n_u_args_tuple __pyx_string_tab[53]
-#define __pyx_n_u_as_completed __pyx_string_tab[54]
-#define __pyx_n_u_asyncio_coroutines __pyx_string_tab[55]
-#define __pyx_n_u_attempt __pyx_string_tab[56]
+#define __pyx_n_u_TimeoutError __pyx_string_tab[31]
+#define __pyx_n_u_Tuple __pyx_string_tab[32]
+#define __pyx_kp_u_Use_parallel_batch_processing_de __pyx_string_tab[33]
+#define __pyx_kp_u_Use_sequential_processing_legacy __pyx_string_tab[34]
+#define __pyx_n_u_VideoCapture __pyx_string_tab[35]
+#define __pyx_n_u_VideoWriter __pyx_string_tab[36]
+#define __pyx_n_u_VideoWriter_fourcc __pyx_string_tab[37]
+#define __pyx_kp_u__2 __pyx_string_tab[38]
+#define __pyx_kp_u__3 __pyx_string_tab[39]
+#define __pyx_kp_u__4 __pyx_string_tab[40]
+#define __pyx_n_u__6 __pyx_string_tab[41]
+#define __pyx_n_u_a __pyx_string_tab[42]
+#define __pyx_n_u_action __pyx_string_tab[43]
+#define __pyx_n_u_add_argument __pyx_string_tab[44]
+#define __pyx_kp_u_add_note __pyx_string_tab[45]
+#define __pyx_n_u_alen __pyx_string_tab[46]
+#define __pyx_n_u_all_segments __pyx_string_tab[47]
+#define __pyx_n_u_apa __pyx_string_tab[48]
+#define __pyx_n_u_append __pyx_string_tab[49]
+#define __pyx_n_u_argparse __pyx_string_tab[50]
+#define __pyx_n_u_args __pyx_string_tab[51]
+#define __pyx_n_u_args_tuple __pyx_string_tab[52]
+#define __pyx_n_u_as_completed __pyx_string_tab[53]
+#define __pyx_n_u_asyncio_coroutines __pyx_string_tab[54]
+#define __pyx_n_u_attempt __pyx_string_tab[55]
+#define __pyx_n_u_audioUtils __pyx_string_tab[56]
 #define __pyx_n_u_audio_path __pyx_string_tab[57]
 #define __pyx_n_u_b __pyx_string_tab[58]
 #define __pyx_n_u_ba __pyx_string_tab[59]
@@ -3658,21 +3657,20 @@ static __pyx_mstatetype * const __pyx_mstate_global = &__pyx_mstate_global_stati
 #define __pyx_kp_u_u4e00_u9fff_s __pyx_string_tab[274]
 #define __pyx_n_u_use_parallel __pyx_string_tab[275]
 #define __pyx_n_u_utf8 __pyx_string_tab[276]
-#define __pyx_n_u_utils_audioUtils __pyx_string_tab[277]
-#define __pyx_n_u_utils_ocr_ocr_utils __pyx_string_tab[278]
-#define __pyx_n_u_utils_overlay_utils __pyx_string_tab[279]
-#define __pyx_n_u_utils_pattern __pyx_string_tab[280]
-#define __pyx_n_u_utils_system_resources __pyx_string_tab[281]
-#define __pyx_n_u_utils_translate_utils __pyx_string_tab[282]
-#define __pyx_n_u_utils_vision __pyx_string_tab[283]
-#define __pyx_n_u_value __pyx_string_tab[284]
-#define __pyx_kp_u_video __pyx_string_tab[285]
-#define __pyx_n_u_video_path __pyx_string_tab[286]
-#define __pyx_n_u_video_translate_cython __pyx_string_tab[287]
-#define __pyx_kp_u_video_translate_cython_pyx __pyx_string_tab[288]
-#define __pyx_n_u_width __pyx_string_tab[289]
-#define __pyx_n_u_write __pyx_string_tab[290]
-#define __pyx_n_u_x __pyx_string_tab[291]
+#define __pyx_n_u_utils_ocr_ocr_utils __pyx_string_tab[277]
+#define __pyx_n_u_utils_overlay_utils __pyx_string_tab[278]
+#define __pyx_n_u_utils_pattern __pyx_string_tab[279]
+#define __pyx_n_u_utils_system_resources __pyx_string_tab[280]
+#define __pyx_n_u_utils_translate_utils __pyx_string_tab[281]
+#define __pyx_n_u_utils_vision __pyx_string_tab[282]
+#define __pyx_n_u_value __pyx_string_tab[283]
+#define __pyx_kp_u_video __pyx_string_tab[284]
+#define __pyx_n_u_video_path __pyx_string_tab[285]
+#define __pyx_n_u_video_translate_cython __pyx_string_tab[286]
+#define __pyx_kp_u_video_translate_cython_pyx __pyx_string_tab[287]
+#define __pyx_n_u_width __pyx_string_tab[288]
+#define __pyx_n_u_write __pyx_string_tab[289]
+#define __pyx_n_u_x __pyx_string_tab[290]
 /* #### Code section: module_state_clear ### */
 #if CYTHON_USE_MODULE_STATE
 static CYTHON_SMALL_CODE int __pyx_m_clear(PyObject *m) {
@@ -3708,7 +3706,7 @@ static CYTHON_SMALL_CODE int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_type_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process);
   for (int i=0; i<4; ++i) { Py_CLEAR(clear_module_state->__pyx_tuple[i]); }
   for (int i=0; i<24; ++i) { Py_CLEAR(clear_module_state->__pyx_codeobj_tab[i]); }
-  for (int i=0; i<292; ++i) { Py_CLEAR(clear_module_state->__pyx_string_tab[i]); }
+  for (int i=0; i<291; ++i) { Py_CLEAR(clear_module_state->__pyx_string_tab[i]); }
   Py_CLEAR(clear_module_state->__pyx_float_0_2);
   Py_CLEAR(clear_module_state->__pyx_float_0_5);
   Py_CLEAR(clear_module_state->__pyx_int_0);
@@ -3752,7 +3750,7 @@ static CYTHON_SMALL_CODE int __pyx_m_traverse(PyObject *m, visitproc visit, void
   Py_VISIT(traverse_module_state->__pyx_type_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process);
   for (int i=0; i<4; ++i) { __Pyx_VISIT_CONST(traverse_module_state->__pyx_tuple[i]); }
   for (int i=0; i<24; ++i) { __Pyx_VISIT_CONST(traverse_module_state->__pyx_codeobj_tab[i]); }
-  for (int i=0; i<292; ++i) { __Pyx_VISIT_CONST(traverse_module_state->__pyx_string_tab[i]); }
+  for (int i=0; i<291; ++i) { __Pyx_VISIT_CONST(traverse_module_state->__pyx_string_tab[i]); }
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_float_0_2);
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_float_0_5);
   __Pyx_VISIT_CONST(traverse_module_state->__pyx_int_0);
@@ -3766,7 +3764,7 @@ static CYTHON_SMALL_CODE int __pyx_m_traverse(PyObject *m, visitproc visit, void
 #endif
 /* #### Code section: module_code ### */
 
-/* "video_translate_cython.pyx":54
+/* "video_translate_cython.pyx":55
  * _extract_lines_with_boxes = None
  * 
  * def _get_ocr_extractor():             # <<<<<<<<<<<<<<
@@ -3803,51 +3801,51 @@ static PyObject *__pyx_pf_22video_translate_cython__get_ocr_extractor(CYTHON_UNU
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_get_ocr_extractor", 0);
 
-  /* "video_translate_cython.pyx":57
+  /* "video_translate_cython.pyx":58
  *     """Lazy-load OCR extractor to avoid importing torch/easyocr at module level."""
  *     global _extract_lines_with_boxes
  *     if _extract_lines_with_boxes is None:             # <<<<<<<<<<<<<<
  *         from utils.ocr.ocr_utils import extract_lines_with_boxes
  *         _extract_lines_with_boxes = extract_lines_with_boxes
 */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = (__pyx_t_1 == Py_None);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "video_translate_cython.pyx":58
+    /* "video_translate_cython.pyx":59
  *     global _extract_lines_with_boxes
  *     if _extract_lines_with_boxes is None:
  *         from utils.ocr.ocr_utils import extract_lines_with_boxes             # <<<<<<<<<<<<<<
  *         _extract_lines_with_boxes = extract_lines_with_boxes
  *     return _extract_lines_with_boxes
 */
-    __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 58, __pyx_L1_error)
+    __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes_2);
     __Pyx_GIVEREF(__pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes_2);
-    if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes_2) != (0)) __PYX_ERR(0, 58, __pyx_L1_error);
-    __pyx_t_3 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_ocr_ocr_utils, __pyx_t_1, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L1_error)
+    if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes_2) != (0)) __PYX_ERR(0, 59, __pyx_L1_error);
+    __pyx_t_3 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_ocr_ocr_utils, __pyx_t_1, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 59, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 58, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_t_1);
     __pyx_v_extract_lines_with_boxes = __pyx_t_1;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":59
+    /* "video_translate_cython.pyx":60
  *     if _extract_lines_with_boxes is None:
  *         from utils.ocr.ocr_utils import extract_lines_with_boxes
  *         _extract_lines_with_boxes = extract_lines_with_boxes             # <<<<<<<<<<<<<<
  *     return _extract_lines_with_boxes
  * 
 */
-    if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes, __pyx_v_extract_lines_with_boxes) < (0)) __PYX_ERR(0, 59, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes, __pyx_v_extract_lines_with_boxes) < (0)) __PYX_ERR(0, 60, __pyx_L1_error)
 
-    /* "video_translate_cython.pyx":57
+    /* "video_translate_cython.pyx":58
  *     """Lazy-load OCR extractor to avoid importing torch/easyocr at module level."""
  *     global _extract_lines_with_boxes
  *     if _extract_lines_with_boxes is None:             # <<<<<<<<<<<<<<
@@ -3856,7 +3854,7 @@ static PyObject *__pyx_pf_22video_translate_cython__get_ocr_extractor(CYTHON_UNU
 */
   }
 
-  /* "video_translate_cython.pyx":60
+  /* "video_translate_cython.pyx":61
  *         from utils.ocr.ocr_utils import extract_lines_with_boxes
  *         _extract_lines_with_boxes = extract_lines_with_boxes
  *     return _extract_lines_with_boxes             # <<<<<<<<<<<<<<
@@ -3864,13 +3862,13 @@ static PyObject *__pyx_pf_22video_translate_cython__get_ocr_extractor(CYTHON_UNU
  * from libc.stdlib cimport malloc, free
 */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 60, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":54
+  /* "video_translate_cython.pyx":55
  * _extract_lines_with_boxes = None
  * 
  * def _get_ocr_extractor():             # <<<<<<<<<<<<<<
@@ -3891,7 +3889,7 @@ static PyObject *__pyx_pf_22video_translate_cython__get_ocr_extractor(CYTHON_UNU
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":74
+/* "video_translate_cython.pyx":75
  * _frame_lock_manager = None
  * 
  * def _get_frame_read_lock():             # <<<<<<<<<<<<<<
@@ -3930,20 +3928,20 @@ static PyObject *__pyx_pf_22video_translate_cython_2_get_frame_read_lock(CYTHON_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_get_frame_read_lock", 0);
 
-  /* "video_translate_cython.pyx":79
+  /* "video_translate_cython.pyx":80
  *     """
  *     global _frame_read_lock, _frame_lock_manager
  *     if _frame_read_lock is None:             # <<<<<<<<<<<<<<
  *         # Create manager and lock that can be shared across processes
  *         _frame_lock_manager = multiprocessing.Manager()
 */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_frame_read_lock); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_frame_read_lock); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = (__pyx_t_1 == Py_None);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "video_translate_cython.pyx":81
+    /* "video_translate_cython.pyx":82
  *     if _frame_read_lock is None:
  *         # Create manager and lock that can be shared across processes
  *         _frame_lock_manager = multiprocessing.Manager()             # <<<<<<<<<<<<<<
@@ -3951,9 +3949,9 @@ static PyObject *__pyx_pf_22video_translate_cython_2_get_frame_read_lock(CYTHON_
  *     return _frame_read_lock
 */
     __pyx_t_3 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_multiprocessing); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 81, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_multiprocessing); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_Manager); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 81, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_Manager); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_6 = 1;
@@ -3973,13 +3971,13 @@ static PyObject *__pyx_pf_22video_translate_cython_2_get_frame_read_lock(CYTHON_
       __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+__pyx_t_6, (1-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
     }
-    if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_frame_lock_manager, __pyx_t_1) < (0)) __PYX_ERR(0, 81, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_frame_lock_manager, __pyx_t_1) < (0)) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "video_translate_cython.pyx":82
+    /* "video_translate_cython.pyx":83
  *         # Create manager and lock that can be shared across processes
  *         _frame_lock_manager = multiprocessing.Manager()
  *         _frame_read_lock = _frame_lock_manager.Lock()             # <<<<<<<<<<<<<<
@@ -3987,9 +3985,9 @@ static PyObject *__pyx_pf_22video_translate_cython_2_get_frame_read_lock(CYTHON_
  * 
 */
     __pyx_t_5 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_frame_lock_manager); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 82, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_frame_lock_manager); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 83, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_Lock); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 82, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_Lock); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 83, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_6 = 1;
@@ -4009,13 +4007,13 @@ static PyObject *__pyx_pf_22video_translate_cython_2_get_frame_read_lock(CYTHON_
       __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+__pyx_t_6, (1-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
     }
-    if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_frame_read_lock, __pyx_t_1) < (0)) __PYX_ERR(0, 82, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_frame_read_lock, __pyx_t_1) < (0)) __PYX_ERR(0, 83, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "video_translate_cython.pyx":79
+    /* "video_translate_cython.pyx":80
  *     """
  *     global _frame_read_lock, _frame_lock_manager
  *     if _frame_read_lock is None:             # <<<<<<<<<<<<<<
@@ -4024,7 +4022,7 @@ static PyObject *__pyx_pf_22video_translate_cython_2_get_frame_read_lock(CYTHON_
 */
   }
 
-  /* "video_translate_cython.pyx":83
+  /* "video_translate_cython.pyx":84
  *         _frame_lock_manager = multiprocessing.Manager()
  *         _frame_read_lock = _frame_lock_manager.Lock()
  *     return _frame_read_lock             # <<<<<<<<<<<<<<
@@ -4032,13 +4030,13 @@ static PyObject *__pyx_pf_22video_translate_cython_2_get_frame_read_lock(CYTHON_
  * def _init_frame_lock_shared(lock):
 */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_frame_read_lock); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_frame_read_lock); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":74
+  /* "video_translate_cython.pyx":75
  * _frame_lock_manager = None
  * 
  * def _get_frame_read_lock():             # <<<<<<<<<<<<<<
@@ -4060,7 +4058,7 @@ static PyObject *__pyx_pf_22video_translate_cython_2_get_frame_read_lock(CYTHON_
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":85
+/* "video_translate_cython.pyx":86
  *     return _frame_read_lock
  * 
  * def _init_frame_lock_shared(lock):             # <<<<<<<<<<<<<<
@@ -4108,32 +4106,32 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_lock,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 85, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 86, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 85, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 86, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "_init_frame_lock_shared", 0) < (0)) __PYX_ERR(0, 85, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "_init_frame_lock_shared", 0) < (0)) __PYX_ERR(0, 86, __pyx_L3_error)
       for (Py_ssize_t i = __pyx_nargs; i < 1; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("_init_frame_lock_shared", 1, 1, 1, i); __PYX_ERR(0, 85, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("_init_frame_lock_shared", 1, 1, 1, i); __PYX_ERR(0, 86, __pyx_L3_error) }
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 85, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 86, __pyx_L3_error)
     }
     __pyx_v_lock = values[0];
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("_init_frame_lock_shared", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 85, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("_init_frame_lock_shared", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 86, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4162,16 +4160,16 @@ static PyObject *__pyx_pf_22video_translate_cython_4_init_frame_lock_shared(CYTH
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_init_frame_lock_shared", 0);
 
-  /* "video_translate_cython.pyx":88
+  /* "video_translate_cython.pyx":89
  *     """Initialize shared lock in worker process."""
  *     global _frame_read_lock
  *     _frame_read_lock = lock             # <<<<<<<<<<<<<<
  * 
  * # ------------------ Utility functions ------------------
 */
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_frame_read_lock, __pyx_v_lock) < (0)) __PYX_ERR(0, 88, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_frame_read_lock, __pyx_v_lock) < (0)) __PYX_ERR(0, 89, __pyx_L1_error)
 
-  /* "video_translate_cython.pyx":85
+  /* "video_translate_cython.pyx":86
  *     return _frame_read_lock
  * 
  * def _init_frame_lock_shared(lock):             # <<<<<<<<<<<<<<
@@ -4191,7 +4189,7 @@ static PyObject *__pyx_pf_22video_translate_cython_4_init_frame_lock_shared(CYTH
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":91
+/* "video_translate_cython.pyx":92
  * 
  * # ------------------ Utility functions ------------------
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
@@ -4239,32 +4237,32 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_text,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 91, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 92, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 91, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 92, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "clean_extracted_text", 0) < (0)) __PYX_ERR(0, 91, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "clean_extracted_text", 0) < (0)) __PYX_ERR(0, 92, __pyx_L3_error)
       for (Py_ssize_t i = __pyx_nargs; i < 1; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("clean_extracted_text", 1, 1, 1, i); __PYX_ERR(0, 91, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("clean_extracted_text", 1, 1, 1, i); __PYX_ERR(0, 92, __pyx_L3_error) }
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 91, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 92, __pyx_L3_error)
     }
     __pyx_v_text = ((PyObject*)values[0]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("clean_extracted_text", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 91, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("clean_extracted_text", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 92, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4275,7 +4273,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_text), (&PyUnicode_Type), 0, "text", 2))) __PYX_ERR(0, 93, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_text), (&PyUnicode_Type), 0, "text", 2))) __PYX_ERR(0, 94, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_6clean_extracted_text(__pyx_self, __pyx_v_text);
 
   /* function exit code */
@@ -4311,7 +4309,7 @@ static PyObject *__pyx_pf_22video_translate_cython_6clean_extracted_text(CYTHON_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("clean_extracted_text", 0);
 
-  /* "video_translate_cython.pyx":98
+  /* "video_translate_cython.pyx":99
  *     """
  *     # small helper: this is Python-level regex; no nogil possible here
  *     clean_text = re.sub(r'[^\u4e00-\u9fff\s]', '', text)             # <<<<<<<<<<<<<<
@@ -4319,9 +4317,9 @@ static PyObject *__pyx_pf_22video_translate_cython_6clean_extracted_text(CYTHON_
  *     return clean_text
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_re); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_re); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_sub); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 98, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_sub); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_5 = 1;
@@ -4341,13 +4339,13 @@ static PyObject *__pyx_pf_22video_translate_cython_6clean_extracted_text(CYTHON_
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+__pyx_t_5, (4-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 98, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __pyx_v_clean_text = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":99
+  /* "video_translate_cython.pyx":100
  *     # small helper: this is Python-level regex; no nogil possible here
  *     clean_text = re.sub(r'[^\u4e00-\u9fff\s]', '', text)
  *     clean_text = re.sub(r'\s+', ' ', clean_text).strip()             # <<<<<<<<<<<<<<
@@ -4355,9 +4353,9 @@ static PyObject *__pyx_pf_22video_translate_cython_6clean_extracted_text(CYTHON_
  * 
 */
   __pyx_t_3 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_mstate_global->__pyx_n_u_re); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_mstate_global->__pyx_n_u_re); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_mstate_global->__pyx_n_u_sub); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_mstate_global->__pyx_n_u_sub); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_t_5 = 1;
@@ -4377,7 +4375,7 @@ static PyObject *__pyx_pf_22video_translate_cython_6clean_extracted_text(CYTHON_
     __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_7, __pyx_callargs+__pyx_t_5, (4-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 99, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 100, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
   }
   __pyx_t_4 = __pyx_t_2;
@@ -4388,13 +4386,13 @@ static PyObject *__pyx_pf_22video_translate_cython_6clean_extracted_text(CYTHON_
     __pyx_t_1 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_strip, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __Pyx_DECREF_SET(__pyx_v_clean_text, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":100
+  /* "video_translate_cython.pyx":101
  *     clean_text = re.sub(r'[^\u4e00-\u9fff\s]', '', text)
  *     clean_text = re.sub(r'\s+', ' ', clean_text).strip()
  *     return clean_text             # <<<<<<<<<<<<<<
@@ -4402,12 +4400,12 @@ static PyObject *__pyx_pf_22video_translate_cython_6clean_extracted_text(CYTHON_
  * 
 */
   __Pyx_XDECREF(__pyx_r);
-  if (!(likely(PyUnicode_CheckExact(__pyx_v_clean_text))||((__pyx_v_clean_text) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_v_clean_text))) __PYX_ERR(0, 100, __pyx_L1_error)
+  if (!(likely(PyUnicode_CheckExact(__pyx_v_clean_text))||((__pyx_v_clean_text) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_v_clean_text))) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_INCREF(__pyx_v_clean_text);
   __pyx_r = ((PyObject*)__pyx_v_clean_text);
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":91
+  /* "video_translate_cython.pyx":92
  * 
  * # ------------------ Utility functions ------------------
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
@@ -4432,7 +4430,7 @@ static PyObject *__pyx_pf_22video_translate_cython_6clean_extracted_text(CYTHON_
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":104
+/* "video_translate_cython.pyx":105
  * 
  * # ------------------ Safe frame reading with retry logic and serialization ------------------
  * def get_frame_at_index_safe(video_path: str, frame_index: int, max_retries: int = 3) -> object:             # <<<<<<<<<<<<<<
@@ -4482,41 +4480,41 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_video_path,&__pyx_mstate_global->__pyx_n_u_frame_index,&__pyx_mstate_global->__pyx_n_u_max_retries,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 104, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 105, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 104, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 105, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 104, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 105, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 104, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 105, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "get_frame_at_index_safe", 0) < (0)) __PYX_ERR(0, 104, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "get_frame_at_index_safe", 0) < (0)) __PYX_ERR(0, 105, __pyx_L3_error)
       if (!values[2]) values[2] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_int_3)));
       for (Py_ssize_t i = __pyx_nargs; i < 2; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("get_frame_at_index_safe", 0, 2, 3, i); __PYX_ERR(0, 104, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("get_frame_at_index_safe", 0, 2, 3, i); __PYX_ERR(0, 105, __pyx_L3_error) }
       }
     } else {
       switch (__pyx_nargs) {
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 104, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 105, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 104, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 105, __pyx_L3_error)
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 104, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 105, __pyx_L3_error)
         break;
         default: goto __pyx_L5_argtuple_error;
       }
@@ -4528,7 +4526,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("get_frame_at_index_safe", 0, 2, 3, __pyx_nargs); __PYX_ERR(0, 104, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("get_frame_at_index_safe", 0, 2, 3, __pyx_nargs); __PYX_ERR(0, 105, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4539,9 +4537,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 104, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_frame_index), (&PyLong_Type), 0, "frame_index", 2))) __PYX_ERR(0, 104, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_max_retries), (&PyLong_Type), 0, "max_retries", 2))) __PYX_ERR(0, 104, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 105, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_frame_index), (&PyLong_Type), 0, "frame_index", 2))) __PYX_ERR(0, 105, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_max_retries), (&PyLong_Type), 0, "max_retries", 2))) __PYX_ERR(0, 105, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_8get_frame_at_index_safe(__pyx_self, __pyx_v_video_path, __pyx_v_frame_index, __pyx_v_max_retries);
 
   /* function exit code */
@@ -4601,19 +4599,19 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_frame_at_index_safe", 0);
 
-  /* "video_translate_cython.pyx":112
+  /* "video_translate_cython.pyx":113
  *     Returns frame or None if all retries fail.
  *     """
  *     import time             # <<<<<<<<<<<<<<
  * 
  *     # Get the lock for serialized frame reading
 */
-  __pyx_t_1 = __Pyx_ImportDottedModule(__pyx_mstate_global->__pyx_n_u_time, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_ImportDottedModule(__pyx_mstate_global->__pyx_n_u_time, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_time = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":115
+  /* "video_translate_cython.pyx":116
  * 
  *     # Get the lock for serialized frame reading
  *     lock = _get_frame_read_lock()             # <<<<<<<<<<<<<<
@@ -4621,7 +4619,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
  *     for attempt in range(max_retries):
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_get_frame_read_lock); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_get_frame_read_lock); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -4640,13 +4638,13 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_4, (1-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 115, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __pyx_v_lock = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":117
+  /* "video_translate_cython.pyx":118
  *     lock = _get_frame_read_lock()
  * 
  *     for attempt in range(max_retries):             # <<<<<<<<<<<<<<
@@ -4662,7 +4660,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+__pyx_t_4, (2-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 118, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
@@ -4670,9 +4668,9 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
     __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 117, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 118, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 117, __pyx_L1_error)
+    __pyx_t_6 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 118, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -4681,7 +4679,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
         {
           Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_2);
           #if !CYTHON_ASSUME_SAFE_SIZE
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 117, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 118, __pyx_L1_error)
           #endif
           if (__pyx_t_5 >= __pyx_temp) break;
         }
@@ -4691,7 +4689,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
         {
           Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_2);
           #if !CYTHON_ASSUME_SAFE_SIZE
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 117, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 118, __pyx_L1_error)
           #endif
           if (__pyx_t_5 >= __pyx_temp) break;
         }
@@ -4702,24 +4700,24 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
         #endif
         ++__pyx_t_5;
       }
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 118, __pyx_L1_error)
     } else {
       __pyx_t_1 = __pyx_t_6(__pyx_t_2);
       if (unlikely(!__pyx_t_1)) {
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
-          if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 117, __pyx_L1_error)
+          if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 118, __pyx_L1_error)
           PyErr_Clear();
         }
         break;
       }
     }
     __Pyx_GOTREF(__pyx_t_1);
-    if (!(likely(PyLong_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_t_1))) __PYX_ERR(0, 117, __pyx_L1_error)
+    if (!(likely(PyLong_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_t_1))) __PYX_ERR(0, 118, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_attempt, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "video_translate_cython.pyx":118
+    /* "video_translate_cython.pyx":119
  * 
  *     for attempt in range(max_retries):
  *         try:             # <<<<<<<<<<<<<<
@@ -4735,7 +4733,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
       __Pyx_XGOTREF(__pyx_t_9);
       /*try:*/ {
 
-        /* "video_translate_cython.pyx":121
+        /* "video_translate_cython.pyx":122
  *             # Serialize VideoCapture operations to prevent decoder contention
  *             # If lock is available, use it; otherwise proceed (may cause contention but better than hanging)
  *             if lock is not None:             # <<<<<<<<<<<<<<
@@ -4745,7 +4743,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
         __pyx_t_10 = (__pyx_v_lock != Py_None);
         if (__pyx_t_10) {
 
-          /* "video_translate_cython.pyx":122
+          /* "video_translate_cython.pyx":123
  *             # If lock is available, use it; otherwise proceed (may cause contention but better than hanging)
  *             if lock is not None:
  *                 with lock:             # <<<<<<<<<<<<<<
@@ -4753,10 +4751,10 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
  *             else:
 */
           /*with:*/ {
-            __pyx_t_11 = __Pyx_PyObject_LookupSpecial(__pyx_v_lock, __pyx_mstate_global->__pyx_n_u_exit); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 122, __pyx_L5_error)
+            __pyx_t_11 = __Pyx_PyObject_LookupSpecial(__pyx_v_lock, __pyx_mstate_global->__pyx_n_u_exit); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 123, __pyx_L5_error)
             __Pyx_GOTREF(__pyx_t_11);
             __pyx_t_3 = NULL;
-            __pyx_t_12 = __Pyx_PyObject_LookupSpecial(__pyx_v_lock, __pyx_mstate_global->__pyx_n_u_enter); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 122, __pyx_L14_error)
+            __pyx_t_12 = __Pyx_PyObject_LookupSpecial(__pyx_v_lock, __pyx_mstate_global->__pyx_n_u_enter); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 123, __pyx_L14_error)
             __Pyx_GOTREF(__pyx_t_12);
             __pyx_t_4 = 1;
             #if CYTHON_UNPACK_METHODS
@@ -4775,7 +4773,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
               __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_12, __pyx_callargs+__pyx_t_4, (1-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
               __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
               __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-              if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 122, __pyx_L14_error)
+              if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 123, __pyx_L14_error)
               __Pyx_GOTREF(__pyx_t_1);
             }
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -4789,7 +4787,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
                 __Pyx_XGOTREF(__pyx_t_15);
                 /*try:*/ {
 
-                  /* "video_translate_cython.pyx":123
+                  /* "video_translate_cython.pyx":124
  *             if lock is not None:
  *                 with lock:
  *                     frame = get_frame_at_index(video_path, frame_index)             # <<<<<<<<<<<<<<
@@ -4797,7 +4795,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
  *                 frame = get_frame_at_index(video_path, frame_index)
 */
                   __pyx_t_12 = NULL;
-                  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 123, __pyx_L20_error)
+                  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 124, __pyx_L20_error)
                   __Pyx_GOTREF(__pyx_t_3);
                   __pyx_t_4 = 1;
                   #if CYTHON_UNPACK_METHODS
@@ -4816,13 +4814,13 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
                     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_4, (3-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
                     __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
                     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-                    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 123, __pyx_L20_error)
+                    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 124, __pyx_L20_error)
                     __Pyx_GOTREF(__pyx_t_1);
                   }
                   __Pyx_XDECREF_SET(__pyx_v_frame, __pyx_t_1);
                   __pyx_t_1 = 0;
 
-                  /* "video_translate_cython.pyx":122
+                  /* "video_translate_cython.pyx":123
  *             # If lock is available, use it; otherwise proceed (may cause contention but better than hanging)
  *             if lock is not None:
  *                 with lock:             # <<<<<<<<<<<<<<
@@ -4840,20 +4838,20 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
                 __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
                 /*except:*/ {
                   __Pyx_AddTraceback("video_translate_cython.get_frame_at_index_safe", __pyx_clineno, __pyx_lineno, __pyx_filename);
-                  if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_3, &__pyx_t_12) < 0) __PYX_ERR(0, 122, __pyx_L22_except_error)
+                  if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_3, &__pyx_t_12) < 0) __PYX_ERR(0, 123, __pyx_L22_except_error)
                   __Pyx_XGOTREF(__pyx_t_1);
                   __Pyx_XGOTREF(__pyx_t_3);
                   __Pyx_XGOTREF(__pyx_t_12);
-                  __pyx_t_16 = PyTuple_Pack(3, __pyx_t_1, __pyx_t_3, __pyx_t_12); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 122, __pyx_L22_except_error)
+                  __pyx_t_16 = PyTuple_Pack(3, __pyx_t_1, __pyx_t_3, __pyx_t_12); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 123, __pyx_L22_except_error)
                   __Pyx_GOTREF(__pyx_t_16);
                   __pyx_t_17 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_16, NULL);
                   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
                   __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
-                  if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 122, __pyx_L22_except_error)
+                  if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 123, __pyx_L22_except_error)
                   __Pyx_GOTREF(__pyx_t_17);
                   __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_17);
                   __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-                  if (__pyx_t_10 < (0)) __PYX_ERR(0, 122, __pyx_L22_except_error)
+                  if (__pyx_t_10 < (0)) __PYX_ERR(0, 123, __pyx_L22_except_error)
                   __pyx_t_18 = (!__pyx_t_10);
                   if (unlikely(__pyx_t_18)) {
                     __Pyx_GIVEREF(__pyx_t_1);
@@ -4861,7 +4859,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
                     __Pyx_XGIVEREF(__pyx_t_12);
                     __Pyx_ErrRestoreWithState(__pyx_t_1, __pyx_t_3, __pyx_t_12);
                     __pyx_t_1 = 0;  __pyx_t_3 = 0;  __pyx_t_12 = 0; 
-                    __PYX_ERR(0, 122, __pyx_L22_except_error)
+                    __PYX_ERR(0, 123, __pyx_L22_except_error)
                   }
                   __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
                   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -4887,7 +4885,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
                 if (__pyx_t_11) {
                   __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_mstate_global->__pyx_tuple[0], NULL);
                   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-                  if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 122, __pyx_L5_error)
+                  if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 123, __pyx_L5_error)
                   __Pyx_GOTREF(__pyx_t_15);
                   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
                 }
@@ -4902,7 +4900,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
             __pyx_L31:;
           }
 
-          /* "video_translate_cython.pyx":121
+          /* "video_translate_cython.pyx":122
  *             # Serialize VideoCapture operations to prevent decoder contention
  *             # If lock is available, use it; otherwise proceed (may cause contention but better than hanging)
  *             if lock is not None:             # <<<<<<<<<<<<<<
@@ -4912,7 +4910,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
           goto __pyx_L13;
         }
 
-        /* "video_translate_cython.pyx":125
+        /* "video_translate_cython.pyx":126
  *                     frame = get_frame_at_index(video_path, frame_index)
  *             else:
  *                 frame = get_frame_at_index(video_path, frame_index)             # <<<<<<<<<<<<<<
@@ -4921,7 +4919,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
 */
         /*else*/ {
           __pyx_t_3 = NULL;
-          __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 125, __pyx_L5_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 126, __pyx_L5_error)
           __Pyx_GOTREF(__pyx_t_1);
           __pyx_t_4 = 1;
           #if CYTHON_UNPACK_METHODS
@@ -4940,7 +4938,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
             __pyx_t_12 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+__pyx_t_4, (3-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
             __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-            if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 125, __pyx_L5_error)
+            if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 126, __pyx_L5_error)
             __Pyx_GOTREF(__pyx_t_12);
           }
           __Pyx_XDECREF_SET(__pyx_v_frame, __pyx_t_12);
@@ -4948,18 +4946,18 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
         }
         __pyx_L13:;
 
-        /* "video_translate_cython.pyx":127
+        /* "video_translate_cython.pyx":128
  *                 frame = get_frame_at_index(video_path, frame_index)
  * 
  *             if frame is not None:             # <<<<<<<<<<<<<<
  *                 return frame
  *         except (MemoryError, OSError, RuntimeError) as e:
 */
-        if (unlikely(!__pyx_v_frame)) { __Pyx_RaiseUnboundLocalError("frame"); __PYX_ERR(0, 127, __pyx_L5_error) }
+        if (unlikely(!__pyx_v_frame)) { __Pyx_RaiseUnboundLocalError("frame"); __PYX_ERR(0, 128, __pyx_L5_error) }
         __pyx_t_18 = (__pyx_v_frame != Py_None);
         if (__pyx_t_18) {
 
-          /* "video_translate_cython.pyx":128
+          /* "video_translate_cython.pyx":129
  * 
  *             if frame is not None:
  *                 return frame             # <<<<<<<<<<<<<<
@@ -4967,13 +4965,13 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
  *             # Memory/decoder errors - wait longer before retry
 */
           __Pyx_XDECREF(__pyx_r);
-          if (unlikely(!__pyx_v_frame)) { __Pyx_RaiseUnboundLocalError("frame"); __PYX_ERR(0, 128, __pyx_L5_error) }
+          if (unlikely(!__pyx_v_frame)) { __Pyx_RaiseUnboundLocalError("frame"); __PYX_ERR(0, 129, __pyx_L5_error) }
           __Pyx_INCREF(__pyx_v_frame);
           __pyx_r = __pyx_v_frame;
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           goto __pyx_L9_try_return;
 
-          /* "video_translate_cython.pyx":127
+          /* "video_translate_cython.pyx":128
  *                 frame = get_frame_at_index(video_path, frame_index)
  * 
  *             if frame is not None:             # <<<<<<<<<<<<<<
@@ -4982,7 +4980,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
 */
         }
 
-        /* "video_translate_cython.pyx":118
+        /* "video_translate_cython.pyx":119
  * 
  *     for attempt in range(max_retries):
  *         try:             # <<<<<<<<<<<<<<
@@ -5000,7 +4998,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
       __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "video_translate_cython.pyx":129
+      /* "video_translate_cython.pyx":130
  *             if frame is not None:
  *                 return frame
  *         except (MemoryError, OSError, RuntimeError) as e:             # <<<<<<<<<<<<<<
@@ -5010,7 +5008,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
       __pyx_t_19 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_MemoryError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_OSError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_RuntimeError);
       if (__pyx_t_19) {
         __Pyx_AddTraceback("video_translate_cython.get_frame_at_index_safe", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_12, &__pyx_t_1, &__pyx_t_3) < 0) __PYX_ERR(0, 129, __pyx_L7_except_error)
+        if (__Pyx_GetException(&__pyx_t_12, &__pyx_t_1, &__pyx_t_3) < 0) __PYX_ERR(0, 130, __pyx_L7_except_error)
         __Pyx_XGOTREF(__pyx_t_12);
         __Pyx_XGOTREF(__pyx_t_1);
         __Pyx_XGOTREF(__pyx_t_3);
@@ -5018,22 +5016,22 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
         __pyx_v_e = __pyx_t_1;
         /*try:*/ {
 
-          /* "video_translate_cython.pyx":131
+          /* "video_translate_cython.pyx":132
  *         except (MemoryError, OSError, RuntimeError) as e:
  *             # Memory/decoder errors - wait longer before retry
  *             if attempt < max_retries - 1:             # <<<<<<<<<<<<<<
  *                 time.sleep(0.5 * (attempt + 1))  # Longer backoff for decoder errors
  *                 continue
 */
-          __pyx_t_16 = __Pyx_PyLong_SubtractObjC(__pyx_v_max_retries, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 131, __pyx_L38_error)
+          __pyx_t_16 = __Pyx_PyLong_SubtractObjC(__pyx_v_max_retries, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 132, __pyx_L38_error)
           __Pyx_GOTREF(__pyx_t_16);
-          __pyx_t_20 = PyObject_RichCompare(__pyx_v_attempt, __pyx_t_16, Py_LT); __Pyx_XGOTREF(__pyx_t_20); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 131, __pyx_L38_error)
+          __pyx_t_20 = PyObject_RichCompare(__pyx_v_attempt, __pyx_t_16, Py_LT); __Pyx_XGOTREF(__pyx_t_20); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 132, __pyx_L38_error)
           __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
-          __pyx_t_18 = __Pyx_PyObject_IsTrue(__pyx_t_20); if (unlikely((__pyx_t_18 < 0))) __PYX_ERR(0, 131, __pyx_L38_error)
+          __pyx_t_18 = __Pyx_PyObject_IsTrue(__pyx_t_20); if (unlikely((__pyx_t_18 < 0))) __PYX_ERR(0, 132, __pyx_L38_error)
           __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
           if (__pyx_t_18) {
 
-            /* "video_translate_cython.pyx":132
+            /* "video_translate_cython.pyx":133
  *             # Memory/decoder errors - wait longer before retry
  *             if attempt < max_retries - 1:
  *                 time.sleep(0.5 * (attempt + 1))  # Longer backoff for decoder errors             # <<<<<<<<<<<<<<
@@ -5042,14 +5040,14 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
 */
             __pyx_t_16 = __pyx_v_time;
             __Pyx_INCREF(__pyx_t_16);
-            __pyx_t_21 = __Pyx_PyLong_AddObjC(__pyx_v_attempt, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 132, __pyx_L38_error)
+            __pyx_t_21 = __Pyx_PyLong_AddObjC(__pyx_v_attempt, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 133, __pyx_L38_error)
             __Pyx_GOTREF(__pyx_t_21);
-            __pyx_t_22 = PyNumber_Multiply(__pyx_mstate_global->__pyx_float_0_5, __pyx_t_21); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 132, __pyx_L38_error)
+            __pyx_t_22 = PyNumber_Multiply(__pyx_mstate_global->__pyx_float_0_5, __pyx_t_21); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 133, __pyx_L38_error)
             __Pyx_GOTREF(__pyx_t_22);
             __Pyx_DECREF(__pyx_t_21); __pyx_t_21 = 0;
-            __pyx_t_23 = __Pyx_PyFloat_AsDouble(__pyx_t_22); if (unlikely((__pyx_t_23 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 132, __pyx_L38_error)
+            __pyx_t_23 = __Pyx_PyFloat_AsDouble(__pyx_t_22); if (unlikely((__pyx_t_23 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 133, __pyx_L38_error)
             __Pyx_DECREF(__pyx_t_22); __pyx_t_22 = 0;
-            __pyx_t_22 = PyFloat_FromDouble(__pyx_t_23); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 132, __pyx_L38_error)
+            __pyx_t_22 = PyFloat_FromDouble(__pyx_t_23); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 133, __pyx_L38_error)
             __Pyx_GOTREF(__pyx_t_22);
             __pyx_t_4 = 0;
             {
@@ -5057,12 +5055,12 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
               __pyx_t_20 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_sleep, __pyx_callargs+__pyx_t_4, (2-__pyx_t_4) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
               __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
               __Pyx_DECREF(__pyx_t_22); __pyx_t_22 = 0;
-              if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 132, __pyx_L38_error)
+              if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 133, __pyx_L38_error)
               __Pyx_GOTREF(__pyx_t_20);
             }
             __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
 
-            /* "video_translate_cython.pyx":133
+            /* "video_translate_cython.pyx":134
  *             if attempt < max_retries - 1:
  *                 time.sleep(0.5 * (attempt + 1))  # Longer backoff for decoder errors
  *                 continue             # <<<<<<<<<<<<<<
@@ -5071,7 +5069,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
 */
             goto __pyx_L35_continue;
 
-            /* "video_translate_cython.pyx":131
+            /* "video_translate_cython.pyx":132
  *         except (MemoryError, OSError, RuntimeError) as e:
  *             # Memory/decoder errors - wait longer before retry
  *             if attempt < max_retries - 1:             # <<<<<<<<<<<<<<
@@ -5080,7 +5078,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
 */
           }
 
-          /* "video_translate_cython.pyx":134
+          /* "video_translate_cython.pyx":135
  *                 time.sleep(0.5 * (attempt + 1))  # Longer backoff for decoder errors
  *                 continue
  *             return None             # <<<<<<<<<<<<<<
@@ -5096,7 +5094,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
           goto __pyx_L37_return;
         }
 
-        /* "video_translate_cython.pyx":129
+        /* "video_translate_cython.pyx":130
  *             if frame is not None:
  *                 return frame
  *         except (MemoryError, OSError, RuntimeError) as e:             # <<<<<<<<<<<<<<
@@ -5157,7 +5155,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
         goto __pyx_L11_try_continue;
       }
 
-      /* "video_translate_cython.pyx":135
+      /* "video_translate_cython.pyx":136
  *                 continue
  *             return None
  *         except Exception as e:             # <<<<<<<<<<<<<<
@@ -5167,7 +5165,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
       __pyx_t_24 = __Pyx_PyErr_ExceptionMatches(((PyObject *)(((PyTypeObject*)PyExc_Exception))));
       if (__pyx_t_24) {
         __Pyx_AddTraceback("video_translate_cython.get_frame_at_index_safe", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_12) < 0) __PYX_ERR(0, 135, __pyx_L7_except_error)
+        if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_12) < 0) __PYX_ERR(0, 136, __pyx_L7_except_error)
         __Pyx_XGOTREF(__pyx_t_3);
         __Pyx_XGOTREF(__pyx_t_1);
         __Pyx_XGOTREF(__pyx_t_12);
@@ -5175,22 +5173,22 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
         __pyx_v_e = __pyx_t_1;
         /*try:*/ {
 
-          /* "video_translate_cython.pyx":137
+          /* "video_translate_cython.pyx":138
  *         except Exception as e:
  *             # Other errors - shorter backoff
  *             if attempt < max_retries - 1:             # <<<<<<<<<<<<<<
  *                 time.sleep(0.2 * (attempt + 1))
  *                 continue
 */
-          __pyx_t_20 = __Pyx_PyLong_SubtractObjC(__pyx_v_max_retries, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 137, __pyx_L50_error)
+          __pyx_t_20 = __Pyx_PyLong_SubtractObjC(__pyx_v_max_retries, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 138, __pyx_L50_error)
           __Pyx_GOTREF(__pyx_t_20);
-          __pyx_t_22 = PyObject_RichCompare(__pyx_v_attempt, __pyx_t_20, Py_LT); __Pyx_XGOTREF(__pyx_t_22); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 137, __pyx_L50_error)
+          __pyx_t_22 = PyObject_RichCompare(__pyx_v_attempt, __pyx_t_20, Py_LT); __Pyx_XGOTREF(__pyx_t_22); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 138, __pyx_L50_error)
           __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
-          __pyx_t_18 = __Pyx_PyObject_IsTrue(__pyx_t_22); if (unlikely((__pyx_t_18 < 0))) __PYX_ERR(0, 137, __pyx_L50_error)
+          __pyx_t_18 = __Pyx_PyObject_IsTrue(__pyx_t_22); if (unlikely((__pyx_t_18 < 0))) __PYX_ERR(0, 138, __pyx_L50_error)
           __Pyx_DECREF(__pyx_t_22); __pyx_t_22 = 0;
           if (__pyx_t_18) {
 
-            /* "video_translate_cython.pyx":138
+            /* "video_translate_cython.pyx":139
  *             # Other errors - shorter backoff
  *             if attempt < max_retries - 1:
  *                 time.sleep(0.2 * (attempt + 1))             # <<<<<<<<<<<<<<
@@ -5199,14 +5197,14 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
 */
             __pyx_t_20 = __pyx_v_time;
             __Pyx_INCREF(__pyx_t_20);
-            __pyx_t_16 = __Pyx_PyLong_AddObjC(__pyx_v_attempt, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 138, __pyx_L50_error)
+            __pyx_t_16 = __Pyx_PyLong_AddObjC(__pyx_v_attempt, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 139, __pyx_L50_error)
             __Pyx_GOTREF(__pyx_t_16);
-            __pyx_t_21 = PyNumber_Multiply(__pyx_mstate_global->__pyx_float_0_2, __pyx_t_16); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 138, __pyx_L50_error)
+            __pyx_t_21 = PyNumber_Multiply(__pyx_mstate_global->__pyx_float_0_2, __pyx_t_16); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 139, __pyx_L50_error)
             __Pyx_GOTREF(__pyx_t_21);
             __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
-            __pyx_t_23 = __Pyx_PyFloat_AsDouble(__pyx_t_21); if (unlikely((__pyx_t_23 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 138, __pyx_L50_error)
+            __pyx_t_23 = __Pyx_PyFloat_AsDouble(__pyx_t_21); if (unlikely((__pyx_t_23 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 139, __pyx_L50_error)
             __Pyx_DECREF(__pyx_t_21); __pyx_t_21 = 0;
-            __pyx_t_21 = PyFloat_FromDouble(__pyx_t_23); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 138, __pyx_L50_error)
+            __pyx_t_21 = PyFloat_FromDouble(__pyx_t_23); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 139, __pyx_L50_error)
             __Pyx_GOTREF(__pyx_t_21);
             __pyx_t_4 = 0;
             {
@@ -5214,12 +5212,12 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
               __pyx_t_22 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_sleep, __pyx_callargs+__pyx_t_4, (2-__pyx_t_4) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
               __Pyx_XDECREF(__pyx_t_20); __pyx_t_20 = 0;
               __Pyx_DECREF(__pyx_t_21); __pyx_t_21 = 0;
-              if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 138, __pyx_L50_error)
+              if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 139, __pyx_L50_error)
               __Pyx_GOTREF(__pyx_t_22);
             }
             __Pyx_DECREF(__pyx_t_22); __pyx_t_22 = 0;
 
-            /* "video_translate_cython.pyx":139
+            /* "video_translate_cython.pyx":140
  *             if attempt < max_retries - 1:
  *                 time.sleep(0.2 * (attempt + 1))
  *                 continue             # <<<<<<<<<<<<<<
@@ -5228,7 +5226,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
 */
             goto __pyx_L47_continue;
 
-            /* "video_translate_cython.pyx":137
+            /* "video_translate_cython.pyx":138
  *         except Exception as e:
  *             # Other errors - shorter backoff
  *             if attempt < max_retries - 1:             # <<<<<<<<<<<<<<
@@ -5237,7 +5235,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
 */
           }
 
-          /* "video_translate_cython.pyx":140
+          /* "video_translate_cython.pyx":141
  *                 time.sleep(0.2 * (attempt + 1))
  *                 continue
  *             return None             # <<<<<<<<<<<<<<
@@ -5253,7 +5251,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
           goto __pyx_L49_return;
         }
 
-        /* "video_translate_cython.pyx":135
+        /* "video_translate_cython.pyx":136
  *                 continue
  *             return None
  *         except Exception as e:             # <<<<<<<<<<<<<<
@@ -5315,7 +5313,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
       }
       goto __pyx_L7_except_error;
 
-      /* "video_translate_cython.pyx":118
+      /* "video_translate_cython.pyx":119
  * 
  *     for attempt in range(max_retries):
  *         try:             # <<<<<<<<<<<<<<
@@ -5349,22 +5347,22 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
       __pyx_L12_try_end:;
     }
 
-    /* "video_translate_cython.pyx":143
+    /* "video_translate_cython.pyx":144
  * 
  *         # Frame read returned None, retry with delay
  *         if attempt < max_retries - 1:             # <<<<<<<<<<<<<<
  *             time.sleep(0.2 * (attempt + 1))
  * 
 */
-    __pyx_t_12 = __Pyx_PyLong_SubtractObjC(__pyx_v_max_retries, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyLong_SubtractObjC(__pyx_v_max_retries, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_1 = PyObject_RichCompare(__pyx_v_attempt, __pyx_t_12, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_1 = PyObject_RichCompare(__pyx_v_attempt, __pyx_t_12, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    __pyx_t_18 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_18 < 0))) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_18 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_18 < 0))) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_18) {
 
-      /* "video_translate_cython.pyx":144
+      /* "video_translate_cython.pyx":145
  *         # Frame read returned None, retry with delay
  *         if attempt < max_retries - 1:
  *             time.sleep(0.2 * (attempt + 1))             # <<<<<<<<<<<<<<
@@ -5373,14 +5371,14 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
 */
       __pyx_t_12 = __pyx_v_time;
       __Pyx_INCREF(__pyx_t_12);
-      __pyx_t_3 = __Pyx_PyLong_AddObjC(__pyx_v_attempt, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyLong_AddObjC(__pyx_v_attempt, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 145, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_22 = PyNumber_Multiply(__pyx_mstate_global->__pyx_float_0_2, __pyx_t_3); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 144, __pyx_L1_error)
+      __pyx_t_22 = PyNumber_Multiply(__pyx_mstate_global->__pyx_float_0_2, __pyx_t_3); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 145, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_22);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_23 = __Pyx_PyFloat_AsDouble(__pyx_t_22); if (unlikely((__pyx_t_23 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 144, __pyx_L1_error)
+      __pyx_t_23 = __Pyx_PyFloat_AsDouble(__pyx_t_22); if (unlikely((__pyx_t_23 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_22); __pyx_t_22 = 0;
-      __pyx_t_22 = PyFloat_FromDouble(__pyx_t_23); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 144, __pyx_L1_error)
+      __pyx_t_22 = PyFloat_FromDouble(__pyx_t_23); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 145, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_22);
       __pyx_t_4 = 0;
       {
@@ -5388,12 +5386,12 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
         __pyx_t_1 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_sleep, __pyx_callargs+__pyx_t_4, (2-__pyx_t_4) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
         __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
         __Pyx_DECREF(__pyx_t_22); __pyx_t_22 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
       }
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "video_translate_cython.pyx":143
+      /* "video_translate_cython.pyx":144
  * 
  *         # Frame read returned None, retry with delay
  *         if attempt < max_retries - 1:             # <<<<<<<<<<<<<<
@@ -5402,7 +5400,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
 */
     }
 
-    /* "video_translate_cython.pyx":117
+    /* "video_translate_cython.pyx":118
  *     lock = _get_frame_read_lock()
  * 
  *     for attempt in range(max_retries):             # <<<<<<<<<<<<<<
@@ -5413,7 +5411,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":146
+  /* "video_translate_cython.pyx":147
  *             time.sleep(0.2 * (attempt + 1))
  * 
  *     return None             # <<<<<<<<<<<<<<
@@ -5424,7 +5422,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":104
+  /* "video_translate_cython.pyx":105
  * 
  * # ------------------ Safe frame reading with retry logic and serialization ------------------
  * def get_frame_at_index_safe(video_path: str, frame_index: int, max_retries: int = 3) -> object:             # <<<<<<<<<<<<<<
@@ -5455,7 +5453,7 @@ static PyObject *__pyx_pf_22video_translate_cython_8get_frame_at_index_safe(CYTH
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":150
+/* "video_translate_cython.pyx":151
  * 
  * # ------------------ OCR extraction ------------------
  * @cython.locals(results=object, text=object)             # <<<<<<<<<<<<<<
@@ -5504,35 +5502,35 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_image,&__pyx_mstate_global->__pyx_n_u_source_language,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 150, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 151, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 150, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 151, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 150, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 151, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "extract_text_from_image", 0) < (0)) __PYX_ERR(0, 150, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "extract_text_from_image", 0) < (0)) __PYX_ERR(0, 151, __pyx_L3_error)
       if (!values[1]) values[1] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_n_u_english)));
       for (Py_ssize_t i = __pyx_nargs; i < 1; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("extract_text_from_image", 0, 1, 2, i); __PYX_ERR(0, 150, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("extract_text_from_image", 0, 1, 2, i); __PYX_ERR(0, 151, __pyx_L3_error) }
       }
     } else {
       switch (__pyx_nargs) {
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 150, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 151, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 150, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 151, __pyx_L3_error)
         break;
         default: goto __pyx_L5_argtuple_error;
       }
@@ -5543,7 +5541,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("extract_text_from_image", 0, 1, 2, __pyx_nargs); __PYX_ERR(0, 150, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("extract_text_from_image", 0, 1, 2, __pyx_nargs); __PYX_ERR(0, 151, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5554,7 +5552,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 151, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 152, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_10extract_text_from_image(__pyx_self, __pyx_v_image, __pyx_v_source_language);
 
   /* function exit code */
@@ -5575,7 +5573,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 }
 static PyObject *__pyx_gb_22video_translate_cython_23extract_text_from_image_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "video_translate_cython.pyx":156
+/* "video_translate_cython.pyx":157
  *     results = extract_lines_with_boxes(image)
  *     # Join lines removing whitespace in each text piece
  *     text = ''.join(''.join(text.split()) for text, _ in results)             # <<<<<<<<<<<<<<
@@ -5595,7 +5593,7 @@ static PyObject *__pyx_pf_22video_translate_cython_23extract_text_from_image_gen
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_22video_translate_cython___pyx_scope_struct__genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 156, __pyx_L1_error)
+    __PYX_ERR(0, 157, __pyx_L1_error)
   } else {
     __Pyx_GOTREF((PyObject *)__pyx_cur_scope);
   }
@@ -5603,7 +5601,7 @@ static PyObject *__pyx_pf_22video_translate_cython_23extract_text_from_image_gen
   __Pyx_INCREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_22video_translate_cython_23extract_text_from_image_2generator, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[0]), (PyObject *) __pyx_cur_scope, __pyx_mstate_global->__pyx_n_u_genexpr, __pyx_mstate_global->__pyx_n_u_extract_text_from_image_locals_g, __pyx_mstate_global->__pyx_n_u_video_translate_cython); if (unlikely(!gen)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_22video_translate_cython_23extract_text_from_image_2generator, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[0]), (PyObject *) __pyx_cur_scope, __pyx_mstate_global->__pyx_n_u_genexpr, __pyx_mstate_global->__pyx_n_u_extract_text_from_image_locals_g, __pyx_mstate_global->__pyx_n_u_video_translate_cython); if (unlikely(!gen)) __PYX_ERR(0, 157, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -5644,18 +5642,18 @@ static PyObject *__pyx_gb_22video_translate_cython_23extract_text_from_image_2ge
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 156, __pyx_L1_error)
-  __pyx_r = PyList_New(0); if (unlikely(!__pyx_r)) __PYX_ERR(0, 156, __pyx_L1_error)
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_r = PyList_New(0); if (unlikely(!__pyx_r)) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_r);
-  if (unlikely(!__pyx_cur_scope->__pyx_genexpr_arg_0)) { __Pyx_RaiseUnboundLocalError(".0"); __PYX_ERR(0, 156, __pyx_L1_error) }
+  if (unlikely(!__pyx_cur_scope->__pyx_genexpr_arg_0)) { __Pyx_RaiseUnboundLocalError(".0"); __PYX_ERR(0, 157, __pyx_L1_error) }
   if (likely(PyList_CheckExact(__pyx_cur_scope->__pyx_genexpr_arg_0)) || PyTuple_CheckExact(__pyx_cur_scope->__pyx_genexpr_arg_0)) {
     __pyx_t_1 = __pyx_cur_scope->__pyx_genexpr_arg_0; __Pyx_INCREF(__pyx_t_1);
     __pyx_t_2 = 0;
     __pyx_t_3 = NULL;
   } else {
-    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_genexpr_arg_0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_genexpr_arg_0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __pyx_t_3 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 157, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_3)) {
@@ -5663,7 +5661,7 @@ static PyObject *__pyx_gb_22video_translate_cython_23extract_text_from_image_2ge
         {
           Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
           #if !CYTHON_ASSUME_SAFE_SIZE
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 156, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 157, __pyx_L1_error)
           #endif
           if (__pyx_t_2 >= __pyx_temp) break;
         }
@@ -5673,7 +5671,7 @@ static PyObject *__pyx_gb_22video_translate_cython_23extract_text_from_image_2ge
         {
           Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_1);
           #if !CYTHON_ASSUME_SAFE_SIZE
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 156, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 157, __pyx_L1_error)
           #endif
           if (__pyx_t_2 >= __pyx_temp) break;
         }
@@ -5684,13 +5682,13 @@ static PyObject *__pyx_gb_22video_translate_cython_23extract_text_from_image_2ge
         #endif
         ++__pyx_t_2;
       }
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 156, __pyx_L1_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 157, __pyx_L1_error)
     } else {
       __pyx_t_4 = __pyx_t_3(__pyx_t_1);
       if (unlikely(!__pyx_t_4)) {
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
-          if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 156, __pyx_L1_error)
+          if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 157, __pyx_L1_error)
           PyErr_Clear();
         }
         break;
@@ -5703,7 +5701,7 @@ static PyObject *__pyx_gb_22video_translate_cython_23extract_text_from_image_2ge
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 156, __pyx_L1_error)
+        __PYX_ERR(0, 157, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -5713,22 +5711,22 @@ static PyObject *__pyx_gb_22video_translate_cython_23extract_text_from_image_2ge
         __Pyx_INCREF(__pyx_t_6);
       } else {
         __pyx_t_5 = __Pyx_PyList_GetItemRef(sequence, 0);
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 156, __pyx_L1_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 157, __pyx_L1_error)
         __Pyx_XGOTREF(__pyx_t_5);
         __pyx_t_6 = __Pyx_PyList_GetItemRef(sequence, 1);
-        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 156, __pyx_L1_error)
+        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 157, __pyx_L1_error)
         __Pyx_XGOTREF(__pyx_t_6);
       }
       #else
-      __pyx_t_5 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 156, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 157, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_6 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 156, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 157, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       #endif
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_7 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 156, __pyx_L1_error)
+      __pyx_t_7 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 157, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_8 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_7);
@@ -5736,7 +5734,7 @@ static PyObject *__pyx_gb_22video_translate_cython_23extract_text_from_image_2ge
       __Pyx_GOTREF(__pyx_t_5);
       index = 1; __pyx_t_6 = __pyx_t_8(__pyx_t_7); if (unlikely(!__pyx_t_6)) goto __pyx_L6_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_6);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_8(__pyx_t_7), 2) < (0)) __PYX_ERR(0, 156, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_8(__pyx_t_7), 2) < (0)) __PYX_ERR(0, 157, __pyx_L1_error)
       __pyx_t_8 = NULL;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       goto __pyx_L7_unpacking_done;
@@ -5744,7 +5742,7 @@ static PyObject *__pyx_gb_22video_translate_cython_23extract_text_from_image_2ge
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_8 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 156, __pyx_L1_error)
+      __PYX_ERR(0, 157, __pyx_L1_error)
       __pyx_L7_unpacking_done:;
     }
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_text);
@@ -5762,13 +5760,13 @@ static PyObject *__pyx_gb_22video_translate_cython_23extract_text_from_image_2ge
       PyObject *__pyx_callargs[2] = {__pyx_t_6, NULL};
       __pyx_t_4 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_split, __pyx_callargs+__pyx_t_9, (1-__pyx_t_9) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 156, __pyx_L1_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 157, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
     }
-    __pyx_t_6 = PyUnicode_Join(__pyx_mstate_global->__pyx_kp_u__2, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __pyx_t_6 = PyUnicode_Join(__pyx_mstate_global->__pyx_kp_u__2, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 157, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(__Pyx_ListComp_Append(__pyx_r, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 156, __pyx_L1_error)
+    if (unlikely(__Pyx_ListComp_Append(__pyx_r, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 157, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -5798,7 +5796,7 @@ static PyObject *__pyx_gb_22video_translate_cython_23extract_text_from_image_2ge
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":150
+/* "video_translate_cython.pyx":151
  * 
  * # ------------------ OCR extraction ------------------
  * @cython.locals(results=object, text=object)             # <<<<<<<<<<<<<<
@@ -5824,7 +5822,7 @@ static PyObject *__pyx_pf_22video_translate_cython_10extract_text_from_image(CYT
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("extract_text_from_image", 0);
 
-  /* "video_translate_cython.pyx":153
+  /* "video_translate_cython.pyx":154
  * def extract_text_from_image(image, source_language: str = "english") -> str:
  *     """Extract text from image using existing OCR util."""
  *     extract_lines_with_boxes = _get_ocr_extractor()             # <<<<<<<<<<<<<<
@@ -5832,7 +5830,7 @@ static PyObject *__pyx_pf_22video_translate_cython_10extract_text_from_image(CYT
  *     # Join lines removing whitespace in each text piece
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_get_ocr_extractor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 153, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_get_ocr_extractor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 154, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -5851,13 +5849,13 @@ static PyObject *__pyx_pf_22video_translate_cython_10extract_text_from_image(CYT
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_4, (1-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 153, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __pyx_v_extract_lines_with_boxes = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":154
+  /* "video_translate_cython.pyx":155
  *     """Extract text from image using existing OCR util."""
  *     extract_lines_with_boxes = _get_ocr_extractor()
  *     results = extract_lines_with_boxes(image)             # <<<<<<<<<<<<<<
@@ -5884,42 +5882,42 @@ static PyObject *__pyx_pf_22video_translate_cython_10extract_text_from_image(CYT
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+__pyx_t_4, (2-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __pyx_v_results = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":156
+  /* "video_translate_cython.pyx":157
  *     results = extract_lines_with_boxes(image)
  *     # Join lines removing whitespace in each text piece
  *     text = ''.join(''.join(text.split()) for text, _ in results)             # <<<<<<<<<<<<<<
  *     if len(text) == 0:
  *         return ""
 */
-  __pyx_t_1 = __pyx_pf_22video_translate_cython_23extract_text_from_image_genexpr(NULL, __pyx_v_results); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_t_1 = __pyx_pf_22video_translate_cython_23extract_text_from_image_genexpr(NULL, __pyx_v_results); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_Generator_GetInlinedResult(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Generator_GetInlinedResult(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyUnicode_Join(__pyx_mstate_global->__pyx_kp_u__2, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_Join(__pyx_mstate_global->__pyx_kp_u__2, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_text = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":157
+  /* "video_translate_cython.pyx":158
  *     # Join lines removing whitespace in each text piece
  *     text = ''.join(''.join(text.split()) for text, _ in results)
  *     if len(text) == 0:             # <<<<<<<<<<<<<<
  *         return ""
  *     else:
 */
-  __pyx_t_5 = PyObject_Length(__pyx_v_text); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_t_5 = PyObject_Length(__pyx_v_text); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 158, __pyx_L1_error)
   __pyx_t_6 = (__pyx_t_5 == 0);
   if (__pyx_t_6) {
 
-    /* "video_translate_cython.pyx":158
+    /* "video_translate_cython.pyx":159
  *     text = ''.join(''.join(text.split()) for text, _ in results)
  *     if len(text) == 0:
  *         return ""             # <<<<<<<<<<<<<<
@@ -5931,7 +5929,7 @@ static PyObject *__pyx_pf_22video_translate_cython_10extract_text_from_image(CYT
     __pyx_r = __pyx_mstate_global->__pyx_kp_u__2;
     goto __pyx_L0;
 
-    /* "video_translate_cython.pyx":157
+    /* "video_translate_cython.pyx":158
  *     # Join lines removing whitespace in each text piece
  *     text = ''.join(''.join(text.split()) for text, _ in results)
  *     if len(text) == 0:             # <<<<<<<<<<<<<<
@@ -5940,7 +5938,7 @@ static PyObject *__pyx_pf_22video_translate_cython_10extract_text_from_image(CYT
 */
   }
 
-  /* "video_translate_cython.pyx":160
+  /* "video_translate_cython.pyx":161
  *         return ""
  *     else:
  *         return text             # <<<<<<<<<<<<<<
@@ -5949,13 +5947,13 @@ static PyObject *__pyx_pf_22video_translate_cython_10extract_text_from_image(CYT
 */
   /*else*/ {
     __Pyx_XDECREF(__pyx_r);
-    if (!(likely(PyUnicode_CheckExact(__pyx_v_text))||((__pyx_v_text) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_v_text))) __PYX_ERR(0, 160, __pyx_L1_error)
+    if (!(likely(PyUnicode_CheckExact(__pyx_v_text))||((__pyx_v_text) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_v_text))) __PYX_ERR(0, 161, __pyx_L1_error)
     __Pyx_INCREF(__pyx_v_text);
     __pyx_r = ((PyObject*)__pyx_v_text);
     goto __pyx_L0;
   }
 
-  /* "video_translate_cython.pyx":150
+  /* "video_translate_cython.pyx":151
  * 
  * # ------------------ OCR extraction ------------------
  * @cython.locals(results=object, text=object)             # <<<<<<<<<<<<<<
@@ -5980,7 +5978,7 @@ static PyObject *__pyx_pf_22video_translate_cython_10extract_text_from_image(CYT
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":163
+/* "video_translate_cython.pyx":164
  * 
  * 
  * @cython.locals(cache_key=tuple)             # <<<<<<<<<<<<<<
@@ -6030,41 +6028,41 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_video_path,&__pyx_mstate_global->__pyx_n_u_frame_index,&__pyx_mstate_global->__pyx_n_u_source_language,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 163, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 164, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 163, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 164, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 163, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 164, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 163, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 164, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "extract_text_from_frame_cached", 0) < (0)) __PYX_ERR(0, 163, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "extract_text_from_frame_cached", 0) < (0)) __PYX_ERR(0, 164, __pyx_L3_error)
       if (!values[2]) values[2] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_n_u_english)));
       for (Py_ssize_t i = __pyx_nargs; i < 2; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("extract_text_from_frame_cached", 0, 2, 3, i); __PYX_ERR(0, 163, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("extract_text_from_frame_cached", 0, 2, 3, i); __PYX_ERR(0, 164, __pyx_L3_error) }
       }
     } else {
       switch (__pyx_nargs) {
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 163, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 164, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 163, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 164, __pyx_L3_error)
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 163, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 164, __pyx_L3_error)
         break;
         default: goto __pyx_L5_argtuple_error;
       }
@@ -6076,7 +6074,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("extract_text_from_frame_cached", 0, 2, 3, __pyx_nargs); __PYX_ERR(0, 163, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("extract_text_from_frame_cached", 0, 2, 3, __pyx_nargs); __PYX_ERR(0, 164, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6087,9 +6085,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 164, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_frame_index), (&PyLong_Type), 0, "frame_index", 2))) __PYX_ERR(0, 164, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 164, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 165, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_frame_index), (&PyLong_Type), 0, "frame_index", 2))) __PYX_ERR(0, 165, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 165, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_12extract_text_from_frame_cached(__pyx_self, __pyx_v_video_path, __pyx_v_frame_index, __pyx_v_source_language);
 
   /* function exit code */
@@ -6130,38 +6128,38 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("extract_text_from_frame_cached", 0);
 
-  /* "video_translate_cython.pyx":166
+  /* "video_translate_cython.pyx":167
  * def extract_text_from_frame_cached(video_path: str, frame_index: int, source_language: str = "english") -> str:
  *     """Uses module-level cache to avoid duplicate OCR."""
  *     cache_key = (video_path, frame_index)             # <<<<<<<<<<<<<<
  *     if cache_key in ocr_cache:
  *         # Cache hit
 */
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_video_path);
   __Pyx_GIVEREF(__pyx_v_video_path);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 166, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 167, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_frame_index);
   __Pyx_GIVEREF(__pyx_v_frame_index);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_frame_index) != (0)) __PYX_ERR(0, 166, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_frame_index) != (0)) __PYX_ERR(0, 167, __pyx_L1_error);
   __pyx_v_cache_key = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":167
+  /* "video_translate_cython.pyx":168
  *     """Uses module-level cache to avoid duplicate OCR."""
  *     cache_key = (video_path, frame_index)
  *     if cache_key in ocr_cache:             # <<<<<<<<<<<<<<
  *         # Cache hit
  *         return ocr_cache[cache_key]
 */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 168, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_v_cache_key, __pyx_t_1, Py_EQ)); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_v_cache_key, __pyx_t_1, Py_EQ)); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 168, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "video_translate_cython.pyx":169
+    /* "video_translate_cython.pyx":170
  *     if cache_key in ocr_cache:
  *         # Cache hit
  *         return ocr_cache[cache_key]             # <<<<<<<<<<<<<<
@@ -6169,17 +6167,17 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
  *     # Cache miss - perform OCR with safe frame reading
 */
     __Pyx_XDECREF(__pyx_r);
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_v_cache_key); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_v_cache_key); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (!(likely(PyUnicode_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_3))) __PYX_ERR(0, 169, __pyx_L1_error)
+    if (!(likely(PyUnicode_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_3))) __PYX_ERR(0, 170, __pyx_L1_error)
     __pyx_r = ((PyObject*)__pyx_t_3);
     __pyx_t_3 = 0;
     goto __pyx_L0;
 
-    /* "video_translate_cython.pyx":167
+    /* "video_translate_cython.pyx":168
  *     """Uses module-level cache to avoid duplicate OCR."""
  *     cache_key = (video_path, frame_index)
  *     if cache_key in ocr_cache:             # <<<<<<<<<<<<<<
@@ -6188,7 +6186,7 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
 */
   }
 
-  /* "video_translate_cython.pyx":172
+  /* "video_translate_cython.pyx":173
  * 
  *     # Cache miss - perform OCR with safe frame reading
  *     frame = get_frame_at_index_safe(video_path, frame_index)             # <<<<<<<<<<<<<<
@@ -6196,7 +6194,7 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
  *         ocr_cache[cache_key] = ""
 */
   __pyx_t_1 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_get_frame_at_index_safe); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 172, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_get_frame_at_index_safe); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -6215,13 +6213,13 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
     __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 172, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 173, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
   }
   __pyx_v_frame = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":173
+  /* "video_translate_cython.pyx":174
  *     # Cache miss - perform OCR with safe frame reading
  *     frame = get_frame_at_index_safe(video_path, frame_index)
  *     if frame is None:             # <<<<<<<<<<<<<<
@@ -6231,19 +6229,19 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
   __pyx_t_2 = (__pyx_v_frame == Py_None);
   if (__pyx_t_2) {
 
-    /* "video_translate_cython.pyx":174
+    /* "video_translate_cython.pyx":175
  *     frame = get_frame_at_index_safe(video_path, frame_index)
  *     if frame is None:
  *         ocr_cache[cache_key] = ""             # <<<<<<<<<<<<<<
  *         return ""
  * 
 */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 175, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (unlikely((PyObject_SetItem(__pyx_t_3, __pyx_v_cache_key, __pyx_mstate_global->__pyx_kp_u__2) < 0))) __PYX_ERR(0, 174, __pyx_L1_error)
+    if (unlikely((PyObject_SetItem(__pyx_t_3, __pyx_v_cache_key, __pyx_mstate_global->__pyx_kp_u__2) < 0))) __PYX_ERR(0, 175, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":175
+    /* "video_translate_cython.pyx":176
  *     if frame is None:
  *         ocr_cache[cache_key] = ""
  *         return ""             # <<<<<<<<<<<<<<
@@ -6255,7 +6253,7 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
     __pyx_r = __pyx_mstate_global->__pyx_kp_u__2;
     goto __pyx_L0;
 
-    /* "video_translate_cython.pyx":173
+    /* "video_translate_cython.pyx":174
  *     # Cache miss - perform OCR with safe frame reading
  *     frame = get_frame_at_index_safe(video_path, frame_index)
  *     if frame is None:             # <<<<<<<<<<<<<<
@@ -6264,7 +6262,7 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
 */
   }
 
-  /* "video_translate_cython.pyx":177
+  /* "video_translate_cython.pyx":178
  *         return ""
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -6280,7 +6278,7 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
     __Pyx_XGOTREF(__pyx_t_8);
     /*try:*/ {
 
-      /* "video_translate_cython.pyx":178
+      /* "video_translate_cython.pyx":179
  * 
  *     try:
  *         text = extract_text_from_image(frame, source_language=source_language)             # <<<<<<<<<<<<<<
@@ -6288,7 +6286,7 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
  *         return text
 */
       __pyx_t_4 = NULL;
-      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_extract_text_from_image); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L5_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_extract_text_from_image); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 179, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_5 = 1;
       #if CYTHON_UNPACK_METHODS
@@ -6304,32 +6302,32 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
       #endif
       {
         PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 1 : 0)] = {__pyx_t_4, __pyx_v_frame};
-        __pyx_t_9 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 178, __pyx_L5_error)
+        __pyx_t_9 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 179, __pyx_L5_error)
         __Pyx_GOTREF(__pyx_t_9);
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_v_source_language, __pyx_t_9, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 178, __pyx_L5_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_v_source_language, __pyx_t_9, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 179, __pyx_L5_error)
         __pyx_t_3 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_1, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_9);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L5_error)
+        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 179, __pyx_L5_error)
         __Pyx_GOTREF(__pyx_t_3);
       }
       __pyx_v_text = __pyx_t_3;
       __pyx_t_3 = 0;
 
-      /* "video_translate_cython.pyx":179
+      /* "video_translate_cython.pyx":180
  *     try:
  *         text = extract_text_from_image(frame, source_language=source_language)
  *         ocr_cache[cache_key] = text             # <<<<<<<<<<<<<<
  *         return text
  *     except Exception:
 */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 179, __pyx_L5_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 180, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_3);
-      if (unlikely((PyObject_SetItem(__pyx_t_3, __pyx_v_cache_key, __pyx_v_text) < 0))) __PYX_ERR(0, 179, __pyx_L5_error)
+      if (unlikely((PyObject_SetItem(__pyx_t_3, __pyx_v_cache_key, __pyx_v_text) < 0))) __PYX_ERR(0, 180, __pyx_L5_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "video_translate_cython.pyx":180
+      /* "video_translate_cython.pyx":181
  *         text = extract_text_from_image(frame, source_language=source_language)
  *         ocr_cache[cache_key] = text
  *         return text             # <<<<<<<<<<<<<<
@@ -6337,12 +6335,12 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
  *         # OCR failed, cache empty result
 */
       __Pyx_XDECREF(__pyx_r);
-      if (!(likely(PyUnicode_CheckExact(__pyx_v_text))||((__pyx_v_text) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_v_text))) __PYX_ERR(0, 180, __pyx_L5_error)
+      if (!(likely(PyUnicode_CheckExact(__pyx_v_text))||((__pyx_v_text) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_v_text))) __PYX_ERR(0, 181, __pyx_L5_error)
       __Pyx_INCREF(__pyx_v_text);
       __pyx_r = ((PyObject*)__pyx_v_text);
       goto __pyx_L9_try_return;
 
-      /* "video_translate_cython.pyx":177
+      /* "video_translate_cython.pyx":178
  *         return ""
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -6356,7 +6354,7 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "video_translate_cython.pyx":181
+    /* "video_translate_cython.pyx":182
  *         ocr_cache[cache_key] = text
  *         return text
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -6366,24 +6364,24 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
     __pyx_t_10 = __Pyx_PyErr_ExceptionMatches(((PyObject *)(((PyTypeObject*)PyExc_Exception))));
     if (__pyx_t_10) {
       __Pyx_AddTraceback("video_translate_cython.extract_text_from_frame_cached", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_9) < 0) __PYX_ERR(0, 181, __pyx_L7_except_error)
+      if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_9) < 0) __PYX_ERR(0, 182, __pyx_L7_except_error)
       __Pyx_XGOTREF(__pyx_t_3);
       __Pyx_XGOTREF(__pyx_t_1);
       __Pyx_XGOTREF(__pyx_t_9);
 
-      /* "video_translate_cython.pyx":183
+      /* "video_translate_cython.pyx":184
  *     except Exception:
  *         # OCR failed, cache empty result
  *         ocr_cache[cache_key] = ""             # <<<<<<<<<<<<<<
  *         return ""
  * 
 */
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 183, __pyx_L7_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 184, __pyx_L7_except_error)
       __Pyx_GOTREF(__pyx_t_4);
-      if (unlikely((PyObject_SetItem(__pyx_t_4, __pyx_v_cache_key, __pyx_mstate_global->__pyx_kp_u__2) < 0))) __PYX_ERR(0, 183, __pyx_L7_except_error)
+      if (unlikely((PyObject_SetItem(__pyx_t_4, __pyx_v_cache_key, __pyx_mstate_global->__pyx_kp_u__2) < 0))) __PYX_ERR(0, 184, __pyx_L7_except_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "video_translate_cython.pyx":184
+      /* "video_translate_cython.pyx":185
  *         # OCR failed, cache empty result
  *         ocr_cache[cache_key] = ""
  *         return ""             # <<<<<<<<<<<<<<
@@ -6400,7 +6398,7 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
     }
     goto __pyx_L7_except_error;
 
-    /* "video_translate_cython.pyx":177
+    /* "video_translate_cython.pyx":178
  *         return ""
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -6427,7 +6425,7 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
     goto __pyx_L0;
   }
 
-  /* "video_translate_cython.pyx":163
+  /* "video_translate_cython.pyx":164
  * 
  * 
  * @cython.locals(cache_key=tuple)             # <<<<<<<<<<<<<<
@@ -6452,7 +6450,7 @@ static PyObject *__pyx_pf_22video_translate_cython_12extract_text_from_frame_cac
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":188
+/* "video_translate_cython.pyx":189
  * 
  * # ------------------ Similarity check ------------------
  * @cython.locals(current_text=object, similarity=float)             # <<<<<<<<<<<<<<
@@ -6504,53 +6502,53 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_video_path,&__pyx_mstate_global->__pyx_n_u_frame_index,&__pyx_mstate_global->__pyx_n_u_reference_text,&__pyx_mstate_global->__pyx_n_u_similarity_threshold,&__pyx_mstate_global->__pyx_n_u_source_language,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 188, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 189, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  5:
         values[4] = __Pyx_ArgRef_FASTCALL(__pyx_args, 4);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 188, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 189, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 188, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 189, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 188, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 189, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 188, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 189, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 188, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 189, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "is_text_same", 0) < (0)) __PYX_ERR(0, 188, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "is_text_same", 0) < (0)) __PYX_ERR(0, 189, __pyx_L3_error)
       if (!values[4]) values[4] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_n_u_english)));
       for (Py_ssize_t i = __pyx_nargs; i < 4; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("is_text_same", 0, 4, 5, i); __PYX_ERR(0, 188, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("is_text_same", 0, 4, 5, i); __PYX_ERR(0, 189, __pyx_L3_error) }
       }
     } else {
       switch (__pyx_nargs) {
         case  5:
         values[4] = __Pyx_ArgRef_FASTCALL(__pyx_args, 4);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 188, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 189, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 188, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 189, __pyx_L3_error)
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 188, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 189, __pyx_L3_error)
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 188, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 189, __pyx_L3_error)
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 188, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 189, __pyx_L3_error)
         break;
         default: goto __pyx_L5_argtuple_error;
       }
@@ -6559,12 +6557,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     __pyx_v_video_path = ((PyObject*)values[0]);
     __pyx_v_frame_index = ((PyObject*)values[1]);
     __pyx_v_reference_text = ((PyObject*)values[2]);
-    __pyx_v_similarity_threshold = __Pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_similarity_threshold == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
+    __pyx_v_similarity_threshold = __Pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_similarity_threshold == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 191, __pyx_L3_error)
     __pyx_v_source_language = ((PyObject*)values[4]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("is_text_same", 0, 4, 5, __pyx_nargs); __PYX_ERR(0, 188, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("is_text_same", 0, 4, 5, __pyx_nargs); __PYX_ERR(0, 189, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6575,10 +6573,10 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 189, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_frame_index), (&PyLong_Type), 0, "frame_index", 2))) __PYX_ERR(0, 189, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_reference_text), (&PyUnicode_Type), 0, "reference_text", 2))) __PYX_ERR(0, 189, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 190, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 190, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_frame_index), (&PyLong_Type), 0, "frame_index", 2))) __PYX_ERR(0, 190, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_reference_text), (&PyUnicode_Type), 0, "reference_text", 2))) __PYX_ERR(0, 190, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 191, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_14is_text_same(__pyx_self, __pyx_v_video_path, __pyx_v_frame_index, __pyx_v_reference_text, __pyx_v_similarity_threshold, __pyx_v_source_language);
 
   /* function exit code */
@@ -6615,7 +6613,7 @@ static PyObject *__pyx_pf_22video_translate_cython_14is_text_same(CYTHON_UNUSED 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("is_text_same", 0);
 
-  /* "video_translate_cython.pyx":192
+  /* "video_translate_cython.pyx":193
  *                  similarity_threshold: float, source_language: str = "english") -> Optional[Tuple[bool, str, float]]:
  *     """Return (is_same, extracted_text, similarity) or None if frame unreadable."""
  *     current_text = extract_text_from_frame_cached(video_path, frame_index, source_language)             # <<<<<<<<<<<<<<
@@ -6623,7 +6621,7 @@ static PyObject *__pyx_pf_22video_translate_cython_14is_text_same(CYTHON_UNUSED 
  *         return None
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 193, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -6642,13 +6640,13 @@ static PyObject *__pyx_pf_22video_translate_cython_14is_text_same(CYTHON_UNUSED 
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_4, (4-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 193, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __pyx_v_current_text = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":193
+  /* "video_translate_cython.pyx":194
  *     """Return (is_same, extracted_text, similarity) or None if frame unreadable."""
  *     current_text = extract_text_from_frame_cached(video_path, frame_index, source_language)
  *     if current_text is None:             # <<<<<<<<<<<<<<
@@ -6658,7 +6656,7 @@ static PyObject *__pyx_pf_22video_translate_cython_14is_text_same(CYTHON_UNUSED 
   __pyx_t_5 = (__pyx_v_current_text == Py_None);
   if (__pyx_t_5) {
 
-    /* "video_translate_cython.pyx":194
+    /* "video_translate_cython.pyx":195
  *     current_text = extract_text_from_frame_cached(video_path, frame_index, source_language)
  *     if current_text is None:
  *         return None             # <<<<<<<<<<<<<<
@@ -6669,7 +6667,7 @@ static PyObject *__pyx_pf_22video_translate_cython_14is_text_same(CYTHON_UNUSED 
     __pyx_r = ((PyObject*)Py_None); __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "video_translate_cython.pyx":193
+    /* "video_translate_cython.pyx":194
  *     """Return (is_same, extracted_text, similarity) or None if frame unreadable."""
  *     current_text = extract_text_from_frame_cached(video_path, frame_index, source_language)
  *     if current_text is None:             # <<<<<<<<<<<<<<
@@ -6678,7 +6676,7 @@ static PyObject *__pyx_pf_22video_translate_cython_14is_text_same(CYTHON_UNUSED 
 */
   }
 
-  /* "video_translate_cython.pyx":197
+  /* "video_translate_cython.pyx":198
  * 
  *     # text_similarity is Python-level; no nogil
  *     similarity = float(text_similarity(reference_text, current_text))             # <<<<<<<<<<<<<<
@@ -6686,7 +6684,7 @@ static PyObject *__pyx_pf_22video_translate_cython_14is_text_same(CYTHON_UNUSED 
  *     return (is_same, current_text, similarity)
 */
   __pyx_t_3 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_text_similarity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 197, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_text_similarity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -6705,26 +6703,26 @@ static PyObject *__pyx_pf_22video_translate_cython_14is_text_same(CYTHON_UNUSED 
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+__pyx_t_4, (3-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 197, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
-  __pyx_t_6 = __Pyx_PyObject_AsDouble(__pyx_t_1); if (unlikely(__pyx_t_6 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 197, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_AsDouble(__pyx_t_1); if (unlikely(__pyx_t_6 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_similarity = __pyx_t_6;
 
-  /* "video_translate_cython.pyx":198
+  /* "video_translate_cython.pyx":199
  *     # text_similarity is Python-level; no nogil
  *     similarity = float(text_similarity(reference_text, current_text))
  *     is_same = similarity >= similarity_threshold             # <<<<<<<<<<<<<<
  *     return (is_same, current_text, similarity)
  * 
 */
-  __pyx_t_1 = __Pyx_PyBool_FromLong((__pyx_v_similarity >= __pyx_v_similarity_threshold)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong((__pyx_v_similarity >= __pyx_v_similarity_threshold)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_is_same = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":199
+  /* "video_translate_cython.pyx":200
  *     similarity = float(text_similarity(reference_text, current_text))
  *     is_same = similarity >= similarity_threshold
  *     return (is_same, current_text, similarity)             # <<<<<<<<<<<<<<
@@ -6732,24 +6730,24 @@ static PyObject *__pyx_pf_22video_translate_cython_14is_text_same(CYTHON_UNUSED 
  * 
 */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_similarity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_similarity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_v_is_same);
   __Pyx_GIVEREF(__pyx_v_is_same);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_is_same) != (0)) __PYX_ERR(0, 199, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_is_same) != (0)) __PYX_ERR(0, 200, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_current_text);
   __Pyx_GIVEREF(__pyx_v_current_text);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_current_text) != (0)) __PYX_ERR(0, 199, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_current_text) != (0)) __PYX_ERR(0, 200, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_t_1) != (0)) __PYX_ERR(0, 199, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_t_1) != (0)) __PYX_ERR(0, 200, __pyx_L1_error);
   __pyx_t_1 = 0;
   __pyx_r = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":188
+  /* "video_translate_cython.pyx":189
  * 
  * # ------------------ Similarity check ------------------
  * @cython.locals(current_text=object, similarity=float)             # <<<<<<<<<<<<<<
@@ -6772,7 +6770,7 @@ static PyObject *__pyx_pf_22video_translate_cython_14is_text_same(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":203
+/* "video_translate_cython.pyx":204
  * 
  * # ------------------ Search algorithm (exponential + binary) ------------------
  * @cython.locals(cap=object, total_frames=int, start_text=object, frame_checks=int)             # <<<<<<<<<<<<<<
@@ -6790,23 +6788,23 @@ static PyObject *__pyx_pf_22video_translate_cython_38__defaults__(CYTHON_UNUSED 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__defaults__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_self)->arg0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_self)->arg0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_english));
   __Pyx_GIVEREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_english));
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, ((PyObject*)__pyx_mstate_global->__pyx_n_u_english)) != (0)) __PYX_ERR(0, 203, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, ((PyObject*)__pyx_mstate_global->__pyx_n_u_english)) != (0)) __PYX_ERR(0, 204, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1) != (0)) __PYX_ERR(0, 203, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1) != (0)) __PYX_ERR(0, 204, __pyx_L1_error);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2) != (0)) __PYX_ERR(0, 203, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2) != (0)) __PYX_ERR(0, 204, __pyx_L1_error);
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, Py_None) != (0)) __PYX_ERR(0, 203, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, Py_None) != (0)) __PYX_ERR(0, 204, __pyx_L1_error);
   __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6868,49 +6866,49 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_video_path,&__pyx_mstate_global->__pyx_n_u_start_frame_index,&__pyx_mstate_global->__pyx_n_u_source_language,&__pyx_mstate_global->__pyx_n_u_similarity_threshold,0};
     struct __pyx_defaults *__pyx_dynamic_args = __Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_self);
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 203, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 204, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 203, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 204, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 203, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 204, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 203, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 204, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 203, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 204, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "find_text_change_optimal", 0) < (0)) __PYX_ERR(0, 203, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "find_text_change_optimal", 0) < (0)) __PYX_ERR(0, 204, __pyx_L3_error)
       if (!values[2]) values[2] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_n_u_english)));
       for (Py_ssize_t i = __pyx_nargs; i < 2; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("find_text_change_optimal", 0, 2, 4, i); __PYX_ERR(0, 203, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("find_text_change_optimal", 0, 2, 4, i); __PYX_ERR(0, 204, __pyx_L3_error) }
       }
     } else {
       switch (__pyx_nargs) {
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 203, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 204, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 203, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 204, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 203, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 204, __pyx_L3_error)
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 203, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 204, __pyx_L3_error)
         break;
         default: goto __pyx_L5_argtuple_error;
       }
@@ -6920,14 +6918,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     __pyx_v_start_frame_index = ((PyObject*)values[1]);
     __pyx_v_source_language = ((PyObject*)values[2]);
     if (values[3]) {
-      __pyx_v_similarity_threshold = __Pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_similarity_threshold == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L3_error)
+      __pyx_v_similarity_threshold = __Pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_similarity_threshold == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L3_error)
     } else {
       __pyx_v_similarity_threshold = __pyx_dynamic_args->arg0;
     }
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("find_text_change_optimal", 0, 2, 4, __pyx_nargs); __PYX_ERR(0, 203, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("find_text_change_optimal", 0, 2, 4, __pyx_nargs); __PYX_ERR(0, 204, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6938,9 +6936,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 204, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_start_frame_index), (&PyLong_Type), 0, "start_frame_index", 2))) __PYX_ERR(0, 204, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 205, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_start_frame_index), (&PyLong_Type), 0, "start_frame_index", 2))) __PYX_ERR(0, 205, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 205, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_16find_text_change_optimal(__pyx_self, __pyx_v_video_path, __pyx_v_start_frame_index, __pyx_v_source_language, __pyx_v_similarity_threshold);
 
   /* function exit code */
@@ -6990,7 +6988,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("find_text_change_optimal", 0);
 
-  /* "video_translate_cython.pyx":211
+  /* "video_translate_cython.pyx":212
  *     to reduce attribute access overhead but cannot run this fully nogil.
  *     """
  *     cap = cv2.VideoCapture(video_path)             # <<<<<<<<<<<<<<
@@ -6998,9 +6996,9 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
  *     cap.release()
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 211, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_VideoCapture); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 211, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_VideoCapture); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_5 = 1;
@@ -7020,13 +7018,13 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 211, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 212, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __pyx_v_cap = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":212
+  /* "video_translate_cython.pyx":213
  *     """
  *     cap = cv2.VideoCapture(video_path)
  *     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))             # <<<<<<<<<<<<<<
@@ -7035,9 +7033,9 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
 */
   __pyx_t_4 = __pyx_v_cap;
   __Pyx_INCREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 212, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_COUNT); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 212, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_COUNT); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_5 = 0;
@@ -7046,17 +7044,17 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
     __pyx_t_1 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_get, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 212, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
-  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 212, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_6 = __Pyx_PyLong_As_int(__pyx_t_3); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 212, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyLong_As_int(__pyx_t_3); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_total_frames = __pyx_t_6;
 
-  /* "video_translate_cython.pyx":213
+  /* "video_translate_cython.pyx":214
  *     cap = cv2.VideoCapture(video_path)
  *     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
  *     cap.release()             # <<<<<<<<<<<<<<
@@ -7070,12 +7068,12 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
     PyObject *__pyx_callargs[2] = {__pyx_t_1, NULL};
     __pyx_t_3 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_release, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 213, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 214, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":215
+  /* "video_translate_cython.pyx":216
  *     cap.release()
  * 
  *     start_text = extract_text_from_frame_cached(video_path, start_frame_index, source_language)             # <<<<<<<<<<<<<<
@@ -7083,7 +7081,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
  *         return -1
 */
   __pyx_t_1 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 216, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -7102,13 +7100,13 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
     __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+__pyx_t_5, (4-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 216, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
   }
   __pyx_v_start_text = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":216
+  /* "video_translate_cython.pyx":217
  * 
  *     start_text = extract_text_from_frame_cached(video_path, start_frame_index, source_language)
  *     if start_text is None or start_text == "":             # <<<<<<<<<<<<<<
@@ -7121,12 +7119,12 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
     __pyx_t_7 = __pyx_t_8;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_8 = (__Pyx_PyUnicode_Equals(__pyx_v_start_text, __pyx_mstate_global->__pyx_kp_u__2, Py_EQ)); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 216, __pyx_L1_error)
+  __pyx_t_8 = (__Pyx_PyUnicode_Equals(__pyx_v_start_text, __pyx_mstate_global->__pyx_kp_u__2, Py_EQ)); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 217, __pyx_L1_error)
   __pyx_t_7 = __pyx_t_8;
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_7) {
 
-    /* "video_translate_cython.pyx":217
+    /* "video_translate_cython.pyx":218
  *     start_text = extract_text_from_frame_cached(video_path, start_frame_index, source_language)
  *     if start_text is None or start_text == "":
  *         return -1             # <<<<<<<<<<<<<<
@@ -7138,7 +7136,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
     __pyx_r = __pyx_mstate_global->__pyx_int_neg_1;
     goto __pyx_L0;
 
-    /* "video_translate_cython.pyx":216
+    /* "video_translate_cython.pyx":217
  * 
  *     start_text = extract_text_from_frame_cached(video_path, start_frame_index, source_language)
  *     if start_text is None or start_text == "":             # <<<<<<<<<<<<<<
@@ -7147,7 +7145,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
 */
   }
 
-  /* "video_translate_cython.pyx":219
+  /* "video_translate_cython.pyx":220
  *         return -1
  * 
  *     frame_checks = 0             # <<<<<<<<<<<<<<
@@ -7156,7 +7154,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
 */
   __pyx_v_frame_checks = 0;
 
-  /* "video_translate_cython.pyx":222
+  /* "video_translate_cython.pyx":223
  * 
  *     # Phase 1 - Exponential search
  *     step = 1             # <<<<<<<<<<<<<<
@@ -7166,19 +7164,19 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
   __Pyx_INCREF(__pyx_mstate_global->__pyx_int_1);
   __pyx_v_step = __pyx_mstate_global->__pyx_int_1;
 
-  /* "video_translate_cython.pyx":223
+  /* "video_translate_cython.pyx":224
  *     # Phase 1 - Exponential search
  *     step = 1
  *     current_index = start_frame_index + step             # <<<<<<<<<<<<<<
  * 
  *     left = 0
 */
-  __pyx_t_3 = PyNumber_Add(__pyx_v_start_frame_index, __pyx_v_step); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 223, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_v_start_frame_index, __pyx_v_step); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 224, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_current_index = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":225
+  /* "video_translate_cython.pyx":226
  *     current_index = start_frame_index + step
  * 
  *     left = 0             # <<<<<<<<<<<<<<
@@ -7188,7 +7186,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
   __Pyx_INCREF(__pyx_mstate_global->__pyx_int_0);
   __pyx_v_left = __pyx_mstate_global->__pyx_int_0;
 
-  /* "video_translate_cython.pyx":226
+  /* "video_translate_cython.pyx":227
  * 
  *     left = 0
  *     right = 0             # <<<<<<<<<<<<<<
@@ -7198,7 +7196,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
   __Pyx_INCREF(__pyx_mstate_global->__pyx_int_0);
   __pyx_v_right = __pyx_mstate_global->__pyx_int_0;
 
-  /* "video_translate_cython.pyx":228
+  /* "video_translate_cython.pyx":229
  *     right = 0
  * 
  *     while current_index < total_frames:             # <<<<<<<<<<<<<<
@@ -7206,15 +7204,15 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
  *         frame_checks += 1
 */
   while (1) {
-    __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_total_frames); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 228, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_total_frames); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 229, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = PyObject_RichCompare(__pyx_v_current_index, __pyx_t_3, Py_LT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 228, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_v_current_index, __pyx_t_3, Py_LT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 229, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 228, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 229, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (!__pyx_t_7) break;
 
-    /* "video_translate_cython.pyx":229
+    /* "video_translate_cython.pyx":230
  * 
  *     while current_index < total_frames:
  *         result_tuple = is_text_same(video_path, current_index, start_text, similarity_threshold, source_language)             # <<<<<<<<<<<<<<
@@ -7222,9 +7220,9 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
  *         if result_tuple is None:
 */
     __pyx_t_3 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_is_text_same); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 229, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_is_text_same); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 230, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyFloat_FromDouble(__pyx_v_similarity_threshold); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 229, __pyx_L1_error)
+    __pyx_t_2 = PyFloat_FromDouble(__pyx_v_similarity_threshold); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 230, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_5 = 1;
     #if CYTHON_UNPACK_METHODS
@@ -7244,13 +7242,13 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 229, __pyx_L1_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 230, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
     }
     __Pyx_XDECREF_SET(__pyx_v_result_tuple, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "video_translate_cython.pyx":230
+    /* "video_translate_cython.pyx":231
  *     while current_index < total_frames:
  *         result_tuple = is_text_same(video_path, current_index, start_text, similarity_threshold, source_language)
  *         frame_checks += 1             # <<<<<<<<<<<<<<
@@ -7259,7 +7257,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
 */
     __pyx_v_frame_checks = (__pyx_v_frame_checks + 1);
 
-    /* "video_translate_cython.pyx":231
+    /* "video_translate_cython.pyx":232
  *         result_tuple = is_text_same(video_path, current_index, start_text, similarity_threshold, source_language)
  *         frame_checks += 1
  *         if result_tuple is None:             # <<<<<<<<<<<<<<
@@ -7269,7 +7267,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
     __pyx_t_7 = (__pyx_v_result_tuple == Py_None);
     if (__pyx_t_7) {
 
-      /* "video_translate_cython.pyx":232
+      /* "video_translate_cython.pyx":233
  *         frame_checks += 1
  *         if result_tuple is None:
  *             break             # <<<<<<<<<<<<<<
@@ -7278,7 +7276,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
 */
       goto __pyx_L7_break;
 
-      /* "video_translate_cython.pyx":231
+      /* "video_translate_cython.pyx":232
  *         result_tuple = is_text_same(video_path, current_index, start_text, similarity_threshold, source_language)
  *         frame_checks += 1
  *         if result_tuple is None:             # <<<<<<<<<<<<<<
@@ -7287,7 +7285,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
 */
     }
 
-    /* "video_translate_cython.pyx":234
+    /* "video_translate_cython.pyx":235
  *             break
  * 
  *         is_same, current_text, similarity = result_tuple             # <<<<<<<<<<<<<<
@@ -7300,7 +7298,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
       if (unlikely(size != 3)) {
         if (size > 3) __Pyx_RaiseTooManyValuesError(3);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 234, __pyx_L1_error)
+        __PYX_ERR(0, 235, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -7312,26 +7310,26 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
         __Pyx_INCREF(__pyx_t_2);
       } else {
         __pyx_t_4 = __Pyx_PyList_GetItemRef(sequence, 0);
-        if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 234, __pyx_L1_error)
+        if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 235, __pyx_L1_error)
         __Pyx_XGOTREF(__pyx_t_4);
         __pyx_t_1 = __Pyx_PyList_GetItemRef(sequence, 1);
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 234, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 235, __pyx_L1_error)
         __Pyx_XGOTREF(__pyx_t_1);
         __pyx_t_2 = __Pyx_PyList_GetItemRef(sequence, 2);
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 234, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 235, __pyx_L1_error)
         __Pyx_XGOTREF(__pyx_t_2);
       }
       #else
-      __pyx_t_4 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 234, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 235, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_1 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 234, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 235, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_2 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 234, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 235, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       #endif
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_3 = PyObject_GetIter(__pyx_v_result_tuple); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 234, __pyx_L1_error)
+      __pyx_t_3 = PyObject_GetIter(__pyx_v_result_tuple); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 235, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_9 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_3);
       index = 0; __pyx_t_4 = __pyx_t_9(__pyx_t_3); if (unlikely(!__pyx_t_4)) goto __pyx_L9_unpacking_failed;
@@ -7340,7 +7338,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
       __Pyx_GOTREF(__pyx_t_1);
       index = 2; __pyx_t_2 = __pyx_t_9(__pyx_t_3); if (unlikely(!__pyx_t_2)) goto __pyx_L9_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_2);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_3), 3) < (0)) __PYX_ERR(0, 234, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_3), 3) < (0)) __PYX_ERR(0, 235, __pyx_L1_error)
       __pyx_t_9 = NULL;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       goto __pyx_L10_unpacking_done;
@@ -7348,7 +7346,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_9 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 234, __pyx_L1_error)
+      __PYX_ERR(0, 235, __pyx_L1_error)
       __pyx_L10_unpacking_done:;
     }
     __Pyx_XDECREF_SET(__pyx_v_is_same, __pyx_t_4);
@@ -7358,33 +7356,33 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
     __Pyx_XDECREF_SET(__pyx_v_similarity, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "video_translate_cython.pyx":235
+    /* "video_translate_cython.pyx":236
  * 
  *         is_same, current_text, similarity = result_tuple
  *         if not is_same:             # <<<<<<<<<<<<<<
  *             left = current_index - step + 1
  *             right = current_index
 */
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_v_is_same); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 235, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_v_is_same); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 236, __pyx_L1_error)
     __pyx_t_8 = (!__pyx_t_7);
     if (__pyx_t_8) {
 
-      /* "video_translate_cython.pyx":236
+      /* "video_translate_cython.pyx":237
  *         is_same, current_text, similarity = result_tuple
  *         if not is_same:
  *             left = current_index - step + 1             # <<<<<<<<<<<<<<
  *             right = current_index
  *             break
 */
-      __pyx_t_2 = PyNumber_Subtract(__pyx_v_current_index, __pyx_v_step); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 236, __pyx_L1_error)
+      __pyx_t_2 = PyNumber_Subtract(__pyx_v_current_index, __pyx_v_step); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 237, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_1 = __Pyx_PyLong_AddObjC(__pyx_t_2, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 236, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyLong_AddObjC(__pyx_t_2, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 237, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF_SET(__pyx_v_left, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "video_translate_cython.pyx":237
+      /* "video_translate_cython.pyx":238
  *         if not is_same:
  *             left = current_index - step + 1
  *             right = current_index             # <<<<<<<<<<<<<<
@@ -7394,7 +7392,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
       __Pyx_INCREF(__pyx_v_current_index);
       __Pyx_DECREF_SET(__pyx_v_right, __pyx_v_current_index);
 
-      /* "video_translate_cython.pyx":238
+      /* "video_translate_cython.pyx":239
  *             left = current_index - step + 1
  *             right = current_index
  *             break             # <<<<<<<<<<<<<<
@@ -7403,7 +7401,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
 */
       goto __pyx_L7_break;
 
-      /* "video_translate_cython.pyx":235
+      /* "video_translate_cython.pyx":236
  * 
  *         is_same, current_text, similarity = result_tuple
  *         if not is_same:             # <<<<<<<<<<<<<<
@@ -7412,32 +7410,32 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
 */
     }
 
-    /* "video_translate_cython.pyx":240
+    /* "video_translate_cython.pyx":241
  *             break
  * 
  *         step <<= 1  # double step             # <<<<<<<<<<<<<<
  *         current_index = start_frame_index + step
  *     else:
 */
-    __pyx_t_1 = __Pyx_PyLong_LshiftObjC(__pyx_v_step, __pyx_mstate_global->__pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 240, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyLong_LshiftObjC(__pyx_v_step, __pyx_mstate_global->__pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 241, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF_SET(__pyx_v_step, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "video_translate_cython.pyx":241
+    /* "video_translate_cython.pyx":242
  * 
  *         step <<= 1  # double step
  *         current_index = start_frame_index + step             # <<<<<<<<<<<<<<
  *     else:
  *         return -1
 */
-    __pyx_t_1 = PyNumber_Add(__pyx_v_start_frame_index, __pyx_v_step); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 241, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Add(__pyx_v_start_frame_index, __pyx_v_step); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 242, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF_SET(__pyx_v_current_index, __pyx_t_1);
     __pyx_t_1 = 0;
   }
 
-  /* "video_translate_cython.pyx":243
+  /* "video_translate_cython.pyx":244
  *         current_index = start_frame_index + step
  *     else:
  *         return -1             # <<<<<<<<<<<<<<
@@ -7452,7 +7450,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
   }
   __pyx_L7_break:;
 
-  /* "video_translate_cython.pyx":246
+  /* "video_translate_cython.pyx":247
  * 
  *     # Phase 2 - Binary search between left and right
  *     while left < right:             # <<<<<<<<<<<<<<
@@ -7460,27 +7458,27 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
  *         result_tuple = is_text_same(video_path, mid, start_text, similarity_threshold, source_language)
 */
   while (1) {
-    __pyx_t_1 = PyObject_RichCompare(__pyx_v_left, __pyx_v_right, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 246, __pyx_L1_error)
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 246, __pyx_L1_error)
+    __pyx_t_1 = PyObject_RichCompare(__pyx_v_left, __pyx_v_right, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 247, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 247, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (!__pyx_t_8) break;
 
-    /* "video_translate_cython.pyx":247
+    /* "video_translate_cython.pyx":248
  *     # Phase 2 - Binary search between left and right
  *     while left < right:
  *         mid = (left + right) // 2             # <<<<<<<<<<<<<<
  *         result_tuple = is_text_same(video_path, mid, start_text, similarity_threshold, source_language)
  *         frame_checks += 1
 */
-    __pyx_t_1 = PyNumber_Add(__pyx_v_left, __pyx_v_right); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 247, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Add(__pyx_v_left, __pyx_v_right); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 248, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyLong_FloorDivideObjC(__pyx_t_1, __pyx_mstate_global->__pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 247, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyLong_FloorDivideObjC(__pyx_t_1, __pyx_mstate_global->__pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 248, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_XDECREF_SET(__pyx_v_mid, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "video_translate_cython.pyx":248
+    /* "video_translate_cython.pyx":249
  *     while left < right:
  *         mid = (left + right) // 2
  *         result_tuple = is_text_same(video_path, mid, start_text, similarity_threshold, source_language)             # <<<<<<<<<<<<<<
@@ -7488,9 +7486,9 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
  *         if result_tuple is None:
 */
     __pyx_t_1 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_is_text_same); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 248, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_is_text_same); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 249, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_3 = PyFloat_FromDouble(__pyx_v_similarity_threshold); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 248, __pyx_L1_error)
+    __pyx_t_3 = PyFloat_FromDouble(__pyx_v_similarity_threshold); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 249, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_5 = 1;
     #if CYTHON_UNPACK_METHODS
@@ -7510,13 +7508,13 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 248, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 249, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
     }
     __Pyx_DECREF_SET(__pyx_v_result_tuple, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "video_translate_cython.pyx":249
+    /* "video_translate_cython.pyx":250
  *         mid = (left + right) // 2
  *         result_tuple = is_text_same(video_path, mid, start_text, similarity_threshold, source_language)
  *         frame_checks += 1             # <<<<<<<<<<<<<<
@@ -7525,7 +7523,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
 */
     __pyx_v_frame_checks = (__pyx_v_frame_checks + 1);
 
-    /* "video_translate_cython.pyx":250
+    /* "video_translate_cython.pyx":251
  *         result_tuple = is_text_same(video_path, mid, start_text, similarity_threshold, source_language)
  *         frame_checks += 1
  *         if result_tuple is None:             # <<<<<<<<<<<<<<
@@ -7535,7 +7533,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
     __pyx_t_8 = (__pyx_v_result_tuple == Py_None);
     if (__pyx_t_8) {
 
-      /* "video_translate_cython.pyx":251
+      /* "video_translate_cython.pyx":252
  *         frame_checks += 1
  *         if result_tuple is None:
  *             break             # <<<<<<<<<<<<<<
@@ -7544,7 +7542,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
 */
       goto __pyx_L13_break;
 
-      /* "video_translate_cython.pyx":250
+      /* "video_translate_cython.pyx":251
  *         result_tuple = is_text_same(video_path, mid, start_text, similarity_threshold, source_language)
  *         frame_checks += 1
  *         if result_tuple is None:             # <<<<<<<<<<<<<<
@@ -7553,7 +7551,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
 */
     }
 
-    /* "video_translate_cython.pyx":252
+    /* "video_translate_cython.pyx":253
  *         if result_tuple is None:
  *             break
  *         is_same, current_text, similarity = result_tuple             # <<<<<<<<<<<<<<
@@ -7566,7 +7564,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
       if (unlikely(size != 3)) {
         if (size > 3) __Pyx_RaiseTooManyValuesError(3);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 252, __pyx_L1_error)
+        __PYX_ERR(0, 253, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -7578,26 +7576,26 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
         __Pyx_INCREF(__pyx_t_3);
       } else {
         __pyx_t_2 = __Pyx_PyList_GetItemRef(sequence, 0);
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 252, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 253, __pyx_L1_error)
         __Pyx_XGOTREF(__pyx_t_2);
         __pyx_t_4 = __Pyx_PyList_GetItemRef(sequence, 1);
-        if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 252, __pyx_L1_error)
+        if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 253, __pyx_L1_error)
         __Pyx_XGOTREF(__pyx_t_4);
         __pyx_t_3 = __Pyx_PyList_GetItemRef(sequence, 2);
-        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 252, __pyx_L1_error)
+        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 253, __pyx_L1_error)
         __Pyx_XGOTREF(__pyx_t_3);
       }
       #else
-      __pyx_t_2 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 252, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 253, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_4 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 252, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 253, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_3 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 252, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 253, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       #endif
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_1 = PyObject_GetIter(__pyx_v_result_tuple); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 252, __pyx_L1_error)
+      __pyx_t_1 = PyObject_GetIter(__pyx_v_result_tuple); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 253, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_9 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_1);
       index = 0; __pyx_t_2 = __pyx_t_9(__pyx_t_1); if (unlikely(!__pyx_t_2)) goto __pyx_L15_unpacking_failed;
@@ -7606,7 +7604,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
       __Pyx_GOTREF(__pyx_t_4);
       index = 2; __pyx_t_3 = __pyx_t_9(__pyx_t_1); if (unlikely(!__pyx_t_3)) goto __pyx_L15_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_3);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_1), 3) < (0)) __PYX_ERR(0, 252, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_1), 3) < (0)) __PYX_ERR(0, 253, __pyx_L1_error)
       __pyx_t_9 = NULL;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       goto __pyx_L16_unpacking_done;
@@ -7614,7 +7612,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_9 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 252, __pyx_L1_error)
+      __PYX_ERR(0, 253, __pyx_L1_error)
       __pyx_L16_unpacking_done:;
     }
     __Pyx_XDECREF_SET(__pyx_v_is_same, __pyx_t_2);
@@ -7624,29 +7622,29 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
     __Pyx_XDECREF_SET(__pyx_v_similarity, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":253
+    /* "video_translate_cython.pyx":254
  *             break
  *         is_same, current_text, similarity = result_tuple
  *         if is_same:             # <<<<<<<<<<<<<<
  *             left = mid + 1
  *         else:
 */
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_v_is_same); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 253, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_v_is_same); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 254, __pyx_L1_error)
     if (__pyx_t_8) {
 
-      /* "video_translate_cython.pyx":254
+      /* "video_translate_cython.pyx":255
  *         is_same, current_text, similarity = result_tuple
  *         if is_same:
  *             left = mid + 1             # <<<<<<<<<<<<<<
  *         else:
  *             right = mid
 */
-      __pyx_t_3 = __Pyx_PyLong_AddObjC(__pyx_v_mid, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 254, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyLong_AddObjC(__pyx_v_mid, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 255, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF_SET(__pyx_v_left, __pyx_t_3);
       __pyx_t_3 = 0;
 
-      /* "video_translate_cython.pyx":253
+      /* "video_translate_cython.pyx":254
  *             break
  *         is_same, current_text, similarity = result_tuple
  *         if is_same:             # <<<<<<<<<<<<<<
@@ -7656,7 +7654,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
       goto __pyx_L17;
     }
 
-    /* "video_translate_cython.pyx":256
+    /* "video_translate_cython.pyx":257
  *             left = mid + 1
  *         else:
  *             right = mid             # <<<<<<<<<<<<<<
@@ -7671,7 +7669,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
   }
   __pyx_L13_break:;
 
-  /* "video_translate_cython.pyx":258
+  /* "video_translate_cython.pyx":259
  *             right = mid
  * 
  *     return left             # <<<<<<<<<<<<<<
@@ -7679,12 +7677,12 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
  * 
 */
   __Pyx_XDECREF(__pyx_r);
-  if (!(likely(PyLong_CheckExact(__pyx_v_left))||((__pyx_v_left) == Py_None) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_v_left))) __PYX_ERR(0, 258, __pyx_L1_error)
+  if (!(likely(PyLong_CheckExact(__pyx_v_left))||((__pyx_v_left) == Py_None) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_v_left))) __PYX_ERR(0, 259, __pyx_L1_error)
   __Pyx_INCREF(__pyx_v_left);
   __pyx_r = ((PyObject*)__pyx_v_left);
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":203
+  /* "video_translate_cython.pyx":204
  * 
  * # ------------------ Search algorithm (exponential + binary) ------------------
  * @cython.locals(cap=object, total_frames=int, start_text=object, frame_checks=int)             # <<<<<<<<<<<<<<
@@ -7717,7 +7715,7 @@ static PyObject *__pyx_pf_22video_translate_cython_16find_text_change_optimal(CY
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":262
+/* "video_translate_cython.pyx":263
  * 
  * # ------------------ Batch processing ------------------
  * @cython.locals(segments=object, current_frame=int, change_frame=int)             # <<<<<<<<<<<<<<
@@ -7735,20 +7733,20 @@ static PyObject *__pyx_pf_22video_translate_cython_40__defaults__(CYTHON_UNUSED 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__defaults__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_self)->arg0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 262, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_self)->arg0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 263, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 263, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1) != (0)) __PYX_ERR(0, 262, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1) != (0)) __PYX_ERR(0, 263, __pyx_L1_error);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 262, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 263, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2) != (0)) __PYX_ERR(0, 262, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2) != (0)) __PYX_ERR(0, 263, __pyx_L1_error);
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, Py_None) != (0)) __PYX_ERR(0, 262, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, Py_None) != (0)) __PYX_ERR(0, 263, __pyx_L1_error);
   __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7812,58 +7810,58 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_video_path,&__pyx_mstate_global->__pyx_n_u_start_frame,&__pyx_mstate_global->__pyx_n_u_end_frame,&__pyx_mstate_global->__pyx_n_u_batch_id,&__pyx_mstate_global->__pyx_n_u_source_language,&__pyx_mstate_global->__pyx_n_u_similarity_threshold,0};
     struct __pyx_defaults *__pyx_dynamic_args = __Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_self);
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 262, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 263, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  6:
         values[5] = __Pyx_ArgRef_FASTCALL(__pyx_args, 5);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 262, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 263, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  5:
         values[4] = __Pyx_ArgRef_FASTCALL(__pyx_args, 4);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 262, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 263, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 262, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 263, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 262, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 263, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 262, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 263, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 262, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 263, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "process_batch_segment", 0) < (0)) __PYX_ERR(0, 262, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "process_batch_segment", 0) < (0)) __PYX_ERR(0, 263, __pyx_L3_error)
       for (Py_ssize_t i = __pyx_nargs; i < 5; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("process_batch_segment", 0, 5, 6, i); __PYX_ERR(0, 262, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("process_batch_segment", 0, 5, 6, i); __PYX_ERR(0, 263, __pyx_L3_error) }
       }
     } else {
       switch (__pyx_nargs) {
         case  6:
         values[5] = __Pyx_ArgRef_FASTCALL(__pyx_args, 5);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 262, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 263, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  5:
         values[4] = __Pyx_ArgRef_FASTCALL(__pyx_args, 4);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 262, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 263, __pyx_L3_error)
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 262, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 263, __pyx_L3_error)
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 262, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 263, __pyx_L3_error)
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 262, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 263, __pyx_L3_error)
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 262, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 263, __pyx_L3_error)
         break;
         default: goto __pyx_L5_argtuple_error;
       }
@@ -7874,14 +7872,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     __pyx_v_batch_id = ((PyObject*)values[3]);
     __pyx_v_source_language = ((PyObject*)values[4]);
     if (values[5]) {
-      __pyx_v_similarity_threshold = __Pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_similarity_threshold == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 264, __pyx_L3_error)
+      __pyx_v_similarity_threshold = __Pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_similarity_threshold == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 265, __pyx_L3_error)
     } else {
       __pyx_v_similarity_threshold = __pyx_dynamic_args->arg0;
     }
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("process_batch_segment", 0, 5, 6, __pyx_nargs); __PYX_ERR(0, 262, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("process_batch_segment", 0, 5, 6, __pyx_nargs); __PYX_ERR(0, 263, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -7892,11 +7890,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 263, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_start_frame), (&PyLong_Type), 0, "start_frame", 2))) __PYX_ERR(0, 263, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_end_frame), (&PyLong_Type), 0, "end_frame", 2))) __PYX_ERR(0, 263, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_batch_id), (&PyLong_Type), 0, "batch_id", 2))) __PYX_ERR(0, 263, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 264, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 264, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_start_frame), (&PyLong_Type), 0, "start_frame", 2))) __PYX_ERR(0, 264, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_end_frame), (&PyLong_Type), 0, "end_frame", 2))) __PYX_ERR(0, 264, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_batch_id), (&PyLong_Type), 0, "batch_id", 2))) __PYX_ERR(0, 264, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 265, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_18process_batch_segment(__pyx_self, __pyx_v_video_path, __pyx_v_start_frame, __pyx_v_end_frame, __pyx_v_batch_id, __pyx_v_source_language, __pyx_v_similarity_threshold);
 
   /* function exit code */
@@ -7961,44 +7959,44 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("process_batch_segment", 0);
 
-  /* "video_translate_cython.pyx":273
+  /* "video_translate_cython.pyx":274
  *     Includes error handling to prevent worker crashes from decoder/memory errors.
  *     """
  *     segments = []             # <<<<<<<<<<<<<<
  *     current_frame = start_frame
  *     max_iterations = (end_frame - start_frame) * 2  # Prevent infinite loops
 */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 274, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_segments = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":274
+  /* "video_translate_cython.pyx":275
  *     """
  *     segments = []
  *     current_frame = start_frame             # <<<<<<<<<<<<<<
  *     max_iterations = (end_frame - start_frame) * 2  # Prevent infinite loops
  *     iterations = 0
 */
-  __pyx_t_2 = __Pyx_PyLong_As_int(__pyx_v_start_frame); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 274, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyLong_As_int(__pyx_v_start_frame); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 275, __pyx_L1_error)
   __pyx_v_current_frame = __pyx_t_2;
 
-  /* "video_translate_cython.pyx":275
+  /* "video_translate_cython.pyx":276
  *     segments = []
  *     current_frame = start_frame
  *     max_iterations = (end_frame - start_frame) * 2  # Prevent infinite loops             # <<<<<<<<<<<<<<
  *     iterations = 0
  * 
 */
-  __pyx_t_1 = PyNumber_Subtract(__pyx_v_end_frame, __pyx_v_start_frame); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 275, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Subtract(__pyx_v_end_frame, __pyx_v_start_frame); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 276, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyLong_MultiplyObjC(__pyx_t_1, __pyx_mstate_global->__pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 275, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyLong_MultiplyObjC(__pyx_t_1, __pyx_mstate_global->__pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 276, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_max_iterations = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":276
+  /* "video_translate_cython.pyx":277
  *     current_frame = start_frame
  *     max_iterations = (end_frame - start_frame) * 2  # Prevent infinite loops
  *     iterations = 0             # <<<<<<<<<<<<<<
@@ -8008,7 +8006,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
   __Pyx_INCREF(__pyx_mstate_global->__pyx_int_0);
   __pyx_v_iterations = __pyx_mstate_global->__pyx_int_0;
 
-  /* "video_translate_cython.pyx":278
+  /* "video_translate_cython.pyx":279
  *     iterations = 0
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -8024,7 +8022,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
     __Pyx_XGOTREF(__pyx_t_6);
     /*try:*/ {
 
-      /* "video_translate_cython.pyx":279
+      /* "video_translate_cython.pyx":280
  * 
  *     try:
  *         while current_frame < end_frame and iterations < max_iterations:             # <<<<<<<<<<<<<<
@@ -8032,37 +8030,37 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
  *             try:
 */
       while (1) {
-        __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 279, __pyx_L3_error)
+        __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 280, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_1 = PyObject_RichCompare(__pyx_t_3, __pyx_v_end_frame, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L3_error)
+        __pyx_t_1 = PyObject_RichCompare(__pyx_t_3, __pyx_v_end_frame, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 280, __pyx_L3_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 279, __pyx_L3_error)
+        __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 280, __pyx_L3_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         if (__pyx_t_8) {
         } else {
           __pyx_t_7 = __pyx_t_8;
           goto __pyx_L11_bool_binop_done;
         }
-        __pyx_t_1 = PyObject_RichCompare(__pyx_v_iterations, __pyx_v_max_iterations, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L3_error)
-        __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 279, __pyx_L3_error)
+        __pyx_t_1 = PyObject_RichCompare(__pyx_v_iterations, __pyx_v_max_iterations, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 280, __pyx_L3_error)
+        __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 280, __pyx_L3_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_t_7 = __pyx_t_8;
         __pyx_L11_bool_binop_done:;
         if (!__pyx_t_7) break;
 
-        /* "video_translate_cython.pyx":280
+        /* "video_translate_cython.pyx":281
  *     try:
  *         while current_frame < end_frame and iterations < max_iterations:
  *             iterations += 1             # <<<<<<<<<<<<<<
  *             try:
  *                 change_frame = find_text_change_optimal_batched(video_path=video_path,
 */
-        __pyx_t_1 = __Pyx_PyLong_AddObjC(__pyx_v_iterations, __pyx_mstate_global->__pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 280, __pyx_L3_error)
+        __pyx_t_1 = __Pyx_PyLong_AddObjC(__pyx_v_iterations, __pyx_mstate_global->__pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF_SET(__pyx_v_iterations, __pyx_t_1);
         __pyx_t_1 = 0;
 
-        /* "video_translate_cython.pyx":281
+        /* "video_translate_cython.pyx":282
  *         while current_frame < end_frame and iterations < max_iterations:
  *             iterations += 1
  *             try:             # <<<<<<<<<<<<<<
@@ -8078,7 +8076,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
           __Pyx_XGOTREF(__pyx_t_11);
           /*try:*/ {
 
-            /* "video_translate_cython.pyx":282
+            /* "video_translate_cython.pyx":283
  *             iterations += 1
  *             try:
  *                 change_frame = find_text_change_optimal_batched(video_path=video_path,             # <<<<<<<<<<<<<<
@@ -8086,27 +8084,27 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
  *                                                                 source_language=source_language,
 */
             __pyx_t_3 = NULL;
-            __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_find_text_change_optimal_batched); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 282, __pyx_L13_error)
+            __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_find_text_change_optimal_batched); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 283, __pyx_L13_error)
             __Pyx_GOTREF(__pyx_t_12);
 
-            /* "video_translate_cython.pyx":283
+            /* "video_translate_cython.pyx":284
  *             try:
  *                 change_frame = find_text_change_optimal_batched(video_path=video_path,
  *                                                                 start_frame_index=current_frame,             # <<<<<<<<<<<<<<
  *                                                                 source_language=source_language,
  *                                                                 similarity_threshold=similarity_threshold)
 */
-            __pyx_t_13 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 283, __pyx_L13_error)
+            __pyx_t_13 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 284, __pyx_L13_error)
             __Pyx_GOTREF(__pyx_t_13);
 
-            /* "video_translate_cython.pyx":285
+            /* "video_translate_cython.pyx":286
  *                                                                 start_frame_index=current_frame,
  *                                                                 source_language=source_language,
  *                                                                 similarity_threshold=similarity_threshold)             # <<<<<<<<<<<<<<
  *                 if change_frame == -1:
  *                     segments.append((current_frame, end_frame))
 */
-            __pyx_t_14 = PyFloat_FromDouble(__pyx_v_similarity_threshold); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 285, __pyx_L13_error)
+            __pyx_t_14 = PyFloat_FromDouble(__pyx_v_similarity_threshold); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 286, __pyx_L13_error)
             __Pyx_GOTREF(__pyx_t_14);
             __pyx_t_15 = 1;
             #if CYTHON_UNPACK_METHODS
@@ -8122,34 +8120,34 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
             #endif
             {
               PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 4 : 0)] = {__pyx_t_3, NULL};
-              __pyx_t_16 = __Pyx_MakeVectorcallBuilderKwds(4); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 282, __pyx_L13_error)
+              __pyx_t_16 = __Pyx_MakeVectorcallBuilderKwds(4); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 283, __pyx_L13_error)
               __Pyx_GOTREF(__pyx_t_16);
-              if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_video_path, __pyx_v_video_path, __pyx_t_16, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 282, __pyx_L13_error)
-              if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_start_frame_index, __pyx_t_13, __pyx_t_16, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 282, __pyx_L13_error)
-              if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_v_source_language, __pyx_t_16, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 282, __pyx_L13_error)
-              if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_t_14, __pyx_t_16, __pyx_callargs+1, 3) < (0)) __PYX_ERR(0, 282, __pyx_L13_error)
+              if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_video_path, __pyx_v_video_path, __pyx_t_16, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 283, __pyx_L13_error)
+              if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_start_frame_index, __pyx_t_13, __pyx_t_16, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 283, __pyx_L13_error)
+              if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_v_source_language, __pyx_t_16, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 283, __pyx_L13_error)
+              if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_t_14, __pyx_t_16, __pyx_callargs+1, 3) < (0)) __PYX_ERR(0, 283, __pyx_L13_error)
               __pyx_t_1 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_12, __pyx_callargs+__pyx_t_15, (1-__pyx_t_15) | (__pyx_t_15*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_16);
               __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
               __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
               __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
               __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
               __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-              if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 282, __pyx_L13_error)
+              if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 283, __pyx_L13_error)
               __Pyx_GOTREF(__pyx_t_1);
             }
 
-            /* "video_translate_cython.pyx":282
+            /* "video_translate_cython.pyx":283
  *             iterations += 1
  *             try:
  *                 change_frame = find_text_change_optimal_batched(video_path=video_path,             # <<<<<<<<<<<<<<
  *                                                                 start_frame_index=current_frame,
  *                                                                 source_language=source_language,
 */
-            __pyx_t_2 = __Pyx_PyLong_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 282, __pyx_L13_error)
+            __pyx_t_2 = __Pyx_PyLong_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 283, __pyx_L13_error)
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
             __pyx_v_change_frame = __pyx_t_2;
 
-            /* "video_translate_cython.pyx":286
+            /* "video_translate_cython.pyx":287
  *                                                                 source_language=source_language,
  *                                                                 similarity_threshold=similarity_threshold)
  *                 if change_frame == -1:             # <<<<<<<<<<<<<<
@@ -8159,27 +8157,27 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
             __pyx_t_7 = (__pyx_v_change_frame == -1L);
             if (__pyx_t_7) {
 
-              /* "video_translate_cython.pyx":287
+              /* "video_translate_cython.pyx":288
  *                                                                 similarity_threshold=similarity_threshold)
  *                 if change_frame == -1:
  *                     segments.append((current_frame, end_frame))             # <<<<<<<<<<<<<<
  *                     break
  *                 elif change_frame >= end_frame:
 */
-              __pyx_t_1 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L13_error)
+              __pyx_t_1 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 288, __pyx_L13_error)
               __Pyx_GOTREF(__pyx_t_1);
-              __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 287, __pyx_L13_error)
+              __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 288, __pyx_L13_error)
               __Pyx_GOTREF(__pyx_t_12);
               __Pyx_GIVEREF(__pyx_t_1);
-              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_1) != (0)) __PYX_ERR(0, 287, __pyx_L13_error);
+              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_1) != (0)) __PYX_ERR(0, 288, __pyx_L13_error);
               __Pyx_INCREF(__pyx_v_end_frame);
               __Pyx_GIVEREF(__pyx_v_end_frame);
-              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_v_end_frame) != (0)) __PYX_ERR(0, 287, __pyx_L13_error);
+              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_v_end_frame) != (0)) __PYX_ERR(0, 288, __pyx_L13_error);
               __pyx_t_1 = 0;
-              __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_12); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 287, __pyx_L13_error)
+              __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_12); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 288, __pyx_L13_error)
               __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-              /* "video_translate_cython.pyx":288
+              /* "video_translate_cython.pyx":289
  *                 if change_frame == -1:
  *                     segments.append((current_frame, end_frame))
  *                     break             # <<<<<<<<<<<<<<
@@ -8188,7 +8186,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
 */
               goto __pyx_L18_try_break;
 
-              /* "video_translate_cython.pyx":286
+              /* "video_translate_cython.pyx":287
  *                                                                 source_language=source_language,
  *                                                                 similarity_threshold=similarity_threshold)
  *                 if change_frame == -1:             # <<<<<<<<<<<<<<
@@ -8197,42 +8195,42 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
 */
             }
 
-            /* "video_translate_cython.pyx":289
+            /* "video_translate_cython.pyx":290
  *                     segments.append((current_frame, end_frame))
  *                     break
  *                 elif change_frame >= end_frame:             # <<<<<<<<<<<<<<
  *                     segments.append((current_frame, end_frame))
  *                     break
 */
-            __pyx_t_12 = __Pyx_PyLong_From_int(__pyx_v_change_frame); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 289, __pyx_L13_error)
+            __pyx_t_12 = __Pyx_PyLong_From_int(__pyx_v_change_frame); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 290, __pyx_L13_error)
             __Pyx_GOTREF(__pyx_t_12);
-            __pyx_t_1 = PyObject_RichCompare(__pyx_t_12, __pyx_v_end_frame, Py_GE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 289, __pyx_L13_error)
+            __pyx_t_1 = PyObject_RichCompare(__pyx_t_12, __pyx_v_end_frame, Py_GE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 290, __pyx_L13_error)
             __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-            __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 289, __pyx_L13_error)
+            __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 290, __pyx_L13_error)
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
             if (__pyx_t_7) {
 
-              /* "video_translate_cython.pyx":290
+              /* "video_translate_cython.pyx":291
  *                     break
  *                 elif change_frame >= end_frame:
  *                     segments.append((current_frame, end_frame))             # <<<<<<<<<<<<<<
  *                     break
  *                 elif change_frame <= current_frame:
 */
-              __pyx_t_1 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 290, __pyx_L13_error)
+              __pyx_t_1 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 291, __pyx_L13_error)
               __Pyx_GOTREF(__pyx_t_1);
-              __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 290, __pyx_L13_error)
+              __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 291, __pyx_L13_error)
               __Pyx_GOTREF(__pyx_t_12);
               __Pyx_GIVEREF(__pyx_t_1);
-              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_1) != (0)) __PYX_ERR(0, 290, __pyx_L13_error);
+              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_1) != (0)) __PYX_ERR(0, 291, __pyx_L13_error);
               __Pyx_INCREF(__pyx_v_end_frame);
               __Pyx_GIVEREF(__pyx_v_end_frame);
-              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_v_end_frame) != (0)) __PYX_ERR(0, 290, __pyx_L13_error);
+              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_v_end_frame) != (0)) __PYX_ERR(0, 291, __pyx_L13_error);
               __pyx_t_1 = 0;
-              __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_12); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 290, __pyx_L13_error)
+              __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_12); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 291, __pyx_L13_error)
               __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-              /* "video_translate_cython.pyx":291
+              /* "video_translate_cython.pyx":292
  *                 elif change_frame >= end_frame:
  *                     segments.append((current_frame, end_frame))
  *                     break             # <<<<<<<<<<<<<<
@@ -8241,7 +8239,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
 */
               goto __pyx_L18_try_break;
 
-              /* "video_translate_cython.pyx":289
+              /* "video_translate_cython.pyx":290
  *                     segments.append((current_frame, end_frame))
  *                     break
  *                 elif change_frame >= end_frame:             # <<<<<<<<<<<<<<
@@ -8250,7 +8248,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
 */
             }
 
-            /* "video_translate_cython.pyx":292
+            /* "video_translate_cython.pyx":293
  *                     segments.append((current_frame, end_frame))
  *                     break
  *                 elif change_frame <= current_frame:             # <<<<<<<<<<<<<<
@@ -8260,29 +8258,29 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
             __pyx_t_7 = (__pyx_v_change_frame <= __pyx_v_current_frame);
             if (__pyx_t_7) {
 
-              /* "video_translate_cython.pyx":294
+              /* "video_translate_cython.pyx":295
  *                 elif change_frame <= current_frame:
  *                     # Invalid change_frame, advance by 1 to prevent infinite loop
  *                     segments.append((current_frame, current_frame + 1))             # <<<<<<<<<<<<<<
  *                     current_frame += 1
  *                 else:
 */
-              __pyx_t_12 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 294, __pyx_L13_error)
+              __pyx_t_12 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 295, __pyx_L13_error)
               __Pyx_GOTREF(__pyx_t_12);
-              __pyx_t_1 = __Pyx_PyLong_From_long((__pyx_v_current_frame + 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 294, __pyx_L13_error)
+              __pyx_t_1 = __Pyx_PyLong_From_long((__pyx_v_current_frame + 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 295, __pyx_L13_error)
               __Pyx_GOTREF(__pyx_t_1);
-              __pyx_t_16 = PyTuple_New(2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 294, __pyx_L13_error)
+              __pyx_t_16 = PyTuple_New(2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 295, __pyx_L13_error)
               __Pyx_GOTREF(__pyx_t_16);
               __Pyx_GIVEREF(__pyx_t_12);
-              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_16, 0, __pyx_t_12) != (0)) __PYX_ERR(0, 294, __pyx_L13_error);
+              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_16, 0, __pyx_t_12) != (0)) __PYX_ERR(0, 295, __pyx_L13_error);
               __Pyx_GIVEREF(__pyx_t_1);
-              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_16, 1, __pyx_t_1) != (0)) __PYX_ERR(0, 294, __pyx_L13_error);
+              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_16, 1, __pyx_t_1) != (0)) __PYX_ERR(0, 295, __pyx_L13_error);
               __pyx_t_12 = 0;
               __pyx_t_1 = 0;
-              __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_16); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 294, __pyx_L13_error)
+              __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_16); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 295, __pyx_L13_error)
               __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-              /* "video_translate_cython.pyx":295
+              /* "video_translate_cython.pyx":296
  *                     # Invalid change_frame, advance by 1 to prevent infinite loop
  *                     segments.append((current_frame, current_frame + 1))
  *                     current_frame += 1             # <<<<<<<<<<<<<<
@@ -8291,7 +8289,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
 */
               __pyx_v_current_frame = (__pyx_v_current_frame + 1);
 
-              /* "video_translate_cython.pyx":292
+              /* "video_translate_cython.pyx":293
  *                     segments.append((current_frame, end_frame))
  *                     break
  *                 elif change_frame <= current_frame:             # <<<<<<<<<<<<<<
@@ -8301,7 +8299,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
               goto __pyx_L21;
             }
 
-            /* "video_translate_cython.pyx":297
+            /* "video_translate_cython.pyx":298
  *                     current_frame += 1
  *                 else:
  *                     segments.append((current_frame, change_frame))             # <<<<<<<<<<<<<<
@@ -8309,22 +8307,22 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
  *             except (MemoryError, OSError, RuntimeError) as e:
 */
             /*else*/ {
-              __pyx_t_16 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 297, __pyx_L13_error)
+              __pyx_t_16 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 298, __pyx_L13_error)
               __Pyx_GOTREF(__pyx_t_16);
-              __pyx_t_1 = __Pyx_PyLong_From_int(__pyx_v_change_frame); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 297, __pyx_L13_error)
+              __pyx_t_1 = __Pyx_PyLong_From_int(__pyx_v_change_frame); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 298, __pyx_L13_error)
               __Pyx_GOTREF(__pyx_t_1);
-              __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 297, __pyx_L13_error)
+              __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 298, __pyx_L13_error)
               __Pyx_GOTREF(__pyx_t_12);
               __Pyx_GIVEREF(__pyx_t_16);
-              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_16) != (0)) __PYX_ERR(0, 297, __pyx_L13_error);
+              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_16) != (0)) __PYX_ERR(0, 298, __pyx_L13_error);
               __Pyx_GIVEREF(__pyx_t_1);
-              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_t_1) != (0)) __PYX_ERR(0, 297, __pyx_L13_error);
+              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_t_1) != (0)) __PYX_ERR(0, 298, __pyx_L13_error);
               __pyx_t_16 = 0;
               __pyx_t_1 = 0;
-              __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_12); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 297, __pyx_L13_error)
+              __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_12); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 298, __pyx_L13_error)
               __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-              /* "video_translate_cython.pyx":298
+              /* "video_translate_cython.pyx":299
  *                 else:
  *                     segments.append((current_frame, change_frame))
  *                     current_frame = change_frame             # <<<<<<<<<<<<<<
@@ -8335,7 +8333,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
             }
             __pyx_L21:;
 
-            /* "video_translate_cython.pyx":281
+            /* "video_translate_cython.pyx":282
  *         while current_frame < end_frame and iterations < max_iterations:
  *             iterations += 1
  *             try:             # <<<<<<<<<<<<<<
@@ -8355,7 +8353,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
           __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
           __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-          /* "video_translate_cython.pyx":299
+          /* "video_translate_cython.pyx":300
  *                     segments.append((current_frame, change_frame))
  *                     current_frame = change_frame
  *             except (MemoryError, OSError, RuntimeError) as e:             # <<<<<<<<<<<<<<
@@ -8365,7 +8363,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
           __pyx_t_2 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_MemoryError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_OSError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_RuntimeError);
           if (__pyx_t_2) {
             __Pyx_AddTraceback("video_translate_cython.process_batch_segment", __pyx_clineno, __pyx_lineno, __pyx_filename);
-            if (__Pyx_GetException(&__pyx_t_12, &__pyx_t_1, &__pyx_t_16) < 0) __PYX_ERR(0, 299, __pyx_L15_except_error)
+            if (__Pyx_GetException(&__pyx_t_12, &__pyx_t_1, &__pyx_t_16) < 0) __PYX_ERR(0, 300, __pyx_L15_except_error)
             __Pyx_XGOTREF(__pyx_t_12);
             __Pyx_XGOTREF(__pyx_t_1);
             __Pyx_XGOTREF(__pyx_t_16);
@@ -8373,63 +8371,63 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
             __pyx_v_e = __pyx_t_1;
             /*try:*/ {
 
-              /* "video_translate_cython.pyx":302
+              /* "video_translate_cython.pyx":303
  *                 # Handle decoder/memory errors gracefully
  *                 # Advance to next frame and continue
  *                 if current_frame < end_frame:             # <<<<<<<<<<<<<<
  *                     segments.append((current_frame, min(current_frame + 10, end_frame)))
  *                     current_frame = min(current_frame + 10, end_frame)
 */
-              __pyx_t_14 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 302, __pyx_L27_error)
+              __pyx_t_14 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 303, __pyx_L27_error)
               __Pyx_GOTREF(__pyx_t_14);
-              __pyx_t_13 = PyObject_RichCompare(__pyx_t_14, __pyx_v_end_frame, Py_LT); __Pyx_XGOTREF(__pyx_t_13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 302, __pyx_L27_error)
+              __pyx_t_13 = PyObject_RichCompare(__pyx_t_14, __pyx_v_end_frame, Py_LT); __Pyx_XGOTREF(__pyx_t_13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 303, __pyx_L27_error)
               __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-              __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 302, __pyx_L27_error)
+              __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 303, __pyx_L27_error)
               __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
               if (__pyx_t_7) {
 
-                /* "video_translate_cython.pyx":303
+                /* "video_translate_cython.pyx":304
  *                 # Advance to next frame and continue
  *                 if current_frame < end_frame:
  *                     segments.append((current_frame, min(current_frame + 10, end_frame)))             # <<<<<<<<<<<<<<
  *                     current_frame = min(current_frame + 10, end_frame)
  *                 else:
 */
-                __pyx_t_13 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 303, __pyx_L27_error)
+                __pyx_t_13 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 304, __pyx_L27_error)
                 __Pyx_GOTREF(__pyx_t_13);
                 __Pyx_INCREF(__pyx_v_end_frame);
                 __pyx_t_18 = __pyx_v_end_frame;
                 __pyx_t_19 = (__pyx_v_current_frame + 10);
-                __pyx_t_3 = __Pyx_PyLong_From_long(__pyx_t_19); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 303, __pyx_L27_error)
+                __pyx_t_3 = __Pyx_PyLong_From_long(__pyx_t_19); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L27_error)
                 __Pyx_GOTREF(__pyx_t_3);
-                __pyx_t_20 = PyObject_RichCompare(__pyx_t_18, __pyx_t_3, Py_LT); __Pyx_XGOTREF(__pyx_t_20); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 303, __pyx_L27_error)
+                __pyx_t_20 = PyObject_RichCompare(__pyx_t_18, __pyx_t_3, Py_LT); __Pyx_XGOTREF(__pyx_t_20); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 304, __pyx_L27_error)
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-                __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_20); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 303, __pyx_L27_error)
+                __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_20); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 304, __pyx_L27_error)
                 __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
                 if (__pyx_t_7) {
                   __Pyx_INCREF(__pyx_t_18);
                   __pyx_t_14 = __pyx_t_18;
                 } else {
-                  __pyx_t_20 = __Pyx_PyLong_From_long(__pyx_t_19); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 303, __pyx_L27_error)
+                  __pyx_t_20 = __Pyx_PyLong_From_long(__pyx_t_19); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 304, __pyx_L27_error)
                   __Pyx_GOTREF(__pyx_t_20);
-                  if (!(likely(PyLong_CheckExact(__pyx_t_20)) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_t_20))) __PYX_ERR(0, 303, __pyx_L27_error)
+                  if (!(likely(PyLong_CheckExact(__pyx_t_20)) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_t_20))) __PYX_ERR(0, 304, __pyx_L27_error)
                   __pyx_t_14 = __pyx_t_20;
                   __pyx_t_20 = 0;
                 }
                 __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
-                __pyx_t_20 = PyTuple_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 303, __pyx_L27_error)
+                __pyx_t_20 = PyTuple_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 304, __pyx_L27_error)
                 __Pyx_GOTREF(__pyx_t_20);
                 __Pyx_GIVEREF(__pyx_t_13);
-                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_t_13) != (0)) __PYX_ERR(0, 303, __pyx_L27_error);
+                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_t_13) != (0)) __PYX_ERR(0, 304, __pyx_L27_error);
                 __Pyx_INCREF(__pyx_t_14);
                 __Pyx_GIVEREF(__pyx_t_14);
-                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 1, __pyx_t_14) != (0)) __PYX_ERR(0, 303, __pyx_L27_error);
+                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 1, __pyx_t_14) != (0)) __PYX_ERR(0, 304, __pyx_L27_error);
                 __pyx_t_13 = 0;
                 __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-                __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_20); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 303, __pyx_L27_error)
+                __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_20); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 304, __pyx_L27_error)
                 __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
 
-                /* "video_translate_cython.pyx":304
+                /* "video_translate_cython.pyx":305
  *                 if current_frame < end_frame:
  *                     segments.append((current_frame, min(current_frame + 10, end_frame)))
  *                     current_frame = min(current_frame + 10, end_frame)             # <<<<<<<<<<<<<<
@@ -8439,28 +8437,28 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
                 __Pyx_INCREF(__pyx_v_end_frame);
                 __pyx_t_18 = __pyx_v_end_frame;
                 __pyx_t_19 = (__pyx_v_current_frame + 10);
-                __pyx_t_14 = __Pyx_PyLong_From_long(__pyx_t_19); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 304, __pyx_L27_error)
+                __pyx_t_14 = __Pyx_PyLong_From_long(__pyx_t_19); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 305, __pyx_L27_error)
                 __Pyx_GOTREF(__pyx_t_14);
-                __pyx_t_13 = PyObject_RichCompare(__pyx_t_18, __pyx_t_14, Py_LT); __Pyx_XGOTREF(__pyx_t_13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 304, __pyx_L27_error)
+                __pyx_t_13 = PyObject_RichCompare(__pyx_t_18, __pyx_t_14, Py_LT); __Pyx_XGOTREF(__pyx_t_13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 305, __pyx_L27_error)
                 __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-                __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 304, __pyx_L27_error)
+                __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 305, __pyx_L27_error)
                 __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
                 if (__pyx_t_7) {
                   __Pyx_INCREF(__pyx_t_18);
                   __pyx_t_20 = __pyx_t_18;
                 } else {
-                  __pyx_t_13 = __Pyx_PyLong_From_long(__pyx_t_19); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 304, __pyx_L27_error)
+                  __pyx_t_13 = __Pyx_PyLong_From_long(__pyx_t_19); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 305, __pyx_L27_error)
                   __Pyx_GOTREF(__pyx_t_13);
-                  if (!(likely(PyLong_CheckExact(__pyx_t_13)) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_t_13))) __PYX_ERR(0, 304, __pyx_L27_error)
+                  if (!(likely(PyLong_CheckExact(__pyx_t_13)) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_t_13))) __PYX_ERR(0, 305, __pyx_L27_error)
                   __pyx_t_20 = __pyx_t_13;
                   __pyx_t_13 = 0;
                 }
                 __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
-                __pyx_t_2 = __Pyx_PyLong_As_int(__pyx_t_20); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 304, __pyx_L27_error)
+                __pyx_t_2 = __Pyx_PyLong_As_int(__pyx_t_20); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 305, __pyx_L27_error)
                 __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
                 __pyx_v_current_frame = __pyx_t_2;
 
-                /* "video_translate_cython.pyx":302
+                /* "video_translate_cython.pyx":303
  *                 # Handle decoder/memory errors gracefully
  *                 # Advance to next frame and continue
  *                 if current_frame < end_frame:             # <<<<<<<<<<<<<<
@@ -8470,7 +8468,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
                 goto __pyx_L29;
               }
 
-              /* "video_translate_cython.pyx":306
+              /* "video_translate_cython.pyx":307
  *                     current_frame = min(current_frame + 10, end_frame)
  *                 else:
  *                     break             # <<<<<<<<<<<<<<
@@ -8483,7 +8481,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
               __pyx_L29:;
             }
 
-            /* "video_translate_cython.pyx":299
+            /* "video_translate_cython.pyx":300
  *                     segments.append((current_frame, change_frame))
  *                     current_frame = change_frame
  *             except (MemoryError, OSError, RuntimeError) as e:             # <<<<<<<<<<<<<<
@@ -8546,7 +8544,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
             goto __pyx_L18_try_break;
           }
 
-          /* "video_translate_cython.pyx":307
+          /* "video_translate_cython.pyx":308
  *                 else:
  *                     break
  *             except Exception as e:             # <<<<<<<<<<<<<<
@@ -8556,7 +8554,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
           __pyx_t_21 = __Pyx_PyErr_ExceptionMatches(((PyObject *)(((PyTypeObject*)PyExc_Exception))));
           if (__pyx_t_21) {
             __Pyx_AddTraceback("video_translate_cython.process_batch_segment", __pyx_clineno, __pyx_lineno, __pyx_filename);
-            if (__Pyx_GetException(&__pyx_t_16, &__pyx_t_1, &__pyx_t_12) < 0) __PYX_ERR(0, 307, __pyx_L15_except_error)
+            if (__Pyx_GetException(&__pyx_t_16, &__pyx_t_1, &__pyx_t_12) < 0) __PYX_ERR(0, 308, __pyx_L15_except_error)
             __Pyx_XGOTREF(__pyx_t_16);
             __Pyx_XGOTREF(__pyx_t_1);
             __Pyx_XGOTREF(__pyx_t_12);
@@ -8564,63 +8562,63 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
             __pyx_v_e = __pyx_t_1;
             /*try:*/ {
 
-              /* "video_translate_cython.pyx":309
+              /* "video_translate_cython.pyx":310
  *             except Exception as e:
  *                 # Unknown error, try to continue with next frame
  *                 if current_frame < end_frame:             # <<<<<<<<<<<<<<
  *                     segments.append((current_frame, min(current_frame + 1, end_frame)))
  *                     current_frame += 1
 */
-              __pyx_t_20 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 309, __pyx_L39_error)
+              __pyx_t_20 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 310, __pyx_L39_error)
               __Pyx_GOTREF(__pyx_t_20);
-              __pyx_t_13 = PyObject_RichCompare(__pyx_t_20, __pyx_v_end_frame, Py_LT); __Pyx_XGOTREF(__pyx_t_13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 309, __pyx_L39_error)
+              __pyx_t_13 = PyObject_RichCompare(__pyx_t_20, __pyx_v_end_frame, Py_LT); __Pyx_XGOTREF(__pyx_t_13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 310, __pyx_L39_error)
               __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
-              __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 309, __pyx_L39_error)
+              __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 310, __pyx_L39_error)
               __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
               if (__pyx_t_7) {
 
-                /* "video_translate_cython.pyx":310
+                /* "video_translate_cython.pyx":311
  *                 # Unknown error, try to continue with next frame
  *                 if current_frame < end_frame:
  *                     segments.append((current_frame, min(current_frame + 1, end_frame)))             # <<<<<<<<<<<<<<
  *                     current_frame += 1
  *                 else:
 */
-                __pyx_t_13 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 310, __pyx_L39_error)
+                __pyx_t_13 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 311, __pyx_L39_error)
                 __Pyx_GOTREF(__pyx_t_13);
                 __Pyx_INCREF(__pyx_v_end_frame);
                 __pyx_t_18 = __pyx_v_end_frame;
                 __pyx_t_19 = (__pyx_v_current_frame + 1);
-                __pyx_t_14 = __Pyx_PyLong_From_long(__pyx_t_19); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 310, __pyx_L39_error)
+                __pyx_t_14 = __Pyx_PyLong_From_long(__pyx_t_19); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 311, __pyx_L39_error)
                 __Pyx_GOTREF(__pyx_t_14);
-                __pyx_t_3 = PyObject_RichCompare(__pyx_t_18, __pyx_t_14, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 310, __pyx_L39_error)
+                __pyx_t_3 = PyObject_RichCompare(__pyx_t_18, __pyx_t_14, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 311, __pyx_L39_error)
                 __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-                __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 310, __pyx_L39_error)
+                __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 311, __pyx_L39_error)
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                 if (__pyx_t_7) {
                   __Pyx_INCREF(__pyx_t_18);
                   __pyx_t_20 = __pyx_t_18;
                 } else {
-                  __pyx_t_3 = __Pyx_PyLong_From_long(__pyx_t_19); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 310, __pyx_L39_error)
+                  __pyx_t_3 = __Pyx_PyLong_From_long(__pyx_t_19); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 311, __pyx_L39_error)
                   __Pyx_GOTREF(__pyx_t_3);
-                  if (!(likely(PyLong_CheckExact(__pyx_t_3)) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_t_3))) __PYX_ERR(0, 310, __pyx_L39_error)
+                  if (!(likely(PyLong_CheckExact(__pyx_t_3)) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_t_3))) __PYX_ERR(0, 311, __pyx_L39_error)
                   __pyx_t_20 = __pyx_t_3;
                   __pyx_t_3 = 0;
                 }
                 __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
-                __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 310, __pyx_L39_error)
+                __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 311, __pyx_L39_error)
                 __Pyx_GOTREF(__pyx_t_3);
                 __Pyx_GIVEREF(__pyx_t_13);
-                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_13) != (0)) __PYX_ERR(0, 310, __pyx_L39_error);
+                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_13) != (0)) __PYX_ERR(0, 311, __pyx_L39_error);
                 __Pyx_INCREF(__pyx_t_20);
                 __Pyx_GIVEREF(__pyx_t_20);
-                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_20) != (0)) __PYX_ERR(0, 310, __pyx_L39_error);
+                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_20) != (0)) __PYX_ERR(0, 311, __pyx_L39_error);
                 __pyx_t_13 = 0;
                 __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
-                __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_3); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 310, __pyx_L39_error)
+                __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_3); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 311, __pyx_L39_error)
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-                /* "video_translate_cython.pyx":311
+                /* "video_translate_cython.pyx":312
  *                 if current_frame < end_frame:
  *                     segments.append((current_frame, min(current_frame + 1, end_frame)))
  *                     current_frame += 1             # <<<<<<<<<<<<<<
@@ -8629,7 +8627,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
 */
                 __pyx_v_current_frame = (__pyx_v_current_frame + 1);
 
-                /* "video_translate_cython.pyx":309
+                /* "video_translate_cython.pyx":310
  *             except Exception as e:
  *                 # Unknown error, try to continue with next frame
  *                 if current_frame < end_frame:             # <<<<<<<<<<<<<<
@@ -8639,7 +8637,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
                 goto __pyx_L41;
               }
 
-              /* "video_translate_cython.pyx":313
+              /* "video_translate_cython.pyx":314
  *                     current_frame += 1
  *                 else:
  *                     break             # <<<<<<<<<<<<<<
@@ -8652,7 +8650,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
               __pyx_L41:;
             }
 
-            /* "video_translate_cython.pyx":307
+            /* "video_translate_cython.pyx":308
  *                 else:
  *                     break
  *             except Exception as e:             # <<<<<<<<<<<<<<
@@ -8716,7 +8714,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
           }
           goto __pyx_L15_except_error;
 
-          /* "video_translate_cython.pyx":281
+          /* "video_translate_cython.pyx":282
  *         while current_frame < end_frame and iterations < max_iterations:
  *             iterations += 1
  *             try:             # <<<<<<<<<<<<<<
@@ -8745,56 +8743,56 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
       }
       __pyx_L10_break:;
 
-      /* "video_translate_cython.pyx":316
+      /* "video_translate_cython.pyx":317
  * 
  *         # Ensure we cover the entire range
  *         if segments and segments[-1][1] < end_frame:             # <<<<<<<<<<<<<<
  *             segments.append((segments[-1][1], end_frame))
  * 
 */
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_v_segments); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 316, __pyx_L3_error)
+      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_v_segments); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 317, __pyx_L3_error)
       if (__pyx_t_8) {
       } else {
         __pyx_t_7 = __pyx_t_8;
         goto __pyx_L47_bool_binop_done;
       }
-      __pyx_t_12 = __Pyx_GetItemInt(__pyx_v_segments, -1L, long, 1, __Pyx_PyLong_From_long, 0, 1, 1, 1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 316, __pyx_L3_error)
+      __pyx_t_12 = __Pyx_GetItemInt(__pyx_v_segments, -1L, long, 1, __Pyx_PyLong_From_long, 0, 1, 1, 1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 317, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_12);
-      __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_12, 1, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 316, __pyx_L3_error)
+      __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_12, 1, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 317, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-      __pyx_t_12 = PyObject_RichCompare(__pyx_t_1, __pyx_v_end_frame, Py_LT); __Pyx_XGOTREF(__pyx_t_12); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 316, __pyx_L3_error)
+      __pyx_t_12 = PyObject_RichCompare(__pyx_t_1, __pyx_v_end_frame, Py_LT); __Pyx_XGOTREF(__pyx_t_12); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 317, __pyx_L3_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_12); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 316, __pyx_L3_error)
+      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_12); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 317, __pyx_L3_error)
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
       __pyx_t_7 = __pyx_t_8;
       __pyx_L47_bool_binop_done:;
       if (__pyx_t_7) {
 
-        /* "video_translate_cython.pyx":317
+        /* "video_translate_cython.pyx":318
  *         # Ensure we cover the entire range
  *         if segments and segments[-1][1] < end_frame:
  *             segments.append((segments[-1][1], end_frame))             # <<<<<<<<<<<<<<
  * 
  *     except Exception as e:
 */
-        __pyx_t_12 = __Pyx_GetItemInt(__pyx_v_segments, -1L, long, 1, __Pyx_PyLong_From_long, 0, 1, 1, 1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 317, __pyx_L3_error)
+        __pyx_t_12 = __Pyx_GetItemInt(__pyx_v_segments, -1L, long, 1, __Pyx_PyLong_From_long, 0, 1, 1, 1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 318, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_12);
-        __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_12, 1, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 317, __pyx_L3_error)
+        __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_12, 1, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 318, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-        __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 317, __pyx_L3_error)
+        __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 318, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_12);
         __Pyx_GIVEREF(__pyx_t_1);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_1) != (0)) __PYX_ERR(0, 317, __pyx_L3_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_1) != (0)) __PYX_ERR(0, 318, __pyx_L3_error);
         __Pyx_INCREF(__pyx_v_end_frame);
         __Pyx_GIVEREF(__pyx_v_end_frame);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_v_end_frame) != (0)) __PYX_ERR(0, 317, __pyx_L3_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_v_end_frame) != (0)) __PYX_ERR(0, 318, __pyx_L3_error);
         __pyx_t_1 = 0;
-        __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_12); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 317, __pyx_L3_error)
+        __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_12); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 318, __pyx_L3_error)
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-        /* "video_translate_cython.pyx":316
+        /* "video_translate_cython.pyx":317
  * 
  *         # Ensure we cover the entire range
  *         if segments and segments[-1][1] < end_frame:             # <<<<<<<<<<<<<<
@@ -8803,7 +8801,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
 */
       }
 
-      /* "video_translate_cython.pyx":278
+      /* "video_translate_cython.pyx":279
  *     iterations = 0
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -8825,7 +8823,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
     __Pyx_XDECREF(__pyx_t_20); __pyx_t_20 = 0;
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":319
+    /* "video_translate_cython.pyx":320
  *             segments.append((segments[-1][1], end_frame))
  * 
  *     except Exception as e:             # <<<<<<<<<<<<<<
@@ -8835,7 +8833,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
     __pyx_t_2 = __Pyx_PyErr_ExceptionMatches(((PyObject *)(((PyTypeObject*)PyExc_Exception))));
     if (__pyx_t_2) {
       __Pyx_AddTraceback("video_translate_cython.process_batch_segment", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_12, &__pyx_t_1, &__pyx_t_16) < 0) __PYX_ERR(0, 319, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_12, &__pyx_t_1, &__pyx_t_16) < 0) __PYX_ERR(0, 320, __pyx_L5_except_error)
       __Pyx_XGOTREF(__pyx_t_12);
       __Pyx_XGOTREF(__pyx_t_1);
       __Pyx_XGOTREF(__pyx_t_16);
@@ -8843,49 +8841,49 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
       __Pyx_XDECREF_SET(__pyx_v_e, __pyx_t_1);
       /*try:*/ {
 
-        /* "video_translate_cython.pyx":321
+        /* "video_translate_cython.pyx":322
  *     except Exception as e:
  *         # Last resort: return partial results
  *         if not segments and current_frame < end_frame:             # <<<<<<<<<<<<<<
  *             segments.append((start_frame, end_frame))
  * 
 */
-        __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_v_segments); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 321, __pyx_L54_error)
+        __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_v_segments); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 322, __pyx_L54_error)
         __pyx_t_30 = (!__pyx_t_8);
         if (__pyx_t_30) {
         } else {
           __pyx_t_7 = __pyx_t_30;
           goto __pyx_L57_bool_binop_done;
         }
-        __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 321, __pyx_L54_error)
+        __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_current_frame); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 322, __pyx_L54_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_20 = PyObject_RichCompare(__pyx_t_3, __pyx_v_end_frame, Py_LT); __Pyx_XGOTREF(__pyx_t_20); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 321, __pyx_L54_error)
+        __pyx_t_20 = PyObject_RichCompare(__pyx_t_3, __pyx_v_end_frame, Py_LT); __Pyx_XGOTREF(__pyx_t_20); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 322, __pyx_L54_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_30 = __Pyx_PyObject_IsTrue(__pyx_t_20); if (unlikely((__pyx_t_30 < 0))) __PYX_ERR(0, 321, __pyx_L54_error)
+        __pyx_t_30 = __Pyx_PyObject_IsTrue(__pyx_t_20); if (unlikely((__pyx_t_30 < 0))) __PYX_ERR(0, 322, __pyx_L54_error)
         __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
         __pyx_t_7 = __pyx_t_30;
         __pyx_L57_bool_binop_done:;
         if (__pyx_t_7) {
 
-          /* "video_translate_cython.pyx":322
+          /* "video_translate_cython.pyx":323
  *         # Last resort: return partial results
  *         if not segments and current_frame < end_frame:
  *             segments.append((start_frame, end_frame))             # <<<<<<<<<<<<<<
  * 
  *     return segments if segments else [(start_frame, end_frame)]
 */
-          __pyx_t_20 = PyTuple_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 322, __pyx_L54_error)
+          __pyx_t_20 = PyTuple_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 323, __pyx_L54_error)
           __Pyx_GOTREF(__pyx_t_20);
           __Pyx_INCREF(__pyx_v_start_frame);
           __Pyx_GIVEREF(__pyx_v_start_frame);
-          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_v_start_frame) != (0)) __PYX_ERR(0, 322, __pyx_L54_error);
+          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_v_start_frame) != (0)) __PYX_ERR(0, 323, __pyx_L54_error);
           __Pyx_INCREF(__pyx_v_end_frame);
           __Pyx_GIVEREF(__pyx_v_end_frame);
-          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 1, __pyx_v_end_frame) != (0)) __PYX_ERR(0, 322, __pyx_L54_error);
-          __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_20); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 322, __pyx_L54_error)
+          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 1, __pyx_v_end_frame) != (0)) __PYX_ERR(0, 323, __pyx_L54_error);
+          __pyx_t_17 = __Pyx_PyObject_Append(__pyx_v_segments, __pyx_t_20); if (unlikely(__pyx_t_17 == ((int)-1))) __PYX_ERR(0, 323, __pyx_L54_error)
           __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
 
-          /* "video_translate_cython.pyx":321
+          /* "video_translate_cython.pyx":322
  *     except Exception as e:
  *         # Last resort: return partial results
  *         if not segments and current_frame < end_frame:             # <<<<<<<<<<<<<<
@@ -8895,7 +8893,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
         }
       }
 
-      /* "video_translate_cython.pyx":319
+      /* "video_translate_cython.pyx":320
  *             segments.append((segments[-1][1], end_frame))
  * 
  *     except Exception as e:             # <<<<<<<<<<<<<<
@@ -8950,7 +8948,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
     }
     goto __pyx_L5_except_error;
 
-    /* "video_translate_cython.pyx":278
+    /* "video_translate_cython.pyx":279
  *     iterations = 0
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -8971,7 +8969,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
     __pyx_L8_try_end:;
   }
 
-  /* "video_translate_cython.pyx":324
+  /* "video_translate_cython.pyx":325
  *             segments.append((start_frame, end_frame))
  * 
  *     return segments if segments else [(start_frame, end_frame)]             # <<<<<<<<<<<<<<
@@ -8979,24 +8977,24 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
  * 
 */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_v_segments); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 324, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_v_segments); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 325, __pyx_L1_error)
   if (__pyx_t_7) {
-    if (!(likely(PyList_CheckExact(__pyx_v_segments)) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_v_segments))) __PYX_ERR(0, 324, __pyx_L1_error)
+    if (!(likely(PyList_CheckExact(__pyx_v_segments)) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_v_segments))) __PYX_ERR(0, 325, __pyx_L1_error)
     __Pyx_INCREF(__pyx_v_segments);
     __pyx_t_16 = __pyx_v_segments;
   } else {
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 325, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_v_start_frame);
     __Pyx_GIVEREF(__pyx_v_start_frame);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_start_frame) != (0)) __PYX_ERR(0, 324, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_start_frame) != (0)) __PYX_ERR(0, 325, __pyx_L1_error);
     __Pyx_INCREF(__pyx_v_end_frame);
     __Pyx_GIVEREF(__pyx_v_end_frame);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_end_frame) != (0)) __PYX_ERR(0, 324, __pyx_L1_error);
-    __pyx_t_12 = PyList_New(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 324, __pyx_L1_error)
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_end_frame) != (0)) __PYX_ERR(0, 325, __pyx_L1_error);
+    __pyx_t_12 = PyList_New(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 325, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_GIVEREF(__pyx_t_1);
-    if (__Pyx_PyList_SET_ITEM(__pyx_t_12, 0, __pyx_t_1) != (0)) __PYX_ERR(0, 324, __pyx_L1_error);
+    if (__Pyx_PyList_SET_ITEM(__pyx_t_12, 0, __pyx_t_1) != (0)) __PYX_ERR(0, 325, __pyx_L1_error);
     __pyx_t_1 = 0;
     __pyx_t_16 = __pyx_t_12;
     __pyx_t_12 = 0;
@@ -9005,7 +9003,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
   __pyx_t_16 = 0;
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":262
+  /* "video_translate_cython.pyx":263
  * 
  * # ------------------ Batch processing ------------------
  * @cython.locals(segments=object, current_frame=int, change_frame=int)             # <<<<<<<<<<<<<<
@@ -9035,7 +9033,7 @@ static PyObject *__pyx_pf_22video_translate_cython_18process_batch_segment(CYTHO
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":328
+/* "video_translate_cython.pyx":329
  * 
  * 
  * @cython.locals(batch_size=int, num_workers=int)             # <<<<<<<<<<<<<<
@@ -9053,23 +9051,23 @@ static PyObject *__pyx_pf_22video_translate_cython_42__defaults__(CYTHON_UNUSED 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__defaults__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_self)->arg0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_self)->arg0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 329, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 329, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_english));
   __Pyx_GIVEREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_english));
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, ((PyObject*)__pyx_mstate_global->__pyx_n_u_english)) != (0)) __PYX_ERR(0, 328, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, ((PyObject*)__pyx_mstate_global->__pyx_n_u_english)) != (0)) __PYX_ERR(0, 329, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1) != (0)) __PYX_ERR(0, 328, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1) != (0)) __PYX_ERR(0, 329, __pyx_L1_error);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 329, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2) != (0)) __PYX_ERR(0, 328, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2) != (0)) __PYX_ERR(0, 329, __pyx_L1_error);
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, Py_None) != (0)) __PYX_ERR(0, 328, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, Py_None) != (0)) __PYX_ERR(0, 329, __pyx_L1_error);
   __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9131,49 +9129,49 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_video_path,&__pyx_mstate_global->__pyx_n_u_total_frames,&__pyx_mstate_global->__pyx_n_u_source_language,&__pyx_mstate_global->__pyx_n_u_similarity_threshold,0};
     struct __pyx_defaults *__pyx_dynamic_args = __Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_self);
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 328, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 329, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 328, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 329, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 328, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 329, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 328, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 329, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 328, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 329, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "find_all_text_segments_parallel", 0) < (0)) __PYX_ERR(0, 328, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "find_all_text_segments_parallel", 0) < (0)) __PYX_ERR(0, 329, __pyx_L3_error)
       if (!values[2]) values[2] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_n_u_english)));
       for (Py_ssize_t i = __pyx_nargs; i < 2; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("find_all_text_segments_parallel", 0, 2, 4, i); __PYX_ERR(0, 328, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("find_all_text_segments_parallel", 0, 2, 4, i); __PYX_ERR(0, 329, __pyx_L3_error) }
       }
     } else {
       switch (__pyx_nargs) {
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 328, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 329, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 328, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 329, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 328, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 329, __pyx_L3_error)
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 328, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 329, __pyx_L3_error)
         break;
         default: goto __pyx_L5_argtuple_error;
       }
@@ -9183,14 +9181,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     __pyx_v_total_frames = ((PyObject*)values[1]);
     __pyx_v_source_language = ((PyObject*)values[2]);
     if (values[3]) {
-      __pyx_v_similarity_threshold = __Pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_similarity_threshold == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 331, __pyx_L3_error)
+      __pyx_v_similarity_threshold = __Pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_similarity_threshold == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 332, __pyx_L3_error)
     } else {
       __pyx_v_similarity_threshold = __pyx_dynamic_args->arg0;
     }
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("find_all_text_segments_parallel", 0, 2, 4, __pyx_nargs); __PYX_ERR(0, 328, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("find_all_text_segments_parallel", 0, 2, 4, __pyx_nargs); __PYX_ERR(0, 329, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -9201,9 +9199,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 329, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_total_frames), (&PyLong_Type), 0, "total_frames", 2))) __PYX_ERR(0, 329, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 330, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 330, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_total_frames), (&PyLong_Type), 0, "total_frames", 2))) __PYX_ERR(0, 330, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 331, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_20find_all_text_segments_parallel(__pyx_self, __pyx_v_video_path, __pyx_v_total_frames, __pyx_v_source_language, __pyx_v_similarity_threshold);
 
   /* function exit code */
@@ -9223,7 +9221,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":377
+/* "video_translate_cython.pyx":378
  * 
  *     # Create a wrapper that initializes the lock in each worker
  *     def process_batch_with_lock(*args):             # <<<<<<<<<<<<<<
@@ -9276,7 +9274,7 @@ static PyObject *__pyx_pf_22video_translate_cython_31find_all_text_segments_para
   __pyx_outer_scope = (struct __pyx_obj_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
 
-  /* "video_translate_cython.pyx":378
+  /* "video_translate_cython.pyx":379
  *     # Create a wrapper that initializes the lock in each worker
  *     def process_batch_with_lock(*args):
  *         _init_frame_lock_shared(shared_lock)             # <<<<<<<<<<<<<<
@@ -9284,9 +9282,9 @@ static PyObject *__pyx_pf_22video_translate_cython_31find_all_text_segments_para
  * 
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_init_frame_lock_shared); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 378, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_init_frame_lock_shared); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 379, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_shared_lock)) { __Pyx_RaiseClosureNameError("shared_lock"); __PYX_ERR(0, 378, __pyx_L1_error) }
+  if (unlikely(!__pyx_cur_scope->__pyx_v_shared_lock)) { __Pyx_RaiseClosureNameError("shared_lock"); __PYX_ERR(0, 379, __pyx_L1_error) }
   __pyx_t_4 = 1;
   #if CYTHON_UNPACK_METHODS
   if (unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -9304,12 +9302,12 @@ static PyObject *__pyx_pf_22video_translate_cython_31find_all_text_segments_para
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_4, (2-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 378, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 379, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":379
+  /* "video_translate_cython.pyx":380
  *     def process_batch_with_lock(*args):
  *         _init_frame_lock_shared(shared_lock)
  *         return process_batch_segment(*args)             # <<<<<<<<<<<<<<
@@ -9317,16 +9315,16 @@ static PyObject *__pyx_pf_22video_translate_cython_31find_all_text_segments_para
  *     with ProcessPoolExecutor(max_workers=num_workers) as executor:
 */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_process_batch_segment); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 379, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_process_batch_segment); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 380, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_v_args, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 379, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_v_args, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 380, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":377
+  /* "video_translate_cython.pyx":378
  * 
  *     # Create a wrapper that initializes the lock in each worker
  *     def process_batch_with_lock(*args):             # <<<<<<<<<<<<<<
@@ -9347,7 +9345,7 @@ static PyObject *__pyx_pf_22video_translate_cython_31find_all_text_segments_para
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":411
+/* "video_translate_cython.pyx":412
  *         return []
  * 
  *     all_segments.sort(key=lambda x: x[0])             # <<<<<<<<<<<<<<
@@ -9394,32 +9392,32 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_x,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 411, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 412, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 411, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 412, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "lambda1", 0) < (0)) __PYX_ERR(0, 411, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "lambda1", 0) < (0)) __PYX_ERR(0, 412, __pyx_L3_error)
       for (Py_ssize_t i = __pyx_nargs; i < 1; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("lambda1", 1, 1, 1, i); __PYX_ERR(0, 411, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("lambda1", 1, 1, 1, i); __PYX_ERR(0, 412, __pyx_L3_error) }
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 411, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 412, __pyx_L3_error)
     }
     __pyx_v_x = values[0];
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("lambda1", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 411, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("lambda1", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 412, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -9449,7 +9447,7 @@ static PyObject *__pyx_lambda_funcdef_lambda1(CYTHON_UNUSED PyObject *__pyx_self
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("lambda1", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_x, 0, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 411, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_x, 0, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 412, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9466,7 +9464,7 @@ static PyObject *__pyx_lambda_funcdef_lambda1(CYTHON_UNUSED PyObject *__pyx_self
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":328
+/* "video_translate_cython.pyx":329
  * 
  * 
  * @cython.locals(batch_size=int, num_workers=int)             # <<<<<<<<<<<<<<
@@ -9543,12 +9541,12 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 328, __pyx_L1_error)
+    __PYX_ERR(0, 329, __pyx_L1_error)
   } else {
     __Pyx_GOTREF((PyObject *)__pyx_cur_scope);
   }
 
-  /* "video_translate_cython.pyx":340
+  /* "video_translate_cython.pyx":341
  *     torch/easyocr in each process. Consider using fewer workers if memory is constrained.
  *     """
  *     batch_size, num_workers = calculate_optimal_batch_config(total_frames)             # <<<<<<<<<<<<<<
@@ -9556,7 +9554,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
  *         num_workers = 1
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_calculate_optimal_batch_config); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 340, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_calculate_optimal_batch_config); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -9575,7 +9573,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_4, (2-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 340, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   if ((likely(PyTuple_CheckExact(__pyx_t_1))) || (PyList_CheckExact(__pyx_t_1))) {
@@ -9584,7 +9582,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
     if (unlikely(size != 2)) {
       if (size > 2) __Pyx_RaiseTooManyValuesError(2);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      __PYX_ERR(0, 340, __pyx_L1_error)
+      __PYX_ERR(0, 341, __pyx_L1_error)
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -9594,22 +9592,22 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
       __Pyx_INCREF(__pyx_t_2);
     } else {
       __pyx_t_3 = __Pyx_PyList_GetItemRef(sequence, 0);
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 340, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 341, __pyx_L1_error)
       __Pyx_XGOTREF(__pyx_t_3);
       __pyx_t_2 = __Pyx_PyList_GetItemRef(sequence, 1);
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 340, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 341, __pyx_L1_error)
       __Pyx_XGOTREF(__pyx_t_2);
     }
     #else
-    __pyx_t_3 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 340, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 341, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 340, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 341, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     #endif
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   } else {
     Py_ssize_t index = -1;
-    __pyx_t_5 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 340, __pyx_L1_error)
+    __pyx_t_5 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 341, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_6 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_5);
@@ -9617,7 +9615,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
     __Pyx_GOTREF(__pyx_t_3);
     index = 1; __pyx_t_2 = __pyx_t_6(__pyx_t_5); if (unlikely(!__pyx_t_2)) goto __pyx_L3_unpacking_failed;
     __Pyx_GOTREF(__pyx_t_2);
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_5), 2) < (0)) __PYX_ERR(0, 340, __pyx_L1_error)
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_5), 2) < (0)) __PYX_ERR(0, 341, __pyx_L1_error)
     __pyx_t_6 = NULL;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     goto __pyx_L4_unpacking_done;
@@ -9625,17 +9623,17 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    __PYX_ERR(0, 340, __pyx_L1_error)
+    __PYX_ERR(0, 341, __pyx_L1_error)
     __pyx_L4_unpacking_done:;
   }
-  __pyx_t_7 = __Pyx_PyLong_As_int(__pyx_t_3); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 340, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyLong_As_int(__pyx_t_3); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_8 = __Pyx_PyLong_As_int(__pyx_t_2); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 340, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyLong_As_int(__pyx_t_2); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_batch_size = __pyx_t_7;
   __pyx_v_num_workers = __pyx_t_8;
 
-  /* "video_translate_cython.pyx":341
+  /* "video_translate_cython.pyx":342
  *     """
  *     batch_size, num_workers = calculate_optimal_batch_config(total_frames)
  *     if num_workers < 1:             # <<<<<<<<<<<<<<
@@ -9645,7 +9643,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
   __pyx_t_9 = (__pyx_v_num_workers < 1);
   if (__pyx_t_9) {
 
-    /* "video_translate_cython.pyx":342
+    /* "video_translate_cython.pyx":343
  *     batch_size, num_workers = calculate_optimal_batch_config(total_frames)
  *     if num_workers < 1:
  *         num_workers = 1             # <<<<<<<<<<<<<<
@@ -9654,7 +9652,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
 */
     __pyx_v_num_workers = 1;
 
-    /* "video_translate_cython.pyx":341
+    /* "video_translate_cython.pyx":342
  *     """
  *     batch_size, num_workers = calculate_optimal_batch_config(total_frames)
  *     if num_workers < 1:             # <<<<<<<<<<<<<<
@@ -9663,7 +9661,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
 */
   }
 
-  /* "video_translate_cython.pyx":348
+  /* "video_translate_cython.pyx":349
  *     # Also prevents FFmpeg decoder contention from too many concurrent VideoCapture instances
  *     # Very conservative limit: max 2 workers to prevent decoder errors
  *     cpu_count = multiprocessing.cpu_count()             # <<<<<<<<<<<<<<
@@ -9671,9 +9669,9 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
  *     num_workers = min(num_workers, max_safe_workers)
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_multiprocessing); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_multiprocessing); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_cpu_count); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_cpu_count); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 349, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_4 = 1;
@@ -9693,33 +9691,33 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+__pyx_t_4, (1-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 348, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __pyx_v_cpu_count = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":349
+  /* "video_translate_cython.pyx":350
  *     # Very conservative limit: max 2 workers to prevent decoder errors
  *     cpu_count = multiprocessing.cpu_count()
  *     max_safe_workers = min(2, max(1, cpu_count - 2))  # Reduced to 2 to prevent decoder contention             # <<<<<<<<<<<<<<
  *     num_workers = min(num_workers, max_safe_workers)
  * 
 */
-  __pyx_t_1 = __Pyx_PyLong_SubtractObjC(__pyx_v_cpu_count, __pyx_mstate_global->__pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyLong_SubtractObjC(__pyx_v_cpu_count, __pyx_mstate_global->__pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_10 = 1;
-  __pyx_t_2 = __Pyx_PyLong_From_long(__pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyLong_From_long(__pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyObject_RichCompare(__pyx_t_1, __pyx_t_2, Py_GT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_3 = PyObject_RichCompare(__pyx_t_1, __pyx_t_2, Py_GT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_9) {
     __Pyx_INCREF(__pyx_t_1);
     __pyx_t_5 = __pyx_t_1;
   } else {
-    __pyx_t_3 = __Pyx_PyLong_From_long(__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyLong_From_long(__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 350, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_5 = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -9729,17 +9727,17 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
   __pyx_t_1 = __pyx_t_5;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_10 = 2;
-  __pyx_t_3 = __Pyx_PyLong_From_long(__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyLong_From_long(__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, __pyx_t_3, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, __pyx_t_3, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_9) {
     __Pyx_INCREF(__pyx_t_1);
     __pyx_t_5 = __pyx_t_1;
   } else {
-    __pyx_t_2 = __Pyx_PyLong_From_long(__pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyLong_From_long(__pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 350, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_5 = __pyx_t_2;
     __pyx_t_2 = 0;
@@ -9751,7 +9749,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
   __pyx_v_max_safe_workers = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":350
+  /* "video_translate_cython.pyx":351
  *     cpu_count = multiprocessing.cpu_count()
  *     max_safe_workers = min(2, max(1, cpu_count - 2))  # Reduced to 2 to prevent decoder contention
  *     num_workers = min(num_workers, max_safe_workers)             # <<<<<<<<<<<<<<
@@ -9761,27 +9759,27 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
   __Pyx_INCREF(__pyx_v_max_safe_workers);
   __pyx_t_1 = __pyx_v_max_safe_workers;
   __pyx_t_8 = __pyx_v_num_workers;
-  __pyx_t_2 = __Pyx_PyLong_From_int(__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 350, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyLong_From_int(__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 351, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyObject_RichCompare(__pyx_t_1, __pyx_t_2, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 350, __pyx_L1_error)
+  __pyx_t_3 = PyObject_RichCompare(__pyx_t_1, __pyx_t_2, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 351, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 350, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 351, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_9) {
     __Pyx_INCREF(__pyx_t_1);
     __pyx_t_5 = __pyx_t_1;
   } else {
-    __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_t_8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 350, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_t_8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 351, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_5 = __pyx_t_3;
     __pyx_t_3 = 0;
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_8 = __Pyx_PyLong_As_int(__pyx_t_5); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 350, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyLong_As_int(__pyx_t_5); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 351, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_num_workers = __pyx_t_8;
 
-  /* "video_translate_cython.pyx":352
+  /* "video_translate_cython.pyx":353
  *     num_workers = min(num_workers, max_safe_workers)
  * 
  *     if num_workers < 1:             # <<<<<<<<<<<<<<
@@ -9791,7 +9789,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
   __pyx_t_9 = (__pyx_v_num_workers < 1);
   if (__pyx_t_9) {
 
-    /* "video_translate_cython.pyx":353
+    /* "video_translate_cython.pyx":354
  * 
  *     if num_workers < 1:
  *         num_workers = 1             # <<<<<<<<<<<<<<
@@ -9800,7 +9798,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
 */
     __pyx_v_num_workers = 1;
 
-    /* "video_translate_cython.pyx":352
+    /* "video_translate_cython.pyx":353
  *     num_workers = min(num_workers, max_safe_workers)
  * 
  *     if num_workers < 1:             # <<<<<<<<<<<<<<
@@ -9809,19 +9807,19 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
 */
   }
 
-  /* "video_translate_cython.pyx":355
+  /* "video_translate_cython.pyx":356
  *         num_workers = 1
  * 
  *     batches = []             # <<<<<<<<<<<<<<
  *     i = 0
  *     batch_id = 0
 */
-  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 355, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 356, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_v_batches = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "video_translate_cython.pyx":356
+  /* "video_translate_cython.pyx":357
  * 
  *     batches = []
  *     i = 0             # <<<<<<<<<<<<<<
@@ -9831,7 +9829,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
   __Pyx_INCREF(__pyx_mstate_global->__pyx_int_0);
   __pyx_v_i = __pyx_mstate_global->__pyx_int_0;
 
-  /* "video_translate_cython.pyx":357
+  /* "video_translate_cython.pyx":358
  *     batches = []
  *     i = 0
  *     batch_id = 0             # <<<<<<<<<<<<<<
@@ -9841,7 +9839,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
   __Pyx_INCREF(__pyx_mstate_global->__pyx_int_0);
   __pyx_v_batch_id = __pyx_mstate_global->__pyx_int_0;
 
-  /* "video_translate_cython.pyx":358
+  /* "video_translate_cython.pyx":359
  *     i = 0
  *     batch_id = 0
  *     while i < total_frames:             # <<<<<<<<<<<<<<
@@ -9849,12 +9847,12 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
  *         batch_end = min(i + batch_size, total_frames)
 */
   while (1) {
-    __pyx_t_5 = PyObject_RichCompare(__pyx_v_i, __pyx_v_total_frames, Py_LT); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 358, __pyx_L1_error)
-    __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 358, __pyx_L1_error)
+    __pyx_t_5 = PyObject_RichCompare(__pyx_v_i, __pyx_v_total_frames, Py_LT); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 359, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 359, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (!__pyx_t_9) break;
 
-    /* "video_translate_cython.pyx":359
+    /* "video_translate_cython.pyx":360
  *     batch_id = 0
  *     while i < total_frames:
  *         batch_start = i             # <<<<<<<<<<<<<<
@@ -9864,7 +9862,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
     __Pyx_INCREF(__pyx_v_i);
     __Pyx_XDECREF_SET(__pyx_v_batch_start, __pyx_v_i);
 
-    /* "video_translate_cython.pyx":360
+    /* "video_translate_cython.pyx":361
  *     while i < total_frames:
  *         batch_start = i
  *         batch_end = min(i + batch_size, total_frames)             # <<<<<<<<<<<<<<
@@ -9873,13 +9871,13 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
 */
     __Pyx_INCREF(__pyx_v_total_frames);
     __pyx_t_11 = __pyx_v_total_frames;
-    __pyx_t_5 = __Pyx_PyLong_From_int(__pyx_v_batch_size); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 360, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyLong_From_int(__pyx_v_batch_size); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 361, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_1 = PyNumber_Add(__pyx_v_i, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 360, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Add(__pyx_v_i, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 361, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_3 = PyObject_RichCompare(__pyx_t_11, __pyx_t_1, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 360, __pyx_L1_error)
-    __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 360, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_t_11, __pyx_t_1, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 361, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 361, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_9) {
       __Pyx_INCREF(__pyx_t_11);
@@ -9896,102 +9894,102 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
     __Pyx_XDECREF_SET(__pyx_v_batch_end, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "video_translate_cython.pyx":361
+    /* "video_translate_cython.pyx":362
  *         batch_start = i
  *         batch_end = min(i + batch_size, total_frames)
  *         batches.append((batch_start, batch_end, batch_id))             # <<<<<<<<<<<<<<
  *         i += batch_size
  *         batch_id += 1
 */
-    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 361, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 362, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_v_batch_start);
     __Pyx_GIVEREF(__pyx_v_batch_start);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_batch_start) != (0)) __PYX_ERR(0, 361, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_batch_start) != (0)) __PYX_ERR(0, 362, __pyx_L1_error);
     __Pyx_INCREF(__pyx_v_batch_end);
     __Pyx_GIVEREF(__pyx_v_batch_end);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_batch_end) != (0)) __PYX_ERR(0, 361, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_batch_end) != (0)) __PYX_ERR(0, 362, __pyx_L1_error);
     __Pyx_INCREF(__pyx_v_batch_id);
     __Pyx_GIVEREF(__pyx_v_batch_id);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_v_batch_id) != (0)) __PYX_ERR(0, 361, __pyx_L1_error);
-    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_batches, __pyx_t_1); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 361, __pyx_L1_error)
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_v_batch_id) != (0)) __PYX_ERR(0, 362, __pyx_L1_error);
+    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_batches, __pyx_t_1); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 362, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "video_translate_cython.pyx":362
+    /* "video_translate_cython.pyx":363
  *         batch_end = min(i + batch_size, total_frames)
  *         batches.append((batch_start, batch_end, batch_id))
  *         i += batch_size             # <<<<<<<<<<<<<<
  *         batch_id += 1
  * 
 */
-    __pyx_t_1 = __Pyx_PyLong_From_int(__pyx_v_batch_size); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 362, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyLong_From_int(__pyx_v_batch_size); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 363, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = PyNumber_InPlaceAdd(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 362, __pyx_L1_error)
+    __pyx_t_5 = PyNumber_InPlaceAdd(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 363, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF_SET(__pyx_v_i, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "video_translate_cython.pyx":363
+    /* "video_translate_cython.pyx":364
  *         batches.append((batch_start, batch_end, batch_id))
  *         i += batch_size
  *         batch_id += 1             # <<<<<<<<<<<<<<
  * 
  *     all_segments = []
 */
-    __pyx_t_5 = __Pyx_PyLong_AddObjC(__pyx_v_batch_id, __pyx_mstate_global->__pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 363, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyLong_AddObjC(__pyx_v_batch_id, __pyx_mstate_global->__pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 364, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF_SET(__pyx_v_batch_id, __pyx_t_5);
     __pyx_t_5 = 0;
   }
 
-  /* "video_translate_cython.pyx":365
+  /* "video_translate_cython.pyx":366
  *         batch_id += 1
  * 
  *     all_segments = []             # <<<<<<<<<<<<<<
  * 
  *     # Use processes so OCR/translation/OpenCV calls run in separate interpreters
 */
-  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 365, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_v_all_segments = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "video_translate_cython.pyx":370
+  /* "video_translate_cython.pyx":371
  *     # and do not contend for the main-process GIL.
  *     # Add timeout to prevent hanging on crashed workers
  *     from concurrent.futures import TimeoutError as FutureTimeoutError             # <<<<<<<<<<<<<<
  *     import time
  * 
 */
-  __pyx_t_5 = PyList_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 370, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 371, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_mstate_global->__pyx_n_u_TimeoutError);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_n_u_TimeoutError);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 0, __pyx_mstate_global->__pyx_n_u_TimeoutError) != (0)) __PYX_ERR(0, 370, __pyx_L1_error);
-  __pyx_t_1 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_concurrent_futures, __pyx_t_5, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 370, __pyx_L1_error)
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_5, 0, __pyx_mstate_global->__pyx_n_u_TimeoutError) != (0)) __PYX_ERR(0, 371, __pyx_L1_error);
+  __pyx_t_1 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_concurrent_futures, __pyx_t_5, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 371, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_ImportFrom(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_TimeoutError); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 370, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_ImportFrom(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_TimeoutError); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 371, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_t_5);
   __pyx_v_FutureTimeoutError = __pyx_t_5;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":371
+  /* "video_translate_cython.pyx":372
  *     # Add timeout to prevent hanging on crashed workers
  *     from concurrent.futures import TimeoutError as FutureTimeoutError
  *     import time             # <<<<<<<<<<<<<<
  * 
  *     # Initialize shared lock for serializing VideoCapture operations
 */
-  __pyx_t_1 = __Pyx_ImportDottedModule(__pyx_mstate_global->__pyx_n_u_time, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 371, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_ImportDottedModule(__pyx_mstate_global->__pyx_n_u_time, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 372, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_time = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":374
+  /* "video_translate_cython.pyx":375
  * 
  *     # Initialize shared lock for serializing VideoCapture operations
  *     shared_lock = _get_frame_read_lock()             # <<<<<<<<<<<<<<
@@ -9999,7 +9997,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
  *     # Create a wrapper that initializes the lock in each worker
 */
   __pyx_t_5 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_get_frame_read_lock); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 374, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_get_frame_read_lock); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 375, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -10018,26 +10016,26 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_4, (1-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 374, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 375, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_cur_scope->__pyx_v_shared_lock = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":377
+  /* "video_translate_cython.pyx":378
  * 
  *     # Create a wrapper that initializes the lock in each worker
  *     def process_batch_with_lock(*args):             # <<<<<<<<<<<<<<
  *         _init_frame_lock_shared(shared_lock)
  *         return process_batch_segment(*args)
 */
-  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_31find_all_text_segments_parallel_1process_batch_with_lock, 0, __pyx_mstate_global->__pyx_n_u_find_all_text_segments_parallel, ((PyObject*)__pyx_cur_scope), __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[1])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_31find_all_text_segments_parallel_1process_batch_with_lock, 0, __pyx_mstate_global->__pyx_n_u_find_all_text_segments_parallel, ((PyObject*)__pyx_cur_scope), __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[1])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 378, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_process_batch_with_lock = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":381
+  /* "video_translate_cython.pyx":382
  *         return process_batch_segment(*args)
  * 
  *     with ProcessPoolExecutor(max_workers=num_workers) as executor:             # <<<<<<<<<<<<<<
@@ -10046,9 +10044,9 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
 */
   /*with:*/ {
     __pyx_t_3 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_ProcessPoolExecutor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 381, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_ProcessPoolExecutor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 382, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_2 = __Pyx_PyLong_From_int(__pyx_v_num_workers); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 381, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyLong_From_int(__pyx_v_num_workers); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 382, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_4 = 1;
     #if CYTHON_UNPACK_METHODS
@@ -10064,21 +10062,21 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
     #endif
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 1 : 0)] = {__pyx_t_3, NULL};
-      __pyx_t_13 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 381, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 382, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_max_workers, __pyx_t_2, __pyx_t_13, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 381, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_max_workers, __pyx_t_2, __pyx_t_13, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 382, __pyx_L1_error)
       __pyx_t_1 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_5, __pyx_callargs+__pyx_t_4, (1-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_13);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 381, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 382, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
     }
-    __pyx_t_14 = __Pyx_PyObject_LookupSpecial(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_exit); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 381, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_LookupSpecial(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_exit); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 382, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
     __pyx_t_13 = NULL;
-    __pyx_t_2 = __Pyx_PyObject_LookupSpecial(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_enter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 381, __pyx_L9_error)
+    __pyx_t_2 = __Pyx_PyObject_LookupSpecial(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_enter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 382, __pyx_L9_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_4 = 1;
     #if CYTHON_UNPACK_METHODS
@@ -10097,7 +10095,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
       __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+__pyx_t_4, (1-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 381, __pyx_L9_error)
+      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 382, __pyx_L9_error)
       __Pyx_GOTREF(__pyx_t_5);
     }
     __pyx_t_2 = __pyx_t_5;
@@ -10115,7 +10113,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
           __pyx_v_executor = __pyx_t_2;
           __pyx_t_2 = 0;
 
-          /* "video_translate_cython.pyx":382
+          /* "video_translate_cython.pyx":383
  * 
  *     with ProcessPoolExecutor(max_workers=num_workers) as executor:
  *         future_to_batch = {             # <<<<<<<<<<<<<<
@@ -10123,10 +10121,10 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
  *             for batch_start, batch_end, batch_id in batches
 */
           { /* enter inner scope */
-            __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 382, __pyx_L21_error)
+            __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 383, __pyx_L21_error)
             __Pyx_GOTREF(__pyx_t_2);
 
-            /* "video_translate_cython.pyx":384
+            /* "video_translate_cython.pyx":385
  *         future_to_batch = {
  *             executor.submit(process_batch_with_lock, video_path, batch_start, batch_end, batch_id, source_language, similarity_threshold): (batch_start, batch_end, batch_id)
  *             for batch_start, batch_end, batch_id in batches             # <<<<<<<<<<<<<<
@@ -10139,13 +10137,13 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
               {
                 Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
                 #if !CYTHON_ASSUME_SAFE_SIZE
-                if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 384, __pyx_L21_error)
+                if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 385, __pyx_L21_error)
                 #endif
                 if (__pyx_t_18 >= __pyx_temp) break;
               }
               __pyx_t_5 = __Pyx_PyList_GetItemRef(__pyx_t_1, __pyx_t_18);
               ++__pyx_t_18;
-              if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 384, __pyx_L21_error)
+              if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 385, __pyx_L21_error)
               __Pyx_GOTREF(__pyx_t_5);
               if ((likely(PyTuple_CheckExact(__pyx_t_5))) || (PyList_CheckExact(__pyx_t_5))) {
                 PyObject* sequence = __pyx_t_5;
@@ -10153,7 +10151,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                 if (unlikely(size != 3)) {
                   if (size > 3) __Pyx_RaiseTooManyValuesError(3);
                   else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-                  __PYX_ERR(0, 384, __pyx_L21_error)
+                  __PYX_ERR(0, 385, __pyx_L21_error)
                 }
                 #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
                 if (likely(PyTuple_CheckExact(sequence))) {
@@ -10165,27 +10163,27 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                   __Pyx_INCREF(__pyx_t_19);
                 } else {
                   __pyx_t_13 = __Pyx_PyList_GetItemRef(sequence, 0);
-                  if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 384, __pyx_L21_error)
+                  if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 385, __pyx_L21_error)
                   __Pyx_XGOTREF(__pyx_t_13);
                   __pyx_t_3 = __Pyx_PyList_GetItemRef(sequence, 1);
-                  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 384, __pyx_L21_error)
+                  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 385, __pyx_L21_error)
                   __Pyx_XGOTREF(__pyx_t_3);
                   __pyx_t_19 = __Pyx_PyList_GetItemRef(sequence, 2);
-                  if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 384, __pyx_L21_error)
+                  if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 385, __pyx_L21_error)
                   __Pyx_XGOTREF(__pyx_t_19);
                 }
                 #else
-                __pyx_t_13 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 384, __pyx_L21_error)
+                __pyx_t_13 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 385, __pyx_L21_error)
                 __Pyx_GOTREF(__pyx_t_13);
-                __pyx_t_3 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 384, __pyx_L21_error)
+                __pyx_t_3 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 385, __pyx_L21_error)
                 __Pyx_GOTREF(__pyx_t_3);
-                __pyx_t_19 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 384, __pyx_L21_error)
+                __pyx_t_19 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 385, __pyx_L21_error)
                 __Pyx_GOTREF(__pyx_t_19);
                 #endif
                 __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
               } else {
                 Py_ssize_t index = -1;
-                __pyx_t_20 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 384, __pyx_L21_error)
+                __pyx_t_20 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 385, __pyx_L21_error)
                 __Pyx_GOTREF(__pyx_t_20);
                 __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
                 __pyx_t_6 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_20);
@@ -10195,7 +10193,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                 __Pyx_GOTREF(__pyx_t_3);
                 index = 2; __pyx_t_19 = __pyx_t_6(__pyx_t_20); if (unlikely(!__pyx_t_19)) goto __pyx_L24_unpacking_failed;
                 __Pyx_GOTREF(__pyx_t_19);
-                if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_20), 3) < (0)) __PYX_ERR(0, 384, __pyx_L21_error)
+                if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_20), 3) < (0)) __PYX_ERR(0, 385, __pyx_L21_error)
                 __pyx_t_6 = NULL;
                 __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
                 goto __pyx_L25_unpacking_done;
@@ -10203,7 +10201,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                 __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
                 __pyx_t_6 = NULL;
                 if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-                __PYX_ERR(0, 384, __pyx_L21_error)
+                __PYX_ERR(0, 385, __pyx_L21_error)
                 __pyx_L25_unpacking_done:;
               }
               __Pyx_XDECREF_SET(__pyx_8genexpr1__pyx_v_batch_start, __pyx_t_13);
@@ -10213,7 +10211,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
               __Pyx_XDECREF_SET(__pyx_8genexpr1__pyx_v_batch_id, __pyx_t_19);
               __pyx_t_19 = 0;
 
-              /* "video_translate_cython.pyx":383
+              /* "video_translate_cython.pyx":384
  *     with ProcessPoolExecutor(max_workers=num_workers) as executor:
  *         future_to_batch = {
  *             executor.submit(process_batch_with_lock, video_path, batch_start, batch_end, batch_id, source_language, similarity_threshold): (batch_start, batch_end, batch_id)             # <<<<<<<<<<<<<<
@@ -10222,7 +10220,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
 */
               __pyx_t_19 = __pyx_v_executor;
               __Pyx_INCREF(__pyx_t_19);
-              __pyx_t_3 = PyFloat_FromDouble(__pyx_v_similarity_threshold); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 383, __pyx_L21_error)
+              __pyx_t_3 = PyFloat_FromDouble(__pyx_v_similarity_threshold); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 384, __pyx_L21_error)
               __Pyx_GOTREF(__pyx_t_3);
               __pyx_t_4 = 0;
               {
@@ -10230,25 +10228,25 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                 __pyx_t_5 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_submit, __pyx_callargs+__pyx_t_4, (8-__pyx_t_4) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
                 __Pyx_XDECREF(__pyx_t_19); __pyx_t_19 = 0;
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-                if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 383, __pyx_L21_error)
+                if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 384, __pyx_L21_error)
                 __Pyx_GOTREF(__pyx_t_5);
               }
-              __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 383, __pyx_L21_error)
+              __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 384, __pyx_L21_error)
               __Pyx_GOTREF(__pyx_t_3);
               __Pyx_INCREF(__pyx_8genexpr1__pyx_v_batch_start);
               __Pyx_GIVEREF(__pyx_8genexpr1__pyx_v_batch_start);
-              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_8genexpr1__pyx_v_batch_start) != (0)) __PYX_ERR(0, 383, __pyx_L21_error);
+              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_8genexpr1__pyx_v_batch_start) != (0)) __PYX_ERR(0, 384, __pyx_L21_error);
               __Pyx_INCREF(__pyx_8genexpr1__pyx_v_batch_end);
               __Pyx_GIVEREF(__pyx_8genexpr1__pyx_v_batch_end);
-              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_8genexpr1__pyx_v_batch_end) != (0)) __PYX_ERR(0, 383, __pyx_L21_error);
+              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_8genexpr1__pyx_v_batch_end) != (0)) __PYX_ERR(0, 384, __pyx_L21_error);
               __Pyx_INCREF(__pyx_8genexpr1__pyx_v_batch_id);
               __Pyx_GIVEREF(__pyx_8genexpr1__pyx_v_batch_id);
-              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_8genexpr1__pyx_v_batch_id) != (0)) __PYX_ERR(0, 383, __pyx_L21_error);
-              if (unlikely(PyDict_SetItem(__pyx_t_2, (PyObject*)__pyx_t_5, (PyObject*)__pyx_t_3))) __PYX_ERR(0, 383, __pyx_L21_error)
+              if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_8genexpr1__pyx_v_batch_id) != (0)) __PYX_ERR(0, 384, __pyx_L21_error);
+              if (unlikely(PyDict_SetItem(__pyx_t_2, (PyObject*)__pyx_t_5, (PyObject*)__pyx_t_3))) __PYX_ERR(0, 384, __pyx_L21_error)
               __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-              /* "video_translate_cython.pyx":384
+              /* "video_translate_cython.pyx":385
  *         future_to_batch = {
  *             executor.submit(process_batch_with_lock, video_path, batch_start, batch_end, batch_id, source_language, similarity_threshold): (batch_start, batch_end, batch_id)
  *             for batch_start, batch_end, batch_id in batches             # <<<<<<<<<<<<<<
@@ -10271,7 +10269,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
           __pyx_v_future_to_batch = ((PyObject*)__pyx_t_2);
           __pyx_t_2 = 0;
 
-          /* "video_translate_cython.pyx":386
+          /* "video_translate_cython.pyx":387
  *             for batch_start, batch_end, batch_id in batches
  *         }
  *         for future in as_completed(future_to_batch):             # <<<<<<<<<<<<<<
@@ -10279,7 +10277,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
  *             try:
 */
           __pyx_t_1 = NULL;
-          __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_as_completed); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 386, __pyx_L13_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_as_completed); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 387, __pyx_L13_error)
           __Pyx_GOTREF(__pyx_t_3);
           __pyx_t_4 = 1;
           #if CYTHON_UNPACK_METHODS
@@ -10298,7 +10296,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
             __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_4, (2-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
             __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-            if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 386, __pyx_L13_error)
+            if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 387, __pyx_L13_error)
             __Pyx_GOTREF(__pyx_t_2);
           }
           if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
@@ -10306,9 +10304,9 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
             __pyx_t_18 = 0;
             __pyx_t_21 = NULL;
           } else {
-            __pyx_t_18 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 386, __pyx_L13_error)
+            __pyx_t_18 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 387, __pyx_L13_error)
             __Pyx_GOTREF(__pyx_t_3);
-            __pyx_t_21 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_3); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 386, __pyx_L13_error)
+            __pyx_t_21 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_3); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 387, __pyx_L13_error)
           }
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           for (;;) {
@@ -10317,7 +10315,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                 {
                   Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_3);
                   #if !CYTHON_ASSUME_SAFE_SIZE
-                  if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 386, __pyx_L13_error)
+                  if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 387, __pyx_L13_error)
                   #endif
                   if (__pyx_t_18 >= __pyx_temp) break;
                 }
@@ -10327,7 +10325,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                 {
                   Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_3);
                   #if !CYTHON_ASSUME_SAFE_SIZE
-                  if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 386, __pyx_L13_error)
+                  if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 387, __pyx_L13_error)
                   #endif
                   if (__pyx_t_18 >= __pyx_temp) break;
                 }
@@ -10338,13 +10336,13 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                 #endif
                 ++__pyx_t_18;
               }
-              if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 386, __pyx_L13_error)
+              if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 387, __pyx_L13_error)
             } else {
               __pyx_t_2 = __pyx_t_21(__pyx_t_3);
               if (unlikely(!__pyx_t_2)) {
                 PyObject* exc_type = PyErr_Occurred();
                 if (exc_type) {
-                  if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 386, __pyx_L13_error)
+                  if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 387, __pyx_L13_error)
                   PyErr_Clear();
                 }
                 break;
@@ -10354,19 +10352,19 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
             __Pyx_XDECREF_SET(__pyx_v_future, __pyx_t_2);
             __pyx_t_2 = 0;
 
-            /* "video_translate_cython.pyx":387
+            /* "video_translate_cython.pyx":388
  *         }
  *         for future in as_completed(future_to_batch):
  *             batch_info = future_to_batch[future]             # <<<<<<<<<<<<<<
  *             try:
  *                 # Add timeout to prevent hanging if worker crashed
 */
-            __pyx_t_2 = __Pyx_PyDict_GetItem(__pyx_v_future_to_batch, __pyx_v_future); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 387, __pyx_L13_error)
+            __pyx_t_2 = __Pyx_PyDict_GetItem(__pyx_v_future_to_batch, __pyx_v_future); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L13_error)
             __Pyx_GOTREF(__pyx_t_2);
             __Pyx_XDECREF_SET(__pyx_v_batch_info, __pyx_t_2);
             __pyx_t_2 = 0;
 
-            /* "video_translate_cython.pyx":388
+            /* "video_translate_cython.pyx":389
  *         for future in as_completed(future_to_batch):
  *             batch_info = future_to_batch[future]
  *             try:             # <<<<<<<<<<<<<<
@@ -10382,7 +10380,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
               __Pyx_XGOTREF(__pyx_t_24);
               /*try:*/ {
 
-                /* "video_translate_cython.pyx":390
+                /* "video_translate_cython.pyx":391
  *             try:
  *                 # Add timeout to prevent hanging if worker crashed
  *                 segments = future.result(timeout=300)  # 5 minute timeout per batch             # <<<<<<<<<<<<<<
@@ -10394,38 +10392,38 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                 __pyx_t_4 = 0;
                 {
                   PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 1 : 0)] = {__pyx_t_1, NULL};
-                  __pyx_t_5 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 390, __pyx_L30_error)
+                  __pyx_t_5 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 391, __pyx_L30_error)
                   __Pyx_GOTREF(__pyx_t_5);
-                  if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_timeout, __pyx_mstate_global->__pyx_int_300, __pyx_t_5, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 390, __pyx_L30_error)
+                  if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_timeout, __pyx_mstate_global->__pyx_int_300, __pyx_t_5, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 391, __pyx_L30_error)
                   __pyx_t_2 = __Pyx_Object_VectorcallMethod_CallFromBuilder(__pyx_mstate_global->__pyx_n_u_result, __pyx_callargs+__pyx_t_4, (1-__pyx_t_4) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_5);
                   __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
                   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-                  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 390, __pyx_L30_error)
+                  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 391, __pyx_L30_error)
                   __Pyx_GOTREF(__pyx_t_2);
                 }
                 __Pyx_XDECREF_SET(__pyx_v_segments, __pyx_t_2);
                 __pyx_t_2 = 0;
 
-                /* "video_translate_cython.pyx":392
+                /* "video_translate_cython.pyx":393
  *                 segments = future.result(timeout=300)  # 5 minute timeout per batch
  *                 # segments is a list of (start, end) tuples from that worker
  *                 if segments:             # <<<<<<<<<<<<<<
  *                     all_segments.extend(segments)
  *             except FutureTimeoutError:
 */
-                __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_v_segments); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 392, __pyx_L30_error)
+                __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_v_segments); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 393, __pyx_L30_error)
                 if (__pyx_t_9) {
 
-                  /* "video_translate_cython.pyx":393
+                  /* "video_translate_cython.pyx":394
  *                 # segments is a list of (start, end) tuples from that worker
  *                 if segments:
  *                     all_segments.extend(segments)             # <<<<<<<<<<<<<<
  *             except FutureTimeoutError:
  *                 # Worker timed out, add fallback segment
 */
-                  __pyx_t_12 = __Pyx_PyList_Extend(__pyx_v_all_segments, __pyx_v_segments); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 393, __pyx_L30_error)
+                  __pyx_t_12 = __Pyx_PyList_Extend(__pyx_v_all_segments, __pyx_v_segments); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 394, __pyx_L30_error)
 
-                  /* "video_translate_cython.pyx":392
+                  /* "video_translate_cython.pyx":393
  *                 segments = future.result(timeout=300)  # 5 minute timeout per batch
  *                 # segments is a list of (start, end) tuples from that worker
  *                 if segments:             # <<<<<<<<<<<<<<
@@ -10434,7 +10432,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
 */
                 }
 
-                /* "video_translate_cython.pyx":388
+                /* "video_translate_cython.pyx":389
  *         for future in as_completed(future_to_batch):
  *             batch_info = future_to_batch[future]
  *             try:             # <<<<<<<<<<<<<<
@@ -10455,7 +10453,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
               __Pyx_XDECREF(__pyx_t_20); __pyx_t_20 = 0;
               __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-              /* "video_translate_cython.pyx":394
+              /* "video_translate_cython.pyx":395
  *                 if segments:
  *                     all_segments.extend(segments)
  *             except FutureTimeoutError:             # <<<<<<<<<<<<<<
@@ -10465,12 +10463,12 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
               __pyx_t_8 = __Pyx_PyErr_ExceptionMatches(__pyx_v_FutureTimeoutError);
               if (__pyx_t_8) {
                 __Pyx_AddTraceback("video_translate_cython.find_all_text_segments_parallel", __pyx_clineno, __pyx_lineno, __pyx_filename);
-                if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_5, &__pyx_t_1) < 0) __PYX_ERR(0, 394, __pyx_L32_except_error)
+                if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_5, &__pyx_t_1) < 0) __PYX_ERR(0, 395, __pyx_L32_except_error)
                 __Pyx_XGOTREF(__pyx_t_2);
                 __Pyx_XGOTREF(__pyx_t_5);
                 __Pyx_XGOTREF(__pyx_t_1);
 
-                /* "video_translate_cython.pyx":396
+                /* "video_translate_cython.pyx":397
  *             except FutureTimeoutError:
  *                 # Worker timed out, add fallback segment
  *                 batch_start, batch_end, batch_id = batch_info             # <<<<<<<<<<<<<<
@@ -10483,7 +10481,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                   if (unlikely(size != 3)) {
                     if (size > 3) __Pyx_RaiseTooManyValuesError(3);
                     else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-                    __PYX_ERR(0, 396, __pyx_L32_except_error)
+                    __PYX_ERR(0, 397, __pyx_L32_except_error)
                   }
                   #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
                   if (likely(PyTuple_CheckExact(sequence))) {
@@ -10495,26 +10493,26 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                     __Pyx_INCREF(__pyx_t_20);
                   } else {
                     __pyx_t_19 = __Pyx_PyList_GetItemRef(sequence, 0);
-                    if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 396, __pyx_L32_except_error)
+                    if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 397, __pyx_L32_except_error)
                     __Pyx_XGOTREF(__pyx_t_19);
                     __pyx_t_13 = __Pyx_PyList_GetItemRef(sequence, 1);
-                    if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 396, __pyx_L32_except_error)
+                    if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 397, __pyx_L32_except_error)
                     __Pyx_XGOTREF(__pyx_t_13);
                     __pyx_t_20 = __Pyx_PyList_GetItemRef(sequence, 2);
-                    if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 396, __pyx_L32_except_error)
+                    if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 397, __pyx_L32_except_error)
                     __Pyx_XGOTREF(__pyx_t_20);
                   }
                   #else
-                  __pyx_t_19 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 396, __pyx_L32_except_error)
+                  __pyx_t_19 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 397, __pyx_L32_except_error)
                   __Pyx_GOTREF(__pyx_t_19);
-                  __pyx_t_13 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 396, __pyx_L32_except_error)
+                  __pyx_t_13 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 397, __pyx_L32_except_error)
                   __Pyx_GOTREF(__pyx_t_13);
-                  __pyx_t_20 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 396, __pyx_L32_except_error)
+                  __pyx_t_20 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 397, __pyx_L32_except_error)
                   __Pyx_GOTREF(__pyx_t_20);
                   #endif
                 } else {
                   Py_ssize_t index = -1;
-                  __pyx_t_25 = PyObject_GetIter(__pyx_v_batch_info); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 396, __pyx_L32_except_error)
+                  __pyx_t_25 = PyObject_GetIter(__pyx_v_batch_info); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 397, __pyx_L32_except_error)
                   __Pyx_GOTREF(__pyx_t_25);
                   __pyx_t_6 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_25);
                   index = 0; __pyx_t_19 = __pyx_t_6(__pyx_t_25); if (unlikely(!__pyx_t_19)) goto __pyx_L41_unpacking_failed;
@@ -10523,7 +10521,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                   __Pyx_GOTREF(__pyx_t_13);
                   index = 2; __pyx_t_20 = __pyx_t_6(__pyx_t_25); if (unlikely(!__pyx_t_20)) goto __pyx_L41_unpacking_failed;
                   __Pyx_GOTREF(__pyx_t_20);
-                  if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_25), 3) < (0)) __PYX_ERR(0, 396, __pyx_L32_except_error)
+                  if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_25), 3) < (0)) __PYX_ERR(0, 397, __pyx_L32_except_error)
                   __pyx_t_6 = NULL;
                   __Pyx_DECREF(__pyx_t_25); __pyx_t_25 = 0;
                   goto __pyx_L42_unpacking_done;
@@ -10531,7 +10529,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                   __Pyx_DECREF(__pyx_t_25); __pyx_t_25 = 0;
                   __pyx_t_6 = NULL;
                   if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-                  __PYX_ERR(0, 396, __pyx_L32_except_error)
+                  __PYX_ERR(0, 397, __pyx_L32_except_error)
                   __pyx_L42_unpacking_done:;
                 }
                 __Pyx_XDECREF_SET(__pyx_v_batch_start, __pyx_t_19);
@@ -10541,22 +10539,22 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                 __Pyx_DECREF_SET(__pyx_v_batch_id, __pyx_t_20);
                 __pyx_t_20 = 0;
 
-                /* "video_translate_cython.pyx":397
+                /* "video_translate_cython.pyx":398
  *                 # Worker timed out, add fallback segment
  *                 batch_start, batch_end, batch_id = batch_info
  *                 all_segments.append((batch_start, batch_end))             # <<<<<<<<<<<<<<
  *             except (MemoryError, OSError, RuntimeError) as e:
  *                 # Worker crashed due to memory/decoder error
 */
-                __pyx_t_20 = PyTuple_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 397, __pyx_L32_except_error)
+                __pyx_t_20 = PyTuple_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 398, __pyx_L32_except_error)
                 __Pyx_GOTREF(__pyx_t_20);
                 __Pyx_INCREF(__pyx_v_batch_start);
                 __Pyx_GIVEREF(__pyx_v_batch_start);
-                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_v_batch_start) != (0)) __PYX_ERR(0, 397, __pyx_L32_except_error);
+                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_v_batch_start) != (0)) __PYX_ERR(0, 398, __pyx_L32_except_error);
                 __Pyx_INCREF(__pyx_v_batch_end);
                 __Pyx_GIVEREF(__pyx_v_batch_end);
-                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 1, __pyx_v_batch_end) != (0)) __PYX_ERR(0, 397, __pyx_L32_except_error);
-                __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_all_segments, __pyx_t_20); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 397, __pyx_L32_except_error)
+                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 1, __pyx_v_batch_end) != (0)) __PYX_ERR(0, 398, __pyx_L32_except_error);
+                __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_all_segments, __pyx_t_20); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 398, __pyx_L32_except_error)
                 __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
                 __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
                 __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -10564,7 +10562,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                 goto __pyx_L31_exception_handled;
               }
 
-              /* "video_translate_cython.pyx":398
+              /* "video_translate_cython.pyx":399
  *                 batch_start, batch_end, batch_id = batch_info
  *                 all_segments.append((batch_start, batch_end))
  *             except (MemoryError, OSError, RuntimeError) as e:             # <<<<<<<<<<<<<<
@@ -10574,7 +10572,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
               __pyx_t_8 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_MemoryError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_OSError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_RuntimeError);
               if (__pyx_t_8) {
                 __Pyx_AddTraceback("video_translate_cython.find_all_text_segments_parallel", __pyx_clineno, __pyx_lineno, __pyx_filename);
-                if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_5, &__pyx_t_2) < 0) __PYX_ERR(0, 398, __pyx_L32_except_error)
+                if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_5, &__pyx_t_2) < 0) __PYX_ERR(0, 399, __pyx_L32_except_error)
                 __Pyx_XGOTREF(__pyx_t_1);
                 __Pyx_XGOTREF(__pyx_t_5);
                 __Pyx_XGOTREF(__pyx_t_2);
@@ -10582,7 +10580,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                 __pyx_v_e = __pyx_t_5;
                 /*try:*/ {
 
-                  /* "video_translate_cython.pyx":401
+                  /* "video_translate_cython.pyx":402
  *                 # Worker crashed due to memory/decoder error
  *                 # Add fallback segment for this batch
  *                 batch_start, batch_end, batch_id = batch_info             # <<<<<<<<<<<<<<
@@ -10595,7 +10593,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                     if (unlikely(size != 3)) {
                       if (size > 3) __Pyx_RaiseTooManyValuesError(3);
                       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-                      __PYX_ERR(0, 401, __pyx_L48_error)
+                      __PYX_ERR(0, 402, __pyx_L48_error)
                     }
                     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
                     if (likely(PyTuple_CheckExact(sequence))) {
@@ -10607,26 +10605,26 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                       __Pyx_INCREF(__pyx_t_19);
                     } else {
                       __pyx_t_20 = __Pyx_PyList_GetItemRef(sequence, 0);
-                      if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 401, __pyx_L48_error)
+                      if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 402, __pyx_L48_error)
                       __Pyx_XGOTREF(__pyx_t_20);
                       __pyx_t_13 = __Pyx_PyList_GetItemRef(sequence, 1);
-                      if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 401, __pyx_L48_error)
+                      if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 402, __pyx_L48_error)
                       __Pyx_XGOTREF(__pyx_t_13);
                       __pyx_t_19 = __Pyx_PyList_GetItemRef(sequence, 2);
-                      if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 401, __pyx_L48_error)
+                      if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 402, __pyx_L48_error)
                       __Pyx_XGOTREF(__pyx_t_19);
                     }
                     #else
-                    __pyx_t_20 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 401, __pyx_L48_error)
+                    __pyx_t_20 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 402, __pyx_L48_error)
                     __Pyx_GOTREF(__pyx_t_20);
-                    __pyx_t_13 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 401, __pyx_L48_error)
+                    __pyx_t_13 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 402, __pyx_L48_error)
                     __Pyx_GOTREF(__pyx_t_13);
-                    __pyx_t_19 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 401, __pyx_L48_error)
+                    __pyx_t_19 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 402, __pyx_L48_error)
                     __Pyx_GOTREF(__pyx_t_19);
                     #endif
                   } else {
                     Py_ssize_t index = -1;
-                    __pyx_t_25 = PyObject_GetIter(__pyx_v_batch_info); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 401, __pyx_L48_error)
+                    __pyx_t_25 = PyObject_GetIter(__pyx_v_batch_info); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 402, __pyx_L48_error)
                     __Pyx_GOTREF(__pyx_t_25);
                     __pyx_t_6 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_25);
                     index = 0; __pyx_t_20 = __pyx_t_6(__pyx_t_25); if (unlikely(!__pyx_t_20)) goto __pyx_L50_unpacking_failed;
@@ -10635,7 +10633,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                     __Pyx_GOTREF(__pyx_t_13);
                     index = 2; __pyx_t_19 = __pyx_t_6(__pyx_t_25); if (unlikely(!__pyx_t_19)) goto __pyx_L50_unpacking_failed;
                     __Pyx_GOTREF(__pyx_t_19);
-                    if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_25), 3) < (0)) __PYX_ERR(0, 401, __pyx_L48_error)
+                    if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_25), 3) < (0)) __PYX_ERR(0, 402, __pyx_L48_error)
                     __pyx_t_6 = NULL;
                     __Pyx_DECREF(__pyx_t_25); __pyx_t_25 = 0;
                     goto __pyx_L51_unpacking_done;
@@ -10643,7 +10641,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                     __Pyx_DECREF(__pyx_t_25); __pyx_t_25 = 0;
                     __pyx_t_6 = NULL;
                     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-                    __PYX_ERR(0, 401, __pyx_L48_error)
+                    __PYX_ERR(0, 402, __pyx_L48_error)
                     __pyx_L51_unpacking_done:;
                   }
                   __Pyx_XDECREF_SET(__pyx_v_batch_start, __pyx_t_20);
@@ -10653,26 +10651,26 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                   __Pyx_DECREF_SET(__pyx_v_batch_id, __pyx_t_19);
                   __pyx_t_19 = 0;
 
-                  /* "video_translate_cython.pyx":402
+                  /* "video_translate_cython.pyx":403
  *                 # Add fallback segment for this batch
  *                 batch_start, batch_end, batch_id = batch_info
  *                 all_segments.append((batch_start, batch_end))             # <<<<<<<<<<<<<<
  *             except Exception as e:
  *                 # Other errors - log but continue
 */
-                  __pyx_t_19 = PyTuple_New(2); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 402, __pyx_L48_error)
+                  __pyx_t_19 = PyTuple_New(2); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 403, __pyx_L48_error)
                   __Pyx_GOTREF(__pyx_t_19);
                   __Pyx_INCREF(__pyx_v_batch_start);
                   __Pyx_GIVEREF(__pyx_v_batch_start);
-                  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_19, 0, __pyx_v_batch_start) != (0)) __PYX_ERR(0, 402, __pyx_L48_error);
+                  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_19, 0, __pyx_v_batch_start) != (0)) __PYX_ERR(0, 403, __pyx_L48_error);
                   __Pyx_INCREF(__pyx_v_batch_end);
                   __Pyx_GIVEREF(__pyx_v_batch_end);
-                  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_19, 1, __pyx_v_batch_end) != (0)) __PYX_ERR(0, 402, __pyx_L48_error);
-                  __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_all_segments, __pyx_t_19); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 402, __pyx_L48_error)
+                  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_19, 1, __pyx_v_batch_end) != (0)) __PYX_ERR(0, 403, __pyx_L48_error);
+                  __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_all_segments, __pyx_t_19); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 403, __pyx_L48_error)
                   __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
                 }
 
-                /* "video_translate_cython.pyx":398
+                /* "video_translate_cython.pyx":399
  *                 batch_start, batch_end, batch_id = batch_info
  *                 all_segments.append((batch_start, batch_end))
  *             except (MemoryError, OSError, RuntimeError) as e:             # <<<<<<<<<<<<<<
@@ -10726,7 +10724,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                 goto __pyx_L31_exception_handled;
               }
 
-              /* "video_translate_cython.pyx":403
+              /* "video_translate_cython.pyx":404
  *                 batch_start, batch_end, batch_id = batch_info
  *                 all_segments.append((batch_start, batch_end))
  *             except Exception as e:             # <<<<<<<<<<<<<<
@@ -10736,7 +10734,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
               __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(((PyObject *)(((PyTypeObject*)PyExc_Exception))));
               if (__pyx_t_7) {
                 __Pyx_AddTraceback("video_translate_cython.find_all_text_segments_parallel", __pyx_clineno, __pyx_lineno, __pyx_filename);
-                if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_5, &__pyx_t_1) < 0) __PYX_ERR(0, 403, __pyx_L32_except_error)
+                if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_5, &__pyx_t_1) < 0) __PYX_ERR(0, 404, __pyx_L32_except_error)
                 __Pyx_XGOTREF(__pyx_t_2);
                 __Pyx_XGOTREF(__pyx_t_5);
                 __Pyx_XGOTREF(__pyx_t_1);
@@ -10744,7 +10742,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                 __pyx_v_e = __pyx_t_5;
                 /*try:*/ {
 
-                  /* "video_translate_cython.pyx":405
+                  /* "video_translate_cython.pyx":406
  *             except Exception as e:
  *                 # Other errors - log but continue
  *                 batch_start, batch_end, batch_id = batch_info             # <<<<<<<<<<<<<<
@@ -10757,7 +10755,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                     if (unlikely(size != 3)) {
                       if (size > 3) __Pyx_RaiseTooManyValuesError(3);
                       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-                      __PYX_ERR(0, 405, __pyx_L61_error)
+                      __PYX_ERR(0, 406, __pyx_L61_error)
                     }
                     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
                     if (likely(PyTuple_CheckExact(sequence))) {
@@ -10769,26 +10767,26 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                       __Pyx_INCREF(__pyx_t_20);
                     } else {
                       __pyx_t_19 = __Pyx_PyList_GetItemRef(sequence, 0);
-                      if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 405, __pyx_L61_error)
+                      if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 406, __pyx_L61_error)
                       __Pyx_XGOTREF(__pyx_t_19);
                       __pyx_t_13 = __Pyx_PyList_GetItemRef(sequence, 1);
-                      if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 405, __pyx_L61_error)
+                      if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 406, __pyx_L61_error)
                       __Pyx_XGOTREF(__pyx_t_13);
                       __pyx_t_20 = __Pyx_PyList_GetItemRef(sequence, 2);
-                      if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 405, __pyx_L61_error)
+                      if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 406, __pyx_L61_error)
                       __Pyx_XGOTREF(__pyx_t_20);
                     }
                     #else
-                    __pyx_t_19 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 405, __pyx_L61_error)
+                    __pyx_t_19 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 406, __pyx_L61_error)
                     __Pyx_GOTREF(__pyx_t_19);
-                    __pyx_t_13 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 405, __pyx_L61_error)
+                    __pyx_t_13 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 406, __pyx_L61_error)
                     __Pyx_GOTREF(__pyx_t_13);
-                    __pyx_t_20 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 405, __pyx_L61_error)
+                    __pyx_t_20 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 406, __pyx_L61_error)
                     __Pyx_GOTREF(__pyx_t_20);
                     #endif
                   } else {
                     Py_ssize_t index = -1;
-                    __pyx_t_25 = PyObject_GetIter(__pyx_v_batch_info); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 405, __pyx_L61_error)
+                    __pyx_t_25 = PyObject_GetIter(__pyx_v_batch_info); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 406, __pyx_L61_error)
                     __Pyx_GOTREF(__pyx_t_25);
                     __pyx_t_6 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_25);
                     index = 0; __pyx_t_19 = __pyx_t_6(__pyx_t_25); if (unlikely(!__pyx_t_19)) goto __pyx_L63_unpacking_failed;
@@ -10797,7 +10795,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                     __Pyx_GOTREF(__pyx_t_13);
                     index = 2; __pyx_t_20 = __pyx_t_6(__pyx_t_25); if (unlikely(!__pyx_t_20)) goto __pyx_L63_unpacking_failed;
                     __Pyx_GOTREF(__pyx_t_20);
-                    if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_25), 3) < (0)) __PYX_ERR(0, 405, __pyx_L61_error)
+                    if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_25), 3) < (0)) __PYX_ERR(0, 406, __pyx_L61_error)
                     __pyx_t_6 = NULL;
                     __Pyx_DECREF(__pyx_t_25); __pyx_t_25 = 0;
                     goto __pyx_L64_unpacking_done;
@@ -10805,7 +10803,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                     __Pyx_DECREF(__pyx_t_25); __pyx_t_25 = 0;
                     __pyx_t_6 = NULL;
                     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-                    __PYX_ERR(0, 405, __pyx_L61_error)
+                    __PYX_ERR(0, 406, __pyx_L61_error)
                     __pyx_L64_unpacking_done:;
                   }
                   __Pyx_XDECREF_SET(__pyx_v_batch_start, __pyx_t_19);
@@ -10815,26 +10813,26 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
                   __Pyx_DECREF_SET(__pyx_v_batch_id, __pyx_t_20);
                   __pyx_t_20 = 0;
 
-                  /* "video_translate_cython.pyx":406
+                  /* "video_translate_cython.pyx":407
  *                 # Other errors - log but continue
  *                 batch_start, batch_end, batch_id = batch_info
  *                 all_segments.append((batch_start, batch_end))             # <<<<<<<<<<<<<<
  * 
  *     if not all_segments:
 */
-                  __pyx_t_20 = PyTuple_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 406, __pyx_L61_error)
+                  __pyx_t_20 = PyTuple_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 407, __pyx_L61_error)
                   __Pyx_GOTREF(__pyx_t_20);
                   __Pyx_INCREF(__pyx_v_batch_start);
                   __Pyx_GIVEREF(__pyx_v_batch_start);
-                  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_v_batch_start) != (0)) __PYX_ERR(0, 406, __pyx_L61_error);
+                  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 0, __pyx_v_batch_start) != (0)) __PYX_ERR(0, 407, __pyx_L61_error);
                   __Pyx_INCREF(__pyx_v_batch_end);
                   __Pyx_GIVEREF(__pyx_v_batch_end);
-                  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 1, __pyx_v_batch_end) != (0)) __PYX_ERR(0, 406, __pyx_L61_error);
-                  __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_all_segments, __pyx_t_20); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 406, __pyx_L61_error)
+                  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_20, 1, __pyx_v_batch_end) != (0)) __PYX_ERR(0, 407, __pyx_L61_error);
+                  __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_all_segments, __pyx_t_20); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 407, __pyx_L61_error)
                   __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
                 }
 
-                /* "video_translate_cython.pyx":403
+                /* "video_translate_cython.pyx":404
  *                 batch_start, batch_end, batch_id = batch_info
  *                 all_segments.append((batch_start, batch_end))
  *             except Exception as e:             # <<<<<<<<<<<<<<
@@ -10889,7 +10887,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
               }
               goto __pyx_L32_except_error;
 
-              /* "video_translate_cython.pyx":388
+              /* "video_translate_cython.pyx":389
  *         for future in as_completed(future_to_batch):
  *             batch_info = future_to_batch[future]
  *             try:             # <<<<<<<<<<<<<<
@@ -10910,7 +10908,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
               __pyx_L37_try_end:;
             }
 
-            /* "video_translate_cython.pyx":386
+            /* "video_translate_cython.pyx":387
  *             for batch_start, batch_end, batch_id in batches
  *         }
  *         for future in as_completed(future_to_batch):             # <<<<<<<<<<<<<<
@@ -10920,7 +10918,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
           }
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-          /* "video_translate_cython.pyx":381
+          /* "video_translate_cython.pyx":382
  *         return process_batch_segment(*args)
  * 
  *     with ProcessPoolExecutor(max_workers=num_workers) as executor:             # <<<<<<<<<<<<<<
@@ -10944,20 +10942,20 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         /*except:*/ {
           __Pyx_AddTraceback("video_translate_cython.find_all_text_segments_parallel", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_5) < 0) __PYX_ERR(0, 381, __pyx_L15_except_error)
+          if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_5) < 0) __PYX_ERR(0, 382, __pyx_L15_except_error)
           __Pyx_XGOTREF(__pyx_t_3);
           __Pyx_XGOTREF(__pyx_t_1);
           __Pyx_XGOTREF(__pyx_t_5);
-          __pyx_t_2 = PyTuple_Pack(3, __pyx_t_3, __pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 381, __pyx_L15_except_error)
+          __pyx_t_2 = PyTuple_Pack(3, __pyx_t_3, __pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 382, __pyx_L15_except_error)
           __Pyx_GOTREF(__pyx_t_2);
           __pyx_t_24 = __Pyx_PyObject_Call(__pyx_t_14, __pyx_t_2, NULL);
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          if (unlikely(!__pyx_t_24)) __PYX_ERR(0, 381, __pyx_L15_except_error)
+          if (unlikely(!__pyx_t_24)) __PYX_ERR(0, 382, __pyx_L15_except_error)
           __Pyx_GOTREF(__pyx_t_24);
           __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_24);
           __Pyx_DECREF(__pyx_t_24); __pyx_t_24 = 0;
-          if (__pyx_t_9 < (0)) __PYX_ERR(0, 381, __pyx_L15_except_error)
+          if (__pyx_t_9 < (0)) __PYX_ERR(0, 382, __pyx_L15_except_error)
           __pyx_t_34 = (!__pyx_t_9);
           if (unlikely(__pyx_t_34)) {
             __Pyx_GIVEREF(__pyx_t_3);
@@ -10965,7 +10963,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
             __Pyx_XGIVEREF(__pyx_t_5);
             __Pyx_ErrRestoreWithState(__pyx_t_3, __pyx_t_1, __pyx_t_5);
             __pyx_t_3 = 0;  __pyx_t_1 = 0;  __pyx_t_5 = 0; 
-            __PYX_ERR(0, 381, __pyx_L15_except_error)
+            __PYX_ERR(0, 382, __pyx_L15_except_error)
           }
           __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
           __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -10991,7 +10989,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
         if (__pyx_t_14) {
           __pyx_t_17 = __Pyx_PyObject_Call(__pyx_t_14, __pyx_mstate_global->__pyx_tuple[0], NULL);
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-          if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 381, __pyx_L1_error)
+          if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 382, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_17);
           __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
         }
@@ -11006,7 +11004,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
     __pyx_L73:;
   }
 
-  /* "video_translate_cython.pyx":408
+  /* "video_translate_cython.pyx":409
  *                 all_segments.append((batch_start, batch_end))
  * 
  *     if not all_segments:             # <<<<<<<<<<<<<<
@@ -11015,14 +11013,14 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
 */
   {
     Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_v_all_segments);
-    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 408, __pyx_L1_error)
+    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 409, __pyx_L1_error)
     __pyx_t_34 = (__pyx_temp != 0);
   }
 
   __pyx_t_9 = (!__pyx_t_34);
   if (__pyx_t_9) {
 
-    /* "video_translate_cython.pyx":409
+    /* "video_translate_cython.pyx":410
  * 
  *     if not all_segments:
  *         return []             # <<<<<<<<<<<<<<
@@ -11030,13 +11028,13 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
  *     all_segments.sort(key=lambda x: x[0])
 */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 409, __pyx_L1_error)
+    __pyx_t_5 = PyList_New(0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 410, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_r = ((PyObject*)__pyx_t_5);
     __pyx_t_5 = 0;
     goto __pyx_L0;
 
-    /* "video_translate_cython.pyx":408
+    /* "video_translate_cython.pyx":409
  *                 all_segments.append((batch_start, batch_end))
  * 
  *     if not all_segments:             # <<<<<<<<<<<<<<
@@ -11045,7 +11043,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
 */
   }
 
-  /* "video_translate_cython.pyx":411
+  /* "video_translate_cython.pyx":412
  *         return []
  * 
  *     all_segments.sort(key=lambda x: x[0])             # <<<<<<<<<<<<<<
@@ -11054,24 +11052,24 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
 */
   __pyx_t_1 = __pyx_v_all_segments;
   __Pyx_INCREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_31find_all_text_segments_parallel_2lambda1, 0, __pyx_mstate_global->__pyx_n_u_find_all_text_segments_parallel_2, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[2])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 411, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_31find_all_text_segments_parallel_2lambda1, 0, __pyx_mstate_global->__pyx_n_u_find_all_text_segments_parallel_2, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[2])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 412, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = 0;
   {
     PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 1 : 0)] = {__pyx_t_1, NULL};
-    __pyx_t_2 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 411, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 412, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_key, __pyx_t_3, __pyx_t_2, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 411, __pyx_L1_error)
+    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_key, __pyx_t_3, __pyx_t_2, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 412, __pyx_L1_error)
     __pyx_t_5 = __Pyx_Object_VectorcallMethod_CallFromBuilder(__pyx_mstate_global->__pyx_n_u_sort, __pyx_callargs+__pyx_t_4, (1-__pyx_t_4) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_2);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 411, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 412, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "video_translate_cython.pyx":412
+  /* "video_translate_cython.pyx":413
  * 
  *     all_segments.sort(key=lambda x: x[0])
  *     merged_segments = merge_adjacent_segments(all_segments, video_path, source_language)             # <<<<<<<<<<<<<<
@@ -11079,7 +11077,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
  * 
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_merge_adjacent_segments); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 412, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_merge_adjacent_segments); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -11098,13 +11096,13 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
     __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_4, (4-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 412, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 413, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
   }
   __pyx_v_merged_segments = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "video_translate_cython.pyx":413
+  /* "video_translate_cython.pyx":414
  *     all_segments.sort(key=lambda x: x[0])
  *     merged_segments = merge_adjacent_segments(all_segments, video_path, source_language)
  *     return merged_segments             # <<<<<<<<<<<<<<
@@ -11112,12 +11110,12 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
  * 
 */
   __Pyx_XDECREF(__pyx_r);
-  if (!(likely(PyList_CheckExact(__pyx_v_merged_segments))||((__pyx_v_merged_segments) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_v_merged_segments))) __PYX_ERR(0, 413, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_v_merged_segments))||((__pyx_v_merged_segments) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_v_merged_segments))) __PYX_ERR(0, 414, __pyx_L1_error)
   __Pyx_INCREF(__pyx_v_merged_segments);
   __pyx_r = ((PyObject*)__pyx_v_merged_segments);
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":328
+  /* "video_translate_cython.pyx":329
  * 
  * 
  * @cython.locals(batch_size=int, num_workers=int)             # <<<<<<<<<<<<<<
@@ -11166,7 +11164,7 @@ static PyObject *__pyx_pf_22video_translate_cython_20find_all_text_segments_para
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":416
+/* "video_translate_cython.pyx":417
  * 
  * 
  * @cython.locals(merged=list, last_merged=tuple, last_text=object, current_text=object, similarity=float)             # <<<<<<<<<<<<<<
@@ -11216,38 +11214,38 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_segments,&__pyx_mstate_global->__pyx_n_u_video_path,&__pyx_mstate_global->__pyx_n_u_source_language,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 416, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 417, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 416, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 417, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 416, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 417, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 416, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 417, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "merge_adjacent_segments", 0) < (0)) __PYX_ERR(0, 416, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "merge_adjacent_segments", 0) < (0)) __PYX_ERR(0, 417, __pyx_L3_error)
       for (Py_ssize_t i = __pyx_nargs; i < 3; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("merge_adjacent_segments", 1, 3, 3, i); __PYX_ERR(0, 416, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("merge_adjacent_segments", 1, 3, 3, i); __PYX_ERR(0, 417, __pyx_L3_error) }
       }
     } else if (unlikely(__pyx_nargs != 3)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 416, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 417, __pyx_L3_error)
       values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 416, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 417, __pyx_L3_error)
       values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 416, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 417, __pyx_L3_error)
     }
     __pyx_v_segments = ((PyObject*)values[0]);
     __pyx_v_video_path = ((PyObject*)values[1]);
@@ -11255,7 +11253,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("merge_adjacent_segments", 1, 3, 3, __pyx_nargs); __PYX_ERR(0, 416, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("merge_adjacent_segments", 1, 3, 3, __pyx_nargs); __PYX_ERR(0, 417, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -11266,9 +11264,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_segments), (&PyList_Type), 0, "segments", 2))) __PYX_ERR(0, 417, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 417, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 417, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_segments), (&PyList_Type), 0, "segments", 2))) __PYX_ERR(0, 418, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 418, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 418, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_22merge_adjacent_segments(__pyx_self, __pyx_v_segments, __pyx_v_video_path, __pyx_v_source_language);
 
   /* function exit code */
@@ -11318,7 +11316,7 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("merge_adjacent_segments", 0);
 
-  /* "video_translate_cython.pyx":422
+  /* "video_translate_cython.pyx":423
  *     Uses py_c_text_similarity (nogil-enabled inner c_text_similarity) to reduce GIL time.
  *     """
  *     if not segments:             # <<<<<<<<<<<<<<
@@ -11327,14 +11325,14 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
 */
   {
     Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_v_segments);
-    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 422, __pyx_L1_error)
+    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 423, __pyx_L1_error)
     __pyx_t_1 = (__pyx_temp != 0);
   }
 
   __pyx_t_2 = (!__pyx_t_1);
   if (__pyx_t_2) {
 
-    /* "video_translate_cython.pyx":423
+    /* "video_translate_cython.pyx":424
  *     """
  *     if not segments:
  *         return []             # <<<<<<<<<<<<<<
@@ -11342,13 +11340,13 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
  *     merged = [segments[0]]
 */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 423, __pyx_L1_error)
+    __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 424, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_r = ((PyObject*)__pyx_t_3);
     __pyx_t_3 = 0;
     goto __pyx_L0;
 
-    /* "video_translate_cython.pyx":422
+    /* "video_translate_cython.pyx":423
  *     Uses py_c_text_similarity (nogil-enabled inner c_text_similarity) to reduce GIL time.
  *     """
  *     if not segments:             # <<<<<<<<<<<<<<
@@ -11357,31 +11355,31 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
 */
   }
 
-  /* "video_translate_cython.pyx":425
+  /* "video_translate_cython.pyx":426
  *         return []
  * 
  *     merged = [segments[0]]             # <<<<<<<<<<<<<<
  *     for current in segments[1:]:
  *         last_merged = merged[-1]
 */
-  __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_segments, 0, long, 1, __Pyx_PyLong_From_long, 1, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 425, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_segments, 0, long, 1, __Pyx_PyLong_From_long, 1, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 426, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyList_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 425, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 426, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 0, __pyx_t_3) != (0)) __PYX_ERR(0, 425, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_4, 0, __pyx_t_3) != (0)) __PYX_ERR(0, 426, __pyx_L1_error);
   __pyx_t_3 = 0;
   __pyx_v_merged = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "video_translate_cython.pyx":426
+  /* "video_translate_cython.pyx":427
  * 
  *     merged = [segments[0]]
  *     for current in segments[1:]:             # <<<<<<<<<<<<<<
  *         last_merged = merged[-1]
  *         if current[0] == last_merged[1]:
 */
-  __pyx_t_4 = __Pyx_PyList_GetSlice(__pyx_v_segments, 1, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 426, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GetSlice(__pyx_v_segments, 1, PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 427, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_3 = __pyx_t_4; __Pyx_INCREF(__pyx_t_3);
   __pyx_t_5 = 0;
@@ -11390,53 +11388,53 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
     {
       Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_3);
       #if !CYTHON_ASSUME_SAFE_SIZE
-      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 426, __pyx_L1_error)
+      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 427, __pyx_L1_error)
       #endif
       if (__pyx_t_5 >= __pyx_temp) break;
     }
     __pyx_t_4 = __Pyx_PyList_GetItemRef(__pyx_t_3, __pyx_t_5);
     ++__pyx_t_5;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 426, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 427, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_XDECREF_SET(__pyx_v_current, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "video_translate_cython.pyx":427
+    /* "video_translate_cython.pyx":428
  *     merged = [segments[0]]
  *     for current in segments[1:]:
  *         last_merged = merged[-1]             # <<<<<<<<<<<<<<
  *         if current[0] == last_merged[1]:
  *             last_text = extract_text_from_frame_cached(video_path, last_merged[0], source_language) or ""
 */
-    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_merged, -1L, long, 1, __Pyx_PyLong_From_long, 1, 1, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 427, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_merged, -1L, long, 1, __Pyx_PyLong_From_long, 1, 1, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 428, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    if (!(likely(PyTuple_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_t_4))) __PYX_ERR(0, 427, __pyx_L1_error)
+    if (!(likely(PyTuple_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_t_4))) __PYX_ERR(0, 428, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_last_merged, ((PyObject*)__pyx_t_4));
     __pyx_t_4 = 0;
 
-    /* "video_translate_cython.pyx":428
+    /* "video_translate_cython.pyx":429
  *     for current in segments[1:]:
  *         last_merged = merged[-1]
  *         if current[0] == last_merged[1]:             # <<<<<<<<<<<<<<
  *             last_text = extract_text_from_frame_cached(video_path, last_merged[0], source_language) or ""
  *             current_text = extract_text_from_frame_cached(video_path, current[0], source_language) or ""
 */
-    __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_current, 0, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 428, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_current, 0, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 429, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     if (unlikely(__pyx_v_last_merged == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 428, __pyx_L1_error)
+      __PYX_ERR(0, 429, __pyx_L1_error)
     }
-    __pyx_t_6 = __Pyx_GetItemInt_Tuple(__pyx_v_last_merged, 1, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 428, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetItemInt_Tuple(__pyx_v_last_merged, 1, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 429, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = PyObject_RichCompare(__pyx_t_4, __pyx_t_6, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 428, __pyx_L1_error)
+    __pyx_t_7 = PyObject_RichCompare(__pyx_t_4, __pyx_t_6, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 429, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 428, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 429, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     if (__pyx_t_2) {
 
-      /* "video_translate_cython.pyx":429
+      /* "video_translate_cython.pyx":430
  *         last_merged = merged[-1]
  *         if current[0] == last_merged[1]:
  *             last_text = extract_text_from_frame_cached(video_path, last_merged[0], source_language) or ""             # <<<<<<<<<<<<<<
@@ -11444,13 +11442,13 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
  *             # use the C-backed similarity to minimize Python overhead
 */
       __pyx_t_4 = NULL;
-      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 429, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 430, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       if (unlikely(__pyx_v_last_merged == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 429, __pyx_L1_error)
+        __PYX_ERR(0, 430, __pyx_L1_error)
       }
-      __pyx_t_9 = __Pyx_GetItemInt_Tuple(__pyx_v_last_merged, 0, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 429, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_GetItemInt_Tuple(__pyx_v_last_merged, 0, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 430, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __pyx_t_10 = 1;
       #if CYTHON_UNPACK_METHODS
@@ -11470,10 +11468,10 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 429, __pyx_L1_error)
+        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 430, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
       }
-      __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 429, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 430, __pyx_L1_error)
       if (!__pyx_t_2) {
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       } else {
@@ -11488,7 +11486,7 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
       __Pyx_XDECREF_SET(__pyx_v_last_text, __pyx_t_7);
       __pyx_t_7 = 0;
 
-      /* "video_translate_cython.pyx":430
+      /* "video_translate_cython.pyx":431
  *         if current[0] == last_merged[1]:
  *             last_text = extract_text_from_frame_cached(video_path, last_merged[0], source_language) or ""
  *             current_text = extract_text_from_frame_cached(video_path, current[0], source_language) or ""             # <<<<<<<<<<<<<<
@@ -11496,9 +11494,9 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
  *             try:
 */
       __pyx_t_8 = NULL;
-      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 430, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 431, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_current, 0, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 430, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_current, 0, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 431, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_10 = 1;
       #if CYTHON_UNPACK_METHODS
@@ -11518,10 +11516,10 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
         __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 430, __pyx_L1_error)
+        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 431, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
       }
-      __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 430, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 431, __pyx_L1_error)
       if (!__pyx_t_2) {
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       } else {
@@ -11536,7 +11534,7 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
       __Pyx_XDECREF_SET(__pyx_v_current_text, __pyx_t_7);
       __pyx_t_7 = 0;
 
-      /* "video_translate_cython.pyx":432
+      /* "video_translate_cython.pyx":433
  *             current_text = extract_text_from_frame_cached(video_path, current[0], source_language) or ""
  *             # use the C-backed similarity to minimize Python overhead
  *             try:             # <<<<<<<<<<<<<<
@@ -11552,7 +11550,7 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
         __Pyx_XGOTREF(__pyx_t_13);
         /*try:*/ {
 
-          /* "video_translate_cython.pyx":433
+          /* "video_translate_cython.pyx":434
  *             # use the C-backed similarity to minimize Python overhead
  *             try:
  *                 similarity = float(py_c_text_similarity(last_text, current_text))             # <<<<<<<<<<<<<<
@@ -11560,7 +11558,7 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
  *                 # fallback to conservative behavior on any error
 */
           __pyx_t_6 = NULL;
-          __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_py_c_text_similarity); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 433, __pyx_L11_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_py_c_text_similarity); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 434, __pyx_L11_error)
           __Pyx_GOTREF(__pyx_t_9);
           __pyx_t_10 = 1;
           #if CYTHON_UNPACK_METHODS
@@ -11579,14 +11577,14 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
             __pyx_t_7 = __Pyx_PyObject_FastCall(__pyx_t_9, __pyx_callargs+__pyx_t_10, (3-__pyx_t_10) | (__pyx_t_10*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
             __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-            if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 433, __pyx_L11_error)
+            if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 434, __pyx_L11_error)
             __Pyx_GOTREF(__pyx_t_7);
           }
-          __pyx_t_14 = __Pyx_PyObject_AsDouble(__pyx_t_7); if (unlikely(__pyx_t_14 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 433, __pyx_L11_error)
+          __pyx_t_14 = __Pyx_PyObject_AsDouble(__pyx_t_7); if (unlikely(__pyx_t_14 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 434, __pyx_L11_error)
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           __pyx_v_similarity = __pyx_t_14;
 
-          /* "video_translate_cython.pyx":432
+          /* "video_translate_cython.pyx":433
  *             current_text = extract_text_from_frame_cached(video_path, current[0], source_language) or ""
  *             # use the C-backed similarity to minimize Python overhead
  *             try:             # <<<<<<<<<<<<<<
@@ -11605,7 +11603,7 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
         __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
         __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-        /* "video_translate_cython.pyx":434
+        /* "video_translate_cython.pyx":435
  *             try:
  *                 similarity = float(py_c_text_similarity(last_text, current_text))
  *             except Exception:             # <<<<<<<<<<<<<<
@@ -11615,12 +11613,12 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
         __pyx_t_15 = __Pyx_PyErr_ExceptionMatches(((PyObject *)(((PyTypeObject*)PyExc_Exception))));
         if (__pyx_t_15) {
           __Pyx_AddTraceback("video_translate_cython.merge_adjacent_segments", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_9, &__pyx_t_6) < 0) __PYX_ERR(0, 434, __pyx_L13_except_error)
+          if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_9, &__pyx_t_6) < 0) __PYX_ERR(0, 435, __pyx_L13_except_error)
           __Pyx_XGOTREF(__pyx_t_7);
           __Pyx_XGOTREF(__pyx_t_9);
           __Pyx_XGOTREF(__pyx_t_6);
 
-          /* "video_translate_cython.pyx":436
+          /* "video_translate_cython.pyx":437
  *             except Exception:
  *                 # fallback to conservative behavior on any error
  *                 similarity = 0.0             # <<<<<<<<<<<<<<
@@ -11635,7 +11633,7 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
         }
         goto __pyx_L13_except_error;
 
-        /* "video_translate_cython.pyx":432
+        /* "video_translate_cython.pyx":433
  *             current_text = extract_text_from_frame_cached(video_path, current[0], source_language) or ""
  *             # use the C-backed similarity to minimize Python overhead
  *             try:             # <<<<<<<<<<<<<<
@@ -11656,25 +11654,25 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
         __pyx_L18_try_end:;
       }
 
-      /* "video_translate_cython.pyx":438
+      /* "video_translate_cython.pyx":439
  *                 similarity = 0.0
  * 
  *             if similarity >= SIMILARITY_THRESHOLD:             # <<<<<<<<<<<<<<
  *                 merged[-1] = (last_merged[0], current[1])
  *             else:
 */
-      __pyx_t_6 = PyFloat_FromDouble(__pyx_v_similarity); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 438, __pyx_L1_error)
+      __pyx_t_6 = PyFloat_FromDouble(__pyx_v_similarity); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 439, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 438, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 439, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_7 = PyObject_RichCompare(__pyx_t_6, __pyx_t_9, Py_GE); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 438, __pyx_L1_error)
+      __pyx_t_7 = PyObject_RichCompare(__pyx_t_6, __pyx_t_9, Py_GE); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 439, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 438, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 439, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       if (__pyx_t_2) {
 
-        /* "video_translate_cython.pyx":439
+        /* "video_translate_cython.pyx":440
  * 
  *             if similarity >= SIMILARITY_THRESHOLD:
  *                 merged[-1] = (last_merged[0], current[1])             # <<<<<<<<<<<<<<
@@ -11683,24 +11681,24 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
 */
         if (unlikely(__pyx_v_last_merged == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 439, __pyx_L1_error)
+          __PYX_ERR(0, 440, __pyx_L1_error)
         }
-        __pyx_t_7 = __Pyx_GetItemInt_Tuple(__pyx_v_last_merged, 0, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 439, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_GetItemInt_Tuple(__pyx_v_last_merged, 0, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 440, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_9 = __Pyx_GetItemInt(__pyx_v_current, 1, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 439, __pyx_L1_error)
+        __pyx_t_9 = __Pyx_GetItemInt(__pyx_v_current, 1, long, 1, __Pyx_PyLong_From_long, 0, 0, 1, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 440, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
-        __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 439, __pyx_L1_error)
+        __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 440, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_GIVEREF(__pyx_t_7);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7) != (0)) __PYX_ERR(0, 439, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7) != (0)) __PYX_ERR(0, 440, __pyx_L1_error);
         __Pyx_GIVEREF(__pyx_t_9);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_9) != (0)) __PYX_ERR(0, 439, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_9) != (0)) __PYX_ERR(0, 440, __pyx_L1_error);
         __pyx_t_7 = 0;
         __pyx_t_9 = 0;
-        if (unlikely((__Pyx_SetItemInt(__pyx_v_merged, -1L, __pyx_t_6, long, 1, __Pyx_PyLong_From_long, 1, 1, 1, 1) < 0))) __PYX_ERR(0, 439, __pyx_L1_error)
+        if (unlikely((__Pyx_SetItemInt(__pyx_v_merged, -1L, __pyx_t_6, long, 1, __Pyx_PyLong_From_long, 1, 1, 1, 1) < 0))) __PYX_ERR(0, 440, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "video_translate_cython.pyx":438
+        /* "video_translate_cython.pyx":439
  *                 similarity = 0.0
  * 
  *             if similarity >= SIMILARITY_THRESHOLD:             # <<<<<<<<<<<<<<
@@ -11710,7 +11708,7 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
         goto __pyx_L21;
       }
 
-      /* "video_translate_cython.pyx":441
+      /* "video_translate_cython.pyx":442
  *                 merged[-1] = (last_merged[0], current[1])
  *             else:
  *                 merged.append(current)             # <<<<<<<<<<<<<<
@@ -11718,11 +11716,11 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
  *             merged.append(current)
 */
       /*else*/ {
-        __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_merged, __pyx_v_current); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 441, __pyx_L1_error)
+        __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_merged, __pyx_v_current); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 442, __pyx_L1_error)
       }
       __pyx_L21:;
 
-      /* "video_translate_cython.pyx":428
+      /* "video_translate_cython.pyx":429
  *     for current in segments[1:]:
  *         last_merged = merged[-1]
  *         if current[0] == last_merged[1]:             # <<<<<<<<<<<<<<
@@ -11732,7 +11730,7 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
       goto __pyx_L6;
     }
 
-    /* "video_translate_cython.pyx":443
+    /* "video_translate_cython.pyx":444
  *                 merged.append(current)
  *         else:
  *             merged.append(current)             # <<<<<<<<<<<<<<
@@ -11740,11 +11738,11 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
  * 
 */
     /*else*/ {
-      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_merged, __pyx_v_current); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 443, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_merged, __pyx_v_current); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 444, __pyx_L1_error)
     }
     __pyx_L6:;
 
-    /* "video_translate_cython.pyx":426
+    /* "video_translate_cython.pyx":427
  * 
  *     merged = [segments[0]]
  *     for current in segments[1:]:             # <<<<<<<<<<<<<<
@@ -11754,7 +11752,7 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":444
+  /* "video_translate_cython.pyx":445
  *         else:
  *             merged.append(current)
  *     return merged             # <<<<<<<<<<<<<<
@@ -11766,7 +11764,7 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
   __pyx_r = __pyx_v_merged;
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":416
+  /* "video_translate_cython.pyx":417
  * 
  * 
  * @cython.locals(merged=list, last_merged=tuple, last_text=object, current_text=object, similarity=float)             # <<<<<<<<<<<<<<
@@ -11795,7 +11793,7 @@ static PyObject *__pyx_pf_22video_translate_cython_22merge_adjacent_segments(CYT
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":448
+/* "video_translate_cython.pyx":449
  * 
  * # ------------------ Overlaying / Main functions ------------------
  * @cython.locals(cap=object, fps=float, width=int, height=int, fourcc=int, out=object, start_frame=int, total_frames=int)             # <<<<<<<<<<<<<<
@@ -11813,27 +11811,27 @@ static PyObject *__pyx_pf_22video_translate_cython_44__defaults__(CYTHON_UNUSED 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__defaults__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyTuple_New(4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 448, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__Pyx_CyFunction_Defaults(struct __pyx_defaults1, __pyx_self)->arg0);
   __Pyx_GIVEREF(__Pyx_CyFunction_Defaults(struct __pyx_defaults1, __pyx_self)->arg0);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __Pyx_CyFunction_Defaults(struct __pyx_defaults1, __pyx_self)->arg0) != (0)) __PYX_ERR(0, 448, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __Pyx_CyFunction_Defaults(struct __pyx_defaults1, __pyx_self)->arg0) != (0)) __PYX_ERR(0, 449, __pyx_L1_error);
   __Pyx_INCREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_English));
   __Pyx_GIVEREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_English));
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject*)__pyx_mstate_global->__pyx_n_u_English)) != (0)) __PYX_ERR(0, 448, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject*)__pyx_mstate_global->__pyx_n_u_English)) != (0)) __PYX_ERR(0, 449, __pyx_L1_error);
   __Pyx_INCREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_black));
   __Pyx_GIVEREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_black));
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, ((PyObject*)__pyx_mstate_global->__pyx_n_u_black)) != (0)) __PYX_ERR(0, 448, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, ((PyObject*)__pyx_mstate_global->__pyx_n_u_black)) != (0)) __PYX_ERR(0, 449, __pyx_L1_error);
   __Pyx_INCREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_english));
   __Pyx_GIVEREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_english));
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 3, ((PyObject*)__pyx_mstate_global->__pyx_n_u_english)) != (0)) __PYX_ERR(0, 448, __pyx_L1_error);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 448, __pyx_L1_error)
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 3, ((PyObject*)__pyx_mstate_global->__pyx_n_u_english)) != (0)) __PYX_ERR(0, 449, __pyx_L1_error);
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1) != (0)) __PYX_ERR(0, 448, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1) != (0)) __PYX_ERR(0, 449, __pyx_L1_error);
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, Py_None) != (0)) __PYX_ERR(0, 448, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, Py_None) != (0)) __PYX_ERR(0, 449, __pyx_L1_error);
   __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -11897,74 +11895,74 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_video_path,&__pyx_mstate_global->__pyx_n_u_font_path,&__pyx_mstate_global->__pyx_n_u_font_size,&__pyx_mstate_global->__pyx_n_u_out_path,&__pyx_mstate_global->__pyx_n_u_target_language,&__pyx_mstate_global->__pyx_n_u_font_color,&__pyx_mstate_global->__pyx_n_u_source_language,0};
     struct __pyx_defaults1 *__pyx_dynamic_args = __Pyx_CyFunction_Defaults(struct __pyx_defaults1, __pyx_self);
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 448, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 449, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  7:
         values[6] = __Pyx_ArgRef_FASTCALL(__pyx_args, 6);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[6])) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[6])) __PYX_ERR(0, 449, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  6:
         values[5] = __Pyx_ArgRef_FASTCALL(__pyx_args, 5);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 449, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  5:
         values[4] = __Pyx_ArgRef_FASTCALL(__pyx_args, 4);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 449, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 449, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 449, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 449, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 449, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "function_overlaying_continuous_legacy", 0) < (0)) __PYX_ERR(0, 448, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "function_overlaying_continuous_legacy", 0) < (0)) __PYX_ERR(0, 449, __pyx_L3_error)
       if (!values[3]) values[3] = __Pyx_NewRef(__pyx_dynamic_args->arg0);
       if (!values[4]) values[4] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_n_u_English)));
       if (!values[5]) values[5] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_n_u_black)));
       if (!values[6]) values[6] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_n_u_english)));
       for (Py_ssize_t i = __pyx_nargs; i < 3; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("function_overlaying_continuous_legacy", 0, 3, 7, i); __PYX_ERR(0, 448, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("function_overlaying_continuous_legacy", 0, 3, 7, i); __PYX_ERR(0, 449, __pyx_L3_error) }
       }
     } else {
       switch (__pyx_nargs) {
         case  7:
         values[6] = __Pyx_ArgRef_FASTCALL(__pyx_args, 6);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[6])) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[6])) __PYX_ERR(0, 449, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  6:
         values[5] = __Pyx_ArgRef_FASTCALL(__pyx_args, 5);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 449, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  5:
         values[4] = __Pyx_ArgRef_FASTCALL(__pyx_args, 4);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 449, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 449, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 449, __pyx_L3_error)
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 449, __pyx_L3_error)
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 449, __pyx_L3_error)
         break;
         default: goto __pyx_L5_argtuple_error;
       }
@@ -11983,7 +11981,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("function_overlaying_continuous_legacy", 0, 3, 7, __pyx_nargs); __PYX_ERR(0, 448, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("function_overlaying_continuous_legacy", 0, 3, 7, __pyx_nargs); __PYX_ERR(0, 449, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -11994,13 +11992,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 449, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_font_path), (&PyUnicode_Type), 0, "font_path", 2))) __PYX_ERR(0, 449, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_font_size), (&PyLong_Type), 0, "font_size", 2))) __PYX_ERR(0, 449, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_out_path), (&PyUnicode_Type), 0, "out_path", 2))) __PYX_ERR(0, 449, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_target_language), (&PyUnicode_Type), 0, "target_language", 2))) __PYX_ERR(0, 450, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_font_color), (&PyUnicode_Type), 0, "font_color", 2))) __PYX_ERR(0, 450, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 450, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 450, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_font_path), (&PyUnicode_Type), 0, "font_path", 2))) __PYX_ERR(0, 450, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_font_size), (&PyLong_Type), 0, "font_size", 2))) __PYX_ERR(0, 450, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_out_path), (&PyUnicode_Type), 0, "out_path", 2))) __PYX_ERR(0, 450, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_target_language), (&PyUnicode_Type), 0, "target_language", 2))) __PYX_ERR(0, 451, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_font_color), (&PyUnicode_Type), 0, "font_color", 2))) __PYX_ERR(0, 451, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 451, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_24function_overlaying_continuous_legacy(__pyx_self, __pyx_v_video_path, __pyx_v_font_path, __pyx_v_font_size, __pyx_v_out_path, __pyx_v_target_language, __pyx_v_font_color, __pyx_v_source_language);
 
   /* function exit code */
@@ -12060,7 +12058,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("function_overlaying_continuous_legacy", 0);
 
-  /* "video_translate_cython.pyx":451
+  /* "video_translate_cython.pyx":452
  * def function_overlaying_continuous_legacy(video_path: str, font_path: str, font_size: int, out_path: str = OUTPUT_PATH,
  *                                           target_language: str = "English", font_color: str = "black", source_language: str = "english"):
  *     extract_audio(video_path, AUDIO_PATH)             # <<<<<<<<<<<<<<
@@ -12068,9 +12066,9 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
  *     fps = cap.get(cv2.CAP_PROP_FPS)
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_extract_audio); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 451, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_extract_audio); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 452, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 451, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 452, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -12090,12 +12088,12 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 451, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 452, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":452
+  /* "video_translate_cython.pyx":453
  *                                           target_language: str = "English", font_color: str = "black", source_language: str = "english"):
  *     extract_audio(video_path, AUDIO_PATH)
  *     cap = cv2.VideoCapture(video_path)             # <<<<<<<<<<<<<<
@@ -12103,9 +12101,9 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
  *     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 */
   __pyx_t_3 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 452, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_VideoCapture); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 452, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_VideoCapture); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_5 = 1;
@@ -12125,13 +12123,13 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 452, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 453, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __pyx_v_cap = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":453
+  /* "video_translate_cython.pyx":454
  *     extract_audio(video_path, AUDIO_PATH)
  *     cap = cv2.VideoCapture(video_path)
  *     fps = cap.get(cv2.CAP_PROP_FPS)             # <<<<<<<<<<<<<<
@@ -12140,9 +12138,9 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
 */
   __pyx_t_2 = __pyx_v_cap;
   __Pyx_INCREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 453, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 454, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FPS); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 453, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FPS); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 454, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_5 = 0;
@@ -12151,14 +12149,14 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     __pyx_t_1 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_get, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 453, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
-  __pyx_t_6 = __Pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_6 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 453, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_6 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 454, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_fps = __pyx_t_6;
 
-  /* "video_translate_cython.pyx":454
+  /* "video_translate_cython.pyx":455
  *     cap = cv2.VideoCapture(video_path)
  *     fps = cap.get(cv2.CAP_PROP_FPS)
  *     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))             # <<<<<<<<<<<<<<
@@ -12167,9 +12165,9 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
 */
   __pyx_t_4 = __pyx_v_cap;
   __Pyx_INCREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 455, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_WIDTH); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_WIDTH); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 455, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_5 = 0;
@@ -12178,17 +12176,17 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     __pyx_t_1 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_get, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 455, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
-  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 455, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_7 = __Pyx_PyLong_As_int(__pyx_t_3); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyLong_As_int(__pyx_t_3); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 455, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_width = __pyx_t_7;
 
-  /* "video_translate_cython.pyx":455
+  /* "video_translate_cython.pyx":456
  *     fps = cap.get(cv2.CAP_PROP_FPS)
  *     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
  *     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))             # <<<<<<<<<<<<<<
@@ -12197,9 +12195,9 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
 */
   __pyx_t_1 = __pyx_v_cap;
   __Pyx_INCREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 455, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 456, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_HEIGHT); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_HEIGHT); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 456, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_5 = 0;
@@ -12208,39 +12206,39 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     __pyx_t_3 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_get, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 455, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 456, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
   }
-  __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 456, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_7 = __Pyx_PyLong_As_int(__pyx_t_2); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyLong_As_int(__pyx_t_2); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 456, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_height = __pyx_t_7;
 
-  /* "video_translate_cython.pyx":456
+  /* "video_translate_cython.pyx":457
  *     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
  *     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
  *     fourcc = cv2.VideoWriter_fourcc(*'mp4v')             # <<<<<<<<<<<<<<
  *     out = cv2.VideoWriter(out_path, fourcc, fps, (width, height))
  * 
 */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 456, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 457, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_VideoWriter_fourcc); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 456, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_VideoWriter_fourcc); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 457, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PySequence_Tuple(__pyx_mstate_global->__pyx_n_u_mp4v); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 456, __pyx_L1_error)
+  __pyx_t_2 = PySequence_Tuple(__pyx_mstate_global->__pyx_n_u_mp4v); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 457, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 456, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 457, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_7 = __Pyx_PyLong_As_int(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 456, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyLong_As_int(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 457, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_fourcc = __pyx_t_7;
 
-  /* "video_translate_cython.pyx":457
+  /* "video_translate_cython.pyx":458
  *     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
  *     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
  *     out = cv2.VideoWriter(out_path, fourcc, fps, (width, height))             # <<<<<<<<<<<<<<
@@ -12248,25 +12246,25 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
  *     start_frame = 0
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 457, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 458, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_VideoWriter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 457, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_VideoWriter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 458, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_fourcc); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 457, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_fourcc); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 458, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_fps); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 457, __pyx_L1_error)
+  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_fps); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 458, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_9 = __Pyx_PyLong_From_int(__pyx_v_width); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 457, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyLong_From_int(__pyx_v_width); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 458, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_10 = __Pyx_PyLong_From_int(__pyx_v_height); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 457, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyLong_From_int(__pyx_v_height); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 458, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_11 = PyTuple_New(2); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 457, __pyx_L1_error)
+  __pyx_t_11 = PyTuple_New(2); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 458, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_GIVEREF(__pyx_t_9);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_9) != (0)) __PYX_ERR(0, 457, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_9) != (0)) __PYX_ERR(0, 458, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_10);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_11, 1, __pyx_t_10) != (0)) __PYX_ERR(0, 457, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_11, 1, __pyx_t_10) != (0)) __PYX_ERR(0, 458, __pyx_L1_error);
   __pyx_t_9 = 0;
   __pyx_t_10 = 0;
   __pyx_t_5 = 1;
@@ -12289,13 +12287,13 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 457, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 458, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __pyx_v_out = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":459
+  /* "video_translate_cython.pyx":460
  *     out = cv2.VideoWriter(out_path, fourcc, fps, (width, height))
  * 
  *     start_frame = 0             # <<<<<<<<<<<<<<
@@ -12304,7 +12302,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
 */
   __pyx_v_start_frame = 0;
 
-  /* "video_translate_cython.pyx":460
+  /* "video_translate_cython.pyx":461
  * 
  *     start_frame = 0
  *     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))             # <<<<<<<<<<<<<<
@@ -12313,9 +12311,9 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
 */
   __pyx_t_4 = __pyx_v_cap;
   __Pyx_INCREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 460, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 461, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_COUNT); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 460, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_COUNT); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 461, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __pyx_t_5 = 0;
@@ -12324,17 +12322,17 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     __pyx_t_1 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_get, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 460, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 461, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
-  __pyx_t_8 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 460, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 461, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_7 = __Pyx_PyLong_As_int(__pyx_t_8); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 460, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyLong_As_int(__pyx_t_8); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 461, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __pyx_v_total_frames = __pyx_t_7;
 
-  /* "video_translate_cython.pyx":462
+  /* "video_translate_cython.pyx":463
  *     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
  * 
  *     while start_frame < total_frames:             # <<<<<<<<<<<<<<
@@ -12345,7 +12343,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     __pyx_t_12 = (__pyx_v_start_frame < __pyx_v_total_frames);
     if (!__pyx_t_12) break;
 
-    /* "video_translate_cython.pyx":463
+    /* "video_translate_cython.pyx":464
  * 
  *     while start_frame < total_frames:
  *         change_frame = find_text_change_optimal(video_path=video_path, start_frame_index=start_frame, source_language=source_language)             # <<<<<<<<<<<<<<
@@ -12353,9 +12351,9 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
  *             change_frame = total_frames
 */
     __pyx_t_1 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_find_text_change_optimal); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 463, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_find_text_change_optimal); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 464, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_11 = __Pyx_PyLong_From_int(__pyx_v_start_frame); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 463, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyLong_From_int(__pyx_v_start_frame); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 464, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     __pyx_t_5 = 1;
     #if CYTHON_UNPACK_METHODS
@@ -12371,45 +12369,45 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     #endif
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_1, NULL};
-      __pyx_t_3 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 463, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 464, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_video_path, __pyx_v_video_path, __pyx_t_3, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 463, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_start_frame_index, __pyx_t_11, __pyx_t_3, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 463, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_v_source_language, __pyx_t_3, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 463, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_video_path, __pyx_v_video_path, __pyx_t_3, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 464, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_start_frame_index, __pyx_t_11, __pyx_t_3, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 464, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_v_source_language, __pyx_t_3, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 464, __pyx_L1_error)
       __pyx_t_8 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_4, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_3);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 463, __pyx_L1_error)
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 464, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
     }
     __Pyx_XDECREF_SET(__pyx_v_change_frame, __pyx_t_8);
     __pyx_t_8 = 0;
 
-    /* "video_translate_cython.pyx":464
+    /* "video_translate_cython.pyx":465
  *     while start_frame < total_frames:
  *         change_frame = find_text_change_optimal(video_path=video_path, start_frame_index=start_frame, source_language=source_language)
  *         if change_frame == -1:             # <<<<<<<<<<<<<<
  *             change_frame = total_frames
  * 
 */
-    __pyx_t_12 = (__Pyx_PyLong_BoolEqObjC(__pyx_v_change_frame, __pyx_mstate_global->__pyx_int_neg_1, -1L, 0)); if (unlikely((__pyx_t_12 < 0))) __PYX_ERR(0, 464, __pyx_L1_error)
+    __pyx_t_12 = (__Pyx_PyLong_BoolEqObjC(__pyx_v_change_frame, __pyx_mstate_global->__pyx_int_neg_1, -1L, 0)); if (unlikely((__pyx_t_12 < 0))) __PYX_ERR(0, 465, __pyx_L1_error)
     if (__pyx_t_12) {
 
-      /* "video_translate_cython.pyx":465
+      /* "video_translate_cython.pyx":466
  *         change_frame = find_text_change_optimal(video_path=video_path, start_frame_index=start_frame, source_language=source_language)
  *         if change_frame == -1:
  *             change_frame = total_frames             # <<<<<<<<<<<<<<
  * 
  *         frame = get_frame_at_index(video_path, start_frame)
 */
-      __pyx_t_8 = __Pyx_PyLong_From_int(__pyx_v_total_frames); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 465, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyLong_From_int(__pyx_v_total_frames); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 466, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF_SET(__pyx_v_change_frame, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "video_translate_cython.pyx":464
+      /* "video_translate_cython.pyx":465
  *     while start_frame < total_frames:
  *         change_frame = find_text_change_optimal(video_path=video_path, start_frame_index=start_frame, source_language=source_language)
  *         if change_frame == -1:             # <<<<<<<<<<<<<<
@@ -12418,7 +12416,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
 */
     }
 
-    /* "video_translate_cython.pyx":467
+    /* "video_translate_cython.pyx":468
  *             change_frame = total_frames
  * 
  *         frame = get_frame_at_index(video_path, start_frame)             # <<<<<<<<<<<<<<
@@ -12426,9 +12424,9 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
  *             start_frame = change_frame
 */
     __pyx_t_4 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 467, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 468, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_11 = __Pyx_PyLong_From_int(__pyx_v_start_frame); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 467, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyLong_From_int(__pyx_v_start_frame); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 468, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     __pyx_t_5 = 1;
     #if CYTHON_UNPACK_METHODS
@@ -12448,13 +12446,13 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 467, __pyx_L1_error)
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 468, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
     }
     __Pyx_XDECREF_SET(__pyx_v_frame, __pyx_t_8);
     __pyx_t_8 = 0;
 
-    /* "video_translate_cython.pyx":468
+    /* "video_translate_cython.pyx":469
  * 
  *         frame = get_frame_at_index(video_path, start_frame)
  *         if frame is None:             # <<<<<<<<<<<<<<
@@ -12464,17 +12462,17 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     __pyx_t_12 = (__pyx_v_frame == Py_None);
     if (__pyx_t_12) {
 
-      /* "video_translate_cython.pyx":469
+      /* "video_translate_cython.pyx":470
  *         frame = get_frame_at_index(video_path, start_frame)
  *         if frame is None:
  *             start_frame = change_frame             # <<<<<<<<<<<<<<
  *             continue
  * 
 */
-      __pyx_t_7 = __Pyx_PyLong_As_int(__pyx_v_change_frame); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 469, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyLong_As_int(__pyx_v_change_frame); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 470, __pyx_L1_error)
       __pyx_v_start_frame = __pyx_t_7;
 
-      /* "video_translate_cython.pyx":470
+      /* "video_translate_cython.pyx":471
  *         if frame is None:
  *             start_frame = change_frame
  *             continue             # <<<<<<<<<<<<<<
@@ -12483,7 +12481,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
 */
       goto __pyx_L3_continue;
 
-      /* "video_translate_cython.pyx":468
+      /* "video_translate_cython.pyx":469
  * 
  *         frame = get_frame_at_index(video_path, start_frame)
  *         if frame is None:             # <<<<<<<<<<<<<<
@@ -12492,7 +12490,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
 */
     }
 
-    /* "video_translate_cython.pyx":472
+    /* "video_translate_cython.pyx":473
  *             continue
  * 
  *         extract_lines_with_boxes = _get_ocr_extractor()             # <<<<<<<<<<<<<<
@@ -12500,7 +12498,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
  *         translated_lines = translate_lines(lines, target_language=target_language)
 */
     __pyx_t_3 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_get_ocr_extractor); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 472, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_get_ocr_extractor); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 473, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     __pyx_t_5 = 1;
     #if CYTHON_UNPACK_METHODS
@@ -12519,13 +12517,13 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
       __pyx_t_8 = __Pyx_PyObject_FastCall(__pyx_t_11, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 472, __pyx_L1_error)
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 473, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
     }
     __Pyx_XDECREF_SET(__pyx_v_extract_lines_with_boxes, __pyx_t_8);
     __pyx_t_8 = 0;
 
-    /* "video_translate_cython.pyx":473
+    /* "video_translate_cython.pyx":474
  * 
  *         extract_lines_with_boxes = _get_ocr_extractor()
  *         lines = extract_lines_with_boxes(frame)             # <<<<<<<<<<<<<<
@@ -12552,13 +12550,13 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
       __pyx_t_8 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 473, __pyx_L1_error)
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 474, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
     }
     __Pyx_XDECREF_SET(__pyx_v_lines, __pyx_t_8);
     __pyx_t_8 = 0;
 
-    /* "video_translate_cython.pyx":474
+    /* "video_translate_cython.pyx":475
  *         extract_lines_with_boxes = _get_ocr_extractor()
  *         lines = extract_lines_with_boxes(frame)
  *         translated_lines = translate_lines(lines, target_language=target_language)             # <<<<<<<<<<<<<<
@@ -12566,7 +12564,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
  *         for i in range(start_frame, change_frame):
 */
     __pyx_t_3 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_translate_lines); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 474, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_translate_lines); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 475, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     __pyx_t_5 = 1;
     #if CYTHON_UNPACK_METHODS
@@ -12582,20 +12580,20 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     #endif
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 1 : 0)] = {__pyx_t_3, __pyx_v_lines};
-      __pyx_t_4 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 474, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 475, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_target_language, __pyx_v_target_language, __pyx_t_4, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 474, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_target_language, __pyx_v_target_language, __pyx_t_4, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 475, __pyx_L1_error)
       __pyx_t_8 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_11, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_4);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 474, __pyx_L1_error)
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 475, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
     }
     __Pyx_XDECREF_SET(__pyx_v_translated_lines, __pyx_t_8);
     __pyx_t_8 = 0;
 
-    /* "video_translate_cython.pyx":476
+    /* "video_translate_cython.pyx":477
  *         translated_lines = translate_lines(lines, target_language=target_language)
  * 
  *         for i in range(start_frame, change_frame):             # <<<<<<<<<<<<<<
@@ -12605,7 +12603,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     __pyx_t_11 = NULL;
     __Pyx_INCREF(__pyx_builtin_range);
     __pyx_t_4 = __pyx_builtin_range; 
-    __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_start_frame); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 476, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_start_frame); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_5 = 1;
     {
@@ -12614,7 +12612,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
       __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 476, __pyx_L1_error)
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 477, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
     }
     if (likely(PyList_CheckExact(__pyx_t_8)) || PyTuple_CheckExact(__pyx_t_8)) {
@@ -12622,9 +12620,9 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
       __pyx_t_13 = 0;
       __pyx_t_14 = NULL;
     } else {
-      __pyx_t_13 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 476, __pyx_L1_error)
+      __pyx_t_13 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 477, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_14 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 476, __pyx_L1_error)
+      __pyx_t_14 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 477, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     for (;;) {
@@ -12633,7 +12631,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
           {
             Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_4);
             #if !CYTHON_ASSUME_SAFE_SIZE
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 476, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 477, __pyx_L1_error)
             #endif
             if (__pyx_t_13 >= __pyx_temp) break;
           }
@@ -12643,7 +12641,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
           {
             Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_4);
             #if !CYTHON_ASSUME_SAFE_SIZE
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 476, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 477, __pyx_L1_error)
             #endif
             if (__pyx_t_13 >= __pyx_temp) break;
           }
@@ -12654,13 +12652,13 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
           #endif
           ++__pyx_t_13;
         }
-        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 476, __pyx_L1_error)
+        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 477, __pyx_L1_error)
       } else {
         __pyx_t_8 = __pyx_t_14(__pyx_t_4);
         if (unlikely(!__pyx_t_8)) {
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
-            if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 476, __pyx_L1_error)
+            if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 477, __pyx_L1_error)
             PyErr_Clear();
           }
           break;
@@ -12670,7 +12668,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
       __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "video_translate_cython.pyx":477
+      /* "video_translate_cython.pyx":478
  * 
  *         for i in range(start_frame, change_frame):
  *             frame = get_frame_at_index(video_path, i)             # <<<<<<<<<<<<<<
@@ -12678,7 +12676,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
  *                 continue
 */
       __pyx_t_3 = NULL;
-      __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 477, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 478, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
       __pyx_t_5 = 1;
       #if CYTHON_UNPACK_METHODS
@@ -12697,13 +12695,13 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
         __pyx_t_8 = __Pyx_PyObject_FastCall(__pyx_t_11, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 477, __pyx_L1_error)
+        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 478, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_8);
       }
       __Pyx_DECREF_SET(__pyx_v_frame, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "video_translate_cython.pyx":478
+      /* "video_translate_cython.pyx":479
  *         for i in range(start_frame, change_frame):
  *             frame = get_frame_at_index(video_path, i)
  *             if frame is None:             # <<<<<<<<<<<<<<
@@ -12713,7 +12711,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
       __pyx_t_12 = (__pyx_v_frame == Py_None);
       if (__pyx_t_12) {
 
-        /* "video_translate_cython.pyx":479
+        /* "video_translate_cython.pyx":480
  *             frame = get_frame_at_index(video_path, i)
  *             if frame is None:
  *                 continue             # <<<<<<<<<<<<<<
@@ -12722,7 +12720,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
 */
         goto __pyx_L7_continue;
 
-        /* "video_translate_cython.pyx":478
+        /* "video_translate_cython.pyx":479
  *         for i in range(start_frame, change_frame):
  *             frame = get_frame_at_index(video_path, i)
  *             if frame is None:             # <<<<<<<<<<<<<<
@@ -12731,7 +12729,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
 */
       }
 
-      /* "video_translate_cython.pyx":480
+      /* "video_translate_cython.pyx":481
  *             if frame is None:
  *                 continue
  *             frame_with_overlay = overlay_translated_lines_on_frame(frame, translated_lines, font_path=font_path, font_size=font_size, font_color=font_color)             # <<<<<<<<<<<<<<
@@ -12739,7 +12737,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
  * 
 */
       __pyx_t_11 = NULL;
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_overlay_translated_lines_on_fram); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 480, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_overlay_translated_lines_on_fram); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 481, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_5 = 1;
       #if CYTHON_UNPACK_METHODS
@@ -12755,22 +12753,22 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
       #endif
       {
         PyObject *__pyx_callargs[3 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_11, __pyx_v_frame, __pyx_v_translated_lines};
-        __pyx_t_1 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 480, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 481, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_path, __pyx_v_font_path, __pyx_t_1, __pyx_callargs+3, 0) < (0)) __PYX_ERR(0, 480, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_size, __pyx_v_font_size, __pyx_t_1, __pyx_callargs+3, 1) < (0)) __PYX_ERR(0, 480, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_color, __pyx_v_font_color, __pyx_t_1, __pyx_callargs+3, 2) < (0)) __PYX_ERR(0, 480, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_path, __pyx_v_font_path, __pyx_t_1, __pyx_callargs+3, 0) < (0)) __PYX_ERR(0, 481, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_size, __pyx_v_font_size, __pyx_t_1, __pyx_callargs+3, 1) < (0)) __PYX_ERR(0, 481, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_color, __pyx_v_font_color, __pyx_t_1, __pyx_callargs+3, 2) < (0)) __PYX_ERR(0, 481, __pyx_L1_error)
         __pyx_t_8 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_3, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_1);
         __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 480, __pyx_L1_error)
+        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 481, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_8);
       }
       __Pyx_XDECREF_SET(__pyx_v_frame_with_overlay, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "video_translate_cython.pyx":481
+      /* "video_translate_cython.pyx":482
  *                 continue
  *             frame_with_overlay = overlay_translated_lines_on_frame(frame, translated_lines, font_path=font_path, font_size=font_size, font_color=font_color)
  *             out.write(frame_with_overlay)             # <<<<<<<<<<<<<<
@@ -12784,12 +12782,12 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
         PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_frame_with_overlay};
         __pyx_t_8 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_write, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 481, __pyx_L1_error)
+        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 482, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_8);
       }
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-      /* "video_translate_cython.pyx":476
+      /* "video_translate_cython.pyx":477
  *         translated_lines = translate_lines(lines, target_language=target_language)
  * 
  *         for i in range(start_frame, change_frame):             # <<<<<<<<<<<<<<
@@ -12800,19 +12798,19 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "video_translate_cython.pyx":483
+    /* "video_translate_cython.pyx":484
  *             out.write(frame_with_overlay)
  * 
  *         start_frame = change_frame             # <<<<<<<<<<<<<<
  * 
  *     cap.release()
 */
-    __pyx_t_7 = __Pyx_PyLong_As_int(__pyx_v_change_frame); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 483, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyLong_As_int(__pyx_v_change_frame); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 484, __pyx_L1_error)
     __pyx_v_start_frame = __pyx_t_7;
     __pyx_L3_continue:;
   }
 
-  /* "video_translate_cython.pyx":485
+  /* "video_translate_cython.pyx":486
  *         start_frame = change_frame
  * 
  *     cap.release()             # <<<<<<<<<<<<<<
@@ -12826,12 +12824,12 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     PyObject *__pyx_callargs[2] = {__pyx_t_8, NULL};
     __pyx_t_4 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_release, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 485, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 486, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "video_translate_cython.pyx":486
+  /* "video_translate_cython.pyx":487
  * 
  *     cap.release()
  *     out.release()             # <<<<<<<<<<<<<<
@@ -12845,12 +12843,12 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     PyObject *__pyx_callargs[2] = {__pyx_t_8, NULL};
     __pyx_t_4 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_release, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 486, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 487, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "video_translate_cython.pyx":487
+  /* "video_translate_cython.pyx":488
  *     cap.release()
  *     out.release()
  *     combine_audio_with_video(silent_video_path=out_path, audio_path=AUDIO_PATH, combined_audio_video_path=out_path)             # <<<<<<<<<<<<<<
@@ -12858,9 +12856,9 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
  *         if os.path.exists(AUDIO_PATH):
 */
   __pyx_t_8 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_combine_audio_with_video); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 487, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_combine_audio_with_video); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 487, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_5 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -12876,22 +12874,22 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
   #endif
   {
     PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_8, NULL};
-    __pyx_t_11 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 487, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 488, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_silent_video_path, __pyx_v_out_path, __pyx_t_11, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 487, __pyx_L1_error)
-    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_audio_path, __pyx_t_1, __pyx_t_11, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 487, __pyx_L1_error)
-    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_combined_audio_video_path, __pyx_v_out_path, __pyx_t_11, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 487, __pyx_L1_error)
+    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_silent_video_path, __pyx_v_out_path, __pyx_t_11, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 488, __pyx_L1_error)
+    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_audio_path, __pyx_t_1, __pyx_t_11, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 488, __pyx_L1_error)
+    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_combined_audio_video_path, __pyx_v_out_path, __pyx_t_11, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 488, __pyx_L1_error)
     __pyx_t_4 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_3, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_11);
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 487, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 488, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "video_translate_cython.pyx":488
+  /* "video_translate_cython.pyx":489
  *     out.release()
  *     combine_audio_with_video(silent_video_path=out_path, audio_path=AUDIO_PATH, combined_audio_video_path=out_path)
  *     try:             # <<<<<<<<<<<<<<
@@ -12907,21 +12905,21 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     __Pyx_XGOTREF(__pyx_t_17);
     /*try:*/ {
 
-      /* "video_translate_cython.pyx":489
+      /* "video_translate_cython.pyx":490
  *     combine_audio_with_video(silent_video_path=out_path, audio_path=AUDIO_PATH, combined_audio_video_path=out_path)
  *     try:
  *         if os.path.exists(AUDIO_PATH):             # <<<<<<<<<<<<<<
  *             os.remove(AUDIO_PATH)
  *     except Exception:
 */
-      __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_os); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 489, __pyx_L11_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_os); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 490, __pyx_L11_error)
       __Pyx_GOTREF(__pyx_t_11);
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_path); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 489, __pyx_L11_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_path); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 490, __pyx_L11_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       __pyx_t_3 = __pyx_t_1;
       __Pyx_INCREF(__pyx_t_3);
-      __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 489, __pyx_L11_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 490, __pyx_L11_error)
       __Pyx_GOTREF(__pyx_t_11);
       __pyx_t_5 = 0;
       {
@@ -12930,14 +12928,14 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 489, __pyx_L11_error)
+        if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 490, __pyx_L11_error)
         __Pyx_GOTREF(__pyx_t_4);
       }
-      __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_12 < 0))) __PYX_ERR(0, 489, __pyx_L11_error)
+      __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_12 < 0))) __PYX_ERR(0, 490, __pyx_L11_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       if (__pyx_t_12) {
 
-        /* "video_translate_cython.pyx":490
+        /* "video_translate_cython.pyx":491
  *     try:
  *         if os.path.exists(AUDIO_PATH):
  *             os.remove(AUDIO_PATH)             # <<<<<<<<<<<<<<
@@ -12945,12 +12943,12 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
  *         pass
 */
         __pyx_t_1 = NULL;
-        __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_os); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 490, __pyx_L11_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_os); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 491, __pyx_L11_error)
         __Pyx_GOTREF(__pyx_t_11);
-        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_remove); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 490, __pyx_L11_error)
+        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_remove); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 491, __pyx_L11_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 490, __pyx_L11_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 491, __pyx_L11_error)
         __Pyx_GOTREF(__pyx_t_11);
         __pyx_t_5 = 1;
         #if CYTHON_UNPACK_METHODS
@@ -12970,12 +12968,12 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
           __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 490, __pyx_L11_error)
+          if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 491, __pyx_L11_error)
           __Pyx_GOTREF(__pyx_t_4);
         }
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-        /* "video_translate_cython.pyx":489
+        /* "video_translate_cython.pyx":490
  *     combine_audio_with_video(silent_video_path=out_path, audio_path=AUDIO_PATH, combined_audio_video_path=out_path)
  *     try:
  *         if os.path.exists(AUDIO_PATH):             # <<<<<<<<<<<<<<
@@ -12984,7 +12982,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
 */
       }
 
-      /* "video_translate_cython.pyx":488
+      /* "video_translate_cython.pyx":489
  *     out.release()
  *     combine_audio_with_video(silent_video_path=out_path, audio_path=AUDIO_PATH, combined_audio_video_path=out_path)
  *     try:             # <<<<<<<<<<<<<<
@@ -13006,7 +13004,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "video_translate_cython.pyx":491
+    /* "video_translate_cython.pyx":492
  *         if os.path.exists(AUDIO_PATH):
  *             os.remove(AUDIO_PATH)
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -13020,7 +13018,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     }
     goto __pyx_L13_except_error;
 
-    /* "video_translate_cython.pyx":488
+    /* "video_translate_cython.pyx":489
  *     out.release()
  *     combine_audio_with_video(silent_video_path=out_path, audio_path=AUDIO_PATH, combined_audio_video_path=out_path)
  *     try:             # <<<<<<<<<<<<<<
@@ -13041,7 +13039,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
     __pyx_L16_try_end:;
   }
 
-  /* "video_translate_cython.pyx":448
+  /* "video_translate_cython.pyx":449
  * 
  * # ------------------ Overlaying / Main functions ------------------
  * @cython.locals(cap=object, fps=float, width=int, height=int, fourcc=int, out=object, start_frame=int, total_frames=int)             # <<<<<<<<<<<<<<
@@ -13078,7 +13076,7 @@ static PyObject *__pyx_pf_22video_translate_cython_24function_overlaying_continu
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":495
+/* "video_translate_cython.pyx":496
  * 
  * 
  * @cython.locals(fps=float, width=int, height=int, total_frames=int, segments=list, out=object)             # <<<<<<<<<<<<<<
@@ -13097,45 +13095,45 @@ static PyObject *__pyx_pf_22video_translate_cython_46__defaults__(CYTHON_UNUSED 
   __Pyx_RefNannySetupContext("__defaults__", 0);
   __Pyx_XDECREF(__pyx_r);
 
-  /* "video_translate_cython.pyx":498
+  /* "video_translate_cython.pyx":499
  * def function_overlaying_continuous(video_path: str, font_path: str, font_size: int, out_path: str = OUTPUT_PATH,
  *                                    target_language: str = "English", font_color: str = "black", source_language: str = "english",
  *                                    use_parallel: bool = True):             # <<<<<<<<<<<<<<
  *     if not use_parallel:
  *         return function_overlaying_continuous_legacy(video_path, font_path, font_size, out_path, target_language, font_color, source_language)
 */
-  __pyx_t_1 = PyTuple_New(5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 495, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 496, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__Pyx_CyFunction_Defaults(struct __pyx_defaults1, __pyx_self)->arg0);
   __Pyx_GIVEREF(__Pyx_CyFunction_Defaults(struct __pyx_defaults1, __pyx_self)->arg0);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __Pyx_CyFunction_Defaults(struct __pyx_defaults1, __pyx_self)->arg0) != (0)) __PYX_ERR(0, 495, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __Pyx_CyFunction_Defaults(struct __pyx_defaults1, __pyx_self)->arg0) != (0)) __PYX_ERR(0, 496, __pyx_L1_error);
   __Pyx_INCREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_English));
   __Pyx_GIVEREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_English));
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject*)__pyx_mstate_global->__pyx_n_u_English)) != (0)) __PYX_ERR(0, 495, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject*)__pyx_mstate_global->__pyx_n_u_English)) != (0)) __PYX_ERR(0, 496, __pyx_L1_error);
   __Pyx_INCREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_black));
   __Pyx_GIVEREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_black));
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, ((PyObject*)__pyx_mstate_global->__pyx_n_u_black)) != (0)) __PYX_ERR(0, 495, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 2, ((PyObject*)__pyx_mstate_global->__pyx_n_u_black)) != (0)) __PYX_ERR(0, 496, __pyx_L1_error);
   __Pyx_INCREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_english));
   __Pyx_GIVEREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_english));
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 3, ((PyObject*)__pyx_mstate_global->__pyx_n_u_english)) != (0)) __PYX_ERR(0, 495, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 3, ((PyObject*)__pyx_mstate_global->__pyx_n_u_english)) != (0)) __PYX_ERR(0, 496, __pyx_L1_error);
   __Pyx_INCREF(((PyObject*)Py_True));
   __Pyx_GIVEREF(((PyObject*)Py_True));
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 4, ((PyObject*)Py_True)) != (0)) __PYX_ERR(0, 495, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 4, ((PyObject*)Py_True)) != (0)) __PYX_ERR(0, 496, __pyx_L1_error);
 
-  /* "video_translate_cython.pyx":495
+  /* "video_translate_cython.pyx":496
  * 
  * 
  * @cython.locals(fps=float, width=int, height=int, total_frames=int, segments=list, out=object)             # <<<<<<<<<<<<<<
  * def function_overlaying_continuous(video_path: str, font_path: str, font_size: int, out_path: str = OUTPUT_PATH,
  *                                    target_language: str = "English", font_color: str = "black", source_language: str = "english",
 */
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 495, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 496, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1) != (0)) __PYX_ERR(0, 495, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1) != (0)) __PYX_ERR(0, 496, __pyx_L1_error);
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, Py_None) != (0)) __PYX_ERR(0, 495, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, Py_None) != (0)) __PYX_ERR(0, 496, __pyx_L1_error);
   __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -13200,83 +13198,83 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_video_path,&__pyx_mstate_global->__pyx_n_u_font_path,&__pyx_mstate_global->__pyx_n_u_font_size,&__pyx_mstate_global->__pyx_n_u_out_path,&__pyx_mstate_global->__pyx_n_u_target_language,&__pyx_mstate_global->__pyx_n_u_font_color,&__pyx_mstate_global->__pyx_n_u_source_language,&__pyx_mstate_global->__pyx_n_u_use_parallel,0};
     struct __pyx_defaults1 *__pyx_dynamic_args = __Pyx_CyFunction_Defaults(struct __pyx_defaults1, __pyx_self);
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 495, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 496, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  8:
         values[7] = __Pyx_ArgRef_FASTCALL(__pyx_args, 7);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[7])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[7])) __PYX_ERR(0, 496, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  7:
         values[6] = __Pyx_ArgRef_FASTCALL(__pyx_args, 6);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[6])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[6])) __PYX_ERR(0, 496, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  6:
         values[5] = __Pyx_ArgRef_FASTCALL(__pyx_args, 5);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 496, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  5:
         values[4] = __Pyx_ArgRef_FASTCALL(__pyx_args, 4);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 496, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 496, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 496, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 496, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 496, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "function_overlaying_continuous", 0) < (0)) __PYX_ERR(0, 495, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "function_overlaying_continuous", 0) < (0)) __PYX_ERR(0, 496, __pyx_L3_error)
       if (!values[3]) values[3] = __Pyx_NewRef(__pyx_dynamic_args->arg0);
       if (!values[4]) values[4] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_n_u_English)));
       if (!values[5]) values[5] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_n_u_black)));
       if (!values[6]) values[6] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_n_u_english)));
       if (!values[7]) values[7] = __Pyx_NewRef(((PyObject *)((PyObject*)Py_True)));
       for (Py_ssize_t i = __pyx_nargs; i < 3; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("function_overlaying_continuous", 0, 3, 8, i); __PYX_ERR(0, 495, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("function_overlaying_continuous", 0, 3, 8, i); __PYX_ERR(0, 496, __pyx_L3_error) }
       }
     } else {
       switch (__pyx_nargs) {
         case  8:
         values[7] = __Pyx_ArgRef_FASTCALL(__pyx_args, 7);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[7])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[7])) __PYX_ERR(0, 496, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  7:
         values[6] = __Pyx_ArgRef_FASTCALL(__pyx_args, 6);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[6])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[6])) __PYX_ERR(0, 496, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  6:
         values[5] = __Pyx_ArgRef_FASTCALL(__pyx_args, 5);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[5])) __PYX_ERR(0, 496, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  5:
         values[4] = __Pyx_ArgRef_FASTCALL(__pyx_args, 4);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 496, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 496, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 496, __pyx_L3_error)
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 496, __pyx_L3_error)
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 495, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 496, __pyx_L3_error)
         break;
         default: goto __pyx_L5_argtuple_error;
       }
@@ -13297,7 +13295,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("function_overlaying_continuous", 0, 3, 8, __pyx_nargs); __PYX_ERR(0, 495, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("function_overlaying_continuous", 0, 3, 8, __pyx_nargs); __PYX_ERR(0, 496, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -13308,13 +13306,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 496, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_font_path), (&PyUnicode_Type), 0, "font_path", 2))) __PYX_ERR(0, 496, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_font_size), (&PyLong_Type), 0, "font_size", 2))) __PYX_ERR(0, 496, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_out_path), (&PyUnicode_Type), 0, "out_path", 2))) __PYX_ERR(0, 496, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_target_language), (&PyUnicode_Type), 0, "target_language", 2))) __PYX_ERR(0, 497, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_font_color), (&PyUnicode_Type), 0, "font_color", 2))) __PYX_ERR(0, 497, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 497, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 497, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_font_path), (&PyUnicode_Type), 0, "font_path", 2))) __PYX_ERR(0, 497, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_font_size), (&PyLong_Type), 0, "font_size", 2))) __PYX_ERR(0, 497, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_out_path), (&PyUnicode_Type), 0, "out_path", 2))) __PYX_ERR(0, 497, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_target_language), (&PyUnicode_Type), 0, "target_language", 2))) __PYX_ERR(0, 498, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_font_color), (&PyUnicode_Type), 0, "font_color", 2))) __PYX_ERR(0, 498, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 498, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_26function_overlaying_continuous(__pyx_self, __pyx_v_video_path, __pyx_v_font_path, __pyx_v_font_size, __pyx_v_out_path, __pyx_v_target_language, __pyx_v_font_color, __pyx_v_source_language, __pyx_v_use_parallel);
 
   /* function exit code */
@@ -13380,18 +13378,18 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("function_overlaying_continuous", 0);
 
-  /* "video_translate_cython.pyx":499
+  /* "video_translate_cython.pyx":500
  *                                    target_language: str = "English", font_color: str = "black", source_language: str = "english",
  *                                    use_parallel: bool = True):
  *     if not use_parallel:             # <<<<<<<<<<<<<<
  *         return function_overlaying_continuous_legacy(video_path, font_path, font_size, out_path, target_language, font_color, source_language)
  * 
 */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_use_parallel); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 499, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_use_parallel); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 500, __pyx_L1_error)
   __pyx_t_2 = (!__pyx_t_1);
   if (__pyx_t_2) {
 
-    /* "video_translate_cython.pyx":500
+    /* "video_translate_cython.pyx":501
  *                                    use_parallel: bool = True):
  *     if not use_parallel:
  *         return function_overlaying_continuous_legacy(video_path, font_path, font_size, out_path, target_language, font_color, source_language)             # <<<<<<<<<<<<<<
@@ -13400,7 +13398,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
 */
     __Pyx_XDECREF(__pyx_r);
     __pyx_t_4 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_function_overlaying_continuous_l); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 500, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_function_overlaying_continuous_l); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 501, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_6 = 1;
     #if CYTHON_UNPACK_METHODS
@@ -13419,14 +13417,14 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+__pyx_t_6, (8-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 500, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 501, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
     goto __pyx_L0;
 
-    /* "video_translate_cython.pyx":499
+    /* "video_translate_cython.pyx":500
  *                                    target_language: str = "English", font_color: str = "black", source_language: str = "english",
  *                                    use_parallel: bool = True):
  *     if not use_parallel:             # <<<<<<<<<<<<<<
@@ -13435,7 +13433,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
 */
   }
 
-  /* "video_translate_cython.pyx":502
+  /* "video_translate_cython.pyx":503
  *         return function_overlaying_continuous_legacy(video_path, font_path, font_size, out_path, target_language, font_color, source_language)
  * 
  *     extract_audio(video_path, AUDIO_PATH)             # <<<<<<<<<<<<<<
@@ -13443,9 +13441,9 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
  *     fps = cap.get(cv2.CAP_PROP_FPS)
 */
   __pyx_t_5 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_extract_audio); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 502, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_extract_audio); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 503, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 502, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 503, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __pyx_t_6 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -13465,12 +13463,12 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 502, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 503, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":503
+  /* "video_translate_cython.pyx":504
  * 
  *     extract_audio(video_path, AUDIO_PATH)
  *     cap = cv2.VideoCapture(video_path)             # <<<<<<<<<<<<<<
@@ -13478,9 +13476,9 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
  *     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 */
   __pyx_t_4 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 503, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 504, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_mstate_global->__pyx_n_u_VideoCapture); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 503, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_mstate_global->__pyx_n_u_VideoCapture); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 504, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_t_6 = 1;
@@ -13500,13 +13498,13 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+__pyx_t_6, (2-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 503, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 504, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
   }
   __pyx_v_cap = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":504
+  /* "video_translate_cython.pyx":505
  *     extract_audio(video_path, AUDIO_PATH)
  *     cap = cv2.VideoCapture(video_path)
  *     fps = cap.get(cv2.CAP_PROP_FPS)             # <<<<<<<<<<<<<<
@@ -13515,9 +13513,9 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
 */
   __pyx_t_5 = __pyx_v_cap;
   __Pyx_INCREF(__pyx_t_5);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 504, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 505, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FPS); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 504, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FPS); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 505, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_6 = 0;
@@ -13526,14 +13524,14 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     __pyx_t_3 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_get, __pyx_callargs+__pyx_t_6, (2-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 504, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 505, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
   }
-  __pyx_t_8 = __Pyx_PyFloat_AsFloat(__pyx_t_3); if (unlikely((__pyx_t_8 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 504, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyFloat_AsFloat(__pyx_t_3); if (unlikely((__pyx_t_8 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 505, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_fps = __pyx_t_8;
 
-  /* "video_translate_cython.pyx":505
+  /* "video_translate_cython.pyx":506
  *     cap = cv2.VideoCapture(video_path)
  *     fps = cap.get(cv2.CAP_PROP_FPS)
  *     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))             # <<<<<<<<<<<<<<
@@ -13542,9 +13540,9 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
 */
   __pyx_t_7 = __pyx_v_cap;
   __Pyx_INCREF(__pyx_t_7);
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 505, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 506, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_WIDTH); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 505, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_WIDTH); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 506, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_6 = 0;
@@ -13553,17 +13551,17 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     __pyx_t_3 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_get, __pyx_callargs+__pyx_t_6, (2-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 505, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 506, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
   }
-  __pyx_t_4 = __Pyx_PyNumber_Int(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 505, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyNumber_Int(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 506, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_9 = __Pyx_PyLong_As_int(__pyx_t_4); if (unlikely((__pyx_t_9 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 505, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyLong_As_int(__pyx_t_4); if (unlikely((__pyx_t_9 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 506, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_width = __pyx_t_9;
 
-  /* "video_translate_cython.pyx":506
+  /* "video_translate_cython.pyx":507
  *     fps = cap.get(cv2.CAP_PROP_FPS)
  *     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
  *     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))             # <<<<<<<<<<<<<<
@@ -13572,9 +13570,9 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
 */
   __pyx_t_3 = __pyx_v_cap;
   __Pyx_INCREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 506, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 507, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_HEIGHT); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 506, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_HEIGHT); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 507, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_t_6 = 0;
@@ -13583,17 +13581,17 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     __pyx_t_4 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_get, __pyx_callargs+__pyx_t_6, (2-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 506, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 507, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
   }
-  __pyx_t_5 = __Pyx_PyNumber_Int(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 506, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyNumber_Int(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 507, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_9 = __Pyx_PyLong_As_int(__pyx_t_5); if (unlikely((__pyx_t_9 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 506, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyLong_As_int(__pyx_t_5); if (unlikely((__pyx_t_9 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 507, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_height = __pyx_t_9;
 
-  /* "video_translate_cython.pyx":507
+  /* "video_translate_cython.pyx":508
  *     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
  *     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
  *     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))             # <<<<<<<<<<<<<<
@@ -13602,9 +13600,9 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
 */
   __pyx_t_4 = __pyx_v_cap;
   __Pyx_INCREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 507, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 508, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_COUNT); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 507, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_COUNT); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 508, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_6 = 0;
@@ -13613,17 +13611,17 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     __pyx_t_5 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_get, __pyx_callargs+__pyx_t_6, (2-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 507, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 508, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
   }
-  __pyx_t_7 = __Pyx_PyNumber_Int(__pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 507, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyNumber_Int(__pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 508, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_9 = __Pyx_PyLong_As_int(__pyx_t_7); if (unlikely((__pyx_t_9 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 507, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyLong_As_int(__pyx_t_7); if (unlikely((__pyx_t_9 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 508, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_v_total_frames = __pyx_t_9;
 
-  /* "video_translate_cython.pyx":508
+  /* "video_translate_cython.pyx":509
  *     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
  *     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
  *     cap.release()             # <<<<<<<<<<<<<<
@@ -13637,12 +13635,12 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     PyObject *__pyx_callargs[2] = {__pyx_t_5, NULL};
     __pyx_t_7 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_release, __pyx_callargs+__pyx_t_6, (1-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 508, __pyx_L1_error)
+    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 509, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
   }
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "video_translate_cython.pyx":510
+  /* "video_translate_cython.pyx":511
  *     cap.release()
  * 
  *     segments = find_all_text_segments_parallel(video_path=video_path, total_frames=total_frames, source_language=source_language, similarity_threshold=SIMILARITY_THRESHOLD)             # <<<<<<<<<<<<<<
@@ -13650,11 +13648,11 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
  *         return
 */
   __pyx_t_5 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_find_all_text_segments_parallel_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_find_all_text_segments_parallel_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_total_frames); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_total_frames); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __pyx_t_6 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -13670,26 +13668,26 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
   #endif
   {
     PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 4 : 0)] = {__pyx_t_5, NULL};
-    __pyx_t_11 = __Pyx_MakeVectorcallBuilderKwds(4); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 510, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_MakeVectorcallBuilderKwds(4); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 511, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_video_path, __pyx_v_video_path, __pyx_t_11, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 510, __pyx_L1_error)
-    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_total_frames, __pyx_t_3, __pyx_t_11, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 510, __pyx_L1_error)
-    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_v_source_language, __pyx_t_11, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 510, __pyx_L1_error)
-    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_t_10, __pyx_t_11, __pyx_callargs+1, 3) < (0)) __PYX_ERR(0, 510, __pyx_L1_error)
+    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_video_path, __pyx_v_video_path, __pyx_t_11, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 511, __pyx_L1_error)
+    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_total_frames, __pyx_t_3, __pyx_t_11, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 511, __pyx_L1_error)
+    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_v_source_language, __pyx_t_11, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 511, __pyx_L1_error)
+    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_t_10, __pyx_t_11, __pyx_callargs+1, 3) < (0)) __PYX_ERR(0, 511, __pyx_L1_error)
     __pyx_t_7 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_4, __pyx_callargs+__pyx_t_6, (1-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_11);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 510, __pyx_L1_error)
+    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 511, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
   }
-  if (!(likely(PyList_CheckExact(__pyx_t_7))||((__pyx_t_7) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_7))) __PYX_ERR(0, 510, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_7))||((__pyx_t_7) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_7))) __PYX_ERR(0, 511, __pyx_L1_error)
   __pyx_v_segments = ((PyObject*)__pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "video_translate_cython.pyx":511
+  /* "video_translate_cython.pyx":512
  * 
  *     segments = find_all_text_segments_parallel(video_path=video_path, total_frames=total_frames, source_language=source_language, similarity_threshold=SIMILARITY_THRESHOLD)
  *     if not segments:             # <<<<<<<<<<<<<<
@@ -13700,14 +13698,14 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
   else
   {
     Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_v_segments);
-    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 511, __pyx_L1_error)
+    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 512, __pyx_L1_error)
     __pyx_t_2 = (__pyx_temp != 0);
   }
 
   __pyx_t_1 = (!__pyx_t_2);
   if (__pyx_t_1) {
 
-    /* "video_translate_cython.pyx":512
+    /* "video_translate_cython.pyx":513
  *     segments = find_all_text_segments_parallel(video_path=video_path, total_frames=total_frames, source_language=source_language, similarity_threshold=SIMILARITY_THRESHOLD)
  *     if not segments:
  *         return             # <<<<<<<<<<<<<<
@@ -13718,7 +13716,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "video_translate_cython.pyx":511
+    /* "video_translate_cython.pyx":512
  * 
  *     segments = find_all_text_segments_parallel(video_path=video_path, total_frames=total_frames, source_language=source_language, similarity_threshold=SIMILARITY_THRESHOLD)
  *     if not segments:             # <<<<<<<<<<<<<<
@@ -13727,28 +13725,28 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
 */
   }
 
-  /* "video_translate_cython.pyx":514
+  /* "video_translate_cython.pyx":515
  *         return
  * 
  *     fourcc = cv2.VideoWriter_fourcc(*'mp4v')             # <<<<<<<<<<<<<<
  *     out = cv2.VideoWriter(out_path, fourcc, fps, (width, height))
  * 
 */
-  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 514, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 515, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_mstate_global->__pyx_n_u_VideoWriter_fourcc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 514, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_mstate_global->__pyx_n_u_VideoWriter_fourcc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 515, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = PySequence_Tuple(__pyx_mstate_global->__pyx_n_u_mp4v); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 514, __pyx_L1_error)
+  __pyx_t_7 = PySequence_Tuple(__pyx_mstate_global->__pyx_n_u_mp4v); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 515, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 514, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 515, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_v_fourcc = __pyx_t_11;
   __pyx_t_11 = 0;
 
-  /* "video_translate_cython.pyx":515
+  /* "video_translate_cython.pyx":516
  * 
  *     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
  *     out = cv2.VideoWriter(out_path, fourcc, fps, (width, height))             # <<<<<<<<<<<<<<
@@ -13756,23 +13754,23 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
  *     extract_lines_with_boxes = _get_ocr_extractor()
 */
   __pyx_t_7 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 515, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 516, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_VideoWriter); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 515, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_VideoWriter); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 516, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_fps); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 515, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_fps); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 516, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_width); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 515, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_width); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 516, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyLong_From_int(__pyx_v_height); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 515, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyLong_From_int(__pyx_v_height); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 516, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 515, __pyx_L1_error)
+  __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 516, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_3) != (0)) __PYX_ERR(0, 515, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_3) != (0)) __PYX_ERR(0, 516, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_5);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_t_5) != (0)) __PYX_ERR(0, 515, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_t_5) != (0)) __PYX_ERR(0, 516, __pyx_L1_error);
   __pyx_t_3 = 0;
   __pyx_t_5 = 0;
   __pyx_t_6 = 1;
@@ -13794,13 +13792,13 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-    if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 515, __pyx_L1_error)
+    if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 516, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
   }
   __pyx_v_out = __pyx_t_11;
   __pyx_t_11 = 0;
 
-  /* "video_translate_cython.pyx":517
+  /* "video_translate_cython.pyx":518
  *     out = cv2.VideoWriter(out_path, fourcc, fps, (width, height))
  * 
  *     extract_lines_with_boxes = _get_ocr_extractor()             # <<<<<<<<<<<<<<
@@ -13808,7 +13806,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
  *         frame = get_frame_at_index(video_path, start_frame)
 */
   __pyx_t_10 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_get_ocr_extractor); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 517, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_get_ocr_extractor); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 518, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __pyx_t_6 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -13827,13 +13825,13 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     __pyx_t_11 = __Pyx_PyObject_FastCall(__pyx_t_12, __pyx_callargs+__pyx_t_6, (1-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 517, __pyx_L1_error)
+    if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 518, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
   }
   __pyx_v_extract_lines_with_boxes = __pyx_t_11;
   __pyx_t_11 = 0;
 
-  /* "video_translate_cython.pyx":518
+  /* "video_translate_cython.pyx":519
  * 
  *     extract_lines_with_boxes = _get_ocr_extractor()
  *     for seg_idx, (start_frame, end_frame) in enumerate(segments, 1):             # <<<<<<<<<<<<<<
@@ -13848,13 +13846,13 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     {
       Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_11);
       #if !CYTHON_ASSUME_SAFE_SIZE
-      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 518, __pyx_L1_error)
+      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 519, __pyx_L1_error)
       #endif
       if (__pyx_t_14 >= __pyx_temp) break;
     }
     __pyx_t_12 = __Pyx_PyList_GetItemRef(__pyx_t_11, __pyx_t_14);
     ++__pyx_t_14;
-    if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 518, __pyx_L1_error)
+    if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 519, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     if ((likely(PyTuple_CheckExact(__pyx_t_12))) || (PyList_CheckExact(__pyx_t_12))) {
       PyObject* sequence = __pyx_t_12;
@@ -13862,7 +13860,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 518, __pyx_L1_error)
+        __PYX_ERR(0, 519, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -13872,22 +13870,22 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
         __Pyx_INCREF(__pyx_t_4);
       } else {
         __pyx_t_10 = __Pyx_PyList_GetItemRef(sequence, 0);
-        if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 518, __pyx_L1_error)
+        if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 519, __pyx_L1_error)
         __Pyx_XGOTREF(__pyx_t_10);
         __pyx_t_4 = __Pyx_PyList_GetItemRef(sequence, 1);
-        if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 518, __pyx_L1_error)
+        if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 519, __pyx_L1_error)
         __Pyx_XGOTREF(__pyx_t_4);
       }
       #else
-      __pyx_t_10 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 518, __pyx_L1_error)
+      __pyx_t_10 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 519, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
-      __pyx_t_4 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 518, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 519, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       #endif
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_7 = PyObject_GetIter(__pyx_t_12); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 518, __pyx_L1_error)
+      __pyx_t_7 = PyObject_GetIter(__pyx_t_12); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 519, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
       __pyx_t_15 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_7);
@@ -13895,7 +13893,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
       __Pyx_GOTREF(__pyx_t_10);
       index = 1; __pyx_t_4 = __pyx_t_15(__pyx_t_7); if (unlikely(!__pyx_t_4)) goto __pyx_L7_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_4);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_15(__pyx_t_7), 2) < (0)) __PYX_ERR(0, 518, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_15(__pyx_t_7), 2) < (0)) __PYX_ERR(0, 519, __pyx_L1_error)
       __pyx_t_15 = NULL;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       goto __pyx_L8_unpacking_done;
@@ -13903,7 +13901,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_15 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 518, __pyx_L1_error)
+      __PYX_ERR(0, 519, __pyx_L1_error)
       __pyx_L8_unpacking_done:;
     }
     __Pyx_XDECREF_SET(__pyx_v_start_frame, __pyx_t_10);
@@ -13912,13 +13910,13 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     __pyx_t_4 = 0;
     __Pyx_INCREF(__pyx_t_13);
     __Pyx_XDECREF_SET(__pyx_v_seg_idx, __pyx_t_13);
-    __pyx_t_12 = __Pyx_PyLong_AddObjC(__pyx_t_13, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 518, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyLong_AddObjC(__pyx_t_13, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 519, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_13);
     __pyx_t_13 = ((PyObject*)__pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "video_translate_cython.pyx":519
+    /* "video_translate_cython.pyx":520
  *     extract_lines_with_boxes = _get_ocr_extractor()
  *     for seg_idx, (start_frame, end_frame) in enumerate(segments, 1):
  *         frame = get_frame_at_index(video_path, start_frame)             # <<<<<<<<<<<<<<
@@ -13926,7 +13924,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
  *             continue
 */
     __pyx_t_4 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 519, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 520, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     __pyx_t_6 = 1;
     #if CYTHON_UNPACK_METHODS
@@ -13945,13 +13943,13 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
       __pyx_t_12 = __Pyx_PyObject_FastCall(__pyx_t_10, __pyx_callargs+__pyx_t_6, (3-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-      if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 519, __pyx_L1_error)
+      if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 520, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
     }
     __Pyx_XDECREF_SET(__pyx_v_frame, __pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "video_translate_cython.pyx":520
+    /* "video_translate_cython.pyx":521
  *     for seg_idx, (start_frame, end_frame) in enumerate(segments, 1):
  *         frame = get_frame_at_index(video_path, start_frame)
  *         if frame is None:             # <<<<<<<<<<<<<<
@@ -13961,7 +13959,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     __pyx_t_1 = (__pyx_v_frame == Py_None);
     if (__pyx_t_1) {
 
-      /* "video_translate_cython.pyx":521
+      /* "video_translate_cython.pyx":522
  *         frame = get_frame_at_index(video_path, start_frame)
  *         if frame is None:
  *             continue             # <<<<<<<<<<<<<<
@@ -13970,7 +13968,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
 */
       goto __pyx_L5_continue;
 
-      /* "video_translate_cython.pyx":520
+      /* "video_translate_cython.pyx":521
  *     for seg_idx, (start_frame, end_frame) in enumerate(segments, 1):
  *         frame = get_frame_at_index(video_path, start_frame)
  *         if frame is None:             # <<<<<<<<<<<<<<
@@ -13979,7 +13977,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
 */
     }
 
-    /* "video_translate_cython.pyx":522
+    /* "video_translate_cython.pyx":523
  *         if frame is None:
  *             continue
  *         lines = extract_lines_with_boxes(frame)             # <<<<<<<<<<<<<<
@@ -14006,13 +14004,13 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
       __pyx_t_12 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+__pyx_t_6, (2-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 522, __pyx_L1_error)
+      if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 523, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
     }
     __Pyx_XDECREF_SET(__pyx_v_lines, __pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "video_translate_cython.pyx":523
+    /* "video_translate_cython.pyx":524
  *             continue
  *         lines = extract_lines_with_boxes(frame)
  *         translated_lines = translate_lines(lines, target_language=target_language)             # <<<<<<<<<<<<<<
@@ -14020,7 +14018,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
  *         for i in range(start_frame, end_frame):
 */
     __pyx_t_4 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_mstate_global->__pyx_n_u_translate_lines); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 523, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_mstate_global->__pyx_n_u_translate_lines); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 524, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     __pyx_t_6 = 1;
     #if CYTHON_UNPACK_METHODS
@@ -14036,32 +14034,32 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     #endif
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 1 : 0)] = {__pyx_t_4, __pyx_v_lines};
-      __pyx_t_7 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 523, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 524, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_target_language, __pyx_v_target_language, __pyx_t_7, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 523, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_target_language, __pyx_v_target_language, __pyx_t_7, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 524, __pyx_L1_error)
       __pyx_t_12 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_10, __pyx_callargs+__pyx_t_6, (2-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_7);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-      if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 523, __pyx_L1_error)
+      if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 524, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
     }
     __Pyx_XDECREF_SET(__pyx_v_translated_lines, __pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "video_translate_cython.pyx":524
+    /* "video_translate_cython.pyx":525
  *         lines = extract_lines_with_boxes(frame)
  *         translated_lines = translate_lines(lines, target_language=target_language)
  *         frames_in_segment = end_frame - start_frame             # <<<<<<<<<<<<<<
  *         for i in range(start_frame, end_frame):
  *             frame = get_frame_at_index(video_path, i)
 */
-    __pyx_t_12 = PyNumber_Subtract(__pyx_v_end_frame, __pyx_v_start_frame); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 524, __pyx_L1_error)
+    __pyx_t_12 = PyNumber_Subtract(__pyx_v_end_frame, __pyx_v_start_frame); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 525, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_XDECREF_SET(__pyx_v_frames_in_segment, __pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "video_translate_cython.pyx":525
+    /* "video_translate_cython.pyx":526
  *         translated_lines = translate_lines(lines, target_language=target_language)
  *         frames_in_segment = end_frame - start_frame
  *         for i in range(start_frame, end_frame):             # <<<<<<<<<<<<<<
@@ -14077,7 +14075,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
       __pyx_t_12 = __Pyx_PyObject_FastCall(__pyx_t_7, __pyx_callargs+__pyx_t_6, (3-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 525, __pyx_L1_error)
+      if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 526, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
     }
     if (likely(PyList_CheckExact(__pyx_t_12)) || PyTuple_CheckExact(__pyx_t_12)) {
@@ -14085,9 +14083,9 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
       __pyx_t_16 = 0;
       __pyx_t_17 = NULL;
     } else {
-      __pyx_t_16 = -1; __pyx_t_7 = PyObject_GetIter(__pyx_t_12); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 525, __pyx_L1_error)
+      __pyx_t_16 = -1; __pyx_t_7 = PyObject_GetIter(__pyx_t_12); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 526, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_17 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_7); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 525, __pyx_L1_error)
+      __pyx_t_17 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_7); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 526, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     for (;;) {
@@ -14096,7 +14094,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
           {
             Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_7);
             #if !CYTHON_ASSUME_SAFE_SIZE
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 525, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 526, __pyx_L1_error)
             #endif
             if (__pyx_t_16 >= __pyx_temp) break;
           }
@@ -14106,7 +14104,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
           {
             Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_7);
             #if !CYTHON_ASSUME_SAFE_SIZE
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 525, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 526, __pyx_L1_error)
             #endif
             if (__pyx_t_16 >= __pyx_temp) break;
           }
@@ -14117,13 +14115,13 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
           #endif
           ++__pyx_t_16;
         }
-        if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 525, __pyx_L1_error)
+        if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 526, __pyx_L1_error)
       } else {
         __pyx_t_12 = __pyx_t_17(__pyx_t_7);
         if (unlikely(!__pyx_t_12)) {
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
-            if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 525, __pyx_L1_error)
+            if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 526, __pyx_L1_error)
             PyErr_Clear();
           }
           break;
@@ -14133,7 +14131,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
       __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_12);
       __pyx_t_12 = 0;
 
-      /* "video_translate_cython.pyx":526
+      /* "video_translate_cython.pyx":527
  *         frames_in_segment = end_frame - start_frame
  *         for i in range(start_frame, end_frame):
  *             frame = get_frame_at_index(video_path, i)             # <<<<<<<<<<<<<<
@@ -14141,7 +14139,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
  *                 continue
 */
       __pyx_t_10 = NULL;
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 526, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 527, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_6 = 1;
       #if CYTHON_UNPACK_METHODS
@@ -14160,13 +14158,13 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
         __pyx_t_12 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+__pyx_t_6, (3-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
         __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 526, __pyx_L1_error)
+        if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 527, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_12);
       }
       __Pyx_DECREF_SET(__pyx_v_frame, __pyx_t_12);
       __pyx_t_12 = 0;
 
-      /* "video_translate_cython.pyx":527
+      /* "video_translate_cython.pyx":528
  *         for i in range(start_frame, end_frame):
  *             frame = get_frame_at_index(video_path, i)
  *             if frame is None:             # <<<<<<<<<<<<<<
@@ -14176,7 +14174,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
       __pyx_t_1 = (__pyx_v_frame == Py_None);
       if (__pyx_t_1) {
 
-        /* "video_translate_cython.pyx":528
+        /* "video_translate_cython.pyx":529
  *             frame = get_frame_at_index(video_path, i)
  *             if frame is None:
  *                 continue             # <<<<<<<<<<<<<<
@@ -14185,7 +14183,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
 */
         goto __pyx_L10_continue;
 
-        /* "video_translate_cython.pyx":527
+        /* "video_translate_cython.pyx":528
  *         for i in range(start_frame, end_frame):
  *             frame = get_frame_at_index(video_path, i)
  *             if frame is None:             # <<<<<<<<<<<<<<
@@ -14194,7 +14192,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
 */
       }
 
-      /* "video_translate_cython.pyx":529
+      /* "video_translate_cython.pyx":530
  *             if frame is None:
  *                 continue
  *             frame_with_overlay = overlay_translated_lines_on_frame(frame, translated_lines, font_path=font_path, font_size=font_size, font_color=font_color)             # <<<<<<<<<<<<<<
@@ -14202,7 +14200,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
  * 
 */
       __pyx_t_4 = NULL;
-      __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_mstate_global->__pyx_n_u_overlay_translated_lines_on_fram); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 529, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_mstate_global->__pyx_n_u_overlay_translated_lines_on_fram); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 530, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
       __pyx_t_6 = 1;
       #if CYTHON_UNPACK_METHODS
@@ -14218,22 +14216,22 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
       #endif
       {
         PyObject *__pyx_callargs[3 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_4, __pyx_v_frame, __pyx_v_translated_lines};
-        __pyx_t_5 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 529, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 530, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_path, __pyx_v_font_path, __pyx_t_5, __pyx_callargs+3, 0) < (0)) __PYX_ERR(0, 529, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_size, __pyx_v_font_size, __pyx_t_5, __pyx_callargs+3, 1) < (0)) __PYX_ERR(0, 529, __pyx_L1_error)
-        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_color, __pyx_v_font_color, __pyx_t_5, __pyx_callargs+3, 2) < (0)) __PYX_ERR(0, 529, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_path, __pyx_v_font_path, __pyx_t_5, __pyx_callargs+3, 0) < (0)) __PYX_ERR(0, 530, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_size, __pyx_v_font_size, __pyx_t_5, __pyx_callargs+3, 1) < (0)) __PYX_ERR(0, 530, __pyx_L1_error)
+        if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_color, __pyx_v_font_color, __pyx_t_5, __pyx_callargs+3, 2) < (0)) __PYX_ERR(0, 530, __pyx_L1_error)
         __pyx_t_12 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_10, __pyx_callargs+__pyx_t_6, (3-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_5);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-        if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 529, __pyx_L1_error)
+        if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 530, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_12);
       }
       __Pyx_XDECREF_SET(__pyx_v_frame_with_overlay, __pyx_t_12);
       __pyx_t_12 = 0;
 
-      /* "video_translate_cython.pyx":530
+      /* "video_translate_cython.pyx":531
  *                 continue
  *             frame_with_overlay = overlay_translated_lines_on_frame(frame, translated_lines, font_path=font_path, font_size=font_size, font_color=font_color)
  *             out.write(frame_with_overlay)             # <<<<<<<<<<<<<<
@@ -14247,12 +14245,12 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
         PyObject *__pyx_callargs[2] = {__pyx_t_10, __pyx_v_frame_with_overlay};
         __pyx_t_12 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_write, __pyx_callargs+__pyx_t_6, (2-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
         __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
-        if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 530, __pyx_L1_error)
+        if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 531, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_12);
       }
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-      /* "video_translate_cython.pyx":525
+      /* "video_translate_cython.pyx":526
  *         translated_lines = translate_lines(lines, target_language=target_language)
  *         frames_in_segment = end_frame - start_frame
  *         for i in range(start_frame, end_frame):             # <<<<<<<<<<<<<<
@@ -14263,7 +14261,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     }
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "video_translate_cython.pyx":518
+    /* "video_translate_cython.pyx":519
  * 
  *     extract_lines_with_boxes = _get_ocr_extractor()
  *     for seg_idx, (start_frame, end_frame) in enumerate(segments, 1):             # <<<<<<<<<<<<<<
@@ -14275,7 +14273,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-  /* "video_translate_cython.pyx":532
+  /* "video_translate_cython.pyx":533
  *             out.write(frame_with_overlay)
  * 
  *     out.release()             # <<<<<<<<<<<<<<
@@ -14289,12 +14287,12 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     PyObject *__pyx_callargs[2] = {__pyx_t_7, NULL};
     __pyx_t_11 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_release, __pyx_callargs+__pyx_t_6, (1-__pyx_t_6) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 532, __pyx_L1_error)
+    if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 533, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
   }
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "video_translate_cython.pyx":533
+  /* "video_translate_cython.pyx":534
  * 
  *     out.release()
  *     combine_audio_with_video(silent_video_path=out_path, audio_path=AUDIO_PATH, combined_audio_video_path=out_path)             # <<<<<<<<<<<<<<
@@ -14302,9 +14300,9 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
  *         if os.path.exists(AUDIO_PATH):
 */
   __pyx_t_7 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_combine_audio_with_video); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 533, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_combine_audio_with_video); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 533, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __pyx_t_6 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -14320,22 +14318,22 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
   #endif
   {
     PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_7, NULL};
-    __pyx_t_5 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 533, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 534, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_silent_video_path, __pyx_v_out_path, __pyx_t_5, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 533, __pyx_L1_error)
-    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_audio_path, __pyx_t_10, __pyx_t_5, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 533, __pyx_L1_error)
-    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_combined_audio_video_path, __pyx_v_out_path, __pyx_t_5, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 533, __pyx_L1_error)
+    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_silent_video_path, __pyx_v_out_path, __pyx_t_5, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 534, __pyx_L1_error)
+    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_audio_path, __pyx_t_10, __pyx_t_5, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 534, __pyx_L1_error)
+    if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_combined_audio_video_path, __pyx_v_out_path, __pyx_t_5, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 534, __pyx_L1_error)
     __pyx_t_11 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_12, __pyx_callargs+__pyx_t_6, (1-__pyx_t_6) | (__pyx_t_6*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_5);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 533, __pyx_L1_error)
+    if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 534, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
   }
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "video_translate_cython.pyx":534
+  /* "video_translate_cython.pyx":535
  *     out.release()
  *     combine_audio_with_video(silent_video_path=out_path, audio_path=AUDIO_PATH, combined_audio_video_path=out_path)
  *     try:             # <<<<<<<<<<<<<<
@@ -14351,21 +14349,21 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     __Pyx_XGOTREF(__pyx_t_20);
     /*try:*/ {
 
-      /* "video_translate_cython.pyx":535
+      /* "video_translate_cython.pyx":536
  *     combine_audio_with_video(silent_video_path=out_path, audio_path=AUDIO_PATH, combined_audio_video_path=out_path)
  *     try:
  *         if os.path.exists(AUDIO_PATH):             # <<<<<<<<<<<<<<
  *             os.remove(AUDIO_PATH)
  *     except Exception:
 */
-      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_os); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 535, __pyx_L15_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_os); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 536, __pyx_L15_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_path); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 535, __pyx_L15_error)
+      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_path); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 536, __pyx_L15_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_t_12 = __pyx_t_10;
       __Pyx_INCREF(__pyx_t_12);
-      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 535, __pyx_L15_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 536, __pyx_L15_error)
       __Pyx_GOTREF(__pyx_t_5);
       __pyx_t_6 = 0;
       {
@@ -14374,14 +14372,14 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
         __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-        if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 535, __pyx_L15_error)
+        if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 536, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_11);
       }
-      __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_11); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 535, __pyx_L15_error)
+      __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_11); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 536, __pyx_L15_error)
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       if (__pyx_t_1) {
 
-        /* "video_translate_cython.pyx":536
+        /* "video_translate_cython.pyx":537
  *     try:
  *         if os.path.exists(AUDIO_PATH):
  *             os.remove(AUDIO_PATH)             # <<<<<<<<<<<<<<
@@ -14389,12 +14387,12 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
  *         pass
 */
         __pyx_t_10 = NULL;
-        __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_os); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 536, __pyx_L15_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_os); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 537, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_remove); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 536, __pyx_L15_error)
+        __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_remove); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 537, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_12);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-        __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 536, __pyx_L15_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 537, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_5);
         __pyx_t_6 = 1;
         #if CYTHON_UNPACK_METHODS
@@ -14414,12 +14412,12 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
           __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-          if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 536, __pyx_L15_error)
+          if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 537, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_11);
         }
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-        /* "video_translate_cython.pyx":535
+        /* "video_translate_cython.pyx":536
  *     combine_audio_with_video(silent_video_path=out_path, audio_path=AUDIO_PATH, combined_audio_video_path=out_path)
  *     try:
  *         if os.path.exists(AUDIO_PATH):             # <<<<<<<<<<<<<<
@@ -14428,7 +14426,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
 */
       }
 
-      /* "video_translate_cython.pyx":534
+      /* "video_translate_cython.pyx":535
  *     out.release()
  *     combine_audio_with_video(silent_video_path=out_path, audio_path=AUDIO_PATH, combined_audio_video_path=out_path)
  *     try:             # <<<<<<<<<<<<<<
@@ -14450,7 +14448,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "video_translate_cython.pyx":537
+    /* "video_translate_cython.pyx":538
  *         if os.path.exists(AUDIO_PATH):
  *             os.remove(AUDIO_PATH)
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -14464,7 +14462,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     }
     goto __pyx_L17_except_error;
 
-    /* "video_translate_cython.pyx":534
+    /* "video_translate_cython.pyx":535
  *     out.release()
  *     combine_audio_with_video(silent_video_path=out_path, audio_path=AUDIO_PATH, combined_audio_video_path=out_path)
  *     try:             # <<<<<<<<<<<<<<
@@ -14485,7 +14483,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
     __pyx_L20_try_end:;
   }
 
-  /* "video_translate_cython.pyx":495
+  /* "video_translate_cython.pyx":496
  * 
  * 
  * @cython.locals(fps=float, width=int, height=int, total_frames=int, segments=list, out=object)             # <<<<<<<<<<<<<<
@@ -14527,7 +14525,7 @@ static PyObject *__pyx_pf_22video_translate_cython_26function_overlaying_continu
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":597
+/* "video_translate_cython.pyx":598
  * # discrimination for short OCR strings. Change to your preferred algo later.
  * 
  * cdef double c_text_similarity(const char *a, Py_ssize_t a_len, const char *b, Py_ssize_t b_len) nogil:             # <<<<<<<<<<<<<<
@@ -14553,7 +14551,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
   int __pyx_clineno = 0;
   PyGILState_STATE __pyx_gilstate_save;
 
-  /* "video_translate_cython.pyx":606
+  /* "video_translate_cython.pyx":607
  *     cdef unsigned int freq_a[256]
  *     cdef unsigned int freq_b[256]
  *     cdef unsigned int intersect = 0             # <<<<<<<<<<<<<<
@@ -14562,7 +14560,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
 */
   __pyx_v_intersect = 0;
 
-  /* "video_translate_cython.pyx":607
+  /* "video_translate_cython.pyx":608
  *     cdef unsigned int freq_b[256]
  *     cdef unsigned int intersect = 0
  *     cdef unsigned int unionc = 0             # <<<<<<<<<<<<<<
@@ -14571,7 +14569,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
 */
   __pyx_v_unionc = 0;
 
-  /* "video_translate_cython.pyx":610
+  /* "video_translate_cython.pyx":611
  * 
  *     # zero arrays
  *     for i in range(256):             # <<<<<<<<<<<<<<
@@ -14581,7 +14579,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
   for (__pyx_t_1 = 0; __pyx_t_1 < 0x100; __pyx_t_1+=1) {
     __pyx_v_i = __pyx_t_1;
 
-    /* "video_translate_cython.pyx":611
+    /* "video_translate_cython.pyx":612
  *     # zero arrays
  *     for i in range(256):
  *         freq_a[i] = 0             # <<<<<<<<<<<<<<
@@ -14590,7 +14588,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
 */
     (__pyx_v_freq_a[__pyx_v_i]) = 0;
 
-    /* "video_translate_cython.pyx":612
+    /* "video_translate_cython.pyx":613
  *     for i in range(256):
  *         freq_a[i] = 0
  *         freq_b[i] = 0             # <<<<<<<<<<<<<<
@@ -14600,7 +14598,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
     (__pyx_v_freq_b[__pyx_v_i]) = 0;
   }
 
-  /* "video_translate_cython.pyx":614
+  /* "video_translate_cython.pyx":615
  *         freq_b[i] = 0
  * 
  *     for i in range(a_len):             # <<<<<<<<<<<<<<
@@ -14612,7 +14610,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "video_translate_cython.pyx":615
+    /* "video_translate_cython.pyx":616
  * 
  *     for i in range(a_len):
  *         freq_a[(<unsigned char>a[i])] += 1             # <<<<<<<<<<<<<<
@@ -14623,7 +14621,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
     (__pyx_v_freq_a[__pyx_t_4]) = ((__pyx_v_freq_a[__pyx_t_4]) + 1);
   }
 
-  /* "video_translate_cython.pyx":616
+  /* "video_translate_cython.pyx":617
  *     for i in range(a_len):
  *         freq_a[(<unsigned char>a[i])] += 1
  *     for i in range(b_len):             # <<<<<<<<<<<<<<
@@ -14635,7 +14633,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "video_translate_cython.pyx":617
+    /* "video_translate_cython.pyx":618
  *         freq_a[(<unsigned char>a[i])] += 1
  *     for i in range(b_len):
  *         freq_b[(<unsigned char>b[i])] += 1             # <<<<<<<<<<<<<<
@@ -14646,7 +14644,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
     (__pyx_v_freq_b[__pyx_t_4]) = ((__pyx_v_freq_b[__pyx_t_4]) + 1);
   }
 
-  /* "video_translate_cython.pyx":619
+  /* "video_translate_cython.pyx":620
  *         freq_b[(<unsigned char>b[i])] += 1
  * 
  *     for i in range(256):             # <<<<<<<<<<<<<<
@@ -14656,7 +14654,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
   for (__pyx_t_1 = 0; __pyx_t_1 < 0x100; __pyx_t_1+=1) {
     __pyx_v_i = __pyx_t_1;
 
-    /* "video_translate_cython.pyx":620
+    /* "video_translate_cython.pyx":621
  * 
  *     for i in range(256):
  *         if freq_a[i] and freq_b[i]:             # <<<<<<<<<<<<<<
@@ -14674,7 +14672,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
     __pyx_L12_bool_binop_done:;
     if (__pyx_t_5) {
 
-      /* "video_translate_cython.pyx":621
+      /* "video_translate_cython.pyx":622
  *     for i in range(256):
  *         if freq_a[i] and freq_b[i]:
  *             if freq_a[i] < freq_b[i]:             # <<<<<<<<<<<<<<
@@ -14684,7 +14682,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
       __pyx_t_5 = ((__pyx_v_freq_a[__pyx_v_i]) < (__pyx_v_freq_b[__pyx_v_i]));
       if (__pyx_t_5) {
 
-        /* "video_translate_cython.pyx":622
+        /* "video_translate_cython.pyx":623
  *         if freq_a[i] and freq_b[i]:
  *             if freq_a[i] < freq_b[i]:
  *                 intersect += freq_a[i]             # <<<<<<<<<<<<<<
@@ -14693,7 +14691,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
 */
         __pyx_v_intersect = (__pyx_v_intersect + (__pyx_v_freq_a[__pyx_v_i]));
 
-        /* "video_translate_cython.pyx":621
+        /* "video_translate_cython.pyx":622
  *     for i in range(256):
  *         if freq_a[i] and freq_b[i]:
  *             if freq_a[i] < freq_b[i]:             # <<<<<<<<<<<<<<
@@ -14703,7 +14701,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
         goto __pyx_L14;
       }
 
-      /* "video_translate_cython.pyx":624
+      /* "video_translate_cython.pyx":625
  *                 intersect += freq_a[i]
  *             else:
  *                 intersect += freq_b[i]             # <<<<<<<<<<<<<<
@@ -14715,7 +14713,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
       }
       __pyx_L14:;
 
-      /* "video_translate_cython.pyx":620
+      /* "video_translate_cython.pyx":621
  * 
  *     for i in range(256):
  *         if freq_a[i] and freq_b[i]:             # <<<<<<<<<<<<<<
@@ -14724,7 +14722,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
 */
     }
 
-    /* "video_translate_cython.pyx":625
+    /* "video_translate_cython.pyx":626
  *             else:
  *                 intersect += freq_b[i]
  *         if freq_a[i] or freq_b[i]:             # <<<<<<<<<<<<<<
@@ -14742,7 +14740,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
     __pyx_L16_bool_binop_done:;
     if (__pyx_t_5) {
 
-      /* "video_translate_cython.pyx":626
+      /* "video_translate_cython.pyx":627
  *                 intersect += freq_b[i]
  *         if freq_a[i] or freq_b[i]:
  *             if freq_a[i] > freq_b[i]:             # <<<<<<<<<<<<<<
@@ -14752,7 +14750,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
       __pyx_t_5 = ((__pyx_v_freq_a[__pyx_v_i]) > (__pyx_v_freq_b[__pyx_v_i]));
       if (__pyx_t_5) {
 
-        /* "video_translate_cython.pyx":627
+        /* "video_translate_cython.pyx":628
  *         if freq_a[i] or freq_b[i]:
  *             if freq_a[i] > freq_b[i]:
  *                 unionc += freq_a[i]             # <<<<<<<<<<<<<<
@@ -14761,7 +14759,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
 */
         __pyx_v_unionc = (__pyx_v_unionc + (__pyx_v_freq_a[__pyx_v_i]));
 
-        /* "video_translate_cython.pyx":626
+        /* "video_translate_cython.pyx":627
  *                 intersect += freq_b[i]
  *         if freq_a[i] or freq_b[i]:
  *             if freq_a[i] > freq_b[i]:             # <<<<<<<<<<<<<<
@@ -14771,7 +14769,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
         goto __pyx_L18;
       }
 
-      /* "video_translate_cython.pyx":629
+      /* "video_translate_cython.pyx":630
  *                 unionc += freq_a[i]
  *             else:
  *                 unionc += freq_b[i]             # <<<<<<<<<<<<<<
@@ -14783,7 +14781,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
       }
       __pyx_L18:;
 
-      /* "video_translate_cython.pyx":625
+      /* "video_translate_cython.pyx":626
  *             else:
  *                 intersect += freq_b[i]
  *         if freq_a[i] or freq_b[i]:             # <<<<<<<<<<<<<<
@@ -14793,7 +14791,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
     }
   }
 
-  /* "video_translate_cython.pyx":631
+  /* "video_translate_cython.pyx":632
  *                 unionc += freq_b[i]
  * 
  *     if unionc == 0:             # <<<<<<<<<<<<<<
@@ -14803,7 +14801,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
   __pyx_t_5 = (__pyx_v_unionc == 0);
   if (__pyx_t_5) {
 
-    /* "video_translate_cython.pyx":632
+    /* "video_translate_cython.pyx":633
  * 
  *     if unionc == 0:
  *         return 0.0             # <<<<<<<<<<<<<<
@@ -14813,7 +14811,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
     __pyx_r = 0.0;
     goto __pyx_L0;
 
-    /* "video_translate_cython.pyx":631
+    /* "video_translate_cython.pyx":632
  *                 unionc += freq_b[i]
  * 
  *     if unionc == 0:             # <<<<<<<<<<<<<<
@@ -14822,7 +14820,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
 */
   }
 
-  /* "video_translate_cython.pyx":633
+  /* "video_translate_cython.pyx":634
  *     if unionc == 0:
  *         return 0.0
  *     return <double>intersect / <double>unionc             # <<<<<<<<<<<<<<
@@ -14833,12 +14831,12 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
     PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
     __Pyx_PyGILState_Release(__pyx_gilstate_save);
-    __PYX_ERR(0, 633, __pyx_L1_error)
+    __PYX_ERR(0, 634, __pyx_L1_error)
   }
   __pyx_r = (((double)__pyx_v_intersect) / ((double)__pyx_v_unionc));
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":597
+  /* "video_translate_cython.pyx":598
  * # discrimination for short OCR strings. Change to your preferred algo later.
  * 
  * cdef double c_text_similarity(const char *a, Py_ssize_t a_len, const char *b, Py_ssize_t b_len) nogil:             # <<<<<<<<<<<<<<
@@ -14856,7 +14854,7 @@ static double __pyx_f_22video_translate_cython_c_text_similarity(char const *__p
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":639
+/* "video_translate_cython.pyx":640
  * # c_text_similarity in nogil. This keeps Python interaction minimal.
  * 
  * def py_c_text_similarity(str a, str b) -> float:             # <<<<<<<<<<<<<<
@@ -14904,39 +14902,39 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_a,&__pyx_mstate_global->__pyx_n_u_b,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 639, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 640, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 639, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 640, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 639, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 640, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "py_c_text_similarity", 0) < (0)) __PYX_ERR(0, 639, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "py_c_text_similarity", 0) < (0)) __PYX_ERR(0, 640, __pyx_L3_error)
       for (Py_ssize_t i = __pyx_nargs; i < 2; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("py_c_text_similarity", 1, 2, 2, i); __PYX_ERR(0, 639, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("py_c_text_similarity", 1, 2, 2, i); __PYX_ERR(0, 640, __pyx_L3_error) }
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 639, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 640, __pyx_L3_error)
       values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 639, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 640, __pyx_L3_error)
     }
     __pyx_v_a = ((PyObject*)values[0]);
     __pyx_v_b = ((PyObject*)values[1]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("py_c_text_similarity", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 639, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("py_c_text_similarity", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 640, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -14947,8 +14945,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_a), (&PyUnicode_Type), 1, "a", 1))) __PYX_ERR(0, 639, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), (&PyUnicode_Type), 1, "b", 1))) __PYX_ERR(0, 639, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_a), (&PyUnicode_Type), 1, "a", 1))) __PYX_ERR(0, 640, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), (&PyUnicode_Type), 1, "b", 1))) __PYX_ERR(0, 640, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_28py_c_text_similarity(__pyx_self, __pyx_v_a, __pyx_v_b);
 
   /* function exit code */
@@ -14988,7 +14986,7 @@ static PyObject *__pyx_pf_22video_translate_cython_28py_c_text_similarity(CYTHON
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("py_c_text_similarity", 0);
 
-  /* "video_translate_cython.pyx":640
+  /* "video_translate_cython.pyx":641
  * 
  * def py_c_text_similarity(str a, str b) -> float:
  *     cdef bytes ba = a.encode('utf8')             # <<<<<<<<<<<<<<
@@ -14997,14 +14995,14 @@ static PyObject *__pyx_pf_22video_translate_cython_28py_c_text_similarity(CYTHON
 */
   if (unlikely(__pyx_v_a == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 640, __pyx_L1_error)
+    __PYX_ERR(0, 641, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_a); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 640, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_a); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 641, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_ba = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":641
+  /* "video_translate_cython.pyx":642
  * def py_c_text_similarity(str a, str b) -> float:
  *     cdef bytes ba = a.encode('utf8')
  *     cdef bytes bb = b.encode('utf8')             # <<<<<<<<<<<<<<
@@ -15013,54 +15011,54 @@ static PyObject *__pyx_pf_22video_translate_cython_28py_c_text_similarity(CYTHON
 */
   if (unlikely(__pyx_v_b == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "encode");
-    __PYX_ERR(0, 641, __pyx_L1_error)
+    __PYX_ERR(0, 642, __pyx_L1_error)
   }
-  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_b); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 641, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_AsUTF8String(__pyx_v_b); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 642, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_bb = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":642
+  /* "video_translate_cython.pyx":643
  *     cdef bytes ba = a.encode('utf8')
  *     cdef bytes bb = b.encode('utf8')
  *     cdef const char *apa = ba             # <<<<<<<<<<<<<<
  *     cdef const char *bpa = bb
  *     cdef Py_ssize_t alen = len(ba)
 */
-  __pyx_t_2 = __Pyx_PyBytes_AsString(__pyx_v_ba); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 642, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBytes_AsString(__pyx_v_ba); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 643, __pyx_L1_error)
   __pyx_v_apa = __pyx_t_2;
 
-  /* "video_translate_cython.pyx":643
+  /* "video_translate_cython.pyx":644
  *     cdef bytes bb = b.encode('utf8')
  *     cdef const char *apa = ba
  *     cdef const char *bpa = bb             # <<<<<<<<<<<<<<
  *     cdef Py_ssize_t alen = len(ba)
  *     cdef Py_ssize_t blen = len(bb)
 */
-  __pyx_t_3 = __Pyx_PyBytes_AsString(__pyx_v_bb); if (unlikely((!__pyx_t_3) && PyErr_Occurred())) __PYX_ERR(0, 643, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyBytes_AsString(__pyx_v_bb); if (unlikely((!__pyx_t_3) && PyErr_Occurred())) __PYX_ERR(0, 644, __pyx_L1_error)
   __pyx_v_bpa = __pyx_t_3;
 
-  /* "video_translate_cython.pyx":644
+  /* "video_translate_cython.pyx":645
  *     cdef const char *apa = ba
  *     cdef const char *bpa = bb
  *     cdef Py_ssize_t alen = len(ba)             # <<<<<<<<<<<<<<
  *     cdef Py_ssize_t blen = len(bb)
  *     cdef double score
 */
-  __pyx_t_4 = __Pyx_PyBytes_GET_SIZE(__pyx_v_ba); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 644, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyBytes_GET_SIZE(__pyx_v_ba); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 645, __pyx_L1_error)
   __pyx_v_alen = __pyx_t_4;
 
-  /* "video_translate_cython.pyx":645
+  /* "video_translate_cython.pyx":646
  *     cdef const char *bpa = bb
  *     cdef Py_ssize_t alen = len(ba)
  *     cdef Py_ssize_t blen = len(bb)             # <<<<<<<<<<<<<<
  *     cdef double score
  * 
 */
-  __pyx_t_4 = __Pyx_PyBytes_GET_SIZE(__pyx_v_bb); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 645, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyBytes_GET_SIZE(__pyx_v_bb); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 646, __pyx_L1_error)
   __pyx_v_blen = __pyx_t_4;
 
-  /* "video_translate_cython.pyx":649
+  /* "video_translate_cython.pyx":650
  * 
  *     # Call nogil function with raw pointers; ba and bb must stay alive until return
  *     with cython.nogil:             # <<<<<<<<<<<<<<
@@ -15074,18 +15072,18 @@ static PyObject *__pyx_pf_22video_translate_cython_28py_c_text_similarity(CYTHON
       __Pyx_FastGIL_Remember();
       /*try:*/ {
 
-        /* "video_translate_cython.pyx":650
+        /* "video_translate_cython.pyx":651
  *     # Call nogil function with raw pointers; ba and bb must stay alive until return
  *     with cython.nogil:
  *         score = c_text_similarity(apa, alen, bpa, blen)             # <<<<<<<<<<<<<<
  *     return float(score)
  * 
 */
-        __pyx_t_5 = __pyx_f_22video_translate_cython_c_text_similarity(__pyx_v_apa, __pyx_v_alen, __pyx_v_bpa, __pyx_v_blen); if (unlikely(__pyx_t_5 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 650, __pyx_L4_error)
+        __pyx_t_5 = __pyx_f_22video_translate_cython_c_text_similarity(__pyx_v_apa, __pyx_v_alen, __pyx_v_bpa, __pyx_v_blen); if (unlikely(__pyx_t_5 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 651, __pyx_L4_error)
         __pyx_v_score = __pyx_t_5;
       }
 
-      /* "video_translate_cython.pyx":649
+      /* "video_translate_cython.pyx":650
  * 
  *     # Call nogil function with raw pointers; ba and bb must stay alive until return
  *     with cython.nogil:             # <<<<<<<<<<<<<<
@@ -15107,7 +15105,7 @@ static PyObject *__pyx_pf_22video_translate_cython_28py_c_text_similarity(CYTHON
       }
   }
 
-  /* "video_translate_cython.pyx":651
+  /* "video_translate_cython.pyx":652
  *     with cython.nogil:
  *         score = c_text_similarity(apa, alen, bpa, blen)
  *     return float(score)             # <<<<<<<<<<<<<<
@@ -15115,13 +15113,13 @@ static PyObject *__pyx_pf_22video_translate_cython_28py_c_text_similarity(CYTHON
  * 
 */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_score); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 651, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_score); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 652, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":639
+  /* "video_translate_cython.pyx":640
  * # c_text_similarity in nogil. This keeps Python interaction minimal.
  * 
  * def py_c_text_similarity(str a, str b) -> float:             # <<<<<<<<<<<<<<
@@ -15142,7 +15140,7 @@ static PyObject *__pyx_pf_22video_translate_cython_28py_c_text_similarity(CYTHON
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":660
+/* "video_translate_cython.pyx":661
  * # while still using the existing OCR and cache behavior.
  * 
  * @cython.locals(current_text=object, similarity=float)             # <<<<<<<<<<<<<<
@@ -15194,53 +15192,53 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_video_path,&__pyx_mstate_global->__pyx_n_u_frame_index,&__pyx_mstate_global->__pyx_n_u_reference_text,&__pyx_mstate_global->__pyx_n_u_similarity_threshold,&__pyx_mstate_global->__pyx_n_u_source_language,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 660, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 661, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  5:
         values[4] = __Pyx_ArgRef_FASTCALL(__pyx_args, 4);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 660, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 661, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 660, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 661, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 660, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 661, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 660, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 661, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 660, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 661, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "is_text_same_nogil", 0) < (0)) __PYX_ERR(0, 660, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "is_text_same_nogil", 0) < (0)) __PYX_ERR(0, 661, __pyx_L3_error)
       if (!values[4]) values[4] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_n_u_english)));
       for (Py_ssize_t i = __pyx_nargs; i < 4; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("is_text_same_nogil", 0, 4, 5, i); __PYX_ERR(0, 660, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("is_text_same_nogil", 0, 4, 5, i); __PYX_ERR(0, 661, __pyx_L3_error) }
       }
     } else {
       switch (__pyx_nargs) {
         case  5:
         values[4] = __Pyx_ArgRef_FASTCALL(__pyx_args, 4);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 660, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[4])) __PYX_ERR(0, 661, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 660, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 661, __pyx_L3_error)
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 660, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 661, __pyx_L3_error)
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 660, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 661, __pyx_L3_error)
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 660, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 661, __pyx_L3_error)
         break;
         default: goto __pyx_L5_argtuple_error;
       }
@@ -15249,12 +15247,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     __pyx_v_video_path = ((PyObject*)values[0]);
     __pyx_v_frame_index = ((PyObject*)values[1]);
     __pyx_v_reference_text = ((PyObject*)values[2]);
-    __pyx_v_similarity_threshold = __Pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_similarity_threshold == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 662, __pyx_L3_error)
+    __pyx_v_similarity_threshold = __Pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_similarity_threshold == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 663, __pyx_L3_error)
     __pyx_v_source_language = ((PyObject*)values[4]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("is_text_same_nogil", 0, 4, 5, __pyx_nargs); __PYX_ERR(0, 660, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("is_text_same_nogil", 0, 4, 5, __pyx_nargs); __PYX_ERR(0, 661, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -15265,10 +15263,10 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 661, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_frame_index), (&PyLong_Type), 0, "frame_index", 2))) __PYX_ERR(0, 661, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_reference_text), (&PyUnicode_Type), 0, "reference_text", 2))) __PYX_ERR(0, 661, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 662, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 662, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_frame_index), (&PyLong_Type), 0, "frame_index", 2))) __PYX_ERR(0, 662, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_reference_text), (&PyUnicode_Type), 0, "reference_text", 2))) __PYX_ERR(0, 662, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 663, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_30is_text_same_nogil(__pyx_self, __pyx_v_video_path, __pyx_v_frame_index, __pyx_v_reference_text, __pyx_v_similarity_threshold, __pyx_v_source_language);
 
   /* function exit code */
@@ -15305,7 +15303,7 @@ static PyObject *__pyx_pf_22video_translate_cython_30is_text_same_nogil(CYTHON_U
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("is_text_same_nogil", 0);
 
-  /* "video_translate_cython.pyx":666
+  /* "video_translate_cython.pyx":667
  *     calculation runs in nogil for speed.
  *     """
  *     current_text = extract_text_from_frame_cached(video_path, frame_index, source_language)             # <<<<<<<<<<<<<<
@@ -15313,7 +15311,7 @@ static PyObject *__pyx_pf_22video_translate_cython_30is_text_same_nogil(CYTHON_U
  *         return None
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 666, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 667, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -15332,13 +15330,13 @@ static PyObject *__pyx_pf_22video_translate_cython_30is_text_same_nogil(CYTHON_U
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_4, (4-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 666, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 667, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __pyx_v_current_text = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":667
+  /* "video_translate_cython.pyx":668
  *     """
  *     current_text = extract_text_from_frame_cached(video_path, frame_index, source_language)
  *     if current_text is None:             # <<<<<<<<<<<<<<
@@ -15348,7 +15346,7 @@ static PyObject *__pyx_pf_22video_translate_cython_30is_text_same_nogil(CYTHON_U
   __pyx_t_5 = (__pyx_v_current_text == Py_None);
   if (__pyx_t_5) {
 
-    /* "video_translate_cython.pyx":668
+    /* "video_translate_cython.pyx":669
  *     current_text = extract_text_from_frame_cached(video_path, frame_index, source_language)
  *     if current_text is None:
  *         return None             # <<<<<<<<<<<<<<
@@ -15359,7 +15357,7 @@ static PyObject *__pyx_pf_22video_translate_cython_30is_text_same_nogil(CYTHON_U
     __pyx_r = ((PyObject*)Py_None); __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "video_translate_cython.pyx":667
+    /* "video_translate_cython.pyx":668
  *     """
  *     current_text = extract_text_from_frame_cached(video_path, frame_index, source_language)
  *     if current_text is None:             # <<<<<<<<<<<<<<
@@ -15368,7 +15366,7 @@ static PyObject *__pyx_pf_22video_translate_cython_30is_text_same_nogil(CYTHON_U
 */
   }
 
-  /* "video_translate_cython.pyx":671
+  /* "video_translate_cython.pyx":672
  * 
  *     # Use the C-coded similarity which internally runs with nogil.
  *     similarity = py_c_text_similarity(reference_text, current_text)             # <<<<<<<<<<<<<<
@@ -15376,7 +15374,7 @@ static PyObject *__pyx_pf_22video_translate_cython_30is_text_same_nogil(CYTHON_U
  *     return (is_same, current_text, similarity)
 */
   __pyx_t_3 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_py_c_text_similarity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 671, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_py_c_text_similarity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 672, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -15395,26 +15393,26 @@ static PyObject *__pyx_pf_22video_translate_cython_30is_text_same_nogil(CYTHON_U
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+__pyx_t_4, (3-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 671, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 672, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
-  __pyx_t_6 = __Pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_6 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 671, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_6 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 672, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_similarity = __pyx_t_6;
 
-  /* "video_translate_cython.pyx":672
+  /* "video_translate_cython.pyx":673
  *     # Use the C-coded similarity which internally runs with nogil.
  *     similarity = py_c_text_similarity(reference_text, current_text)
  *     is_same = similarity >= similarity_threshold             # <<<<<<<<<<<<<<
  *     return (is_same, current_text, similarity)
  * 
 */
-  __pyx_t_1 = __Pyx_PyBool_FromLong((__pyx_v_similarity >= __pyx_v_similarity_threshold)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 672, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong((__pyx_v_similarity >= __pyx_v_similarity_threshold)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 673, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_is_same = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":673
+  /* "video_translate_cython.pyx":674
  *     similarity = py_c_text_similarity(reference_text, current_text)
  *     is_same = similarity >= similarity_threshold
  *     return (is_same, current_text, similarity)             # <<<<<<<<<<<<<<
@@ -15422,24 +15420,24 @@ static PyObject *__pyx_pf_22video_translate_cython_30is_text_same_nogil(CYTHON_U
  * # You can switch usages of is_text_same -> is_text_same_nogil where appropriate.
 */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_similarity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 673, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_similarity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 674, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 673, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 674, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_v_is_same);
   __Pyx_GIVEREF(__pyx_v_is_same);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_is_same) != (0)) __PYX_ERR(0, 673, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_is_same) != (0)) __PYX_ERR(0, 674, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_current_text);
   __Pyx_GIVEREF(__pyx_v_current_text);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_current_text) != (0)) __PYX_ERR(0, 673, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_current_text) != (0)) __PYX_ERR(0, 674, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_t_1) != (0)) __PYX_ERR(0, 673, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_t_1) != (0)) __PYX_ERR(0, 674, __pyx_L1_error);
   __pyx_t_1 = 0;
   __pyx_r = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":660
+  /* "video_translate_cython.pyx":661
  * # while still using the existing OCR and cache behavior.
  * 
  * @cython.locals(current_text=object, similarity=float)             # <<<<<<<<<<<<<<
@@ -15462,7 +15460,7 @@ static PyObject *__pyx_pf_22video_translate_cython_30is_text_same_nogil(CYTHON_U
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":687
+/* "video_translate_cython.pyx":688
  * 
  * 
  * def _ocr_worker(args_tuple):             # <<<<<<<<<<<<<<
@@ -15510,32 +15508,32 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_args_tuple,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 687, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 688, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 687, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 688, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "_ocr_worker", 0) < (0)) __PYX_ERR(0, 687, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "_ocr_worker", 0) < (0)) __PYX_ERR(0, 688, __pyx_L3_error)
       for (Py_ssize_t i = __pyx_nargs; i < 1; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("_ocr_worker", 1, 1, 1, i); __PYX_ERR(0, 687, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("_ocr_worker", 1, 1, 1, i); __PYX_ERR(0, 688, __pyx_L3_error) }
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 687, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 688, __pyx_L3_error)
     }
     __pyx_v_args_tuple = values[0];
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("_ocr_worker", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 687, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("_ocr_worker", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 688, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -15557,7 +15555,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 }
 static PyObject *__pyx_gb_22video_translate_cython_11_ocr_worker_2generator1(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "video_translate_cython.pyx":731
+/* "video_translate_cython.pyx":732
  *         from utils.ocr.ocr_utils import extract_lines_with_boxes
  *         lines = extract_lines_with_boxes(frame)
  *         text = ''.join(''.join(t.split()) for t, _ in lines)             # <<<<<<<<<<<<<<
@@ -15577,7 +15575,7 @@ static PyObject *__pyx_pf_22video_translate_cython_11_ocr_worker_genexpr(CYTHON_
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_22video_translate_cython___pyx_scope_struct_2_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 731, __pyx_L1_error)
+    __PYX_ERR(0, 732, __pyx_L1_error)
   } else {
     __Pyx_GOTREF((PyObject *)__pyx_cur_scope);
   }
@@ -15585,7 +15583,7 @@ static PyObject *__pyx_pf_22video_translate_cython_11_ocr_worker_genexpr(CYTHON_
   __Pyx_INCREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_22video_translate_cython_11_ocr_worker_2generator1, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[3]), (PyObject *) __pyx_cur_scope, __pyx_mstate_global->__pyx_n_u_genexpr, __pyx_mstate_global->__pyx_n_u_ocr_worker_locals_genexpr, __pyx_mstate_global->__pyx_n_u_video_translate_cython); if (unlikely(!gen)) __PYX_ERR(0, 731, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_22video_translate_cython_11_ocr_worker_2generator1, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[3]), (PyObject *) __pyx_cur_scope, __pyx_mstate_global->__pyx_n_u_genexpr, __pyx_mstate_global->__pyx_n_u_ocr_worker_locals_genexpr, __pyx_mstate_global->__pyx_n_u_video_translate_cython); if (unlikely(!gen)) __PYX_ERR(0, 732, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -15626,18 +15624,18 @@ static PyObject *__pyx_gb_22video_translate_cython_11_ocr_worker_2generator1(__p
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 731, __pyx_L1_error)
-  __pyx_r = PyList_New(0); if (unlikely(!__pyx_r)) __PYX_ERR(0, 731, __pyx_L1_error)
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 732, __pyx_L1_error)
+  __pyx_r = PyList_New(0); if (unlikely(!__pyx_r)) __PYX_ERR(0, 732, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_r);
-  if (unlikely(!__pyx_cur_scope->__pyx_genexpr_arg_0)) { __Pyx_RaiseUnboundLocalError(".0"); __PYX_ERR(0, 731, __pyx_L1_error) }
+  if (unlikely(!__pyx_cur_scope->__pyx_genexpr_arg_0)) { __Pyx_RaiseUnboundLocalError(".0"); __PYX_ERR(0, 732, __pyx_L1_error) }
   if (likely(PyList_CheckExact(__pyx_cur_scope->__pyx_genexpr_arg_0)) || PyTuple_CheckExact(__pyx_cur_scope->__pyx_genexpr_arg_0)) {
     __pyx_t_1 = __pyx_cur_scope->__pyx_genexpr_arg_0; __Pyx_INCREF(__pyx_t_1);
     __pyx_t_2 = 0;
     __pyx_t_3 = NULL;
   } else {
-    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_genexpr_arg_0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 731, __pyx_L1_error)
+    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_genexpr_arg_0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 732, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 731, __pyx_L1_error)
+    __pyx_t_3 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 732, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_3)) {
@@ -15645,7 +15643,7 @@ static PyObject *__pyx_gb_22video_translate_cython_11_ocr_worker_2generator1(__p
         {
           Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
           #if !CYTHON_ASSUME_SAFE_SIZE
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 731, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 732, __pyx_L1_error)
           #endif
           if (__pyx_t_2 >= __pyx_temp) break;
         }
@@ -15655,7 +15653,7 @@ static PyObject *__pyx_gb_22video_translate_cython_11_ocr_worker_2generator1(__p
         {
           Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_1);
           #if !CYTHON_ASSUME_SAFE_SIZE
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 731, __pyx_L1_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 732, __pyx_L1_error)
           #endif
           if (__pyx_t_2 >= __pyx_temp) break;
         }
@@ -15666,13 +15664,13 @@ static PyObject *__pyx_gb_22video_translate_cython_11_ocr_worker_2generator1(__p
         #endif
         ++__pyx_t_2;
       }
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 731, __pyx_L1_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 732, __pyx_L1_error)
     } else {
       __pyx_t_4 = __pyx_t_3(__pyx_t_1);
       if (unlikely(!__pyx_t_4)) {
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
-          if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 731, __pyx_L1_error)
+          if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 732, __pyx_L1_error)
           PyErr_Clear();
         }
         break;
@@ -15685,7 +15683,7 @@ static PyObject *__pyx_gb_22video_translate_cython_11_ocr_worker_2generator1(__p
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 731, __pyx_L1_error)
+        __PYX_ERR(0, 732, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -15695,22 +15693,22 @@ static PyObject *__pyx_gb_22video_translate_cython_11_ocr_worker_2generator1(__p
         __Pyx_INCREF(__pyx_t_6);
       } else {
         __pyx_t_5 = __Pyx_PyList_GetItemRef(sequence, 0);
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 731, __pyx_L1_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 732, __pyx_L1_error)
         __Pyx_XGOTREF(__pyx_t_5);
         __pyx_t_6 = __Pyx_PyList_GetItemRef(sequence, 1);
-        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 731, __pyx_L1_error)
+        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 732, __pyx_L1_error)
         __Pyx_XGOTREF(__pyx_t_6);
       }
       #else
-      __pyx_t_5 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 731, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 732, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_6 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 731, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 732, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       #endif
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_7 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 731, __pyx_L1_error)
+      __pyx_t_7 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 732, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_8 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_7);
@@ -15718,7 +15716,7 @@ static PyObject *__pyx_gb_22video_translate_cython_11_ocr_worker_2generator1(__p
       __Pyx_GOTREF(__pyx_t_5);
       index = 1; __pyx_t_6 = __pyx_t_8(__pyx_t_7); if (unlikely(!__pyx_t_6)) goto __pyx_L6_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_6);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_8(__pyx_t_7), 2) < (0)) __PYX_ERR(0, 731, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_8(__pyx_t_7), 2) < (0)) __PYX_ERR(0, 732, __pyx_L1_error)
       __pyx_t_8 = NULL;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       goto __pyx_L7_unpacking_done;
@@ -15726,7 +15724,7 @@ static PyObject *__pyx_gb_22video_translate_cython_11_ocr_worker_2generator1(__p
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_8 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 731, __pyx_L1_error)
+      __PYX_ERR(0, 732, __pyx_L1_error)
       __pyx_L7_unpacking_done:;
     }
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_t);
@@ -15744,13 +15742,13 @@ static PyObject *__pyx_gb_22video_translate_cython_11_ocr_worker_2generator1(__p
       PyObject *__pyx_callargs[2] = {__pyx_t_6, NULL};
       __pyx_t_4 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_split, __pyx_callargs+__pyx_t_9, (1-__pyx_t_9) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 731, __pyx_L1_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 732, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
     }
-    __pyx_t_6 = PyUnicode_Join(__pyx_mstate_global->__pyx_kp_u__2, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 731, __pyx_L1_error)
+    __pyx_t_6 = PyUnicode_Join(__pyx_mstate_global->__pyx_kp_u__2, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 732, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(__Pyx_ListComp_Append(__pyx_r, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 731, __pyx_L1_error)
+    if (unlikely(__Pyx_ListComp_Append(__pyx_r, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 732, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -15780,7 +15778,7 @@ static PyObject *__pyx_gb_22video_translate_cython_11_ocr_worker_2generator1(__p
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":687
+/* "video_translate_cython.pyx":688
  * 
  * 
  * def _ocr_worker(args_tuple):             # <<<<<<<<<<<<<<
@@ -15835,7 +15833,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_ocr_worker", 0);
 
-  /* "video_translate_cython.pyx":693
+  /* "video_translate_cython.pyx":694
  *     Uses serialized frame reading to prevent decoder contention.
  *     """
  *     video_path, frame_index, source_language = args_tuple             # <<<<<<<<<<<<<<
@@ -15848,7 +15846,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
     if (unlikely(size != 3)) {
       if (size > 3) __Pyx_RaiseTooManyValuesError(3);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      __PYX_ERR(0, 693, __pyx_L1_error)
+      __PYX_ERR(0, 694, __pyx_L1_error)
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -15860,26 +15858,26 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
       __Pyx_INCREF(__pyx_t_3);
     } else {
       __pyx_t_1 = __Pyx_PyList_GetItemRef(sequence, 0);
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 693, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 694, __pyx_L1_error)
       __Pyx_XGOTREF(__pyx_t_1);
       __pyx_t_2 = __Pyx_PyList_GetItemRef(sequence, 1);
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 693, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 694, __pyx_L1_error)
       __Pyx_XGOTREF(__pyx_t_2);
       __pyx_t_3 = __Pyx_PyList_GetItemRef(sequence, 2);
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 693, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 694, __pyx_L1_error)
       __Pyx_XGOTREF(__pyx_t_3);
     }
     #else
-    __pyx_t_1 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 693, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 694, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 693, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 694, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 693, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 694, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
   } else {
     Py_ssize_t index = -1;
-    __pyx_t_4 = PyObject_GetIter(__pyx_v_args_tuple); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 693, __pyx_L1_error)
+    __pyx_t_4 = PyObject_GetIter(__pyx_v_args_tuple); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 694, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_4);
     index = 0; __pyx_t_1 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_1)) goto __pyx_L3_unpacking_failed;
@@ -15888,7 +15886,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
     __Pyx_GOTREF(__pyx_t_2);
     index = 2; __pyx_t_3 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_3)) goto __pyx_L3_unpacking_failed;
     __Pyx_GOTREF(__pyx_t_3);
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 3) < (0)) __PYX_ERR(0, 693, __pyx_L1_error)
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 3) < (0)) __PYX_ERR(0, 694, __pyx_L1_error)
     __pyx_t_5 = NULL;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     goto __pyx_L4_unpacking_done;
@@ -15896,7 +15894,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    __PYX_ERR(0, 693, __pyx_L1_error)
+    __PYX_ERR(0, 694, __pyx_L1_error)
     __pyx_L4_unpacking_done:;
   }
   __pyx_v_video_path = __pyx_t_1;
@@ -15906,19 +15904,19 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
   __pyx_v_source_language = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":694
+  /* "video_translate_cython.pyx":695
  *     """
  *     video_path, frame_index, source_language = args_tuple
  *     import time             # <<<<<<<<<<<<<<
  * 
  *     try:
 */
-  __pyx_t_3 = __Pyx_ImportDottedModule(__pyx_mstate_global->__pyx_n_u_time, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 694, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_ImportDottedModule(__pyx_mstate_global->__pyx_n_u_time, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 695, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_time = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":696
+  /* "video_translate_cython.pyx":697
  *     import time
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -15934,7 +15932,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
     __Pyx_XGOTREF(__pyx_t_8);
     /*try:*/ {
 
-      /* "video_translate_cython.pyx":698
+      /* "video_translate_cython.pyx":699
  *     try:
  *         # Initialize lock in this worker process
  *         lock = _get_frame_read_lock()             # <<<<<<<<<<<<<<
@@ -15942,7 +15940,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
  *         # Local import to reduce child process startup cost at module import time
 */
       __pyx_t_2 = NULL;
-      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_get_frame_read_lock); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 698, __pyx_L5_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_get_frame_read_lock); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 699, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_9 = 1;
       #if CYTHON_UNPACK_METHODS
@@ -15961,35 +15959,35 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
         __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+__pyx_t_9, (1-__pyx_t_9) | (__pyx_t_9*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
         __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 698, __pyx_L5_error)
+        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 699, __pyx_L5_error)
         __Pyx_GOTREF(__pyx_t_3);
       }
       __pyx_v_lock = __pyx_t_3;
       __pyx_t_3 = 0;
 
-      /* "video_translate_cython.pyx":701
+      /* "video_translate_cython.pyx":702
  * 
  *         # Local import to reduce child process startup cost at module import time
  *         from utils.vision import get_frame_at_index             # <<<<<<<<<<<<<<
  * 
  *         # Retry frame reading with serialized access to handle decoder errors
 */
-      __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 701, __pyx_L5_error)
+      __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 702, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_mstate_global->__pyx_n_u_get_frame_at_index);
       __Pyx_GIVEREF(__pyx_mstate_global->__pyx_n_u_get_frame_at_index);
-      if (__Pyx_PyList_SET_ITEM(__pyx_t_3, 0, __pyx_mstate_global->__pyx_n_u_get_frame_at_index) != (0)) __PYX_ERR(0, 701, __pyx_L5_error);
-      __pyx_t_1 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_vision, __pyx_t_3, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 701, __pyx_L5_error)
+      if (__Pyx_PyList_SET_ITEM(__pyx_t_3, 0, __pyx_mstate_global->__pyx_n_u_get_frame_at_index) != (0)) __PYX_ERR(0, 702, __pyx_L5_error);
+      __pyx_t_1 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_vision, __pyx_t_3, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 702, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 701, __pyx_L5_error)
+      __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 702, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_3);
       __pyx_v_get_frame_at_index = __pyx_t_3;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "video_translate_cython.pyx":704
+      /* "video_translate_cython.pyx":705
  * 
  *         # Retry frame reading with serialized access to handle decoder errors
  *         frame = None             # <<<<<<<<<<<<<<
@@ -15999,7 +15997,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
       __Pyx_INCREF(Py_None);
       __pyx_v_frame = Py_None;
 
-      /* "video_translate_cython.pyx":705
+      /* "video_translate_cython.pyx":706
  *         # Retry frame reading with serialized access to handle decoder errors
  *         frame = None
  *         for attempt in range(3):             # <<<<<<<<<<<<<<
@@ -16007,12 +16005,12 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
  *                 # Use lock to serialize VideoCapture operations if available
 */
       for (__pyx_t_10 = 0; __pyx_t_10 < 3; __pyx_t_10+=1) {
-        __pyx_t_1 = PyLong_FromSsize_t(__pyx_t_10); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 705, __pyx_L5_error)
+        __pyx_t_1 = PyLong_FromSsize_t(__pyx_t_10); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 706, __pyx_L5_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_XDECREF_SET(__pyx_v_attempt, __pyx_t_1);
         __pyx_t_1 = 0;
 
-        /* "video_translate_cython.pyx":706
+        /* "video_translate_cython.pyx":707
  *         frame = None
  *         for attempt in range(3):
  *             try:             # <<<<<<<<<<<<<<
@@ -16028,7 +16026,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
           __Pyx_XGOTREF(__pyx_t_13);
           /*try:*/ {
 
-            /* "video_translate_cython.pyx":708
+            /* "video_translate_cython.pyx":709
  *             try:
  *                 # Use lock to serialize VideoCapture operations if available
  *                 if lock is not None:             # <<<<<<<<<<<<<<
@@ -16038,7 +16036,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
             __pyx_t_14 = (__pyx_v_lock != Py_None);
             if (__pyx_t_14) {
 
-              /* "video_translate_cython.pyx":709
+              /* "video_translate_cython.pyx":710
  *                 # Use lock to serialize VideoCapture operations if available
  *                 if lock is not None:
  *                     with lock:             # <<<<<<<<<<<<<<
@@ -16046,10 +16044,10 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
  *                 else:
 */
               /*with:*/ {
-                __pyx_t_15 = __Pyx_PyObject_LookupSpecial(__pyx_v_lock, __pyx_mstate_global->__pyx_n_u_exit); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 709, __pyx_L13_error)
+                __pyx_t_15 = __Pyx_PyObject_LookupSpecial(__pyx_v_lock, __pyx_mstate_global->__pyx_n_u_exit); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 710, __pyx_L13_error)
                 __Pyx_GOTREF(__pyx_t_15);
                 __pyx_t_3 = NULL;
-                __pyx_t_2 = __Pyx_PyObject_LookupSpecial(__pyx_v_lock, __pyx_mstate_global->__pyx_n_u_enter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 709, __pyx_L22_error)
+                __pyx_t_2 = __Pyx_PyObject_LookupSpecial(__pyx_v_lock, __pyx_mstate_global->__pyx_n_u_enter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 710, __pyx_L22_error)
                 __Pyx_GOTREF(__pyx_t_2);
                 __pyx_t_9 = 1;
                 #if CYTHON_UNPACK_METHODS
@@ -16068,7 +16066,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
                   __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+__pyx_t_9, (1-__pyx_t_9) | (__pyx_t_9*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
                   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
                   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-                  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 709, __pyx_L22_error)
+                  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 710, __pyx_L22_error)
                   __Pyx_GOTREF(__pyx_t_1);
                 }
                 __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -16082,7 +16080,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
                     __Pyx_XGOTREF(__pyx_t_18);
                     /*try:*/ {
 
-                      /* "video_translate_cython.pyx":710
+                      /* "video_translate_cython.pyx":711
  *                 if lock is not None:
  *                     with lock:
  *                         frame = get_frame_at_index(video_path, frame_index)             # <<<<<<<<<<<<<<
@@ -16109,13 +16107,13 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
                         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_9, (3-__pyx_t_9) | (__pyx_t_9*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
                         __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
                         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-                        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 710, __pyx_L28_error)
+                        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 711, __pyx_L28_error)
                         __Pyx_GOTREF(__pyx_t_1);
                       }
                       __Pyx_DECREF_SET(__pyx_v_frame, __pyx_t_1);
                       __pyx_t_1 = 0;
 
-                      /* "video_translate_cython.pyx":709
+                      /* "video_translate_cython.pyx":710
  *                 # Use lock to serialize VideoCapture operations if available
  *                 if lock is not None:
  *                     with lock:             # <<<<<<<<<<<<<<
@@ -16134,20 +16132,20 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
                     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
                     /*except:*/ {
                       __Pyx_AddTraceback("video_translate_cython._ocr_worker", __pyx_clineno, __pyx_lineno, __pyx_filename);
-                      if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_3, &__pyx_t_2) < 0) __PYX_ERR(0, 709, __pyx_L30_except_error)
+                      if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_3, &__pyx_t_2) < 0) __PYX_ERR(0, 710, __pyx_L30_except_error)
                       __Pyx_XGOTREF(__pyx_t_1);
                       __Pyx_XGOTREF(__pyx_t_3);
                       __Pyx_XGOTREF(__pyx_t_2);
-                      __pyx_t_4 = PyTuple_Pack(3, __pyx_t_1, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 709, __pyx_L30_except_error)
+                      __pyx_t_4 = PyTuple_Pack(3, __pyx_t_1, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 710, __pyx_L30_except_error)
                       __Pyx_GOTREF(__pyx_t_4);
                       __pyx_t_19 = __Pyx_PyObject_Call(__pyx_t_15, __pyx_t_4, NULL);
                       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
                       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-                      if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 709, __pyx_L30_except_error)
+                      if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 710, __pyx_L30_except_error)
                       __Pyx_GOTREF(__pyx_t_19);
                       __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_19);
                       __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
-                      if (__pyx_t_14 < (0)) __PYX_ERR(0, 709, __pyx_L30_except_error)
+                      if (__pyx_t_14 < (0)) __PYX_ERR(0, 710, __pyx_L30_except_error)
                       __pyx_t_20 = (!__pyx_t_14);
                       if (unlikely(__pyx_t_20)) {
                         __Pyx_GIVEREF(__pyx_t_1);
@@ -16155,7 +16153,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
                         __Pyx_XGIVEREF(__pyx_t_2);
                         __Pyx_ErrRestoreWithState(__pyx_t_1, __pyx_t_3, __pyx_t_2);
                         __pyx_t_1 = 0;  __pyx_t_3 = 0;  __pyx_t_2 = 0; 
-                        __PYX_ERR(0, 709, __pyx_L30_except_error)
+                        __PYX_ERR(0, 710, __pyx_L30_except_error)
                       }
                       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
                       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -16181,7 +16179,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
                     if (__pyx_t_15) {
                       __pyx_t_18 = __Pyx_PyObject_Call(__pyx_t_15, __pyx_mstate_global->__pyx_tuple[0], NULL);
                       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-                      if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 709, __pyx_L13_error)
+                      if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 710, __pyx_L13_error)
                       __Pyx_GOTREF(__pyx_t_18);
                       __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
                     }
@@ -16196,7 +16194,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
                 __pyx_L39:;
               }
 
-              /* "video_translate_cython.pyx":708
+              /* "video_translate_cython.pyx":709
  *             try:
  *                 # Use lock to serialize VideoCapture operations if available
  *                 if lock is not None:             # <<<<<<<<<<<<<<
@@ -16206,7 +16204,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
               goto __pyx_L21;
             }
 
-            /* "video_translate_cython.pyx":712
+            /* "video_translate_cython.pyx":713
  *                         frame = get_frame_at_index(video_path, frame_index)
  *                 else:
  *                     frame = get_frame_at_index(video_path, frame_index)             # <<<<<<<<<<<<<<
@@ -16234,7 +16232,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
                 __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+__pyx_t_9, (3-__pyx_t_9) | (__pyx_t_9*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
                 __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
                 __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-                if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 712, __pyx_L13_error)
+                if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 713, __pyx_L13_error)
                 __Pyx_GOTREF(__pyx_t_2);
               }
               __Pyx_DECREF_SET(__pyx_v_frame, __pyx_t_2);
@@ -16242,7 +16240,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
             }
             __pyx_L21:;
 
-            /* "video_translate_cython.pyx":713
+            /* "video_translate_cython.pyx":714
  *                 else:
  *                     frame = get_frame_at_index(video_path, frame_index)
  *                 if frame is not None:             # <<<<<<<<<<<<<<
@@ -16252,7 +16250,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
             __pyx_t_20 = (__pyx_v_frame != Py_None);
             if (__pyx_t_20) {
 
-              /* "video_translate_cython.pyx":714
+              /* "video_translate_cython.pyx":715
  *                     frame = get_frame_at_index(video_path, frame_index)
  *                 if frame is not None:
  *                     break             # <<<<<<<<<<<<<<
@@ -16261,7 +16259,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
 */
               goto __pyx_L18_try_break;
 
-              /* "video_translate_cython.pyx":713
+              /* "video_translate_cython.pyx":714
  *                 else:
  *                     frame = get_frame_at_index(video_path, frame_index)
  *                 if frame is not None:             # <<<<<<<<<<<<<<
@@ -16270,7 +16268,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
 */
             }
 
-            /* "video_translate_cython.pyx":706
+            /* "video_translate_cython.pyx":707
  *         frame = None
  *         for attempt in range(3):
  *             try:             # <<<<<<<<<<<<<<
@@ -16288,7 +16286,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
           __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-          /* "video_translate_cython.pyx":715
+          /* "video_translate_cython.pyx":716
  *                 if frame is not None:
  *                     break
  *             except (MemoryError, OSError, RuntimeError):             # <<<<<<<<<<<<<<
@@ -16298,24 +16296,24 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
           __pyx_t_21 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_MemoryError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_OSError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_RuntimeError);
           if (__pyx_t_21) {
             __Pyx_AddTraceback("video_translate_cython._ocr_worker", __pyx_clineno, __pyx_lineno, __pyx_filename);
-            if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_1, &__pyx_t_3) < 0) __PYX_ERR(0, 715, __pyx_L15_except_error)
+            if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_1, &__pyx_t_3) < 0) __PYX_ERR(0, 716, __pyx_L15_except_error)
             __Pyx_XGOTREF(__pyx_t_2);
             __Pyx_XGOTREF(__pyx_t_1);
             __Pyx_XGOTREF(__pyx_t_3);
 
-            /* "video_translate_cython.pyx":717
+            /* "video_translate_cython.pyx":718
  *             except (MemoryError, OSError, RuntimeError):
  *                 # Memory/decoder errors - wait longer
  *                 if attempt < 2:             # <<<<<<<<<<<<<<
  *                     time.sleep(0.5 * (attempt + 1))
  *                 continue
 */
-            __pyx_t_4 = PyObject_RichCompare(__pyx_v_attempt, __pyx_mstate_global->__pyx_int_2, Py_LT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 717, __pyx_L15_except_error)
-            __pyx_t_20 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_20 < 0))) __PYX_ERR(0, 717, __pyx_L15_except_error)
+            __pyx_t_4 = PyObject_RichCompare(__pyx_v_attempt, __pyx_mstate_global->__pyx_int_2, Py_LT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 718, __pyx_L15_except_error)
+            __pyx_t_20 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_20 < 0))) __PYX_ERR(0, 718, __pyx_L15_except_error)
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
             if (__pyx_t_20) {
 
-              /* "video_translate_cython.pyx":718
+              /* "video_translate_cython.pyx":719
  *                 # Memory/decoder errors - wait longer
  *                 if attempt < 2:
  *                     time.sleep(0.5 * (attempt + 1))             # <<<<<<<<<<<<<<
@@ -16324,9 +16322,9 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
 */
               __pyx_t_22 = __pyx_v_time;
               __Pyx_INCREF(__pyx_t_22);
-              __pyx_t_23 = __Pyx_PyLong_AddObjC(__pyx_v_attempt, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_23)) __PYX_ERR(0, 718, __pyx_L15_except_error)
+              __pyx_t_23 = __Pyx_PyLong_AddObjC(__pyx_v_attempt, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_23)) __PYX_ERR(0, 719, __pyx_L15_except_error)
               __Pyx_GOTREF(__pyx_t_23);
-              __pyx_t_24 = PyNumber_Multiply(__pyx_mstate_global->__pyx_float_0_5, __pyx_t_23); if (unlikely(!__pyx_t_24)) __PYX_ERR(0, 718, __pyx_L15_except_error)
+              __pyx_t_24 = PyNumber_Multiply(__pyx_mstate_global->__pyx_float_0_5, __pyx_t_23); if (unlikely(!__pyx_t_24)) __PYX_ERR(0, 719, __pyx_L15_except_error)
               __Pyx_GOTREF(__pyx_t_24);
               __Pyx_DECREF(__pyx_t_23); __pyx_t_23 = 0;
               __pyx_t_9 = 0;
@@ -16335,12 +16333,12 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
                 __pyx_t_4 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_sleep, __pyx_callargs+__pyx_t_9, (2-__pyx_t_9) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
                 __Pyx_XDECREF(__pyx_t_22); __pyx_t_22 = 0;
                 __Pyx_DECREF(__pyx_t_24); __pyx_t_24 = 0;
-                if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 718, __pyx_L15_except_error)
+                if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 719, __pyx_L15_except_error)
                 __Pyx_GOTREF(__pyx_t_4);
               }
               __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-              /* "video_translate_cython.pyx":717
+              /* "video_translate_cython.pyx":718
  *             except (MemoryError, OSError, RuntimeError):
  *                 # Memory/decoder errors - wait longer
  *                 if attempt < 2:             # <<<<<<<<<<<<<<
@@ -16349,7 +16347,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
 */
             }
 
-            /* "video_translate_cython.pyx":719
+            /* "video_translate_cython.pyx":720
  *                 if attempt < 2:
  *                     time.sleep(0.5 * (attempt + 1))
  *                 continue             # <<<<<<<<<<<<<<
@@ -16364,7 +16362,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
             goto __pyx_L19_try_continue;
           }
 
-          /* "video_translate_cython.pyx":720
+          /* "video_translate_cython.pyx":721
  *                     time.sleep(0.5 * (attempt + 1))
  *                 continue
  *             except Exception:             # <<<<<<<<<<<<<<
@@ -16374,24 +16372,24 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
           __pyx_t_21 = __Pyx_PyErr_ExceptionMatches(((PyObject *)(((PyTypeObject*)PyExc_Exception))));
           if (__pyx_t_21) {
             __Pyx_AddTraceback("video_translate_cython._ocr_worker", __pyx_clineno, __pyx_lineno, __pyx_filename);
-            if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_2) < 0) __PYX_ERR(0, 720, __pyx_L15_except_error)
+            if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_2) < 0) __PYX_ERR(0, 721, __pyx_L15_except_error)
             __Pyx_XGOTREF(__pyx_t_3);
             __Pyx_XGOTREF(__pyx_t_1);
             __Pyx_XGOTREF(__pyx_t_2);
 
-            /* "video_translate_cython.pyx":721
+            /* "video_translate_cython.pyx":722
  *                 continue
  *             except Exception:
  *                 if attempt < 2:             # <<<<<<<<<<<<<<
  *                     time.sleep(0.2 * (attempt + 1))
  *                 continue
 */
-            __pyx_t_4 = PyObject_RichCompare(__pyx_v_attempt, __pyx_mstate_global->__pyx_int_2, Py_LT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 721, __pyx_L15_except_error)
-            __pyx_t_20 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_20 < 0))) __PYX_ERR(0, 721, __pyx_L15_except_error)
+            __pyx_t_4 = PyObject_RichCompare(__pyx_v_attempt, __pyx_mstate_global->__pyx_int_2, Py_LT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 722, __pyx_L15_except_error)
+            __pyx_t_20 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_20 < 0))) __PYX_ERR(0, 722, __pyx_L15_except_error)
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
             if (__pyx_t_20) {
 
-              /* "video_translate_cython.pyx":722
+              /* "video_translate_cython.pyx":723
  *             except Exception:
  *                 if attempt < 2:
  *                     time.sleep(0.2 * (attempt + 1))             # <<<<<<<<<<<<<<
@@ -16400,9 +16398,9 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
 */
               __pyx_t_24 = __pyx_v_time;
               __Pyx_INCREF(__pyx_t_24);
-              __pyx_t_22 = __Pyx_PyLong_AddObjC(__pyx_v_attempt, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 722, __pyx_L15_except_error)
+              __pyx_t_22 = __Pyx_PyLong_AddObjC(__pyx_v_attempt, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 723, __pyx_L15_except_error)
               __Pyx_GOTREF(__pyx_t_22);
-              __pyx_t_23 = PyNumber_Multiply(__pyx_mstate_global->__pyx_float_0_2, __pyx_t_22); if (unlikely(!__pyx_t_23)) __PYX_ERR(0, 722, __pyx_L15_except_error)
+              __pyx_t_23 = PyNumber_Multiply(__pyx_mstate_global->__pyx_float_0_2, __pyx_t_22); if (unlikely(!__pyx_t_23)) __PYX_ERR(0, 723, __pyx_L15_except_error)
               __Pyx_GOTREF(__pyx_t_23);
               __Pyx_DECREF(__pyx_t_22); __pyx_t_22 = 0;
               __pyx_t_9 = 0;
@@ -16411,12 +16409,12 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
                 __pyx_t_4 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_sleep, __pyx_callargs+__pyx_t_9, (2-__pyx_t_9) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
                 __Pyx_XDECREF(__pyx_t_24); __pyx_t_24 = 0;
                 __Pyx_DECREF(__pyx_t_23); __pyx_t_23 = 0;
-                if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 722, __pyx_L15_except_error)
+                if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 723, __pyx_L15_except_error)
                 __Pyx_GOTREF(__pyx_t_4);
               }
               __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-              /* "video_translate_cython.pyx":721
+              /* "video_translate_cython.pyx":722
  *                 continue
  *             except Exception:
  *                 if attempt < 2:             # <<<<<<<<<<<<<<
@@ -16425,7 +16423,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
 */
             }
 
-            /* "video_translate_cython.pyx":723
+            /* "video_translate_cython.pyx":724
  *                 if attempt < 2:
  *                     time.sleep(0.2 * (attempt + 1))
  *                 continue             # <<<<<<<<<<<<<<
@@ -16441,7 +16439,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
           }
           goto __pyx_L15_except_error;
 
-          /* "video_translate_cython.pyx":706
+          /* "video_translate_cython.pyx":707
  *         frame = None
  *         for attempt in range(3):
  *             try:             # <<<<<<<<<<<<<<
@@ -16472,7 +16470,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
       }
       __pyx_L12_break:;
 
-      /* "video_translate_cython.pyx":725
+      /* "video_translate_cython.pyx":726
  *                 continue
  * 
  *         if frame is None:             # <<<<<<<<<<<<<<
@@ -16482,7 +16480,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
       __pyx_t_20 = (__pyx_v_frame == Py_None);
       if (__pyx_t_20) {
 
-        /* "video_translate_cython.pyx":726
+        /* "video_translate_cython.pyx":727
  * 
  *         if frame is None:
  *             return (frame_index, "")             # <<<<<<<<<<<<<<
@@ -16490,19 +16488,19 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
  *         # Lazy load OCR to avoid importing at module level
 */
         __Pyx_XDECREF(__pyx_r);
-        __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 726, __pyx_L5_error)
+        __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 727, __pyx_L5_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_INCREF(__pyx_v_frame_index);
         __Pyx_GIVEREF(__pyx_v_frame_index);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_frame_index) != (0)) __PYX_ERR(0, 726, __pyx_L5_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_frame_index) != (0)) __PYX_ERR(0, 727, __pyx_L5_error);
         __Pyx_INCREF(__pyx_mstate_global->__pyx_kp_u__2);
         __Pyx_GIVEREF(__pyx_mstate_global->__pyx_kp_u__2);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_mstate_global->__pyx_kp_u__2) != (0)) __PYX_ERR(0, 726, __pyx_L5_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_mstate_global->__pyx_kp_u__2) != (0)) __PYX_ERR(0, 727, __pyx_L5_error);
         __pyx_r = __pyx_t_2;
         __pyx_t_2 = 0;
         goto __pyx_L9_try_return;
 
-        /* "video_translate_cython.pyx":725
+        /* "video_translate_cython.pyx":726
  *                 continue
  * 
  *         if frame is None:             # <<<<<<<<<<<<<<
@@ -16511,29 +16509,29 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
 */
       }
 
-      /* "video_translate_cython.pyx":729
+      /* "video_translate_cython.pyx":730
  * 
  *         # Lazy load OCR to avoid importing at module level
  *         from utils.ocr.ocr_utils import extract_lines_with_boxes             # <<<<<<<<<<<<<<
  *         lines = extract_lines_with_boxes(frame)
  *         text = ''.join(''.join(t.split()) for t, _ in lines)
 */
-      __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 729, __pyx_L5_error)
+      __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 730, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_INCREF(__pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes_2);
       __Pyx_GIVEREF(__pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes_2);
-      if (__Pyx_PyList_SET_ITEM(__pyx_t_2, 0, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes_2) != (0)) __PYX_ERR(0, 729, __pyx_L5_error);
-      __pyx_t_1 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_ocr_ocr_utils, __pyx_t_2, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 729, __pyx_L5_error)
+      if (__Pyx_PyList_SET_ITEM(__pyx_t_2, 0, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes_2) != (0)) __PYX_ERR(0, 730, __pyx_L5_error);
+      __pyx_t_1 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_ocr_ocr_utils, __pyx_t_2, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 730, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 729, __pyx_L5_error)
+      __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 730, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_INCREF(__pyx_t_2);
       __pyx_v_extract_lines_with_boxes = __pyx_t_2;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "video_translate_cython.pyx":730
+      /* "video_translate_cython.pyx":731
  *         # Lazy load OCR to avoid importing at module level
  *         from utils.ocr.ocr_utils import extract_lines_with_boxes
  *         lines = extract_lines_with_boxes(frame)             # <<<<<<<<<<<<<<
@@ -16560,31 +16558,31 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_9, (2-__pyx_t_9) | (__pyx_t_9*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
         __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 730, __pyx_L5_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 731, __pyx_L5_error)
         __Pyx_GOTREF(__pyx_t_1);
       }
       __pyx_v_lines = __pyx_t_1;
       __pyx_t_1 = 0;
 
-      /* "video_translate_cython.pyx":731
+      /* "video_translate_cython.pyx":732
  *         from utils.ocr.ocr_utils import extract_lines_with_boxes
  *         lines = extract_lines_with_boxes(frame)
  *         text = ''.join(''.join(t.split()) for t, _ in lines)             # <<<<<<<<<<<<<<
  *         return (frame_index, text)
  *     except (MemoryError, OSError, RuntimeError) as e:
 */
-      __pyx_t_1 = __pyx_pf_22video_translate_cython_11_ocr_worker_genexpr(NULL, __pyx_v_lines); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 731, __pyx_L5_error)
+      __pyx_t_1 = __pyx_pf_22video_translate_cython_11_ocr_worker_genexpr(NULL, __pyx_v_lines); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 732, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_3 = __Pyx_Generator_GetInlinedResult(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 731, __pyx_L5_error)
+      __pyx_t_3 = __Pyx_Generator_GetInlinedResult(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 732, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyUnicode_Join(__pyx_mstate_global->__pyx_kp_u__2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 731, __pyx_L5_error)
+      __pyx_t_1 = PyUnicode_Join(__pyx_mstate_global->__pyx_kp_u__2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 732, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_v_text = ((PyObject*)__pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "video_translate_cython.pyx":732
+      /* "video_translate_cython.pyx":733
  *         lines = extract_lines_with_boxes(frame)
  *         text = ''.join(''.join(t.split()) for t, _ in lines)
  *         return (frame_index, text)             # <<<<<<<<<<<<<<
@@ -16592,19 +16590,19 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
  *         # Worker crashed due to memory/decoder error
 */
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 732, __pyx_L5_error)
+      __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 733, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_INCREF(__pyx_v_frame_index);
       __Pyx_GIVEREF(__pyx_v_frame_index);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_frame_index) != (0)) __PYX_ERR(0, 732, __pyx_L5_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_frame_index) != (0)) __PYX_ERR(0, 733, __pyx_L5_error);
       __Pyx_INCREF(__pyx_v_text);
       __Pyx_GIVEREF(__pyx_v_text);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_text) != (0)) __PYX_ERR(0, 732, __pyx_L5_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_text) != (0)) __PYX_ERR(0, 733, __pyx_L5_error);
       __pyx_r = __pyx_t_1;
       __pyx_t_1 = 0;
       goto __pyx_L9_try_return;
 
-      /* "video_translate_cython.pyx":696
+      /* "video_translate_cython.pyx":697
  *     import time
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -16621,7 +16619,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "video_translate_cython.pyx":733
+    /* "video_translate_cython.pyx":734
  *         text = ''.join(''.join(t.split()) for t, _ in lines)
  *         return (frame_index, text)
  *     except (MemoryError, OSError, RuntimeError) as e:             # <<<<<<<<<<<<<<
@@ -16631,7 +16629,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
     __pyx_t_21 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_MemoryError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_OSError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_RuntimeError);
     if (__pyx_t_21) {
       __Pyx_AddTraceback("video_translate_cython._ocr_worker", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_3, &__pyx_t_2) < 0) __PYX_ERR(0, 733, __pyx_L7_except_error)
+      if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_3, &__pyx_t_2) < 0) __PYX_ERR(0, 734, __pyx_L7_except_error)
       __Pyx_XGOTREF(__pyx_t_1);
       __Pyx_XGOTREF(__pyx_t_3);
       __Pyx_XGOTREF(__pyx_t_2);
@@ -16639,7 +16637,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
       __pyx_v_e = __pyx_t_3;
       /*try:*/ {
 
-        /* "video_translate_cython.pyx":735
+        /* "video_translate_cython.pyx":736
  *     except (MemoryError, OSError, RuntimeError) as e:
  *         # Worker crashed due to memory/decoder error
  *         return (frame_index, "")             # <<<<<<<<<<<<<<
@@ -16647,14 +16645,14 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
  *         # Other errors
 */
         __Pyx_XDECREF(__pyx_r);
-        __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 735, __pyx_L53_error)
+        __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 736, __pyx_L53_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_INCREF(__pyx_v_frame_index);
         __Pyx_GIVEREF(__pyx_v_frame_index);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_frame_index) != (0)) __PYX_ERR(0, 735, __pyx_L53_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_frame_index) != (0)) __PYX_ERR(0, 736, __pyx_L53_error);
         __Pyx_INCREF(__pyx_mstate_global->__pyx_kp_u__2);
         __Pyx_GIVEREF(__pyx_mstate_global->__pyx_kp_u__2);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_mstate_global->__pyx_kp_u__2) != (0)) __PYX_ERR(0, 735, __pyx_L53_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_mstate_global->__pyx_kp_u__2) != (0)) __PYX_ERR(0, 736, __pyx_L53_error);
         __pyx_r = __pyx_t_4;
         __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -16663,7 +16661,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
         goto __pyx_L52_return;
       }
 
-      /* "video_translate_cython.pyx":733
+      /* "video_translate_cython.pyx":734
  *         text = ''.join(''.join(t.split()) for t, _ in lines)
  *         return (frame_index, text)
  *     except (MemoryError, OSError, RuntimeError) as e:             # <<<<<<<<<<<<<<
@@ -16715,7 +16713,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
       }
     }
 
-    /* "video_translate_cython.pyx":736
+    /* "video_translate_cython.pyx":737
  *         # Worker crashed due to memory/decoder error
  *         return (frame_index, "")
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -16725,12 +16723,12 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
     __pyx_t_25 = __Pyx_PyErr_ExceptionMatches(((PyObject *)(((PyTypeObject*)PyExc_Exception))));
     if (__pyx_t_25) {
       __Pyx_AddTraceback("video_translate_cython._ocr_worker", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_3, &__pyx_t_1) < 0) __PYX_ERR(0, 736, __pyx_L7_except_error)
+      if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_3, &__pyx_t_1) < 0) __PYX_ERR(0, 737, __pyx_L7_except_error)
       __Pyx_XGOTREF(__pyx_t_2);
       __Pyx_XGOTREF(__pyx_t_3);
       __Pyx_XGOTREF(__pyx_t_1);
 
-      /* "video_translate_cython.pyx":738
+      /* "video_translate_cython.pyx":739
  *     except Exception:
  *         # Other errors
  *         return (frame_index, "")             # <<<<<<<<<<<<<<
@@ -16738,14 +16736,14 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
  * 
 */
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 738, __pyx_L7_except_error)
+      __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 739, __pyx_L7_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_INCREF(__pyx_v_frame_index);
       __Pyx_GIVEREF(__pyx_v_frame_index);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_frame_index) != (0)) __PYX_ERR(0, 738, __pyx_L7_except_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_frame_index) != (0)) __PYX_ERR(0, 739, __pyx_L7_except_error);
       __Pyx_INCREF(__pyx_mstate_global->__pyx_kp_u__2);
       __Pyx_GIVEREF(__pyx_mstate_global->__pyx_kp_u__2);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_mstate_global->__pyx_kp_u__2) != (0)) __PYX_ERR(0, 738, __pyx_L7_except_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_mstate_global->__pyx_kp_u__2) != (0)) __PYX_ERR(0, 739, __pyx_L7_except_error);
       __pyx_r = __pyx_t_4;
       __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -16755,7 +16753,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
     }
     goto __pyx_L7_except_error;
 
-    /* "video_translate_cython.pyx":696
+    /* "video_translate_cython.pyx":697
  *     import time
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -16782,7 +16780,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
     goto __pyx_L0;
   }
 
-  /* "video_translate_cython.pyx":687
+  /* "video_translate_cython.pyx":688
  * 
  * 
  * def _ocr_worker(args_tuple):             # <<<<<<<<<<<<<<
@@ -16820,7 +16818,7 @@ static PyObject *__pyx_pf_22video_translate_cython_32_ocr_worker(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":742
+/* "video_translate_cython.pyx":743
  * 
  * # Convenience function: batch OCR frames using processes (safe, no GIL issues)
  * def batch_ocr_process(video_path: str, frame_indices: list, source_language: str = "english", max_workers: int = None) -> dict:             # <<<<<<<<<<<<<<
@@ -16871,50 +16869,50 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_video_path,&__pyx_mstate_global->__pyx_n_u_frame_indices,&__pyx_mstate_global->__pyx_n_u_source_language,&__pyx_mstate_global->__pyx_n_u_max_workers,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 742, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 743, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 742, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 743, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 742, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 743, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 742, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 743, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 742, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 743, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "batch_ocr_process", 0) < (0)) __PYX_ERR(0, 742, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "batch_ocr_process", 0) < (0)) __PYX_ERR(0, 743, __pyx_L3_error)
       if (!values[2]) values[2] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_n_u_english)));
       if (!values[3]) values[3] = __Pyx_NewRef(((PyObject*)Py_None));
       for (Py_ssize_t i = __pyx_nargs; i < 2; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("batch_ocr_process", 0, 2, 4, i); __PYX_ERR(0, 742, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("batch_ocr_process", 0, 2, 4, i); __PYX_ERR(0, 743, __pyx_L3_error) }
       }
     } else {
       switch (__pyx_nargs) {
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 742, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 743, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 742, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 743, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 742, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 743, __pyx_L3_error)
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 742, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 743, __pyx_L3_error)
         break;
         default: goto __pyx_L5_argtuple_error;
       }
@@ -16928,7 +16926,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("batch_ocr_process", 0, 2, 4, __pyx_nargs); __PYX_ERR(0, 742, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("batch_ocr_process", 0, 2, 4, __pyx_nargs); __PYX_ERR(0, 743, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -16939,10 +16937,10 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 742, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_frame_indices), (&PyList_Type), 0, "frame_indices", 2))) __PYX_ERR(0, 742, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 742, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_max_workers), (&PyLong_Type), 1, "max_workers", 2))) __PYX_ERR(0, 742, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 743, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_frame_indices), (&PyList_Type), 0, "frame_indices", 2))) __PYX_ERR(0, 743, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 743, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_max_workers), (&PyLong_Type), 1, "max_workers", 2))) __PYX_ERR(0, 743, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_34batch_ocr_process(__pyx_self, __pyx_v_video_path, __pyx_v_frame_indices, __pyx_v_source_language, __pyx_v_max_workers);
 
   /* function exit code */
@@ -16962,7 +16960,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":756
+/* "video_translate_cython.pyx":757
  *     shared_lock = _get_frame_read_lock()
  * 
  *     def _ocr_worker_with_lock(args_tuple):             # <<<<<<<<<<<<<<
@@ -17009,32 +17007,32 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_args_tuple,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 756, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 757, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 756, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 757, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "_ocr_worker_with_lock", 0) < (0)) __PYX_ERR(0, 756, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "_ocr_worker_with_lock", 0) < (0)) __PYX_ERR(0, 757, __pyx_L3_error)
       for (Py_ssize_t i = __pyx_nargs; i < 1; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("_ocr_worker_with_lock", 1, 1, 1, i); __PYX_ERR(0, 756, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("_ocr_worker_with_lock", 1, 1, 1, i); __PYX_ERR(0, 757, __pyx_L3_error) }
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 756, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 757, __pyx_L3_error)
     }
     __pyx_v_args_tuple = values[0];
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("_ocr_worker_with_lock", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 756, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("_ocr_worker_with_lock", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 757, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -17071,7 +17069,7 @@ static PyObject *__pyx_pf_22video_translate_cython_17batch_ocr_process__ocr_work
   __pyx_outer_scope = (struct __pyx_obj_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
 
-  /* "video_translate_cython.pyx":757
+  /* "video_translate_cython.pyx":758
  * 
  *     def _ocr_worker_with_lock(args_tuple):
  *         _init_frame_lock_shared(shared_lock)             # <<<<<<<<<<<<<<
@@ -17079,9 +17077,9 @@ static PyObject *__pyx_pf_22video_translate_cython_17batch_ocr_process__ocr_work
  * 
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_init_frame_lock_shared); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 757, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_init_frame_lock_shared); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 758, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_shared_lock)) { __Pyx_RaiseClosureNameError("shared_lock"); __PYX_ERR(0, 757, __pyx_L1_error) }
+  if (unlikely(!__pyx_cur_scope->__pyx_v_shared_lock)) { __Pyx_RaiseClosureNameError("shared_lock"); __PYX_ERR(0, 758, __pyx_L1_error) }
   __pyx_t_4 = 1;
   #if CYTHON_UNPACK_METHODS
   if (unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -17099,12 +17097,12 @@ static PyObject *__pyx_pf_22video_translate_cython_17batch_ocr_process__ocr_work
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+__pyx_t_4, (2-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 757, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 758, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":758
+  /* "video_translate_cython.pyx":759
  *     def _ocr_worker_with_lock(args_tuple):
  *         _init_frame_lock_shared(shared_lock)
  *         return _ocr_worker(args_tuple)             # <<<<<<<<<<<<<<
@@ -17113,7 +17111,7 @@ static PyObject *__pyx_pf_22video_translate_cython_17batch_ocr_process__ocr_work
 */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_3 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_ocr_worker); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 758, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_ocr_worker); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 759, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -17132,14 +17130,14 @@ static PyObject *__pyx_pf_22video_translate_cython_17batch_ocr_process__ocr_work
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+__pyx_t_4, (2-__pyx_t_4) | (__pyx_t_4*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 758, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 759, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":756
+  /* "video_translate_cython.pyx":757
  *     shared_lock = _get_frame_read_lock()
  * 
  *     def _ocr_worker_with_lock(args_tuple):             # <<<<<<<<<<<<<<
@@ -17160,7 +17158,7 @@ static PyObject *__pyx_pf_22video_translate_cython_17batch_ocr_process__ocr_work
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":742
+/* "video_translate_cython.pyx":743
  * 
  * # Convenience function: batch OCR frames using processes (safe, no GIL issues)
  * def batch_ocr_process(video_path: str, frame_indices: list, source_language: str = "english", max_workers: int = None) -> dict:             # <<<<<<<<<<<<<<
@@ -17207,13 +17205,13 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 742, __pyx_L1_error)
+    __PYX_ERR(0, 743, __pyx_L1_error)
   } else {
     __Pyx_GOTREF((PyObject *)__pyx_cur_scope);
   }
   __Pyx_INCREF(__pyx_v_max_workers);
 
-  /* "video_translate_cython.pyx":748
+  /* "video_translate_cython.pyx":749
  *     Limits workers to avoid memory exhaustion from loading torch/easyocr in each process.
  *     """
  *     if max_workers is None:             # <<<<<<<<<<<<<<
@@ -17223,7 +17221,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
   __pyx_t_1 = (__pyx_v_max_workers == ((PyObject*)Py_None));
   if (__pyx_t_1) {
 
-    /* "video_translate_cython.pyx":751
+    /* "video_translate_cython.pyx":752
  *         # Limit OCR workers to avoid memory issues and decoder contention
  *         # Each loads torch/easyocr and creates VideoCapture instances
  *         max_workers = 1  # Use only 1 OCR worker to prevent concurrent VideoCapture             # <<<<<<<<<<<<<<
@@ -17233,7 +17231,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
     __Pyx_INCREF(__pyx_mstate_global->__pyx_int_1);
     __Pyx_DECREF_SET(__pyx_v_max_workers, __pyx_mstate_global->__pyx_int_1);
 
-    /* "video_translate_cython.pyx":748
+    /* "video_translate_cython.pyx":749
  *     Limits workers to avoid memory exhaustion from loading torch/easyocr in each process.
  *     """
  *     if max_workers is None:             # <<<<<<<<<<<<<<
@@ -17242,7 +17240,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
 */
   }
 
-  /* "video_translate_cython.pyx":754
+  /* "video_translate_cython.pyx":755
  * 
  *     # Initialize shared lock for frame reading
  *     shared_lock = _get_frame_read_lock()             # <<<<<<<<<<<<<<
@@ -17250,7 +17248,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
  *     def _ocr_worker_with_lock(args_tuple):
 */
   __pyx_t_3 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_get_frame_read_lock); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 754, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_get_frame_read_lock); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 755, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -17269,26 +17267,26 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
     __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 754, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 755, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
   }
   __Pyx_GIVEREF(__pyx_t_2);
   __pyx_cur_scope->__pyx_v_shared_lock = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":756
+  /* "video_translate_cython.pyx":757
  *     shared_lock = _get_frame_read_lock()
  * 
  *     def _ocr_worker_with_lock(args_tuple):             # <<<<<<<<<<<<<<
  *         _init_frame_lock_shared(shared_lock)
  *         return _ocr_worker(args_tuple)
 */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_17batch_ocr_process_1_ocr_worker_with_lock, 0, __pyx_mstate_global->__pyx_n_u_batch_ocr_process_locals__ocr_wo, ((PyObject*)__pyx_cur_scope), __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[4])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 756, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_17batch_ocr_process_1_ocr_worker_with_lock, 0, __pyx_mstate_global->__pyx_n_u_batch_ocr_process_locals__ocr_wo, ((PyObject*)__pyx_cur_scope), __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[4])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 757, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_v__ocr_worker_with_lock = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":760
+  /* "video_translate_cython.pyx":761
  *         return _ocr_worker(args_tuple)
  * 
  *     args = [(video_path, idx, source_language) for idx in frame_indices]             # <<<<<<<<<<<<<<
@@ -17296,7 +17294,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
  *     try:
 */
   { /* enter inner scope */
-    __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 760, __pyx_L6_error)
+    __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 761, __pyx_L6_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_4 = __pyx_v_frame_indices; __Pyx_INCREF(__pyx_t_4);
     __pyx_t_6 = 0;
@@ -17304,28 +17302,28 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
       {
         Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_4);
         #if !CYTHON_ASSUME_SAFE_SIZE
-        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 760, __pyx_L6_error)
+        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 761, __pyx_L6_error)
         #endif
         if (__pyx_t_6 >= __pyx_temp) break;
       }
       __pyx_t_3 = __Pyx_PyList_GetItemRef(__pyx_t_4, __pyx_t_6);
       ++__pyx_t_6;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 760, __pyx_L6_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 761, __pyx_L6_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_XDECREF_SET(__pyx_8genexpr3__pyx_v_idx, __pyx_t_3);
       __pyx_t_3 = 0;
-      __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 760, __pyx_L6_error)
+      __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 761, __pyx_L6_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_v_video_path);
       __Pyx_GIVEREF(__pyx_v_video_path);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 760, __pyx_L6_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 761, __pyx_L6_error);
       __Pyx_INCREF(__pyx_8genexpr3__pyx_v_idx);
       __Pyx_GIVEREF(__pyx_8genexpr3__pyx_v_idx);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_8genexpr3__pyx_v_idx) != (0)) __PYX_ERR(0, 760, __pyx_L6_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_8genexpr3__pyx_v_idx) != (0)) __PYX_ERR(0, 761, __pyx_L6_error);
       __Pyx_INCREF(__pyx_v_source_language);
       __Pyx_GIVEREF(__pyx_v_source_language);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_v_source_language) != (0)) __PYX_ERR(0, 760, __pyx_L6_error);
-      if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_3))) __PYX_ERR(0, 760, __pyx_L6_error)
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_v_source_language) != (0)) __PYX_ERR(0, 761, __pyx_L6_error);
+      if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_3))) __PYX_ERR(0, 761, __pyx_L6_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -17339,19 +17337,19 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
   __pyx_v_args = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":761
+  /* "video_translate_cython.pyx":762
  * 
  *     args = [(video_path, idx, source_language) for idx in frame_indices]
  *     results = {}             # <<<<<<<<<<<<<<
  *     try:
  *         with ProcessPoolExecutor(max_workers=max_workers) as ex:
 */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 761, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 762, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_v_results = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":762
+  /* "video_translate_cython.pyx":763
  *     args = [(video_path, idx, source_language) for idx in frame_indices]
  *     results = {}
  *     try:             # <<<<<<<<<<<<<<
@@ -17367,7 +17365,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
     __Pyx_XGOTREF(__pyx_t_9);
     /*try:*/ {
 
-      /* "video_translate_cython.pyx":763
+      /* "video_translate_cython.pyx":764
  *     results = {}
  *     try:
  *         with ProcessPoolExecutor(max_workers=max_workers) as ex:             # <<<<<<<<<<<<<<
@@ -17376,7 +17374,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
 */
       /*with:*/ {
         __pyx_t_4 = NULL;
-        __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_ProcessPoolExecutor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 763, __pyx_L11_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_ProcessPoolExecutor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 764, __pyx_L11_error)
         __Pyx_GOTREF(__pyx_t_3);
         __pyx_t_5 = 1;
         #if CYTHON_UNPACK_METHODS
@@ -17392,20 +17390,20 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
         #endif
         {
           PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 1 : 0)] = {__pyx_t_4, NULL};
-          __pyx_t_10 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 763, __pyx_L11_error)
+          __pyx_t_10 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 764, __pyx_L11_error)
           __Pyx_GOTREF(__pyx_t_10);
-          if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_max_workers, __pyx_v_max_workers, __pyx_t_10, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 763, __pyx_L11_error)
+          if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_max_workers, __pyx_v_max_workers, __pyx_t_10, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 764, __pyx_L11_error)
           __pyx_t_2 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_3, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_10);
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 763, __pyx_L11_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 764, __pyx_L11_error)
           __Pyx_GOTREF(__pyx_t_2);
         }
-        __pyx_t_11 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_exit); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 763, __pyx_L11_error)
+        __pyx_t_11 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_exit); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 764, __pyx_L11_error)
         __Pyx_GOTREF(__pyx_t_11);
         __pyx_t_10 = NULL;
-        __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_enter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 763, __pyx_L17_error)
+        __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_enter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 764, __pyx_L17_error)
         __Pyx_GOTREF(__pyx_t_4);
         __pyx_t_5 = 1;
         #if CYTHON_UNPACK_METHODS
@@ -17424,7 +17422,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
           __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
           __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 763, __pyx_L17_error)
+          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 764, __pyx_L17_error)
           __Pyx_GOTREF(__pyx_t_3);
         }
         __pyx_t_4 = __pyx_t_3;
@@ -17442,7 +17440,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
               __pyx_v_ex = __pyx_t_4;
               __pyx_t_4 = 0;
 
-              /* "video_translate_cython.pyx":764
+              /* "video_translate_cython.pyx":765
  *     try:
  *         with ProcessPoolExecutor(max_workers=max_workers) as ex:
  *             for frame_index, text in ex.map(_ocr_worker_with_lock, args):             # <<<<<<<<<<<<<<
@@ -17456,7 +17454,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
                 PyObject *__pyx_callargs[3] = {__pyx_t_2, __pyx_v__ocr_worker_with_lock, __pyx_v_args};
                 __pyx_t_4 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_map, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
                 __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-                if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 764, __pyx_L21_error)
+                if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 765, __pyx_L21_error)
                 __Pyx_GOTREF(__pyx_t_4);
               }
               if (likely(PyList_CheckExact(__pyx_t_4)) || PyTuple_CheckExact(__pyx_t_4)) {
@@ -17464,9 +17462,9 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
                 __pyx_t_6 = 0;
                 __pyx_t_15 = NULL;
               } else {
-                __pyx_t_6 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 764, __pyx_L21_error)
+                __pyx_t_6 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 765, __pyx_L21_error)
                 __Pyx_GOTREF(__pyx_t_2);
-                __pyx_t_15 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 764, __pyx_L21_error)
+                __pyx_t_15 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 765, __pyx_L21_error)
               }
               __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
               for (;;) {
@@ -17475,7 +17473,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
                     {
                       Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_2);
                       #if !CYTHON_ASSUME_SAFE_SIZE
-                      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 764, __pyx_L21_error)
+                      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 765, __pyx_L21_error)
                       #endif
                       if (__pyx_t_6 >= __pyx_temp) break;
                     }
@@ -17485,7 +17483,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
                     {
                       Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_2);
                       #if !CYTHON_ASSUME_SAFE_SIZE
-                      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 764, __pyx_L21_error)
+                      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 765, __pyx_L21_error)
                       #endif
                       if (__pyx_t_6 >= __pyx_temp) break;
                     }
@@ -17496,13 +17494,13 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
                     #endif
                     ++__pyx_t_6;
                   }
-                  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 764, __pyx_L21_error)
+                  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 765, __pyx_L21_error)
                 } else {
                   __pyx_t_4 = __pyx_t_15(__pyx_t_2);
                   if (unlikely(!__pyx_t_4)) {
                     PyObject* exc_type = PyErr_Occurred();
                     if (exc_type) {
-                      if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 764, __pyx_L21_error)
+                      if (unlikely(!__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) __PYX_ERR(0, 765, __pyx_L21_error)
                       PyErr_Clear();
                     }
                     break;
@@ -17515,7 +17513,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
                   if (unlikely(size != 2)) {
                     if (size > 2) __Pyx_RaiseTooManyValuesError(2);
                     else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-                    __PYX_ERR(0, 764, __pyx_L21_error)
+                    __PYX_ERR(0, 765, __pyx_L21_error)
                   }
                   #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
                   if (likely(PyTuple_CheckExact(sequence))) {
@@ -17525,22 +17523,22 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
                     __Pyx_INCREF(__pyx_t_10);
                   } else {
                     __pyx_t_3 = __Pyx_PyList_GetItemRef(sequence, 0);
-                    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 764, __pyx_L21_error)
+                    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 765, __pyx_L21_error)
                     __Pyx_XGOTREF(__pyx_t_3);
                     __pyx_t_10 = __Pyx_PyList_GetItemRef(sequence, 1);
-                    if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 764, __pyx_L21_error)
+                    if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 765, __pyx_L21_error)
                     __Pyx_XGOTREF(__pyx_t_10);
                   }
                   #else
-                  __pyx_t_3 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 764, __pyx_L21_error)
+                  __pyx_t_3 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 765, __pyx_L21_error)
                   __Pyx_GOTREF(__pyx_t_3);
-                  __pyx_t_10 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 764, __pyx_L21_error)
+                  __pyx_t_10 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 765, __pyx_L21_error)
                   __Pyx_GOTREF(__pyx_t_10);
                   #endif
                   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
                 } else {
                   Py_ssize_t index = -1;
-                  __pyx_t_16 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 764, __pyx_L21_error)
+                  __pyx_t_16 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 765, __pyx_L21_error)
                   __Pyx_GOTREF(__pyx_t_16);
                   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
                   __pyx_t_17 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_16);
@@ -17548,7 +17546,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
                   __Pyx_GOTREF(__pyx_t_3);
                   index = 1; __pyx_t_10 = __pyx_t_17(__pyx_t_16); if (unlikely(!__pyx_t_10)) goto __pyx_L29_unpacking_failed;
                   __Pyx_GOTREF(__pyx_t_10);
-                  if (__Pyx_IternextUnpackEndCheck(__pyx_t_17(__pyx_t_16), 2) < (0)) __PYX_ERR(0, 764, __pyx_L21_error)
+                  if (__Pyx_IternextUnpackEndCheck(__pyx_t_17(__pyx_t_16), 2) < (0)) __PYX_ERR(0, 765, __pyx_L21_error)
                   __pyx_t_17 = NULL;
                   __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
                   goto __pyx_L30_unpacking_done;
@@ -17556,7 +17554,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
                   __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
                   __pyx_t_17 = NULL;
                   if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-                  __PYX_ERR(0, 764, __pyx_L21_error)
+                  __PYX_ERR(0, 765, __pyx_L21_error)
                   __pyx_L30_unpacking_done:;
                 }
                 __Pyx_XDECREF_SET(__pyx_v_frame_index, __pyx_t_3);
@@ -17564,37 +17562,37 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
                 __Pyx_XDECREF_SET(__pyx_v_text, __pyx_t_10);
                 __pyx_t_10 = 0;
 
-                /* "video_translate_cython.pyx":765
+                /* "video_translate_cython.pyx":766
  *         with ProcessPoolExecutor(max_workers=max_workers) as ex:
  *             for frame_index, text in ex.map(_ocr_worker_with_lock, args):
  *                 results[frame_index] = text             # <<<<<<<<<<<<<<
  *                 ocr_cache[(video_path, frame_index)] = text
  *     except Exception:
 */
-                if (unlikely((PyDict_SetItem(__pyx_v_results, __pyx_v_frame_index, __pyx_v_text) < 0))) __PYX_ERR(0, 765, __pyx_L21_error)
+                if (unlikely((PyDict_SetItem(__pyx_v_results, __pyx_v_frame_index, __pyx_v_text) < 0))) __PYX_ERR(0, 766, __pyx_L21_error)
 
-                /* "video_translate_cython.pyx":766
+                /* "video_translate_cython.pyx":767
  *             for frame_index, text in ex.map(_ocr_worker_with_lock, args):
  *                 results[frame_index] = text
  *                 ocr_cache[(video_path, frame_index)] = text             # <<<<<<<<<<<<<<
  *     except Exception:
  *         # If batch OCR fails, return partial results
 */
-                __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 766, __pyx_L21_error)
+                __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 767, __pyx_L21_error)
                 __Pyx_GOTREF(__pyx_t_4);
-                __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 766, __pyx_L21_error)
+                __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 767, __pyx_L21_error)
                 __Pyx_GOTREF(__pyx_t_10);
                 __Pyx_INCREF(__pyx_v_video_path);
                 __Pyx_GIVEREF(__pyx_v_video_path);
-                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 766, __pyx_L21_error);
+                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 767, __pyx_L21_error);
                 __Pyx_INCREF(__pyx_v_frame_index);
                 __Pyx_GIVEREF(__pyx_v_frame_index);
-                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_10, 1, __pyx_v_frame_index) != (0)) __PYX_ERR(0, 766, __pyx_L21_error);
-                if (unlikely((PyObject_SetItem(__pyx_t_4, __pyx_t_10, __pyx_v_text) < 0))) __PYX_ERR(0, 766, __pyx_L21_error)
+                if (__Pyx_PyTuple_SET_ITEM(__pyx_t_10, 1, __pyx_v_frame_index) != (0)) __PYX_ERR(0, 767, __pyx_L21_error);
+                if (unlikely((PyObject_SetItem(__pyx_t_4, __pyx_t_10, __pyx_v_text) < 0))) __PYX_ERR(0, 767, __pyx_L21_error)
                 __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
                 __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-                /* "video_translate_cython.pyx":764
+                /* "video_translate_cython.pyx":765
  *     try:
  *         with ProcessPoolExecutor(max_workers=max_workers) as ex:
  *             for frame_index, text in ex.map(_ocr_worker_with_lock, args):             # <<<<<<<<<<<<<<
@@ -17604,7 +17602,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
               }
               __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-              /* "video_translate_cython.pyx":763
+              /* "video_translate_cython.pyx":764
  *     results = {}
  *     try:
  *         with ProcessPoolExecutor(max_workers=max_workers) as ex:             # <<<<<<<<<<<<<<
@@ -17624,20 +17622,20 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
             __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
             /*except:*/ {
               __Pyx_AddTraceback("video_translate_cython.batch_ocr_process", __pyx_clineno, __pyx_lineno, __pyx_filename);
-              if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_10, &__pyx_t_4) < 0) __PYX_ERR(0, 763, __pyx_L23_except_error)
+              if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_10, &__pyx_t_4) < 0) __PYX_ERR(0, 764, __pyx_L23_except_error)
               __Pyx_XGOTREF(__pyx_t_2);
               __Pyx_XGOTREF(__pyx_t_10);
               __Pyx_XGOTREF(__pyx_t_4);
-              __pyx_t_3 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_10, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 763, __pyx_L23_except_error)
+              __pyx_t_3 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_10, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 764, __pyx_L23_except_error)
               __Pyx_GOTREF(__pyx_t_3);
               __pyx_t_18 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_3, NULL);
               __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-              if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 763, __pyx_L23_except_error)
+              if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 764, __pyx_L23_except_error)
               __Pyx_GOTREF(__pyx_t_18);
               __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_18);
               __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
-              if (__pyx_t_1 < (0)) __PYX_ERR(0, 763, __pyx_L23_except_error)
+              if (__pyx_t_1 < (0)) __PYX_ERR(0, 764, __pyx_L23_except_error)
               __pyx_t_19 = (!__pyx_t_1);
               if (unlikely(__pyx_t_19)) {
                 __Pyx_GIVEREF(__pyx_t_2);
@@ -17645,7 +17643,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
                 __Pyx_XGIVEREF(__pyx_t_4);
                 __Pyx_ErrRestoreWithState(__pyx_t_2, __pyx_t_10, __pyx_t_4);
                 __pyx_t_2 = 0;  __pyx_t_10 = 0;  __pyx_t_4 = 0; 
-                __PYX_ERR(0, 763, __pyx_L23_except_error)
+                __PYX_ERR(0, 764, __pyx_L23_except_error)
               }
               __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
               __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
@@ -17671,7 +17669,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
             if (__pyx_t_11) {
               __pyx_t_14 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_mstate_global->__pyx_tuple[0], NULL);
               __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-              if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 763, __pyx_L11_error)
+              if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 764, __pyx_L11_error)
               __Pyx_GOTREF(__pyx_t_14);
               __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
             }
@@ -17686,7 +17684,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
         __pyx_L35:;
       }
 
-      /* "video_translate_cython.pyx":762
+      /* "video_translate_cython.pyx":763
  *     args = [(video_path, idx, source_language) for idx in frame_indices]
  *     results = {}
  *     try:             # <<<<<<<<<<<<<<
@@ -17705,7 +17703,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "video_translate_cython.pyx":767
+    /* "video_translate_cython.pyx":768
  *                 results[frame_index] = text
  *                 ocr_cache[(video_path, frame_index)] = text
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -17719,7 +17717,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
     }
     goto __pyx_L13_except_error;
 
-    /* "video_translate_cython.pyx":762
+    /* "video_translate_cython.pyx":763
  *     args = [(video_path, idx, source_language) for idx in frame_indices]
  *     results = {}
  *     try:             # <<<<<<<<<<<<<<
@@ -17740,7 +17738,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
     __pyx_L16_try_end:;
   }
 
-  /* "video_translate_cython.pyx":770
+  /* "video_translate_cython.pyx":771
  *         # If batch OCR fails, return partial results
  *         pass
  *     return results             # <<<<<<<<<<<<<<
@@ -17752,7 +17750,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
   __pyx_r = __pyx_v_results;
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":742
+  /* "video_translate_cython.pyx":743
  * 
  * # Convenience function: batch OCR frames using processes (safe, no GIL issues)
  * def batch_ocr_process(video_path: str, frame_indices: list, source_language: str = "english", max_workers: int = None) -> dict:             # <<<<<<<<<<<<<<
@@ -17784,7 +17782,7 @@ static PyObject *__pyx_pf_22video_translate_cython_34batch_ocr_process(CYTHON_UN
   return __pyx_r;
 }
 
-/* "video_translate_cython.pyx":785
+/* "video_translate_cython.pyx":786
  * # exponential probe indices. It keeps the rest of the binary search behavior intact.
  * 
  * @cython.locals(cap=object, total_frames=int, start_text=object, frame_checks=int)             # <<<<<<<<<<<<<<
@@ -17802,23 +17800,23 @@ static PyObject *__pyx_pf_22video_translate_cython_48__defaults__(CYTHON_UNUSED 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__defaults__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_self)->arg0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 785, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_self)->arg0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 786, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 785, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 786, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_english));
   __Pyx_GIVEREF(((PyObject*)__pyx_mstate_global->__pyx_n_u_english));
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, ((PyObject*)__pyx_mstate_global->__pyx_n_u_english)) != (0)) __PYX_ERR(0, 785, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, ((PyObject*)__pyx_mstate_global->__pyx_n_u_english)) != (0)) __PYX_ERR(0, 786, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1) != (0)) __PYX_ERR(0, 785, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1) != (0)) __PYX_ERR(0, 786, __pyx_L1_error);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 785, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 786, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2) != (0)) __PYX_ERR(0, 785, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2) != (0)) __PYX_ERR(0, 786, __pyx_L1_error);
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, Py_None) != (0)) __PYX_ERR(0, 785, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, Py_None) != (0)) __PYX_ERR(0, 786, __pyx_L1_error);
   __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -17879,49 +17877,49 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_video_path,&__pyx_mstate_global->__pyx_n_u_start_frame_index,&__pyx_mstate_global->__pyx_n_u_source_language,&__pyx_mstate_global->__pyx_n_u_similarity_threshold,0};
     struct __pyx_defaults *__pyx_dynamic_args = __Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_self);
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 785, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 786, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 785, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 786, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 785, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 786, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 785, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 786, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 785, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 786, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "find_text_change_optimal_batched", 0) < (0)) __PYX_ERR(0, 785, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "find_text_change_optimal_batched", 0) < (0)) __PYX_ERR(0, 786, __pyx_L3_error)
       if (!values[2]) values[2] = __Pyx_NewRef(((PyObject*)((PyObject*)__pyx_mstate_global->__pyx_n_u_english)));
       for (Py_ssize_t i = __pyx_nargs; i < 2; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("find_text_change_optimal_batched", 0, 2, 4, i); __PYX_ERR(0, 785, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("find_text_change_optimal_batched", 0, 2, 4, i); __PYX_ERR(0, 786, __pyx_L3_error) }
       }
     } else {
       switch (__pyx_nargs) {
         case  4:
         values[3] = __Pyx_ArgRef_FASTCALL(__pyx_args, 3);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 785, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[3])) __PYX_ERR(0, 786, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  3:
         values[2] = __Pyx_ArgRef_FASTCALL(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 785, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[2])) __PYX_ERR(0, 786, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = __Pyx_ArgRef_FASTCALL(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 785, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[1])) __PYX_ERR(0, 786, __pyx_L3_error)
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 785, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 786, __pyx_L3_error)
         break;
         default: goto __pyx_L5_argtuple_error;
       }
@@ -17931,14 +17929,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     __pyx_v_start_frame_index = ((PyObject*)values[1]);
     __pyx_v_source_language = ((PyObject*)values[2]);
     if (values[3]) {
-      __pyx_v_similarity_threshold = __Pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_similarity_threshold == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 790, __pyx_L3_error)
+      __pyx_v_similarity_threshold = __Pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_similarity_threshold == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 791, __pyx_L3_error)
     } else {
       __pyx_v_similarity_threshold = __pyx_dynamic_args->arg0;
     }
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("find_text_change_optimal_batched", 0, 2, 4, __pyx_nargs); __PYX_ERR(0, 785, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("find_text_change_optimal_batched", 0, 2, 4, __pyx_nargs); __PYX_ERR(0, 786, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -17949,9 +17947,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 787, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_start_frame_index), (&PyLong_Type), 0, "start_frame_index", 2))) __PYX_ERR(0, 788, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 789, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_video_path), (&PyUnicode_Type), 0, "video_path", 2))) __PYX_ERR(0, 788, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_start_frame_index), (&PyLong_Type), 0, "start_frame_index", 2))) __PYX_ERR(0, 789, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_source_language), (&PyUnicode_Type), 0, "source_language", 2))) __PYX_ERR(0, 790, __pyx_L1_error)
   __pyx_r = __pyx_pf_22video_translate_cython_36find_text_change_optimal_batched(__pyx_self, __pyx_v_video_path, __pyx_v_start_frame_index, __pyx_v_source_language, __pyx_v_similarity_threshold);
 
   /* function exit code */
@@ -18036,7 +18034,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("find_text_change_optimal_batched", 0);
 
-  /* "video_translate_cython.pyx":797
+  /* "video_translate_cython.pyx":798
  *     cdef const char *start_ptr, *mid_ptr
  *     cdef Py_ssize_t start_len, mid_len
  *     cdef const char **ptrs = NULL             # <<<<<<<<<<<<<<
@@ -18045,7 +18043,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
   __pyx_v_ptrs = NULL;
 
-  /* "video_translate_cython.pyx":798
+  /* "video_translate_cython.pyx":799
  *     cdef Py_ssize_t start_len, mid_len
  *     cdef const char **ptrs = NULL
  *     cdef Py_ssize_t *lens = NULL             # <<<<<<<<<<<<<<
@@ -18054,7 +18052,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
   __pyx_v_lens = NULL;
 
-  /* "video_translate_cython.pyx":800
+  /* "video_translate_cython.pyx":801
  *     cdef Py_ssize_t *lens = NULL
  * 
  *     cap = cv2.VideoCapture(video_path)             # <<<<<<<<<<<<<<
@@ -18062,9 +18060,9 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
  *     cap.release()
 */
   __pyx_t_2 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 800, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 801, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_VideoCapture); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 800, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_VideoCapture); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 801, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_5 = 1;
@@ -18084,13 +18082,13 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 800, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 801, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
   __pyx_v_cap = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "video_translate_cython.pyx":801
+  /* "video_translate_cython.pyx":802
  * 
  *     cap = cv2.VideoCapture(video_path)
  *     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))             # <<<<<<<<<<<<<<
@@ -18099,9 +18097,9 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
   __pyx_t_4 = __pyx_v_cap;
   __Pyx_INCREF(__pyx_t_4);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 801, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_cv2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 802, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_COUNT); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 801, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_CAP_PROP_FRAME_COUNT); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 802, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_5 = 0;
@@ -18110,17 +18108,17 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
     __pyx_t_1 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_get, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 801, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 802, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
-  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 801, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 802, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_6 = __Pyx_PyLong_As_int(__pyx_t_3); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 801, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyLong_As_int(__pyx_t_3); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 802, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_total_frames = __pyx_t_6;
 
-  /* "video_translate_cython.pyx":802
+  /* "video_translate_cython.pyx":803
  *     cap = cv2.VideoCapture(video_path)
  *     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
  *     cap.release()             # <<<<<<<<<<<<<<
@@ -18134,12 +18132,12 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
     PyObject *__pyx_callargs[2] = {__pyx_t_1, NULL};
     __pyx_t_3 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_release, __pyx_callargs+__pyx_t_5, (1-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 802, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 803, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":804
+  /* "video_translate_cython.pyx":805
  *     cap.release()
  * 
  *     start_text = extract_text_from_frame_cached(video_path, start_frame_index, source_language)             # <<<<<<<<<<<<<<
@@ -18147,7 +18145,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
  *         return -1
 */
   __pyx_t_1 = NULL;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 804, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 805, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = 1;
   #if CYTHON_UNPACK_METHODS
@@ -18166,13 +18164,13 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
     __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+__pyx_t_5, (4-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 804, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 805, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
   }
   __pyx_v_start_text = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":805
+  /* "video_translate_cython.pyx":806
  * 
  *     start_text = extract_text_from_frame_cached(video_path, start_frame_index, source_language)
  *     if start_text is None or start_text == "":             # <<<<<<<<<<<<<<
@@ -18185,12 +18183,12 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
     __pyx_t_7 = __pyx_t_8;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_8 = (__Pyx_PyUnicode_Equals(__pyx_v_start_text, __pyx_mstate_global->__pyx_kp_u__2, Py_EQ)); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 805, __pyx_L1_error)
+  __pyx_t_8 = (__Pyx_PyUnicode_Equals(__pyx_v_start_text, __pyx_mstate_global->__pyx_kp_u__2, Py_EQ)); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 806, __pyx_L1_error)
   __pyx_t_7 = __pyx_t_8;
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_7) {
 
-    /* "video_translate_cython.pyx":806
+    /* "video_translate_cython.pyx":807
  *     start_text = extract_text_from_frame_cached(video_path, start_frame_index, source_language)
  *     if start_text is None or start_text == "":
  *         return -1             # <<<<<<<<<<<<<<
@@ -18202,7 +18200,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
     __pyx_r = __pyx_mstate_global->__pyx_int_neg_1;
     goto __pyx_L0;
 
-    /* "video_translate_cython.pyx":805
+    /* "video_translate_cython.pyx":806
  * 
  *     start_text = extract_text_from_frame_cached(video_path, start_frame_index, source_language)
  *     if start_text is None or start_text == "":             # <<<<<<<<<<<<<<
@@ -18211,7 +18209,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
   }
 
-  /* "video_translate_cython.pyx":808
+  /* "video_translate_cython.pyx":809
  *         return -1
  * 
  *     frame_checks = 0             # <<<<<<<<<<<<<<
@@ -18220,19 +18218,19 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
   __pyx_v_frame_checks = 0;
 
-  /* "video_translate_cython.pyx":811
+  /* "video_translate_cython.pyx":812
  * 
  *     # Phase 1 - build exponential probes
  *     probes = []             # <<<<<<<<<<<<<<
  *     step = 1
  *     while True:
 */
-  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 811, __pyx_L1_error)
+  __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 812, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_probes = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":812
+  /* "video_translate_cython.pyx":813
  *     # Phase 1 - build exponential probes
  *     probes = []
  *     step = 1             # <<<<<<<<<<<<<<
@@ -18242,7 +18240,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
   __Pyx_INCREF(__pyx_mstate_global->__pyx_int_1);
   __pyx_v_step = __pyx_mstate_global->__pyx_int_1;
 
-  /* "video_translate_cython.pyx":813
+  /* "video_translate_cython.pyx":814
  *     probes = []
  *     step = 1
  *     while True:             # <<<<<<<<<<<<<<
@@ -18251,34 +18249,34 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
   while (1) {
 
-    /* "video_translate_cython.pyx":814
+    /* "video_translate_cython.pyx":815
  *     step = 1
  *     while True:
  *         idx = start_frame_index + step             # <<<<<<<<<<<<<<
  *         if idx >= total_frames:
  *             break
 */
-    __pyx_t_3 = PyNumber_Add(__pyx_v_start_frame_index, __pyx_v_step); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 814, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Add(__pyx_v_start_frame_index, __pyx_v_step); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 815, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_XDECREF_SET(__pyx_v_idx, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":815
+    /* "video_translate_cython.pyx":816
  *     while True:
  *         idx = start_frame_index + step
  *         if idx >= total_frames:             # <<<<<<<<<<<<<<
  *             break
  *         probes.append(idx)
 */
-    __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_total_frames); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 815, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyLong_From_int(__pyx_v_total_frames); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 816, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = PyObject_RichCompare(__pyx_v_idx, __pyx_t_3, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 815, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_v_idx, __pyx_t_3, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 816, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 815, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 816, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (__pyx_t_7) {
 
-      /* "video_translate_cython.pyx":816
+      /* "video_translate_cython.pyx":817
  *         idx = start_frame_index + step
  *         if idx >= total_frames:
  *             break             # <<<<<<<<<<<<<<
@@ -18287,7 +18285,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
       goto __pyx_L7_break;
 
-      /* "video_translate_cython.pyx":815
+      /* "video_translate_cython.pyx":816
  *     while True:
  *         idx = start_frame_index + step
  *         if idx >= total_frames:             # <<<<<<<<<<<<<<
@@ -18296,30 +18294,30 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
     }
 
-    /* "video_translate_cython.pyx":817
+    /* "video_translate_cython.pyx":818
  *         if idx >= total_frames:
  *             break
  *         probes.append(idx)             # <<<<<<<<<<<<<<
  *         step <<= 1
  * 
 */
-    __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_probes, __pyx_v_idx); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 817, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_probes, __pyx_v_idx); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 818, __pyx_L1_error)
 
-    /* "video_translate_cython.pyx":818
+    /* "video_translate_cython.pyx":819
  *             break
  *         probes.append(idx)
  *         step <<= 1             # <<<<<<<<<<<<<<
  * 
  *     # batch OCR for probes
 */
-    __pyx_t_4 = __Pyx_PyLong_LshiftObjC(__pyx_v_step, __pyx_mstate_global->__pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 818, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyLong_LshiftObjC(__pyx_v_step, __pyx_mstate_global->__pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 819, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF_SET(__pyx_v_step, __pyx_t_4);
     __pyx_t_4 = 0;
   }
   __pyx_L7_break:;
 
-  /* "video_translate_cython.pyx":821
+  /* "video_translate_cython.pyx":822
  * 
  *     # batch OCR for probes
  *     if probes:             # <<<<<<<<<<<<<<
@@ -18328,13 +18326,13 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
   {
     Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_v_probes);
-    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 821, __pyx_L1_error)
+    if (unlikely(((!CYTHON_ASSUME_SAFE_SIZE) && __pyx_temp < 0))) __PYX_ERR(0, 822, __pyx_L1_error)
     __pyx_t_7 = (__pyx_temp != 0);
   }
 
   if (__pyx_t_7) {
 
-    /* "video_translate_cython.pyx":822
+    /* "video_translate_cython.pyx":823
  *     # batch OCR for probes
  *     if probes:
  *         batch_ocr_process(video_path, probes, source_language=source_language)             # <<<<<<<<<<<<<<
@@ -18342,7 +18340,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
  *     left = 0
 */
     __pyx_t_3 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_batch_ocr_process); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 822, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_mstate_global->__pyx_n_u_batch_ocr_process); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 823, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_5 = 1;
     #if CYTHON_UNPACK_METHODS
@@ -18358,19 +18356,19 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
     #endif
     {
       PyObject *__pyx_callargs[3 + ((CYTHON_VECTORCALL) ? 1 : 0)] = {__pyx_t_3, __pyx_v_video_path, __pyx_v_probes};
-      __pyx_t_2 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 822, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 823, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_v_source_language, __pyx_t_2, __pyx_callargs+3, 0) < (0)) __PYX_ERR(0, 822, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_v_source_language, __pyx_t_2, __pyx_callargs+3, 0) < (0)) __PYX_ERR(0, 823, __pyx_L1_error)
       __pyx_t_4 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_1, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_2);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 822, __pyx_L1_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 823, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "video_translate_cython.pyx":821
+    /* "video_translate_cython.pyx":822
  * 
  *     # batch OCR for probes
  *     if probes:             # <<<<<<<<<<<<<<
@@ -18379,7 +18377,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
   }
 
-  /* "video_translate_cython.pyx":824
+  /* "video_translate_cython.pyx":825
  *         batch_ocr_process(video_path, probes, source_language=source_language)
  * 
  *     left = 0             # <<<<<<<<<<<<<<
@@ -18389,7 +18387,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
   __Pyx_INCREF(__pyx_mstate_global->__pyx_int_0);
   __pyx_v_left = __pyx_mstate_global->__pyx_int_0;
 
-  /* "video_translate_cython.pyx":825
+  /* "video_translate_cython.pyx":826
  * 
  *     left = 0
  *     right = 0             # <<<<<<<<<<<<<<
@@ -18399,7 +18397,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
   __Pyx_INCREF(__pyx_mstate_global->__pyx_int_0);
   __pyx_v_right = __pyx_mstate_global->__pyx_int_0;
 
-  /* "video_translate_cython.pyx":828
+  /* "video_translate_cython.pyx":829
  * 
  *     # Prepare nogil-enabled similarity checks: encode start_text once
  *     start_b = start_text.encode('utf8')             # <<<<<<<<<<<<<<
@@ -18413,14 +18411,14 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
     PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_mstate_global->__pyx_n_u_utf8};
     __pyx_t_4 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_encode, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 828, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 829, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
   }
-  if (!(likely(PyBytes_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("bytes", __pyx_t_4))) __PYX_ERR(0, 828, __pyx_L1_error)
+  if (!(likely(PyBytes_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("bytes", __pyx_t_4))) __PYX_ERR(0, 829, __pyx_L1_error)
   __pyx_v_start_b = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "video_translate_cython.pyx":829
+  /* "video_translate_cython.pyx":830
  *     # Prepare nogil-enabled similarity checks: encode start_text once
  *     start_b = start_text.encode('utf8')
  *     start_ptr = start_b             # <<<<<<<<<<<<<<
@@ -18429,12 +18427,12 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
   if (unlikely(__pyx_v_start_b == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 829, __pyx_L1_error)
+    __PYX_ERR(0, 830, __pyx_L1_error)
   }
-  __pyx_t_10 = __Pyx_PyBytes_AsString(__pyx_v_start_b); if (unlikely((!__pyx_t_10) && PyErr_Occurred())) __PYX_ERR(0, 829, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyBytes_AsString(__pyx_v_start_b); if (unlikely((!__pyx_t_10) && PyErr_Occurred())) __PYX_ERR(0, 830, __pyx_L1_error)
   __pyx_v_start_ptr = __pyx_t_10;
 
-  /* "video_translate_cython.pyx":830
+  /* "video_translate_cython.pyx":831
  *     start_b = start_text.encode('utf8')
  *     start_ptr = start_b
  *     start_len = len(start_b)             # <<<<<<<<<<<<<<
@@ -18443,22 +18441,22 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
   if (unlikely(__pyx_v_start_b == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 830, __pyx_L1_error)
+    __PYX_ERR(0, 831, __pyx_L1_error)
   }
-  __pyx_t_11 = __Pyx_PyBytes_GET_SIZE(__pyx_v_start_b); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 830, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyBytes_GET_SIZE(__pyx_v_start_b); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 831, __pyx_L1_error)
   __pyx_v_start_len = __pyx_t_11;
 
-  /* "video_translate_cython.pyx":832
+  /* "video_translate_cython.pyx":833
  *     start_len = len(start_b)
  * 
  *     n_probes = len(probes)             # <<<<<<<<<<<<<<
  *     found_idx = -1
  * 
 */
-  __pyx_t_11 = __Pyx_PyList_GET_SIZE(__pyx_v_probes); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 832, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyList_GET_SIZE(__pyx_v_probes); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 833, __pyx_L1_error)
   __pyx_v_n_probes = __pyx_t_11;
 
-  /* "video_translate_cython.pyx":833
+  /* "video_translate_cython.pyx":834
  * 
  *     n_probes = len(probes)
  *     found_idx = -1             # <<<<<<<<<<<<<<
@@ -18467,7 +18465,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
   __pyx_v_found_idx = -1;
 
-  /* "video_translate_cython.pyx":835
+  /* "video_translate_cython.pyx":836
  *     found_idx = -1
  * 
  *     if n_probes == 0:             # <<<<<<<<<<<<<<
@@ -18477,7 +18475,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
   __pyx_t_7 = (__pyx_v_n_probes == 0);
   if (__pyx_t_7) {
 
-    /* "video_translate_cython.pyx":836
+    /* "video_translate_cython.pyx":837
  * 
  *     if n_probes == 0:
  *         return -1             # <<<<<<<<<<<<<<
@@ -18489,7 +18487,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
     __pyx_r = __pyx_mstate_global->__pyx_int_neg_1;
     goto __pyx_L0;
 
-    /* "video_translate_cython.pyx":835
+    /* "video_translate_cython.pyx":836
  *     found_idx = -1
  * 
  *     if n_probes == 0:             # <<<<<<<<<<<<<<
@@ -18498,19 +18496,19 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
   }
 
-  /* "video_translate_cython.pyx":840
+  /* "video_translate_cython.pyx":841
  *     # Keep Python-level byte objects alive in this list while we run nogil
  *     # This ensures they are not garbage collected while C pointers reference them
  *     probe_bytes_list = []             # <<<<<<<<<<<<<<
  *     for idx in probes:
  *         t = ocr_cache.get((video_path, idx), "")
 */
-  __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 840, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 841, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_v_probe_bytes_list = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "video_translate_cython.pyx":841
+  /* "video_translate_cython.pyx":842
  *     # This ensures they are not garbage collected while C pointers reference them
  *     probe_bytes_list = []
  *     for idx in probes:             # <<<<<<<<<<<<<<
@@ -18523,18 +18521,18 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
     {
       Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_4);
       #if !CYTHON_ASSUME_SAFE_SIZE
-      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 841, __pyx_L1_error)
+      if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 842, __pyx_L1_error)
       #endif
       if (__pyx_t_11 >= __pyx_temp) break;
     }
     __pyx_t_1 = __Pyx_PyList_GetItemRef(__pyx_t_4, __pyx_t_11);
     ++__pyx_t_11;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 841, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 842, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_XDECREF_SET(__pyx_v_idx, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "video_translate_cython.pyx":842
+    /* "video_translate_cython.pyx":843
  *     probe_bytes_list = []
  *     for idx in probes:
  *         t = ocr_cache.get((video_path, idx), "")             # <<<<<<<<<<<<<<
@@ -18542,19 +18540,19 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
  *         probe_bytes_list.append(b)
 */
     __pyx_t_2 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 842, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 843, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_get); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 842, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_get); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 843, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 842, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 843, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_v_video_path);
     __Pyx_GIVEREF(__pyx_v_video_path);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 842, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 843, __pyx_L1_error);
     __Pyx_INCREF(__pyx_v_idx);
     __Pyx_GIVEREF(__pyx_v_idx);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_v_idx) != (0)) __PYX_ERR(0, 842, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_v_idx) != (0)) __PYX_ERR(0, 843, __pyx_L1_error);
     __pyx_t_5 = 1;
     #if CYTHON_UNPACK_METHODS
     if (unlikely(PyMethod_Check(__pyx_t_12))) {
@@ -18573,13 +18571,13 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 842, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 843, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
     }
     __Pyx_XDECREF_SET(__pyx_v_t, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "video_translate_cython.pyx":843
+    /* "video_translate_cython.pyx":844
  *     for idx in probes:
  *         t = ocr_cache.get((video_path, idx), "")
  *         b = t.encode('utf8')             # <<<<<<<<<<<<<<
@@ -18593,22 +18591,22 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
       PyObject *__pyx_callargs[2] = {__pyx_t_12, __pyx_mstate_global->__pyx_n_u_utf8};
       __pyx_t_1 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_encode, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 843, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 844, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
     }
     __Pyx_XDECREF_SET(__pyx_v_b, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "video_translate_cython.pyx":844
+    /* "video_translate_cython.pyx":845
  *         t = ocr_cache.get((video_path, idx), "")
  *         b = t.encode('utf8')
  *         probe_bytes_list.append(b)             # <<<<<<<<<<<<<<
  * 
  *     # Allocate C arrays for pointers and lengths with proper error handling
 */
-    __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_probe_bytes_list, __pyx_v_b); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 844, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_probe_bytes_list, __pyx_v_b); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 845, __pyx_L1_error)
 
-    /* "video_translate_cython.pyx":841
+    /* "video_translate_cython.pyx":842
  *     # This ensures they are not garbage collected while C pointers reference them
  *     probe_bytes_list = []
  *     for idx in probes:             # <<<<<<<<<<<<<<
@@ -18618,7 +18616,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "video_translate_cython.pyx":847
+  /* "video_translate_cython.pyx":848
  * 
  *     # Allocate C arrays for pointers and lengths with proper error handling
  *     cdef int result = -1             # <<<<<<<<<<<<<<
@@ -18627,7 +18625,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
   __pyx_v_result = -1;
 
-  /* "video_translate_cython.pyx":848
+  /* "video_translate_cython.pyx":849
  *     # Allocate C arrays for pointers and lengths with proper error handling
  *     cdef int result = -1
  *     try:             # <<<<<<<<<<<<<<
@@ -18636,7 +18634,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
   /*try:*/ {
 
-    /* "video_translate_cython.pyx":849
+    /* "video_translate_cython.pyx":850
  *     cdef int result = -1
  *     try:
  *         ptrs = <const char **> malloc(n_probes * sizeof(const char *))             # <<<<<<<<<<<<<<
@@ -18645,7 +18643,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
     __pyx_v_ptrs = ((char const **)malloc((__pyx_v_n_probes * (sizeof(char const *)))));
 
-    /* "video_translate_cython.pyx":850
+    /* "video_translate_cython.pyx":851
  *     try:
  *         ptrs = <const char **> malloc(n_probes * sizeof(const char *))
  *         lens = <Py_ssize_t *> malloc(n_probes * sizeof(Py_ssize_t))             # <<<<<<<<<<<<<<
@@ -18654,7 +18652,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
     __pyx_v_lens = ((Py_ssize_t *)malloc((__pyx_v_n_probes * (sizeof(Py_ssize_t)))));
 
-    /* "video_translate_cython.pyx":852
+    /* "video_translate_cython.pyx":853
  *         lens = <Py_ssize_t *> malloc(n_probes * sizeof(Py_ssize_t))
  * 
  *         if not ptrs or not lens:             # <<<<<<<<<<<<<<
@@ -18672,7 +18670,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
     __pyx_L18_bool_binop_done:;
     if (__pyx_t_7) {
 
-      /* "video_translate_cython.pyx":855
+      /* "video_translate_cython.pyx":856
  *             # fallback to non-nogil loop if allocation fails
  *             # Free any partially allocated memory
  *             if ptrs:             # <<<<<<<<<<<<<<
@@ -18682,7 +18680,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
       __pyx_t_7 = (__pyx_v_ptrs != 0);
       if (__pyx_t_7) {
 
-        /* "video_translate_cython.pyx":856
+        /* "video_translate_cython.pyx":857
  *             # Free any partially allocated memory
  *             if ptrs:
  *                 free(ptrs)             # <<<<<<<<<<<<<<
@@ -18691,7 +18689,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
         free(__pyx_v_ptrs);
 
-        /* "video_translate_cython.pyx":857
+        /* "video_translate_cython.pyx":858
  *             if ptrs:
  *                 free(ptrs)
  *                 ptrs = NULL             # <<<<<<<<<<<<<<
@@ -18700,7 +18698,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
         __pyx_v_ptrs = NULL;
 
-        /* "video_translate_cython.pyx":855
+        /* "video_translate_cython.pyx":856
  *             # fallback to non-nogil loop if allocation fails
  *             # Free any partially allocated memory
  *             if ptrs:             # <<<<<<<<<<<<<<
@@ -18709,7 +18707,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
       }
 
-      /* "video_translate_cython.pyx":858
+      /* "video_translate_cython.pyx":859
  *                 free(ptrs)
  *                 ptrs = NULL
  *             if lens:             # <<<<<<<<<<<<<<
@@ -18719,7 +18717,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
       __pyx_t_7 = (__pyx_v_lens != 0);
       if (__pyx_t_7) {
 
-        /* "video_translate_cython.pyx":859
+        /* "video_translate_cython.pyx":860
  *                 ptrs = NULL
  *             if lens:
  *                 free(lens)             # <<<<<<<<<<<<<<
@@ -18728,7 +18726,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
         free(__pyx_v_lens);
 
-        /* "video_translate_cython.pyx":860
+        /* "video_translate_cython.pyx":861
  *             if lens:
  *                 free(lens)
  *                 lens = NULL             # <<<<<<<<<<<<<<
@@ -18737,7 +18735,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
         __pyx_v_lens = NULL;
 
-        /* "video_translate_cython.pyx":858
+        /* "video_translate_cython.pyx":859
  *                 free(ptrs)
  *                 ptrs = NULL
  *             if lens:             # <<<<<<<<<<<<<<
@@ -18746,7 +18744,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
       }
 
-      /* "video_translate_cython.pyx":863
+      /* "video_translate_cython.pyx":864
  * 
  *             # Use fallback method
  *             for current_index in probes:             # <<<<<<<<<<<<<<
@@ -18759,18 +18757,18 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
         {
           Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_4);
           #if !CYTHON_ASSUME_SAFE_SIZE
-          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 863, __pyx_L15_error)
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 864, __pyx_L15_error)
           #endif
           if (__pyx_t_11 >= __pyx_temp) break;
         }
         __pyx_t_1 = __Pyx_PyList_GetItemRef(__pyx_t_4, __pyx_t_11);
         ++__pyx_t_11;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 863, __pyx_L15_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 864, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_XDECREF_SET(__pyx_v_current_index, __pyx_t_1);
         __pyx_t_1 = 0;
 
-        /* "video_translate_cython.pyx":864
+        /* "video_translate_cython.pyx":865
  *             # Use fallback method
  *             for current_index in probes:
  *                 result_tuple = is_text_same_nogil(video_path, current_index, start_text, similarity_threshold, source_language)             # <<<<<<<<<<<<<<
@@ -18778,9 +18776,9 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
  *                 if result_tuple is None:
 */
         __pyx_t_12 = NULL;
-        __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_is_text_same_nogil); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 864, __pyx_L15_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_is_text_same_nogil); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 865, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_2 = PyFloat_FromDouble(__pyx_v_similarity_threshold); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 864, __pyx_L15_error)
+        __pyx_t_2 = PyFloat_FromDouble(__pyx_v_similarity_threshold); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 865, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_2);
         __pyx_t_5 = 1;
         #if CYTHON_UNPACK_METHODS
@@ -18800,13 +18798,13 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
           __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 864, __pyx_L15_error)
+          if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 865, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_1);
         }
         __Pyx_XDECREF_SET(__pyx_v_result_tuple, __pyx_t_1);
         __pyx_t_1 = 0;
 
-        /* "video_translate_cython.pyx":865
+        /* "video_translate_cython.pyx":866
  *             for current_index in probes:
  *                 result_tuple = is_text_same_nogil(video_path, current_index, start_text, similarity_threshold, source_language)
  *                 frame_checks += 1             # <<<<<<<<<<<<<<
@@ -18815,7 +18813,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
         __pyx_v_frame_checks = (__pyx_v_frame_checks + 1);
 
-        /* "video_translate_cython.pyx":866
+        /* "video_translate_cython.pyx":867
  *                 result_tuple = is_text_same_nogil(video_path, current_index, start_text, similarity_threshold, source_language)
  *                 frame_checks += 1
  *                 if result_tuple is None:             # <<<<<<<<<<<<<<
@@ -18825,7 +18823,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
         __pyx_t_7 = (__pyx_v_result_tuple == Py_None);
         if (__pyx_t_7) {
 
-          /* "video_translate_cython.pyx":867
+          /* "video_translate_cython.pyx":868
  *                 frame_checks += 1
  *                 if result_tuple is None:
  *                     break             # <<<<<<<<<<<<<<
@@ -18834,7 +18832,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
           goto __pyx_L23_break;
 
-          /* "video_translate_cython.pyx":866
+          /* "video_translate_cython.pyx":867
  *                 result_tuple = is_text_same_nogil(video_path, current_index, start_text, similarity_threshold, source_language)
  *                 frame_checks += 1
  *                 if result_tuple is None:             # <<<<<<<<<<<<<<
@@ -18843,7 +18841,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
         }
 
-        /* "video_translate_cython.pyx":868
+        /* "video_translate_cython.pyx":869
  *                 if result_tuple is None:
  *                     break
  *                 is_same, current_text, similarity = result_tuple             # <<<<<<<<<<<<<<
@@ -18856,7 +18854,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
           if (unlikely(size != 3)) {
             if (size > 3) __Pyx_RaiseTooManyValuesError(3);
             else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-            __PYX_ERR(0, 868, __pyx_L15_error)
+            __PYX_ERR(0, 869, __pyx_L15_error)
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
           if (likely(PyTuple_CheckExact(sequence))) {
@@ -18868,26 +18866,26 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
             __Pyx_INCREF(__pyx_t_2);
           } else {
             __pyx_t_1 = __Pyx_PyList_GetItemRef(sequence, 0);
-            if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 868, __pyx_L15_error)
+            if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 869, __pyx_L15_error)
             __Pyx_XGOTREF(__pyx_t_1);
             __pyx_t_3 = __Pyx_PyList_GetItemRef(sequence, 1);
-            if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 868, __pyx_L15_error)
+            if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 869, __pyx_L15_error)
             __Pyx_XGOTREF(__pyx_t_3);
             __pyx_t_2 = __Pyx_PyList_GetItemRef(sequence, 2);
-            if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 868, __pyx_L15_error)
+            if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 869, __pyx_L15_error)
             __Pyx_XGOTREF(__pyx_t_2);
           }
           #else
-          __pyx_t_1 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 868, __pyx_L15_error)
+          __pyx_t_1 = __Pyx_PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 869, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_1);
-          __pyx_t_3 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 868, __pyx_L15_error)
+          __pyx_t_3 = __Pyx_PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 869, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_3);
-          __pyx_t_2 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 868, __pyx_L15_error)
+          __pyx_t_2 = __Pyx_PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 869, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_2);
           #endif
         } else {
           Py_ssize_t index = -1;
-          __pyx_t_12 = PyObject_GetIter(__pyx_v_result_tuple); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 868, __pyx_L15_error)
+          __pyx_t_12 = PyObject_GetIter(__pyx_v_result_tuple); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 869, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_12);
           __pyx_t_13 = (CYTHON_COMPILING_IN_LIMITED_API) ? PyIter_Next : __Pyx_PyObject_GetIterNextFunc(__pyx_t_12);
           index = 0; __pyx_t_1 = __pyx_t_13(__pyx_t_12); if (unlikely(!__pyx_t_1)) goto __pyx_L25_unpacking_failed;
@@ -18896,7 +18894,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
           __Pyx_GOTREF(__pyx_t_3);
           index = 2; __pyx_t_2 = __pyx_t_13(__pyx_t_12); if (unlikely(!__pyx_t_2)) goto __pyx_L25_unpacking_failed;
           __Pyx_GOTREF(__pyx_t_2);
-          if (__Pyx_IternextUnpackEndCheck(__pyx_t_13(__pyx_t_12), 3) < (0)) __PYX_ERR(0, 868, __pyx_L15_error)
+          if (__Pyx_IternextUnpackEndCheck(__pyx_t_13(__pyx_t_12), 3) < (0)) __PYX_ERR(0, 869, __pyx_L15_error)
           __pyx_t_13 = NULL;
           __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
           goto __pyx_L26_unpacking_done;
@@ -18904,7 +18902,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
           __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
           __pyx_t_13 = NULL;
           if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-          __PYX_ERR(0, 868, __pyx_L15_error)
+          __PYX_ERR(0, 869, __pyx_L15_error)
           __pyx_L26_unpacking_done:;
         }
         __Pyx_XDECREF_SET(__pyx_v_is_same, __pyx_t_1);
@@ -18914,36 +18912,36 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
         __Pyx_XDECREF_SET(__pyx_v_similarity, __pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "video_translate_cython.pyx":869
+        /* "video_translate_cython.pyx":870
  *                     break
  *                 is_same, current_text, similarity = result_tuple
  *                 if not is_same:             # <<<<<<<<<<<<<<
  *                     left = current_index - (current_index - start_frame_index) // 2
  *                     right = current_index
 */
-        __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_v_is_same); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 869, __pyx_L15_error)
+        __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_v_is_same); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 870, __pyx_L15_error)
         __pyx_t_8 = (!__pyx_t_7);
         if (__pyx_t_8) {
 
-          /* "video_translate_cython.pyx":870
+          /* "video_translate_cython.pyx":871
  *                 is_same, current_text, similarity = result_tuple
  *                 if not is_same:
  *                     left = current_index - (current_index - start_frame_index) // 2             # <<<<<<<<<<<<<<
  *                     right = current_index
  *                     break
 */
-          __pyx_t_2 = PyNumber_Subtract(__pyx_v_current_index, __pyx_v_start_frame_index); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 870, __pyx_L15_error)
+          __pyx_t_2 = PyNumber_Subtract(__pyx_v_current_index, __pyx_v_start_frame_index); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 871, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_3 = __Pyx_PyLong_FloorDivideObjC(__pyx_t_2, __pyx_mstate_global->__pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 870, __pyx_L15_error)
+          __pyx_t_3 = __Pyx_PyLong_FloorDivideObjC(__pyx_t_2, __pyx_mstate_global->__pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 871, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          __pyx_t_2 = PyNumber_Subtract(__pyx_v_current_index, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 870, __pyx_L15_error)
+          __pyx_t_2 = PyNumber_Subtract(__pyx_v_current_index, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 871, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
           __Pyx_DECREF_SET(__pyx_v_left, __pyx_t_2);
           __pyx_t_2 = 0;
 
-          /* "video_translate_cython.pyx":871
+          /* "video_translate_cython.pyx":872
  *                 if not is_same:
  *                     left = current_index - (current_index - start_frame_index) // 2
  *                     right = current_index             # <<<<<<<<<<<<<<
@@ -18953,7 +18951,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
           __Pyx_INCREF(__pyx_v_current_index);
           __Pyx_DECREF_SET(__pyx_v_right, __pyx_v_current_index);
 
-          /* "video_translate_cython.pyx":872
+          /* "video_translate_cython.pyx":873
  *                     left = current_index - (current_index - start_frame_index) // 2
  *                     right = current_index
  *                     break             # <<<<<<<<<<<<<<
@@ -18962,7 +18960,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
           goto __pyx_L23_break;
 
-          /* "video_translate_cython.pyx":869
+          /* "video_translate_cython.pyx":870
  *                     break
  *                 is_same, current_text, similarity = result_tuple
  *                 if not is_same:             # <<<<<<<<<<<<<<
@@ -18971,7 +18969,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
         }
 
-        /* "video_translate_cython.pyx":863
+        /* "video_translate_cython.pyx":864
  * 
  *             # Use fallback method
  *             for current_index in probes:             # <<<<<<<<<<<<<<
@@ -18986,17 +18984,17 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
       goto __pyx_L28_for_end;
       __pyx_L28_for_end:;
 
-      /* "video_translate_cython.pyx":873
+      /* "video_translate_cython.pyx":874
  *                     right = current_index
  *                     break
  *             if right == 0:             # <<<<<<<<<<<<<<
  *                 result = -1
  *             else:
 */
-      __pyx_t_8 = (__Pyx_PyLong_BoolEqObjC(__pyx_v_right, __pyx_mstate_global->__pyx_int_0, 0, 0)); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 873, __pyx_L15_error)
+      __pyx_t_8 = (__Pyx_PyLong_BoolEqObjC(__pyx_v_right, __pyx_mstate_global->__pyx_int_0, 0, 0)); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 874, __pyx_L15_error)
       if (__pyx_t_8) {
 
-        /* "video_translate_cython.pyx":874
+        /* "video_translate_cython.pyx":875
  *                     break
  *             if right == 0:
  *                 result = -1             # <<<<<<<<<<<<<<
@@ -19005,7 +19003,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
         __pyx_v_result = -1;
 
-        /* "video_translate_cython.pyx":873
+        /* "video_translate_cython.pyx":874
  *                     right = current_index
  *                     break
  *             if right == 0:             # <<<<<<<<<<<<<<
@@ -19015,7 +19013,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
         goto __pyx_L29;
       }
 
-      /* "video_translate_cython.pyx":877
+      /* "video_translate_cython.pyx":878
  *             else:
  *                 # proceed to binary phase
  *                 while left < right:             # <<<<<<<<<<<<<<
@@ -19024,49 +19022,49 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
       /*else*/ {
         while (1) {
-          __pyx_t_4 = PyObject_RichCompare(__pyx_v_left, __pyx_v_right, Py_LT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 877, __pyx_L15_error)
-          __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 877, __pyx_L15_error)
+          __pyx_t_4 = PyObject_RichCompare(__pyx_v_left, __pyx_v_right, Py_LT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 878, __pyx_L15_error)
+          __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 878, __pyx_L15_error)
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           if (!__pyx_t_8) break;
 
-          /* "video_translate_cython.pyx":878
+          /* "video_translate_cython.pyx":879
  *                 # proceed to binary phase
  *                 while left < right:
  *                     mid = (left + right) // 2             # <<<<<<<<<<<<<<
  * 
  *                     if (video_path, mid) not in ocr_cache:
 */
-          __pyx_t_4 = PyNumber_Add(__pyx_v_left, __pyx_v_right); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 878, __pyx_L15_error)
+          __pyx_t_4 = PyNumber_Add(__pyx_v_left, __pyx_v_right); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 879, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_4);
-          __pyx_t_2 = __Pyx_PyLong_FloorDivideObjC(__pyx_t_4, __pyx_mstate_global->__pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 878, __pyx_L15_error)
+          __pyx_t_2 = __Pyx_PyLong_FloorDivideObjC(__pyx_t_4, __pyx_mstate_global->__pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 879, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_XDECREF_SET(__pyx_v_mid, __pyx_t_2);
           __pyx_t_2 = 0;
 
-          /* "video_translate_cython.pyx":880
+          /* "video_translate_cython.pyx":881
  *                     mid = (left + right) // 2
  * 
  *                     if (video_path, mid) not in ocr_cache:             # <<<<<<<<<<<<<<
  *                         batch_ocr_process(video_path, [mid], source_language=source_language)
  * 
 */
-          __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 880, __pyx_L15_error)
+          __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 881, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_INCREF(__pyx_v_video_path);
           __Pyx_GIVEREF(__pyx_v_video_path);
-          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 880, __pyx_L15_error);
+          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 881, __pyx_L15_error);
           __Pyx_INCREF(__pyx_v_mid);
           __Pyx_GIVEREF(__pyx_v_mid);
-          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_mid) != (0)) __PYX_ERR(0, 880, __pyx_L15_error);
-          __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 880, __pyx_L15_error)
+          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_mid) != (0)) __PYX_ERR(0, 881, __pyx_L15_error);
+          __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 881, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_4);
-          __pyx_t_8 = (__Pyx_PySequence_ContainsTF(__pyx_t_2, __pyx_t_4, Py_NE)); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 880, __pyx_L15_error)
+          __pyx_t_8 = (__Pyx_PySequence_ContainsTF(__pyx_t_2, __pyx_t_4, Py_NE)); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 881, __pyx_L15_error)
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           if (__pyx_t_8) {
 
-            /* "video_translate_cython.pyx":881
+            /* "video_translate_cython.pyx":882
  * 
  *                     if (video_path, mid) not in ocr_cache:
  *                         batch_ocr_process(video_path, [mid], source_language=source_language)             # <<<<<<<<<<<<<<
@@ -19074,13 +19072,13 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
  *                     mid_text = ocr_cache.get((video_path, mid), "")
 */
             __pyx_t_2 = NULL;
-            __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_batch_ocr_process); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 881, __pyx_L15_error)
+            __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_batch_ocr_process); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 882, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_3);
-            __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 881, __pyx_L15_error)
+            __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 882, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_1);
             __Pyx_INCREF(__pyx_v_mid);
             __Pyx_GIVEREF(__pyx_v_mid);
-            if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_v_mid) != (0)) __PYX_ERR(0, 881, __pyx_L15_error);
+            if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_v_mid) != (0)) __PYX_ERR(0, 882, __pyx_L15_error);
             __pyx_t_5 = 1;
             #if CYTHON_UNPACK_METHODS
             if (unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -19095,20 +19093,20 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
             #endif
             {
               PyObject *__pyx_callargs[3 + ((CYTHON_VECTORCALL) ? 1 : 0)] = {__pyx_t_2, __pyx_v_video_path, __pyx_t_1};
-              __pyx_t_12 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 881, __pyx_L15_error)
+              __pyx_t_12 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 882, __pyx_L15_error)
               __Pyx_GOTREF(__pyx_t_12);
-              if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_v_source_language, __pyx_t_12, __pyx_callargs+3, 0) < (0)) __PYX_ERR(0, 881, __pyx_L15_error)
+              if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_v_source_language, __pyx_t_12, __pyx_callargs+3, 0) < (0)) __PYX_ERR(0, 882, __pyx_L15_error)
               __pyx_t_4 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_3, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_12);
               __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
               __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
               __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-              if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 881, __pyx_L15_error)
+              if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 882, __pyx_L15_error)
               __Pyx_GOTREF(__pyx_t_4);
             }
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-            /* "video_translate_cython.pyx":880
+            /* "video_translate_cython.pyx":881
  *                     mid = (left + right) // 2
  * 
  *                     if (video_path, mid) not in ocr_cache:             # <<<<<<<<<<<<<<
@@ -19117,7 +19115,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
           }
 
-          /* "video_translate_cython.pyx":883
+          /* "video_translate_cython.pyx":884
  *                         batch_ocr_process(video_path, [mid], source_language=source_language)
  * 
  *                     mid_text = ocr_cache.get((video_path, mid), "")             # <<<<<<<<<<<<<<
@@ -19125,19 +19123,19 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
  *                     mid_ptr = mid_b
 */
           __pyx_t_3 = NULL;
-          __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 883, __pyx_L15_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 884, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_12);
-          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_get); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 883, __pyx_L15_error)
+          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_get); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 884, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-          __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 883, __pyx_L15_error)
+          __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 884, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_12);
           __Pyx_INCREF(__pyx_v_video_path);
           __Pyx_GIVEREF(__pyx_v_video_path);
-          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 883, __pyx_L15_error);
+          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 884, __pyx_L15_error);
           __Pyx_INCREF(__pyx_v_mid);
           __Pyx_GIVEREF(__pyx_v_mid);
-          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_v_mid) != (0)) __PYX_ERR(0, 883, __pyx_L15_error);
+          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_v_mid) != (0)) __PYX_ERR(0, 884, __pyx_L15_error);
           __pyx_t_5 = 1;
           #if CYTHON_UNPACK_METHODS
           if (unlikely(PyMethod_Check(__pyx_t_1))) {
@@ -19156,13 +19154,13 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
             __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
             __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 883, __pyx_L15_error)
+            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 884, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_4);
           }
           __Pyx_XDECREF_SET(__pyx_v_mid_text, __pyx_t_4);
           __pyx_t_4 = 0;
 
-          /* "video_translate_cython.pyx":884
+          /* "video_translate_cython.pyx":885
  * 
  *                     mid_text = ocr_cache.get((video_path, mid), "")
  *                     mid_b = mid_text.encode('utf8')             # <<<<<<<<<<<<<<
@@ -19176,14 +19174,14 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
             PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_mstate_global->__pyx_n_u_utf8};
             __pyx_t_4 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_encode, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
             __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 884, __pyx_L15_error)
+            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 885, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_4);
           }
-          if (!(likely(PyBytes_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("bytes", __pyx_t_4))) __PYX_ERR(0, 884, __pyx_L15_error)
+          if (!(likely(PyBytes_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("bytes", __pyx_t_4))) __PYX_ERR(0, 885, __pyx_L15_error)
           __Pyx_XDECREF_SET(__pyx_v_mid_b, ((PyObject*)__pyx_t_4));
           __pyx_t_4 = 0;
 
-          /* "video_translate_cython.pyx":885
+          /* "video_translate_cython.pyx":886
  *                     mid_text = ocr_cache.get((video_path, mid), "")
  *                     mid_b = mid_text.encode('utf8')
  *                     mid_ptr = mid_b             # <<<<<<<<<<<<<<
@@ -19192,12 +19190,12 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
           if (unlikely(__pyx_v_mid_b == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-            __PYX_ERR(0, 885, __pyx_L15_error)
+            __PYX_ERR(0, 886, __pyx_L15_error)
           }
-          __pyx_t_10 = __Pyx_PyBytes_AsString(__pyx_v_mid_b); if (unlikely((!__pyx_t_10) && PyErr_Occurred())) __PYX_ERR(0, 885, __pyx_L15_error)
+          __pyx_t_10 = __Pyx_PyBytes_AsString(__pyx_v_mid_b); if (unlikely((!__pyx_t_10) && PyErr_Occurred())) __PYX_ERR(0, 886, __pyx_L15_error)
           __pyx_v_mid_ptr = __pyx_t_10;
 
-          /* "video_translate_cython.pyx":886
+          /* "video_translate_cython.pyx":887
  *                     mid_b = mid_text.encode('utf8')
  *                     mid_ptr = mid_b
  *                     mid_len = len(mid_b)             # <<<<<<<<<<<<<<
@@ -19206,12 +19204,12 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
           if (unlikely(__pyx_v_mid_b == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-            __PYX_ERR(0, 886, __pyx_L15_error)
+            __PYX_ERR(0, 887, __pyx_L15_error)
           }
-          __pyx_t_11 = __Pyx_PyBytes_GET_SIZE(__pyx_v_mid_b); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 886, __pyx_L15_error)
+          __pyx_t_11 = __Pyx_PyBytes_GET_SIZE(__pyx_v_mid_b); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 887, __pyx_L15_error)
           __pyx_v_mid_len = __pyx_t_11;
 
-          /* "video_translate_cython.pyx":889
+          /* "video_translate_cython.pyx":890
  * 
  *                     # mid_b must stay in scope during nogil block
  *                     with cython.nogil:             # <<<<<<<<<<<<<<
@@ -19225,18 +19223,18 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
               __Pyx_FastGIL_Remember();
               /*try:*/ {
 
-                /* "video_translate_cython.pyx":890
+                /* "video_translate_cython.pyx":891
  *                     # mid_b must stay in scope during nogil block
  *                     with cython.nogil:
  *                         sim_mid = c_text_similarity(start_ptr, start_len, mid_ptr, mid_len)             # <<<<<<<<<<<<<<
  * 
  *                     frame_checks += 1
 */
-                __pyx_t_14 = __pyx_f_22video_translate_cython_c_text_similarity(__pyx_v_start_ptr, __pyx_v_start_len, __pyx_v_mid_ptr, __pyx_v_mid_len); if (unlikely(__pyx_t_14 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 890, __pyx_L36_error)
+                __pyx_t_14 = __pyx_f_22video_translate_cython_c_text_similarity(__pyx_v_start_ptr, __pyx_v_start_len, __pyx_v_mid_ptr, __pyx_v_mid_len); if (unlikely(__pyx_t_14 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 891, __pyx_L36_error)
                 __pyx_v_sim_mid = __pyx_t_14;
               }
 
-              /* "video_translate_cython.pyx":889
+              /* "video_translate_cython.pyx":890
  * 
  *                     # mid_b must stay in scope during nogil block
  *                     with cython.nogil:             # <<<<<<<<<<<<<<
@@ -19258,7 +19256,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
               }
           }
 
-          /* "video_translate_cython.pyx":892
+          /* "video_translate_cython.pyx":893
  *                         sim_mid = c_text_similarity(start_ptr, start_len, mid_ptr, mid_len)
  * 
  *                     frame_checks += 1             # <<<<<<<<<<<<<<
@@ -19267,7 +19265,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
           __pyx_v_frame_checks = (__pyx_v_frame_checks + 1);
 
-          /* "video_translate_cython.pyx":893
+          /* "video_translate_cython.pyx":894
  * 
  *                     frame_checks += 1
  *                     if sim_mid >= similarity_threshold:             # <<<<<<<<<<<<<<
@@ -19277,19 +19275,19 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
           __pyx_t_8 = (__pyx_v_sim_mid >= __pyx_v_similarity_threshold);
           if (__pyx_t_8) {
 
-            /* "video_translate_cython.pyx":894
+            /* "video_translate_cython.pyx":895
  *                     frame_checks += 1
  *                     if sim_mid >= similarity_threshold:
  *                         left = mid + 1             # <<<<<<<<<<<<<<
  *                     else:
  *                         right = mid
 */
-            __pyx_t_4 = __Pyx_PyLong_AddObjC(__pyx_v_mid, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 894, __pyx_L15_error)
+            __pyx_t_4 = __Pyx_PyLong_AddObjC(__pyx_v_mid, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 895, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_DECREF_SET(__pyx_v_left, __pyx_t_4);
             __pyx_t_4 = 0;
 
-            /* "video_translate_cython.pyx":893
+            /* "video_translate_cython.pyx":894
  * 
  *                     frame_checks += 1
  *                     if sim_mid >= similarity_threshold:             # <<<<<<<<<<<<<<
@@ -19299,7 +19297,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
             goto __pyx_L38;
           }
 
-          /* "video_translate_cython.pyx":896
+          /* "video_translate_cython.pyx":897
  *                         left = mid + 1
  *                     else:
  *                         right = mid             # <<<<<<<<<<<<<<
@@ -19313,19 +19311,19 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
           __pyx_L38:;
         }
 
-        /* "video_translate_cython.pyx":898
+        /* "video_translate_cython.pyx":899
  *                         right = mid
  * 
  *                 result = left             # <<<<<<<<<<<<<<
  *         else:
  *             # fill C arrays (still under GIL)
 */
-        __pyx_t_6 = __Pyx_PyLong_As_int(__pyx_v_left); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 898, __pyx_L15_error)
+        __pyx_t_6 = __Pyx_PyLong_As_int(__pyx_v_left); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 899, __pyx_L15_error)
         __pyx_v_result = __pyx_t_6;
       }
       __pyx_L29:;
 
-      /* "video_translate_cython.pyx":852
+      /* "video_translate_cython.pyx":853
  *         lens = <Py_ssize_t *> malloc(n_probes * sizeof(Py_ssize_t))
  * 
  *         if not ptrs or not lens:             # <<<<<<<<<<<<<<
@@ -19335,7 +19333,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
       goto __pyx_L17;
     }
 
-    /* "video_translate_cython.pyx":902
+    /* "video_translate_cython.pyx":903
  *             # fill C arrays (still under GIL)
  *             # Keep probe_bytes_list in scope to prevent garbage collection
  *             for i in range(n_probes):             # <<<<<<<<<<<<<<
@@ -19348,34 +19346,34 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
       for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
         __pyx_v_i = __pyx_t_16;
 
-        /* "video_translate_cython.pyx":903
+        /* "video_translate_cython.pyx":904
  *             # Keep probe_bytes_list in scope to prevent garbage collection
  *             for i in range(n_probes):
  *                 ptrs[i] = probe_bytes_list[i]             # <<<<<<<<<<<<<<
  *                 lens[i] = len(probe_bytes_list[i])
  * 
 */
-        __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_probe_bytes_list, __pyx_v_i, int, 1, __Pyx_PyLong_From_int, 1, 1, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 903, __pyx_L15_error)
+        __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_probe_bytes_list, __pyx_v_i, int, 1, __Pyx_PyLong_From_int, 1, 1, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 904, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_17 = __Pyx_PyObject_AsString(__pyx_t_4); if (unlikely((!__pyx_t_17) && PyErr_Occurred())) __PYX_ERR(0, 903, __pyx_L15_error)
+        __pyx_t_17 = __Pyx_PyObject_AsString(__pyx_t_4); if (unlikely((!__pyx_t_17) && PyErr_Occurred())) __PYX_ERR(0, 904, __pyx_L15_error)
         (__pyx_v_ptrs[__pyx_v_i]) = __pyx_t_17;
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-        /* "video_translate_cython.pyx":904
+        /* "video_translate_cython.pyx":905
  *             for i in range(n_probes):
  *                 ptrs[i] = probe_bytes_list[i]
  *                 lens[i] = len(probe_bytes_list[i])             # <<<<<<<<<<<<<<
  * 
  *             # Run comparisons in nogil: compare start_text against each probe
 */
-        __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_probe_bytes_list, __pyx_v_i, int, 1, __Pyx_PyLong_From_int, 1, 1, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 904, __pyx_L15_error)
+        __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_probe_bytes_list, __pyx_v_i, int, 1, __Pyx_PyLong_From_int, 1, 1, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 905, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_11 = PyObject_Length(__pyx_t_4); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 904, __pyx_L15_error)
+        __pyx_t_11 = PyObject_Length(__pyx_t_4); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 905, __pyx_L15_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         (__pyx_v_lens[__pyx_v_i]) = __pyx_t_11;
       }
 
-      /* "video_translate_cython.pyx":908
+      /* "video_translate_cython.pyx":909
  *             # Run comparisons in nogil: compare start_text against each probe
  *             # probe_bytes_list kept alive in outer scope to prevent GC
  *             with cython.nogil:             # <<<<<<<<<<<<<<
@@ -19389,7 +19387,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
           __Pyx_FastGIL_Remember();
           /*try:*/ {
 
-            /* "video_translate_cython.pyx":909
+            /* "video_translate_cython.pyx":910
  *             # probe_bytes_list kept alive in outer scope to prevent GC
  *             with cython.nogil:
  *                 for i in range(n_probes):             # <<<<<<<<<<<<<<
@@ -19401,17 +19399,17 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
             for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
               __pyx_v_i = __pyx_t_16;
 
-              /* "video_translate_cython.pyx":910
+              /* "video_translate_cython.pyx":911
  *             with cython.nogil:
  *                 for i in range(n_probes):
  *                     sim = c_text_similarity(start_ptr, start_len, ptrs[i], lens[i])             # <<<<<<<<<<<<<<
  *                     if sim < similarity_threshold:
  *                         found_idx = i
 */
-              __pyx_t_14 = __pyx_f_22video_translate_cython_c_text_similarity(__pyx_v_start_ptr, __pyx_v_start_len, (__pyx_v_ptrs[__pyx_v_i]), (__pyx_v_lens[__pyx_v_i])); if (unlikely(__pyx_t_14 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 910, __pyx_L42_error)
+              __pyx_t_14 = __pyx_f_22video_translate_cython_c_text_similarity(__pyx_v_start_ptr, __pyx_v_start_len, (__pyx_v_ptrs[__pyx_v_i]), (__pyx_v_lens[__pyx_v_i])); if (unlikely(__pyx_t_14 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 911, __pyx_L42_error)
               __pyx_v_sim = __pyx_t_14;
 
-              /* "video_translate_cython.pyx":911
+              /* "video_translate_cython.pyx":912
  *                 for i in range(n_probes):
  *                     sim = c_text_similarity(start_ptr, start_len, ptrs[i], lens[i])
  *                     if sim < similarity_threshold:             # <<<<<<<<<<<<<<
@@ -19421,7 +19419,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
               __pyx_t_8 = (__pyx_v_sim < __pyx_v_similarity_threshold);
               if (__pyx_t_8) {
 
-                /* "video_translate_cython.pyx":912
+                /* "video_translate_cython.pyx":913
  *                     sim = c_text_similarity(start_ptr, start_len, ptrs[i], lens[i])
  *                     if sim < similarity_threshold:
  *                         found_idx = i             # <<<<<<<<<<<<<<
@@ -19430,7 +19428,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
                 __pyx_v_found_idx = __pyx_v_i;
 
-                /* "video_translate_cython.pyx":913
+                /* "video_translate_cython.pyx":914
  *                     if sim < similarity_threshold:
  *                         found_idx = i
  *                         break             # <<<<<<<<<<<<<<
@@ -19439,7 +19437,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
                 goto __pyx_L45_break;
 
-                /* "video_translate_cython.pyx":911
+                /* "video_translate_cython.pyx":912
  *                 for i in range(n_probes):
  *                     sim = c_text_similarity(start_ptr, start_len, ptrs[i], lens[i])
  *                     if sim < similarity_threshold:             # <<<<<<<<<<<<<<
@@ -19451,7 +19449,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
             __pyx_L45_break:;
           }
 
-          /* "video_translate_cython.pyx":908
+          /* "video_translate_cython.pyx":909
  *             # Run comparisons in nogil: compare start_text against each probe
  *             # probe_bytes_list kept alive in outer scope to prevent GC
  *             with cython.nogil:             # <<<<<<<<<<<<<<
@@ -19473,7 +19471,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
           }
       }
 
-      /* "video_translate_cython.pyx":916
+      /* "video_translate_cython.pyx":917
  * 
  *             # Free memory used for exponential search before binary search
  *             free(ptrs)             # <<<<<<<<<<<<<<
@@ -19482,7 +19480,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
       free(__pyx_v_ptrs);
 
-      /* "video_translate_cython.pyx":917
+      /* "video_translate_cython.pyx":918
  *             # Free memory used for exponential search before binary search
  *             free(ptrs)
  *             ptrs = NULL             # <<<<<<<<<<<<<<
@@ -19491,7 +19489,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
       __pyx_v_ptrs = NULL;
 
-      /* "video_translate_cython.pyx":918
+      /* "video_translate_cython.pyx":919
  *             free(ptrs)
  *             ptrs = NULL
  *             free(lens)             # <<<<<<<<<<<<<<
@@ -19500,7 +19498,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
       free(__pyx_v_lens);
 
-      /* "video_translate_cython.pyx":919
+      /* "video_translate_cython.pyx":920
  *             ptrs = NULL
  *             free(lens)
  *             lens = NULL             # <<<<<<<<<<<<<<
@@ -19509,7 +19507,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
       __pyx_v_lens = NULL;
 
-      /* "video_translate_cython.pyx":921
+      /* "video_translate_cython.pyx":922
  *             lens = NULL
  * 
  *             if found_idx == -1:             # <<<<<<<<<<<<<<
@@ -19519,7 +19517,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
       __pyx_t_8 = (__pyx_v_found_idx == -1L);
       if (__pyx_t_8) {
 
-        /* "video_translate_cython.pyx":922
+        /* "video_translate_cython.pyx":923
  * 
  *             if found_idx == -1:
  *                 result = -1             # <<<<<<<<<<<<<<
@@ -19528,7 +19526,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
         __pyx_v_result = -1;
 
-        /* "video_translate_cython.pyx":921
+        /* "video_translate_cython.pyx":922
  *             lens = NULL
  * 
  *             if found_idx == -1:             # <<<<<<<<<<<<<<
@@ -19538,7 +19536,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
         goto __pyx_L47;
       }
 
-      /* "video_translate_cython.pyx":924
+      /* "video_translate_cython.pyx":925
  *                 result = -1
  *             else:
  *                 current_index = probes[found_idx]             # <<<<<<<<<<<<<<
@@ -19546,30 +19544,30 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
  *                 right = current_index
 */
       /*else*/ {
-        __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_probes, __pyx_v_found_idx, int, 1, __Pyx_PyLong_From_int, 1, 1, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 924, __pyx_L15_error)
+        __pyx_t_4 = __Pyx_GetItemInt_List(__pyx_v_probes, __pyx_v_found_idx, int, 1, __Pyx_PyLong_From_int, 1, 1, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 925, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_4);
         __pyx_v_current_index = __pyx_t_4;
         __pyx_t_4 = 0;
 
-        /* "video_translate_cython.pyx":925
+        /* "video_translate_cython.pyx":926
  *             else:
  *                 current_index = probes[found_idx]
  *                 left = current_index - (current_index - start_frame_index) // 2             # <<<<<<<<<<<<<<
  *                 right = current_index
  * 
 */
-        __pyx_t_4 = PyNumber_Subtract(__pyx_v_current_index, __pyx_v_start_frame_index); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 925, __pyx_L15_error)
+        __pyx_t_4 = PyNumber_Subtract(__pyx_v_current_index, __pyx_v_start_frame_index); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 926, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_1 = __Pyx_PyLong_FloorDivideObjC(__pyx_t_4, __pyx_mstate_global->__pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 925, __pyx_L15_error)
+        __pyx_t_1 = __Pyx_PyLong_FloorDivideObjC(__pyx_t_4, __pyx_mstate_global->__pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 926, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_4 = PyNumber_Subtract(__pyx_v_current_index, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 925, __pyx_L15_error)
+        __pyx_t_4 = PyNumber_Subtract(__pyx_v_current_index, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 926, __pyx_L15_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF_SET(__pyx_v_left, __pyx_t_4);
         __pyx_t_4 = 0;
 
-        /* "video_translate_cython.pyx":926
+        /* "video_translate_cython.pyx":927
  *                 current_index = probes[found_idx]
  *                 left = current_index - (current_index - start_frame_index) // 2
  *                 right = current_index             # <<<<<<<<<<<<<<
@@ -19579,7 +19577,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
         __Pyx_INCREF(__pyx_v_current_index);
         __Pyx_DECREF_SET(__pyx_v_right, __pyx_v_current_index);
 
-        /* "video_translate_cython.pyx":930
+        /* "video_translate_cython.pyx":931
  *                 # Phase 2 - binary search
  *                 # Keep start_b alive during binary search to ensure start_ptr remains valid
  *                 while left < right:             # <<<<<<<<<<<<<<
@@ -19587,49 +19585,49 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
  * 
 */
         while (1) {
-          __pyx_t_4 = PyObject_RichCompare(__pyx_v_left, __pyx_v_right, Py_LT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 930, __pyx_L15_error)
-          __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 930, __pyx_L15_error)
+          __pyx_t_4 = PyObject_RichCompare(__pyx_v_left, __pyx_v_right, Py_LT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 931, __pyx_L15_error)
+          __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 931, __pyx_L15_error)
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           if (!__pyx_t_8) break;
 
-          /* "video_translate_cython.pyx":931
+          /* "video_translate_cython.pyx":932
  *                 # Keep start_b alive during binary search to ensure start_ptr remains valid
  *                 while left < right:
  *                     mid = (left + right) // 2             # <<<<<<<<<<<<<<
  * 
  *                     if (video_path, mid) not in ocr_cache:
 */
-          __pyx_t_4 = PyNumber_Add(__pyx_v_left, __pyx_v_right); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 931, __pyx_L15_error)
+          __pyx_t_4 = PyNumber_Add(__pyx_v_left, __pyx_v_right); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 932, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_4);
-          __pyx_t_1 = __Pyx_PyLong_FloorDivideObjC(__pyx_t_4, __pyx_mstate_global->__pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 931, __pyx_L15_error)
+          __pyx_t_1 = __Pyx_PyLong_FloorDivideObjC(__pyx_t_4, __pyx_mstate_global->__pyx_int_2, 2, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 932, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_XDECREF_SET(__pyx_v_mid, __pyx_t_1);
           __pyx_t_1 = 0;
 
-          /* "video_translate_cython.pyx":933
+          /* "video_translate_cython.pyx":934
  *                     mid = (left + right) // 2
  * 
  *                     if (video_path, mid) not in ocr_cache:             # <<<<<<<<<<<<<<
  *                         batch_ocr_process(video_path, [mid], source_language=source_language)
  * 
 */
-          __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 933, __pyx_L15_error)
+          __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 934, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_INCREF(__pyx_v_video_path);
           __Pyx_GIVEREF(__pyx_v_video_path);
-          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 933, __pyx_L15_error);
+          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 934, __pyx_L15_error);
           __Pyx_INCREF(__pyx_v_mid);
           __Pyx_GIVEREF(__pyx_v_mid);
-          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_mid) != (0)) __PYX_ERR(0, 933, __pyx_L15_error);
-          __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 933, __pyx_L15_error)
+          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_mid) != (0)) __PYX_ERR(0, 934, __pyx_L15_error);
+          __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 934, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_4);
-          __pyx_t_8 = (__Pyx_PySequence_ContainsTF(__pyx_t_1, __pyx_t_4, Py_NE)); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 933, __pyx_L15_error)
+          __pyx_t_8 = (__Pyx_PySequence_ContainsTF(__pyx_t_1, __pyx_t_4, Py_NE)); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 934, __pyx_L15_error)
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           if (__pyx_t_8) {
 
-            /* "video_translate_cython.pyx":934
+            /* "video_translate_cython.pyx":935
  * 
  *                     if (video_path, mid) not in ocr_cache:
  *                         batch_ocr_process(video_path, [mid], source_language=source_language)             # <<<<<<<<<<<<<<
@@ -19637,13 +19635,13 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
  *                     mid_text = ocr_cache.get((video_path, mid), "")
 */
             __pyx_t_1 = NULL;
-            __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_batch_ocr_process); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 934, __pyx_L15_error)
+            __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_mstate_global->__pyx_n_u_batch_ocr_process); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 935, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_12);
-            __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 934, __pyx_L15_error)
+            __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 935, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_3);
             __Pyx_INCREF(__pyx_v_mid);
             __Pyx_GIVEREF(__pyx_v_mid);
-            if (__Pyx_PyList_SET_ITEM(__pyx_t_3, 0, __pyx_v_mid) != (0)) __PYX_ERR(0, 934, __pyx_L15_error);
+            if (__Pyx_PyList_SET_ITEM(__pyx_t_3, 0, __pyx_v_mid) != (0)) __PYX_ERR(0, 935, __pyx_L15_error);
             __pyx_t_5 = 1;
             #if CYTHON_UNPACK_METHODS
             if (unlikely(PyMethod_Check(__pyx_t_12))) {
@@ -19658,20 +19656,20 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
             #endif
             {
               PyObject *__pyx_callargs[3 + ((CYTHON_VECTORCALL) ? 1 : 0)] = {__pyx_t_1, __pyx_v_video_path, __pyx_t_3};
-              __pyx_t_2 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 934, __pyx_L15_error)
+              __pyx_t_2 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 935, __pyx_L15_error)
               __Pyx_GOTREF(__pyx_t_2);
-              if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_v_source_language, __pyx_t_2, __pyx_callargs+3, 0) < (0)) __PYX_ERR(0, 934, __pyx_L15_error)
+              if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_v_source_language, __pyx_t_2, __pyx_callargs+3, 0) < (0)) __PYX_ERR(0, 935, __pyx_L15_error)
               __pyx_t_4 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_12, __pyx_callargs+__pyx_t_5, (3-__pyx_t_5) | (__pyx_t_5*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_2);
               __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
               __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
               __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-              if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 934, __pyx_L15_error)
+              if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 935, __pyx_L15_error)
               __Pyx_GOTREF(__pyx_t_4);
             }
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-            /* "video_translate_cython.pyx":933
+            /* "video_translate_cython.pyx":934
  *                     mid = (left + right) // 2
  * 
  *                     if (video_path, mid) not in ocr_cache:             # <<<<<<<<<<<<<<
@@ -19680,7 +19678,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
           }
 
-          /* "video_translate_cython.pyx":936
+          /* "video_translate_cython.pyx":937
  *                         batch_ocr_process(video_path, [mid], source_language=source_language)
  * 
  *                     mid_text = ocr_cache.get((video_path, mid), "")             # <<<<<<<<<<<<<<
@@ -19688,19 +19686,19 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
  *                     mid_ptr = mid_b
 */
           __pyx_t_12 = NULL;
-          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 936, __pyx_L15_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_ocr_cache); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 937, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_get); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 936, __pyx_L15_error)
+          __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_get); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 937, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 936, __pyx_L15_error)
+          __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 937, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_INCREF(__pyx_v_video_path);
           __Pyx_GIVEREF(__pyx_v_video_path);
-          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 936, __pyx_L15_error);
+          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_video_path) != (0)) __PYX_ERR(0, 937, __pyx_L15_error);
           __Pyx_INCREF(__pyx_v_mid);
           __Pyx_GIVEREF(__pyx_v_mid);
-          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_mid) != (0)) __PYX_ERR(0, 936, __pyx_L15_error);
+          if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_mid) != (0)) __PYX_ERR(0, 937, __pyx_L15_error);
           __pyx_t_5 = 1;
           #if CYTHON_UNPACK_METHODS
           if (unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -19719,13 +19717,13 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
             __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
             __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 936, __pyx_L15_error)
+            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 937, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_4);
           }
           __Pyx_XDECREF_SET(__pyx_v_mid_text, __pyx_t_4);
           __pyx_t_4 = 0;
 
-          /* "video_translate_cython.pyx":937
+          /* "video_translate_cython.pyx":938
  * 
  *                     mid_text = ocr_cache.get((video_path, mid), "")
  *                     mid_b = mid_text.encode('utf8')             # <<<<<<<<<<<<<<
@@ -19739,14 +19737,14 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
             PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_mstate_global->__pyx_n_u_utf8};
             __pyx_t_4 = __Pyx_PyObject_FastCallMethod(__pyx_mstate_global->__pyx_n_u_encode, __pyx_callargs+__pyx_t_5, (2-__pyx_t_5) | (1*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
             __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 937, __pyx_L15_error)
+            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 938, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_4);
           }
-          if (!(likely(PyBytes_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("bytes", __pyx_t_4))) __PYX_ERR(0, 937, __pyx_L15_error)
+          if (!(likely(PyBytes_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("bytes", __pyx_t_4))) __PYX_ERR(0, 938, __pyx_L15_error)
           __Pyx_XDECREF_SET(__pyx_v_mid_b, ((PyObject*)__pyx_t_4));
           __pyx_t_4 = 0;
 
-          /* "video_translate_cython.pyx":938
+          /* "video_translate_cython.pyx":939
  *                     mid_text = ocr_cache.get((video_path, mid), "")
  *                     mid_b = mid_text.encode('utf8')
  *                     mid_ptr = mid_b             # <<<<<<<<<<<<<<
@@ -19755,12 +19753,12 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
           if (unlikely(__pyx_v_mid_b == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-            __PYX_ERR(0, 938, __pyx_L15_error)
+            __PYX_ERR(0, 939, __pyx_L15_error)
           }
-          __pyx_t_10 = __Pyx_PyBytes_AsString(__pyx_v_mid_b); if (unlikely((!__pyx_t_10) && PyErr_Occurred())) __PYX_ERR(0, 938, __pyx_L15_error)
+          __pyx_t_10 = __Pyx_PyBytes_AsString(__pyx_v_mid_b); if (unlikely((!__pyx_t_10) && PyErr_Occurred())) __PYX_ERR(0, 939, __pyx_L15_error)
           __pyx_v_mid_ptr = __pyx_t_10;
 
-          /* "video_translate_cython.pyx":939
+          /* "video_translate_cython.pyx":940
  *                     mid_b = mid_text.encode('utf8')
  *                     mid_ptr = mid_b
  *                     mid_len = len(mid_b)             # <<<<<<<<<<<<<<
@@ -19769,12 +19767,12 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
           if (unlikely(__pyx_v_mid_b == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-            __PYX_ERR(0, 939, __pyx_L15_error)
+            __PYX_ERR(0, 940, __pyx_L15_error)
           }
-          __pyx_t_11 = __Pyx_PyBytes_GET_SIZE(__pyx_v_mid_b); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 939, __pyx_L15_error)
+          __pyx_t_11 = __Pyx_PyBytes_GET_SIZE(__pyx_v_mid_b); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 940, __pyx_L15_error)
           __pyx_v_mid_len = __pyx_t_11;
 
-          /* "video_translate_cython.pyx":942
+          /* "video_translate_cython.pyx":943
  * 
  *                     # mid_b must stay in scope during nogil block
  *                     with cython.nogil:             # <<<<<<<<<<<<<<
@@ -19788,18 +19786,18 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
               __Pyx_FastGIL_Remember();
               /*try:*/ {
 
-                /* "video_translate_cython.pyx":943
+                /* "video_translate_cython.pyx":944
  *                     # mid_b must stay in scope during nogil block
  *                     with cython.nogil:
  *                         sim_mid = c_text_similarity(start_ptr, start_len, mid_ptr, mid_len)             # <<<<<<<<<<<<<<
  * 
  *                     frame_checks += 1
 */
-                __pyx_t_14 = __pyx_f_22video_translate_cython_c_text_similarity(__pyx_v_start_ptr, __pyx_v_start_len, __pyx_v_mid_ptr, __pyx_v_mid_len); if (unlikely(__pyx_t_14 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 943, __pyx_L54_error)
+                __pyx_t_14 = __pyx_f_22video_translate_cython_c_text_similarity(__pyx_v_start_ptr, __pyx_v_start_len, __pyx_v_mid_ptr, __pyx_v_mid_len); if (unlikely(__pyx_t_14 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 944, __pyx_L54_error)
                 __pyx_v_sim_mid = __pyx_t_14;
               }
 
-              /* "video_translate_cython.pyx":942
+              /* "video_translate_cython.pyx":943
  * 
  *                     # mid_b must stay in scope during nogil block
  *                     with cython.nogil:             # <<<<<<<<<<<<<<
@@ -19821,7 +19819,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
               }
           }
 
-          /* "video_translate_cython.pyx":945
+          /* "video_translate_cython.pyx":946
  *                         sim_mid = c_text_similarity(start_ptr, start_len, mid_ptr, mid_len)
  * 
  *                     frame_checks += 1             # <<<<<<<<<<<<<<
@@ -19830,7 +19828,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
           __pyx_v_frame_checks = (__pyx_v_frame_checks + 1);
 
-          /* "video_translate_cython.pyx":946
+          /* "video_translate_cython.pyx":947
  * 
  *                     frame_checks += 1
  *                     if sim_mid >= similarity_threshold:             # <<<<<<<<<<<<<<
@@ -19840,19 +19838,19 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
           __pyx_t_8 = (__pyx_v_sim_mid >= __pyx_v_similarity_threshold);
           if (__pyx_t_8) {
 
-            /* "video_translate_cython.pyx":947
+            /* "video_translate_cython.pyx":948
  *                     frame_checks += 1
  *                     if sim_mid >= similarity_threshold:
  *                         left = mid + 1             # <<<<<<<<<<<<<<
  *                     else:
  *                         right = mid
 */
-            __pyx_t_4 = __Pyx_PyLong_AddObjC(__pyx_v_mid, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 947, __pyx_L15_error)
+            __pyx_t_4 = __Pyx_PyLong_AddObjC(__pyx_v_mid, __pyx_mstate_global->__pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 948, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_DECREF_SET(__pyx_v_left, __pyx_t_4);
             __pyx_t_4 = 0;
 
-            /* "video_translate_cython.pyx":946
+            /* "video_translate_cython.pyx":947
  * 
  *                     frame_checks += 1
  *                     if sim_mid >= similarity_threshold:             # <<<<<<<<<<<<<<
@@ -19862,7 +19860,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
             goto __pyx_L56;
           }
 
-          /* "video_translate_cython.pyx":949
+          /* "video_translate_cython.pyx":950
  *                         left = mid + 1
  *                     else:
  *                         right = mid             # <<<<<<<<<<<<<<
@@ -19876,14 +19874,14 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
           __pyx_L56:;
         }
 
-        /* "video_translate_cython.pyx":951
+        /* "video_translate_cython.pyx":952
  *                         right = mid
  * 
  *                 result = left             # <<<<<<<<<<<<<<
  * 
  *     finally:
 */
-        __pyx_t_6 = __Pyx_PyLong_As_int(__pyx_v_left); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 951, __pyx_L15_error)
+        __pyx_t_6 = __Pyx_PyLong_As_int(__pyx_v_left); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 952, __pyx_L15_error)
         __pyx_v_result = __pyx_t_6;
       }
       __pyx_L47:;
@@ -19891,7 +19889,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
     __pyx_L17:;
   }
 
-  /* "video_translate_cython.pyx":955
+  /* "video_translate_cython.pyx":956
  *     finally:
  *         # Always free allocated memory, even if an exception occurs
  *         if ptrs != NULL:             # <<<<<<<<<<<<<<
@@ -19903,7 +19901,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
       __pyx_t_8 = (__pyx_v_ptrs != NULL);
       if (__pyx_t_8) {
 
-        /* "video_translate_cython.pyx":956
+        /* "video_translate_cython.pyx":957
  *         # Always free allocated memory, even if an exception occurs
  *         if ptrs != NULL:
  *             free(ptrs)             # <<<<<<<<<<<<<<
@@ -19912,7 +19910,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
         free(__pyx_v_ptrs);
 
-        /* "video_translate_cython.pyx":955
+        /* "video_translate_cython.pyx":956
  *     finally:
  *         # Always free allocated memory, even if an exception occurs
  *         if ptrs != NULL:             # <<<<<<<<<<<<<<
@@ -19921,7 +19919,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
       }
 
-      /* "video_translate_cython.pyx":957
+      /* "video_translate_cython.pyx":958
  *         if ptrs != NULL:
  *             free(ptrs)
  *         if lens != NULL:             # <<<<<<<<<<<<<<
@@ -19931,7 +19929,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
       __pyx_t_8 = (__pyx_v_lens != NULL);
       if (__pyx_t_8) {
 
-        /* "video_translate_cython.pyx":958
+        /* "video_translate_cython.pyx":959
  *             free(ptrs)
  *         if lens != NULL:
  *             free(lens)             # <<<<<<<<<<<<<<
@@ -19940,7 +19938,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
         free(__pyx_v_lens);
 
-        /* "video_translate_cython.pyx":957
+        /* "video_translate_cython.pyx":958
  *         if ptrs != NULL:
  *             free(ptrs)
  *         if lens != NULL:             # <<<<<<<<<<<<<<
@@ -19971,7 +19969,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
       __pyx_t_6 = __pyx_lineno; __pyx_t_15 = __pyx_clineno; __pyx_t_18 = __pyx_filename;
       {
 
-        /* "video_translate_cython.pyx":955
+        /* "video_translate_cython.pyx":956
  *     finally:
  *         # Always free allocated memory, even if an exception occurs
  *         if ptrs != NULL:             # <<<<<<<<<<<<<<
@@ -19981,7 +19979,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
         __pyx_t_8 = (__pyx_v_ptrs != NULL);
         if (__pyx_t_8) {
 
-          /* "video_translate_cython.pyx":956
+          /* "video_translate_cython.pyx":957
  *         # Always free allocated memory, even if an exception occurs
  *         if ptrs != NULL:
  *             free(ptrs)             # <<<<<<<<<<<<<<
@@ -19990,7 +19988,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
           free(__pyx_v_ptrs);
 
-          /* "video_translate_cython.pyx":955
+          /* "video_translate_cython.pyx":956
  *     finally:
  *         # Always free allocated memory, even if an exception occurs
  *         if ptrs != NULL:             # <<<<<<<<<<<<<<
@@ -19999,7 +19997,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
         }
 
-        /* "video_translate_cython.pyx":957
+        /* "video_translate_cython.pyx":958
  *         if ptrs != NULL:
  *             free(ptrs)
  *         if lens != NULL:             # <<<<<<<<<<<<<<
@@ -20009,7 +20007,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
         __pyx_t_8 = (__pyx_v_lens != NULL);
         if (__pyx_t_8) {
 
-          /* "video_translate_cython.pyx":958
+          /* "video_translate_cython.pyx":959
  *             free(ptrs)
  *         if lens != NULL:
  *             free(lens)             # <<<<<<<<<<<<<<
@@ -20018,7 +20016,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
 */
           free(__pyx_v_lens);
 
-          /* "video_translate_cython.pyx":957
+          /* "video_translate_cython.pyx":958
  *         if ptrs != NULL:
  *             free(ptrs)
  *         if lens != NULL:             # <<<<<<<<<<<<<<
@@ -20042,7 +20040,7 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
     __pyx_L16:;
   }
 
-  /* "video_translate_cython.pyx":960
+  /* "video_translate_cython.pyx":961
  *             free(lens)
  * 
  *     return result             # <<<<<<<<<<<<<<
@@ -20050,14 +20048,14 @@ static PyObject *__pyx_pf_22video_translate_cython_36find_text_change_optimal_ba
  * 
 */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = __Pyx_PyLong_From_int(__pyx_v_result); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 960, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyLong_From_int(__pyx_v_result); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 961, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (!(likely(PyLong_CheckExact(__pyx_t_4)) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_t_4))) __PYX_ERR(0, 960, __pyx_L1_error)
+  if (!(likely(PyLong_CheckExact(__pyx_t_4)) || __Pyx_RaiseUnexpectedTypeError("int", __pyx_t_4))) __PYX_ERR(0, 961, __pyx_L1_error)
   __pyx_r = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "video_translate_cython.pyx":785
+  /* "video_translate_cython.pyx":786
  * # exponential probe indices. It keeps the rest of the binary search behavior intact.
  * 
  * @cython.locals(cap=object, total_frames=int, start_text=object, frame_checks=int)             # <<<<<<<<<<<<<<
@@ -21064,15 +21062,15 @@ static int __Pyx_modinit_type_init_code(__pyx_mstatetype *__pyx_mstate) {
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22video_translate_cython___pyx_defaults_spec, NULL); if (unlikely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults)) __PYX_ERR(0, 203, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22video_translate_cython___pyx_defaults_spec, __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults) < (0)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22video_translate_cython___pyx_defaults_spec, NULL); if (unlikely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults)) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22video_translate_cython___pyx_defaults_spec, __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults) < (0)) __PYX_ERR(0, 204, __pyx_L1_error)
   #else
   __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults = &__pyx_type_22video_translate_cython___pyx_defaults;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults) < (0)) __PYX_ERR(0, 203, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults) < (0)) __PYX_ERR(0, 204, __pyx_L1_error)
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults->tp_dictoffset && __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults->tp_getattro == PyObject_GenericGetAttr)) {
@@ -21080,15 +21078,15 @@ static int __Pyx_modinit_type_init_code(__pyx_mstatetype *__pyx_mstate) {
   }
   #endif
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults1 = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22video_translate_cython___pyx_defaults1_spec, NULL); if (unlikely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults1)) __PYX_ERR(0, 448, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22video_translate_cython___pyx_defaults1_spec, __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults1) < (0)) __PYX_ERR(0, 448, __pyx_L1_error)
+  __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults1 = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22video_translate_cython___pyx_defaults1_spec, NULL); if (unlikely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults1)) __PYX_ERR(0, 449, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22video_translate_cython___pyx_defaults1_spec, __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults1) < (0)) __PYX_ERR(0, 449, __pyx_L1_error)
   #else
   __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults1 = &__pyx_type_22video_translate_cython___pyx_defaults1;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults1) < (0)) __PYX_ERR(0, 448, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults1) < (0)) __PYX_ERR(0, 449, __pyx_L1_error)
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults1->tp_dictoffset && __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_defaults1->tp_getattro == PyObject_GenericGetAttr)) {
@@ -21096,15 +21094,15 @@ static int __Pyx_modinit_type_init_code(__pyx_mstatetype *__pyx_mstate) {
   }
   #endif
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct__genexpr = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22video_translate_cython___pyx_scope_struct__genexpr_spec, NULL); if (unlikely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct__genexpr)) __PYX_ERR(0, 156, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22video_translate_cython___pyx_scope_struct__genexpr_spec, __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct__genexpr) < (0)) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct__genexpr = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22video_translate_cython___pyx_scope_struct__genexpr_spec, NULL); if (unlikely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct__genexpr)) __PYX_ERR(0, 157, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22video_translate_cython___pyx_scope_struct__genexpr_spec, __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct__genexpr) < (0)) __PYX_ERR(0, 157, __pyx_L1_error)
   #else
   __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct__genexpr = &__pyx_type_22video_translate_cython___pyx_scope_struct__genexpr;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct__genexpr) < (0)) __PYX_ERR(0, 156, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct__genexpr) < (0)) __PYX_ERR(0, 157, __pyx_L1_error)
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct__genexpr->tp_dictoffset && __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct__genexpr->tp_getattro == PyObject_GenericGetAttr)) {
@@ -21112,15 +21110,15 @@ static int __Pyx_modinit_type_init_code(__pyx_mstatetype *__pyx_mstate) {
   }
   #endif
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel_spec, NULL); if (unlikely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel)) __PYX_ERR(0, 328, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel_spec, __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel) < (0)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel_spec, NULL); if (unlikely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel)) __PYX_ERR(0, 329, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel_spec, __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel) < (0)) __PYX_ERR(0, 329, __pyx_L1_error)
   #else
   __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel = &__pyx_type_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel) < (0)) __PYX_ERR(0, 328, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel) < (0)) __PYX_ERR(0, 329, __pyx_L1_error)
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel->tp_dictoffset && __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_1_find_all_text_segments_parallel->tp_getattro == PyObject_GenericGetAttr)) {
@@ -21128,15 +21126,15 @@ static int __Pyx_modinit_type_init_code(__pyx_mstatetype *__pyx_mstate) {
   }
   #endif
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_2_genexpr = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22video_translate_cython___pyx_scope_struct_2_genexpr_spec, NULL); if (unlikely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_2_genexpr)) __PYX_ERR(0, 731, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22video_translate_cython___pyx_scope_struct_2_genexpr_spec, __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_2_genexpr) < (0)) __PYX_ERR(0, 731, __pyx_L1_error)
+  __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_2_genexpr = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22video_translate_cython___pyx_scope_struct_2_genexpr_spec, NULL); if (unlikely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_2_genexpr)) __PYX_ERR(0, 732, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22video_translate_cython___pyx_scope_struct_2_genexpr_spec, __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_2_genexpr) < (0)) __PYX_ERR(0, 732, __pyx_L1_error)
   #else
   __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_2_genexpr = &__pyx_type_22video_translate_cython___pyx_scope_struct_2_genexpr;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_2_genexpr) < (0)) __PYX_ERR(0, 731, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_2_genexpr) < (0)) __PYX_ERR(0, 732, __pyx_L1_error)
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_2_genexpr->tp_dictoffset && __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_2_genexpr->tp_getattro == PyObject_GenericGetAttr)) {
@@ -21144,15 +21142,15 @@ static int __Pyx_modinit_type_init_code(__pyx_mstatetype *__pyx_mstate) {
   }
   #endif
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process_spec, NULL); if (unlikely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process)) __PYX_ERR(0, 742, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process_spec, __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process) < (0)) __PYX_ERR(0, 742, __pyx_L1_error)
+  __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process_spec, NULL); if (unlikely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process)) __PYX_ERR(0, 743, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process_spec, __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process) < (0)) __PYX_ERR(0, 743, __pyx_L1_error)
   #else
   __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process = &__pyx_type_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process) < (0)) __PYX_ERR(0, 742, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process) < (0)) __PYX_ERR(0, 743, __pyx_L1_error)
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process->tp_dictoffset && __pyx_mstate->__pyx_ptype_22video_translate_cython___pyx_scope_struct_3_batch_ocr_process->tp_getattro == PyObject_GenericGetAttr)) {
@@ -21538,7 +21536,7 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
  * import re
  * import argparse             # <<<<<<<<<<<<<<
  * import multiprocessing
- * from concurrent.futures import ThreadPoolExecutor, as_completed
+ * # from concurrent.futures import ThreadPoolExecutor, as_completed
 */
   __pyx_t_2 = __Pyx_ImportDottedModule(__pyx_mstate_global->__pyx_n_u_argparse, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -21549,639 +21547,639 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
  * import re
  * import argparse
  * import multiprocessing             # <<<<<<<<<<<<<<
- * from concurrent.futures import ThreadPoolExecutor, as_completed
- * from typing import Dict, Tuple, Optional, List
+ * # from concurrent.futures import ThreadPoolExecutor, as_completed
+ * from concurrent.futures import ProcessPoolExecutor, as_completed
 */
   __pyx_t_2 = __Pyx_ImportDottedModule(__pyx_mstate_global->__pyx_n_u_multiprocessing, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_multiprocessing, __pyx_t_2) < (0)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":35
- * import argparse
+  /* "video_translate_cython.pyx":36
  * import multiprocessing
- * from concurrent.futures import ThreadPoolExecutor, as_completed             # <<<<<<<<<<<<<<
+ * # from concurrent.futures import ThreadPoolExecutor, as_completed
+ * from concurrent.futures import ProcessPoolExecutor, as_completed             # <<<<<<<<<<<<<<
  * from typing import Dict, Tuple, Optional, List
  * import cv2
 */
-  __pyx_t_2 = __Pyx_PyList_Pack(2, __pyx_mstate_global->__pyx_n_u_ThreadPoolExecutor, __pyx_mstate_global->__pyx_n_u_as_completed); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyList_Pack(2, __pyx_mstate_global->__pyx_n_u_ProcessPoolExecutor, __pyx_mstate_global->__pyx_n_u_as_completed); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_concurrent_futures, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_concurrent_futures, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_ThreadPoolExecutor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_ProcessPoolExecutor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_ThreadPoolExecutor, __pyx_t_2) < (0)) __PYX_ERR(0, 35, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_ProcessPoolExecutor, __pyx_t_2) < (0)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_as_completed); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_as_completed); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_as_completed, __pyx_t_2) < (0)) __PYX_ERR(0, 35, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_as_completed, __pyx_t_2) < (0)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":36
- * import multiprocessing
- * from concurrent.futures import ThreadPoolExecutor, as_completed
+  /* "video_translate_cython.pyx":37
+ * # from concurrent.futures import ThreadPoolExecutor, as_completed
+ * from concurrent.futures import ProcessPoolExecutor, as_completed
  * from typing import Dict, Tuple, Optional, List             # <<<<<<<<<<<<<<
  * import cv2
  * 
 */
-  __pyx_t_3 = __Pyx_PyList_Pack(4, __pyx_mstate_global->__pyx_n_u_Dict, __pyx_mstate_global->__pyx_n_u_Tuple, __pyx_mstate_global->__pyx_n_u_Optional, __pyx_mstate_global->__pyx_n_u_List); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyList_Pack(4, __pyx_mstate_global->__pyx_n_u_Dict, __pyx_mstate_global->__pyx_n_u_Tuple, __pyx_mstate_global->__pyx_n_u_Optional, __pyx_mstate_global->__pyx_n_u_List); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_typing, __pyx_t_3, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_typing, __pyx_t_3, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_Dict); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_Dict); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_Dict, __pyx_t_3) < (0)) __PYX_ERR(0, 36, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_Dict, __pyx_t_3) < (0)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_Tuple); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_Tuple); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_Tuple, __pyx_t_3) < (0)) __PYX_ERR(0, 36, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_Tuple, __pyx_t_3) < (0)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_Optional); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_Optional); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_Optional, __pyx_t_3) < (0)) __PYX_ERR(0, 36, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_Optional, __pyx_t_3) < (0)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_List); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_List); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_List, __pyx_t_3) < (0)) __PYX_ERR(0, 36, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_List, __pyx_t_3) < (0)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":37
- * from concurrent.futures import ThreadPoolExecutor, as_completed
+  /* "video_translate_cython.pyx":38
+ * from concurrent.futures import ProcessPoolExecutor, as_completed
  * from typing import Dict, Tuple, Optional, List
  * import cv2             # <<<<<<<<<<<<<<
  * 
  * # Your project imports (these are Python-level)
 */
-  __pyx_t_2 = __Pyx_ImportDottedModule(__pyx_mstate_global->__pyx_n_u_cv2, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportDottedModule(__pyx_mstate_global->__pyx_n_u_cv2, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_cv2, __pyx_t_2) < (0)) __PYX_ERR(0, 37, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_cv2, __pyx_t_2) < (0)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":42
+  /* "video_translate_cython.pyx":43
  * # Heavy imports (torch/easyocr) are lazy-loaded to avoid memory issues in multiprocessing
  * # Import lightweight utilities immediately
  * from utils.overlay_utils import overlay_translated_lines_on_frame             # <<<<<<<<<<<<<<
  * from utils.translate_utils import translate_lines
- * from utils.audioUtils import extract_audio, combine_audio_with_video
+ * from audioUtils import extract_audio, combine_audio_with_video
 */
-  __pyx_t_2 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_overlay_translated_lines_on_fram); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_overlay_translated_lines_on_fram); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_overlay_utils, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_overlay_utils, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_overlay_translated_lines_on_fram); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_overlay_translated_lines_on_fram); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_overlay_translated_lines_on_fram, __pyx_t_2) < (0)) __PYX_ERR(0, 42, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_overlay_translated_lines_on_fram, __pyx_t_2) < (0)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":43
+  /* "video_translate_cython.pyx":44
  * # Import lightweight utilities immediately
  * from utils.overlay_utils import overlay_translated_lines_on_frame
  * from utils.translate_utils import translate_lines             # <<<<<<<<<<<<<<
- * from utils.audioUtils import extract_audio, combine_audio_with_video
+ * from audioUtils import extract_audio, combine_audio_with_video
  * from utils.vision import get_frame_at_index
 */
-  __pyx_t_3 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_translate_lines); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 43, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_translate_lines); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_translate_utils, __pyx_t_3, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_translate_utils, __pyx_t_3, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_translate_lines); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 43, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_translate_lines); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_translate_lines, __pyx_t_3) < (0)) __PYX_ERR(0, 43, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_translate_lines, __pyx_t_3) < (0)) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":44
+  /* "video_translate_cython.pyx":45
  * from utils.overlay_utils import overlay_translated_lines_on_frame
  * from utils.translate_utils import translate_lines
- * from utils.audioUtils import extract_audio, combine_audio_with_video             # <<<<<<<<<<<<<<
+ * from audioUtils import extract_audio, combine_audio_with_video             # <<<<<<<<<<<<<<
  * from utils.vision import get_frame_at_index
  * from utils.pattern import text_similarity
 */
-  __pyx_t_2 = __Pyx_PyList_Pack(2, __pyx_mstate_global->__pyx_n_u_extract_audio, __pyx_mstate_global->__pyx_n_u_combine_audio_with_video); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyList_Pack(2, __pyx_mstate_global->__pyx_n_u_extract_audio, __pyx_mstate_global->__pyx_n_u_combine_audio_with_video); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 45, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_audioUtils, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_audioUtils, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 45, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_extract_audio); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_extract_audio); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 45, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_extract_audio, __pyx_t_2) < (0)) __PYX_ERR(0, 44, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_extract_audio, __pyx_t_2) < (0)) __PYX_ERR(0, 45, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_combine_audio_with_video); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_combine_audio_with_video); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 45, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_combine_audio_with_video, __pyx_t_2) < (0)) __PYX_ERR(0, 44, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_combine_audio_with_video, __pyx_t_2) < (0)) __PYX_ERR(0, 45, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":45
+  /* "video_translate_cython.pyx":46
  * from utils.translate_utils import translate_lines
- * from utils.audioUtils import extract_audio, combine_audio_with_video
+ * from audioUtils import extract_audio, combine_audio_with_video
  * from utils.vision import get_frame_at_index             # <<<<<<<<<<<<<<
  * from utils.pattern import text_similarity
  * from constants.index import SIMILARITY_THRESHOLD
 */
-  __pyx_t_3 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 45, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_vision, __pyx_t_3, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 45, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_vision, __pyx_t_3, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 45, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_get_frame_at_index); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_get_frame_at_index, __pyx_t_3) < (0)) __PYX_ERR(0, 45, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_get_frame_at_index, __pyx_t_3) < (0)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":46
- * from utils.audioUtils import extract_audio, combine_audio_with_video
+  /* "video_translate_cython.pyx":47
+ * from audioUtils import extract_audio, combine_audio_with_video
  * from utils.vision import get_frame_at_index
  * from utils.pattern import text_similarity             # <<<<<<<<<<<<<<
  * from constants.index import SIMILARITY_THRESHOLD
  * from constants.paths import OUTPUT_PATH, AUDIO_PATH
 */
-  __pyx_t_2 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_text_similarity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_text_similarity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_pattern, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_pattern, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_text_similarity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_text_similarity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_text_similarity, __pyx_t_2) < (0)) __PYX_ERR(0, 46, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_text_similarity, __pyx_t_2) < (0)) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":47
+  /* "video_translate_cython.pyx":48
  * from utils.vision import get_frame_at_index
  * from utils.pattern import text_similarity
  * from constants.index import SIMILARITY_THRESHOLD             # <<<<<<<<<<<<<<
  * from constants.paths import OUTPUT_PATH, AUDIO_PATH
  * from utils.system_resources import calculate_optimal_batch_config
 */
-  __pyx_t_3 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_constants_index, __pyx_t_3, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_constants_index, __pyx_t_3, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD, __pyx_t_3) < (0)) __PYX_ERR(0, 47, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD, __pyx_t_3) < (0)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":48
+  /* "video_translate_cython.pyx":49
  * from utils.pattern import text_similarity
  * from constants.index import SIMILARITY_THRESHOLD
  * from constants.paths import OUTPUT_PATH, AUDIO_PATH             # <<<<<<<<<<<<<<
  * from utils.system_resources import calculate_optimal_batch_config
  * 
 */
-  __pyx_t_2 = __Pyx_PyList_Pack(2, __pyx_mstate_global->__pyx_n_u_OUTPUT_PATH, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyList_Pack(2, __pyx_mstate_global->__pyx_n_u_OUTPUT_PATH, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_constants_paths, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_constants_paths, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_OUTPUT_PATH); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_OUTPUT_PATH); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_OUTPUT_PATH, __pyx_t_2) < (0)) __PYX_ERR(0, 48, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_OUTPUT_PATH, __pyx_t_2) < (0)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH, __pyx_t_2) < (0)) __PYX_ERR(0, 48, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_AUDIO_PATH, __pyx_t_2) < (0)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":49
+  /* "video_translate_cython.pyx":50
  * from constants.index import SIMILARITY_THRESHOLD
  * from constants.paths import OUTPUT_PATH, AUDIO_PATH
  * from utils.system_resources import calculate_optimal_batch_config             # <<<<<<<<<<<<<<
  * 
  * # Lazy import for OCR (contains torch/easyocr - loaded only when needed)
 */
-  __pyx_t_3 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_calculate_optimal_batch_config); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_calculate_optimal_batch_config); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 50, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_system_resources, __pyx_t_3, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_utils_system_resources, __pyx_t_3, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 50, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_calculate_optimal_batch_config); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_calculate_optimal_batch_config); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 50, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_calculate_optimal_batch_config, __pyx_t_3) < (0)) __PYX_ERR(0, 49, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_calculate_optimal_batch_config, __pyx_t_3) < (0)) __PYX_ERR(0, 50, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":52
+  /* "video_translate_cython.pyx":53
  * 
  * # Lazy import for OCR (contains torch/easyocr - loaded only when needed)
  * _extract_lines_with_boxes = None             # <<<<<<<<<<<<<<
  * 
  * def _get_ocr_extractor():
 */
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes, Py_None) < (0)) __PYX_ERR(0, 52, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_extract_lines_with_boxes, Py_None) < (0)) __PYX_ERR(0, 53, __pyx_L1_error)
 
-  /* "video_translate_cython.pyx":54
+  /* "video_translate_cython.pyx":55
  * _extract_lines_with_boxes = None
  * 
  * def _get_ocr_extractor():             # <<<<<<<<<<<<<<
  *     """Lazy-load OCR extractor to avoid importing torch/easyocr at module level."""
  *     global _extract_lines_with_boxes
 */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_1_get_ocr_extractor, 0, __pyx_mstate_global->__pyx_n_u_get_ocr_extractor, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[5])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 54, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_1_get_ocr_extractor, 0, __pyx_mstate_global->__pyx_n_u_get_ocr_extractor, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[5])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_get_ocr_extractor, __pyx_t_2) < (0)) __PYX_ERR(0, 54, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_get_ocr_extractor, __pyx_t_2) < (0)) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":65
+  /* "video_translate_cython.pyx":66
  * # ------------------ Cython-friendly typed globals ------------------
  * # We use Python objects for many things, so types remain Python-level.
  * reader = None             # <<<<<<<<<<<<<<
  * ocr_cache: Dict[Tuple[str, int], str] = {}
  * 
 */
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_reader, Py_None) < (0)) __PYX_ERR(0, 65, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_reader, Py_None) < (0)) __PYX_ERR(0, 66, __pyx_L1_error)
 
-  /* "video_translate_cython.pyx":66
+  /* "video_translate_cython.pyx":67
  * # We use Python objects for many things, so types remain Python-level.
  * reader = None
  * ocr_cache: Dict[Tuple[str, int], str] = {}             # <<<<<<<<<<<<<<
  * 
  * # Multiprocessing lock for serializing VideoCapture operations
 */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_ocr_cache, __pyx_t_2) < (0)) __PYX_ERR(0, 66, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_ocr_cache, __pyx_t_2) < (0)) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":71
+  /* "video_translate_cython.pyx":72
  * # Prevents FFmpeg decoder contention from concurrent frame reads
  * # Must be shared across all processes using Manager
  * _frame_read_lock = None             # <<<<<<<<<<<<<<
  * _frame_lock_manager = None
  * 
 */
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_frame_read_lock, Py_None) < (0)) __PYX_ERR(0, 71, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_frame_read_lock, Py_None) < (0)) __PYX_ERR(0, 72, __pyx_L1_error)
 
-  /* "video_translate_cython.pyx":72
+  /* "video_translate_cython.pyx":73
  * # Must be shared across all processes using Manager
  * _frame_read_lock = None
  * _frame_lock_manager = None             # <<<<<<<<<<<<<<
  * 
  * def _get_frame_read_lock():
 */
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_frame_lock_manager, Py_None) < (0)) __PYX_ERR(0, 72, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_frame_lock_manager, Py_None) < (0)) __PYX_ERR(0, 73, __pyx_L1_error)
 
-  /* "video_translate_cython.pyx":74
+  /* "video_translate_cython.pyx":75
  * _frame_lock_manager = None
  * 
  * def _get_frame_read_lock():             # <<<<<<<<<<<<<<
  *     """Get or create multiprocessing lock for frame reading.
  *     Uses Manager to ensure lock is shared across all worker processes.
 */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_3_get_frame_read_lock, 0, __pyx_mstate_global->__pyx_n_u_get_frame_read_lock, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[6])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 74, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_3_get_frame_read_lock, 0, __pyx_mstate_global->__pyx_n_u_get_frame_read_lock, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[6])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_get_frame_read_lock, __pyx_t_2) < (0)) __PYX_ERR(0, 74, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_get_frame_read_lock, __pyx_t_2) < (0)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":85
+  /* "video_translate_cython.pyx":86
  *     return _frame_read_lock
  * 
  * def _init_frame_lock_shared(lock):             # <<<<<<<<<<<<<<
  *     """Initialize shared lock in worker process."""
  *     global _frame_read_lock
 */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_5_init_frame_lock_shared, 0, __pyx_mstate_global->__pyx_n_u_init_frame_lock_shared, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[7])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 85, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_5_init_frame_lock_shared, 0, __pyx_mstate_global->__pyx_n_u_init_frame_lock_shared, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[7])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 86, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_init_frame_lock_shared, __pyx_t_2) < (0)) __PYX_ERR(0, 85, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_init_frame_lock_shared, __pyx_t_2) < (0)) __PYX_ERR(0, 86, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":91
+  /* "video_translate_cython.pyx":92
  * 
  * # ------------------ Utility functions ------------------
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
  * @cython.wraparound(False)
  * def clean_extracted_text(text: str) -> str:
 */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_text, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 91, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 91, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_7clean_extracted_text, 0, __pyx_mstate_global->__pyx_n_u_clean_extracted_text, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[8])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 91, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_text, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 92, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 92, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_7clean_extracted_text, 0, __pyx_mstate_global->__pyx_n_u_clean_extracted_text, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[8])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_clean_extracted_text, __pyx_t_3) < (0)) __PYX_ERR(0, 91, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_clean_extracted_text, __pyx_t_3) < (0)) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":104
+  /* "video_translate_cython.pyx":105
  * 
  * # ------------------ Safe frame reading with retry logic and serialization ------------------
  * def get_frame_at_index_safe(video_path: str, frame_index: int, max_retries: int = 3) -> object:             # <<<<<<<<<<<<<<
  *     """
  *     Safely read a frame from video with retry logic and serialized access.
 */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 104, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_frame_index, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 104, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_max_retries, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 104, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_object) < (0)) __PYX_ERR(0, 104, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_9get_frame_at_index_safe, 0, __pyx_mstate_global->__pyx_n_u_get_frame_at_index_safe, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[9])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 104, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 105, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_frame_index, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 105, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_max_retries, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 105, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_object) < (0)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_9get_frame_at_index_safe, 0, __pyx_mstate_global->__pyx_n_u_get_frame_at_index_safe, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[9])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_mstate_global->__pyx_tuple[1]);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_2, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_get_frame_at_index_safe, __pyx_t_2) < (0)) __PYX_ERR(0, 104, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_get_frame_at_index_safe, __pyx_t_2) < (0)) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":150
+  /* "video_translate_cython.pyx":151
  * 
  * # ------------------ OCR extraction ------------------
  * @cython.locals(results=object, text=object)             # <<<<<<<<<<<<<<
  * def extract_text_from_image(image, source_language: str = "english") -> str:
  *     """Extract text from image using existing OCR util."""
 */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 150, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 151, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 150, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 150, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_11extract_text_from_image, 0, __pyx_mstate_global->__pyx_n_u_extract_text_from_image, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[10])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 150, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 151, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 151, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_11extract_text_from_image, 0, __pyx_mstate_global->__pyx_n_u_extract_text_from_image, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[10])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 151, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_mstate_global->__pyx_tuple[2]);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_extract_text_from_image, __pyx_t_3) < (0)) __PYX_ERR(0, 150, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_extract_text_from_image, __pyx_t_3) < (0)) __PYX_ERR(0, 151, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":163
+  /* "video_translate_cython.pyx":164
  * 
  * 
  * @cython.locals(cache_key=tuple)             # <<<<<<<<<<<<<<
  * def extract_text_from_frame_cached(video_path: str, frame_index: int, source_language: str = "english") -> str:
  *     """Uses module-level cache to avoid duplicate OCR."""
 */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 164, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 163, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_frame_index, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 163, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 163, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 163, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_13extract_text_from_frame_cached, 0, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[11])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 164, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_frame_index, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 164, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 164, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_13extract_text_from_frame_cached, 0, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[11])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 164, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_mstate_global->__pyx_tuple[2]);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_2, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached, __pyx_t_2) < (0)) __PYX_ERR(0, 163, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_extract_text_from_frame_cached, __pyx_t_2) < (0)) __PYX_ERR(0, 164, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":188
+  /* "video_translate_cython.pyx":189
  * 
  * # ------------------ Similarity check ------------------
  * @cython.locals(current_text=object, similarity=float)             # <<<<<<<<<<<<<<
  * def is_text_same(video_path: str, frame_index: int, reference_text: str,
  *                  similarity_threshold: float, source_language: str = "english") -> Optional[Tuple[bool, str, float]]:
 */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 188, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 188, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_frame_index, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 188, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_reference_text, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 188, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_mstate_global->__pyx_n_u_float) < (0)) __PYX_ERR(0, 188, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 188, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_kp_u_Optional_Tuple_bool_str_float) < (0)) __PYX_ERR(0, 188, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_15is_text_same, 0, __pyx_mstate_global->__pyx_n_u_is_text_same, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[12])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 188, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 189, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_frame_index, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 189, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_reference_text, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 189, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_mstate_global->__pyx_n_u_float) < (0)) __PYX_ERR(0, 189, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 189, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_kp_u_Optional_Tuple_bool_str_float) < (0)) __PYX_ERR(0, 189, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_15is_text_same, 0, __pyx_mstate_global->__pyx_n_u_is_text_same, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[12])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_mstate_global->__pyx_tuple[2]);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_is_text_same, __pyx_t_3) < (0)) __PYX_ERR(0, 188, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_is_text_same, __pyx_t_3) < (0)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":203
+  /* "video_translate_cython.pyx":204
  * 
  * # ------------------ Search algorithm (exponential + binary) ------------------
  * @cython.locals(cap=object, total_frames=int, start_text=object, frame_checks=int)             # <<<<<<<<<<<<<<
  * def find_text_change_optimal(video_path: str, start_frame_index: int, source_language: str = "english",
  *                              similarity_threshold: float = SIMILARITY_THRESHOLD) -> int:
 */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 203, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_start_frame_index, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 203, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 203, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_mstate_global->__pyx_n_u_float) < (0)) __PYX_ERR(0, 203, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 203, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_17find_text_change_optimal, 0, __pyx_mstate_global->__pyx_n_u_find_text_change_optimal, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[13])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 203, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_start_frame_index, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_mstate_global->__pyx_n_u_float) < (0)) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_17find_text_change_optimal, 0, __pyx_mstate_global->__pyx_n_u_find_text_change_optimal, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[13])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_2, __pyx_mstate_global->__pyx_ptype_22video_translate_cython___pyx_defaults)) __PYX_ERR(0, 203, __pyx_L1_error)
+  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_2, __pyx_mstate_global->__pyx_ptype_22video_translate_cython___pyx_defaults)) __PYX_ERR(0, 204, __pyx_L1_error)
 
-  /* "video_translate_cython.pyx":205
+  /* "video_translate_cython.pyx":206
  * @cython.locals(cap=object, total_frames=int, start_text=object, frame_checks=int)
  * def find_text_change_optimal(video_path: str, start_frame_index: int, source_language: str = "english",
  *                              similarity_threshold: float = SIMILARITY_THRESHOLD) -> int:             # <<<<<<<<<<<<<<
  *     """Find the first frame index where text changes after start_frame_index.
  * 
 */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 205, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_t_2)->arg0 = __pyx_t_5;
   __Pyx_CyFunction_SetDefaultsGetter(__pyx_t_2, __pyx_pf_22video_translate_cython_38__defaults__);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_2, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_find_text_change_optimal, __pyx_t_2) < (0)) __PYX_ERR(0, 203, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_find_text_change_optimal, __pyx_t_2) < (0)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":262
+  /* "video_translate_cython.pyx":263
  * 
  * # ------------------ Batch processing ------------------
  * @cython.locals(segments=object, current_frame=int, change_frame=int)             # <<<<<<<<<<<<<<
  * def process_batch_segment(video_path: str, start_frame: int, end_frame: int, batch_id: int,
  *                           source_language: str, similarity_threshold: float = SIMILARITY_THRESHOLD) -> list:
 */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 263, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 262, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_start_frame, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 262, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_end_frame, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 262, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_batch_id, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 262, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 262, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_mstate_global->__pyx_n_u_float) < (0)) __PYX_ERR(0, 262, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_list) < (0)) __PYX_ERR(0, 262, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_19process_batch_segment, 0, __pyx_mstate_global->__pyx_n_u_process_batch_segment, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[14])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 262, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 263, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_start_frame, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 263, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_end_frame, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 263, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_batch_id, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 263, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 263, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_mstate_global->__pyx_n_u_float) < (0)) __PYX_ERR(0, 263, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_list) < (0)) __PYX_ERR(0, 263, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_19process_batch_segment, 0, __pyx_mstate_global->__pyx_n_u_process_batch_segment, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[14])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 263, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_3, __pyx_mstate_global->__pyx_ptype_22video_translate_cython___pyx_defaults)) __PYX_ERR(0, 262, __pyx_L1_error)
+  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_3, __pyx_mstate_global->__pyx_ptype_22video_translate_cython___pyx_defaults)) __PYX_ERR(0, 263, __pyx_L1_error)
 
-  /* "video_translate_cython.pyx":264
+  /* "video_translate_cython.pyx":265
  * @cython.locals(segments=object, current_frame=int, change_frame=int)
  * def process_batch_segment(video_path: str, start_frame: int, end_frame: int, batch_id: int,
  *                           source_language: str, similarity_threshold: float = SIMILARITY_THRESHOLD) -> list:             # <<<<<<<<<<<<<<
  *     """
  *     Uses the batched, nogil-aware finder for each run inside the batch worker.
 */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 264, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 265, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 264, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 265, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_t_3)->arg0 = __pyx_t_5;
   __Pyx_CyFunction_SetDefaultsGetter(__pyx_t_3, __pyx_pf_22video_translate_cython_40__defaults__);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_process_batch_segment, __pyx_t_3) < (0)) __PYX_ERR(0, 262, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_process_batch_segment, __pyx_t_3) < (0)) __PYX_ERR(0, 263, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":328
+  /* "video_translate_cython.pyx":329
  * 
  * 
  * @cython.locals(batch_size=int, num_workers=int)             # <<<<<<<<<<<<<<
  * def find_all_text_segments_parallel(video_path: str, total_frames: int,
  *                                     source_language: str = "english",
 */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 329, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 328, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_total_frames, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 328, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 328, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_mstate_global->__pyx_n_u_float) < (0)) __PYX_ERR(0, 328, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_list) < (0)) __PYX_ERR(0, 328, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_21find_all_text_segments_parallel, 0, __pyx_mstate_global->__pyx_n_u_find_all_text_segments_parallel_3, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[15])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 328, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 329, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_total_frames, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 329, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 329, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_mstate_global->__pyx_n_u_float) < (0)) __PYX_ERR(0, 329, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_list) < (0)) __PYX_ERR(0, 329, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_21find_all_text_segments_parallel, 0, __pyx_mstate_global->__pyx_n_u_find_all_text_segments_parallel_3, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[15])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 329, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_2, __pyx_mstate_global->__pyx_ptype_22video_translate_cython___pyx_defaults)) __PYX_ERR(0, 328, __pyx_L1_error)
+  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_2, __pyx_mstate_global->__pyx_ptype_22video_translate_cython___pyx_defaults)) __PYX_ERR(0, 329, __pyx_L1_error)
 
-  /* "video_translate_cython.pyx":331
+  /* "video_translate_cython.pyx":332
  * def find_all_text_segments_parallel(video_path: str, total_frames: int,
  *                                     source_language: str = "english",
  *                                     similarity_threshold: float = SIMILARITY_THRESHOLD) -> list:             # <<<<<<<<<<<<<<
  *     """
  *     ProcessPool-based parallelization of batch processing so heavy work runs in
 */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 331, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 331, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_t_2)->arg0 = __pyx_t_5;
   __Pyx_CyFunction_SetDefaultsGetter(__pyx_t_2, __pyx_pf_22video_translate_cython_42__defaults__);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_2, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_find_all_text_segments_parallel_3, __pyx_t_2) < (0)) __PYX_ERR(0, 328, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_find_all_text_segments_parallel_3, __pyx_t_2) < (0)) __PYX_ERR(0, 329, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":416
+  /* "video_translate_cython.pyx":417
  * 
  * 
  * @cython.locals(merged=list, last_merged=tuple, last_text=object, current_text=object, similarity=float)             # <<<<<<<<<<<<<<
  * def merge_adjacent_segments(segments: list, video_path: str, source_language: str) -> list:
  *     """
 */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 416, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 417, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_segments, __pyx_mstate_global->__pyx_n_u_list) < (0)) __PYX_ERR(0, 416, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 416, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 416, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_list) < (0)) __PYX_ERR(0, 416, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_23merge_adjacent_segments, 0, __pyx_mstate_global->__pyx_n_u_merge_adjacent_segments, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[16])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 416, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_segments, __pyx_mstate_global->__pyx_n_u_list) < (0)) __PYX_ERR(0, 417, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 417, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 417, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_list) < (0)) __PYX_ERR(0, 417, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_23merge_adjacent_segments, 0, __pyx_mstate_global->__pyx_n_u_merge_adjacent_segments, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[16])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 417, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_merge_adjacent_segments, __pyx_t_3) < (0)) __PYX_ERR(0, 416, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_merge_adjacent_segments, __pyx_t_3) < (0)) __PYX_ERR(0, 417, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":448
+  /* "video_translate_cython.pyx":449
  * 
  * # ------------------ Overlaying / Main functions ------------------
  * @cython.locals(cap=object, fps=float, width=int, height=int, fourcc=int, out=object, start_frame=int, total_frames=int)             # <<<<<<<<<<<<<<
  * def function_overlaying_continuous_legacy(video_path: str, font_path: str, font_size: int, out_path: str = OUTPUT_PATH,
  *                                           target_language: str = "English", font_color: str = "black", source_language: str = "english"):
 */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 448, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 448, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_font_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 448, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_font_size, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 448, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_out_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 448, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_target_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 448, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_font_color, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 448, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 448, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_25function_overlaying_continuous_legacy, 0, __pyx_mstate_global->__pyx_n_u_function_overlaying_continuous_l, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[17])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 448, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 449, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_font_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 449, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_font_size, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 449, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_out_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 449, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_target_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 449, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_font_color, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 449, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 449, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_25function_overlaying_continuous_legacy, 0, __pyx_mstate_global->__pyx_n_u_function_overlaying_continuous_l, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[17])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_2, __pyx_mstate_global->__pyx_ptype_22video_translate_cython___pyx_defaults1)) __PYX_ERR(0, 448, __pyx_L1_error)
+  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_2, __pyx_mstate_global->__pyx_ptype_22video_translate_cython___pyx_defaults1)) __PYX_ERR(0, 449, __pyx_L1_error)
 
-  /* "video_translate_cython.pyx":449
+  /* "video_translate_cython.pyx":450
  * # ------------------ Overlaying / Main functions ------------------
  * @cython.locals(cap=object, fps=float, width=int, height=int, fourcc=int, out=object, start_frame=int, total_frames=int)
  * def function_overlaying_continuous_legacy(video_path: str, font_path: str, font_size: int, out_path: str = OUTPUT_PATH,             # <<<<<<<<<<<<<<
  *                                           target_language: str = "English", font_color: str = "black", source_language: str = "english"):
  *     extract_audio(video_path, AUDIO_PATH)
 */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_OUTPUT_PATH); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 449, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_OUTPUT_PATH); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 450, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (!(likely(PyUnicode_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_4))) __PYX_ERR(0, 449, __pyx_L1_error)
+  if (!(likely(PyUnicode_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_4))) __PYX_ERR(0, 450, __pyx_L1_error)
   __Pyx_CyFunction_Defaults(struct __pyx_defaults1, __pyx_t_2)->arg0 = ((PyObject*)__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_t_4 = 0;
   __Pyx_CyFunction_SetDefaultsGetter(__pyx_t_2, __pyx_pf_22video_translate_cython_44__defaults__);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_2, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_function_overlaying_continuous_l, __pyx_t_2) < (0)) __PYX_ERR(0, 448, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_function_overlaying_continuous_l, __pyx_t_2) < (0)) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "video_translate_cython.pyx":495
+  /* "video_translate_cython.pyx":496
  * 
  * 
  * @cython.locals(fps=float, width=int, height=int, total_frames=int, segments=list, out=object)             # <<<<<<<<<<<<<<
  * def function_overlaying_continuous(video_path: str, font_path: str, font_size: int, out_path: str = OUTPUT_PATH,
  *                                    target_language: str = "English", font_color: str = "black", source_language: str = "english",
 */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 495, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 496, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 495, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_font_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 495, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_font_size, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 495, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_out_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 495, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_target_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 495, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_font_color, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 495, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 495, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_use_parallel, __pyx_mstate_global->__pyx_n_u_bool) < (0)) __PYX_ERR(0, 495, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_27function_overlaying_continuous, 0, __pyx_mstate_global->__pyx_n_u_function_overlaying_continuous, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[18])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 495, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 496, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_font_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 496, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_font_size, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 496, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_out_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 496, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_target_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 496, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_font_color, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 496, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 496, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_mstate_global->__pyx_n_u_use_parallel, __pyx_mstate_global->__pyx_n_u_bool) < (0)) __PYX_ERR(0, 496, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_27function_overlaying_continuous, 0, __pyx_mstate_global->__pyx_n_u_function_overlaying_continuous, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[18])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 496, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_3, __pyx_mstate_global->__pyx_ptype_22video_translate_cython___pyx_defaults1)) __PYX_ERR(0, 495, __pyx_L1_error)
+  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_3, __pyx_mstate_global->__pyx_ptype_22video_translate_cython___pyx_defaults1)) __PYX_ERR(0, 496, __pyx_L1_error)
 
-  /* "video_translate_cython.pyx":496
+  /* "video_translate_cython.pyx":497
  * 
  * @cython.locals(fps=float, width=int, height=int, total_frames=int, segments=list, out=object)
  * def function_overlaying_continuous(video_path: str, font_path: str, font_size: int, out_path: str = OUTPUT_PATH,             # <<<<<<<<<<<<<<
  *                                    target_language: str = "English", font_color: str = "black", source_language: str = "english",
  *                                    use_parallel: bool = True):
 */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_OUTPUT_PATH); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 496, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_OUTPUT_PATH); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 497, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (!(likely(PyUnicode_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_4))) __PYX_ERR(0, 496, __pyx_L1_error)
+  if (!(likely(PyUnicode_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_4))) __PYX_ERR(0, 497, __pyx_L1_error)
   __Pyx_CyFunction_Defaults(struct __pyx_defaults1, __pyx_t_3)->arg0 = ((PyObject*)__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_t_4 = 0;
   __Pyx_CyFunction_SetDefaultsGetter(__pyx_t_3, __pyx_pf_22video_translate_cython_46__defaults__);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_function_overlaying_continuous, __pyx_t_3) < (0)) __PYX_ERR(0, 495, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_function_overlaying_continuous, __pyx_t_3) < (0)) __PYX_ERR(0, 496, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":542
+  /* "video_translate_cython.pyx":543
  * 
  * # ------------------ CLI entrypoint ------------------
  * if __name__ == "__main__":             # <<<<<<<<<<<<<<
  *     parser = argparse.ArgumentParser(description="Overlay translations on video frames with PARALLEL processing support.")
  *     parser.add_argument("--video", dest="video_path", required=True, help="Path to input video")
 */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 542, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 543, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_6 = (__Pyx_PyUnicode_Equals(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_main, Py_EQ)); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 542, __pyx_L1_error)
+  __pyx_t_6 = (__Pyx_PyUnicode_Equals(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_main, Py_EQ)); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 543, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_6) {
 
-    /* "video_translate_cython.pyx":543
+    /* "video_translate_cython.pyx":544
  * # ------------------ CLI entrypoint ------------------
  * if __name__ == "__main__":
  *     parser = argparse.ArgumentParser(description="Overlay translations on video frames with PARALLEL processing support.")             # <<<<<<<<<<<<<<
@@ -22189,28 +22187,28 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
  *     parser.add_argument("--font", dest="font_path", default=None, help="Path to TTF font (optional)")
 */
     __pyx_t_2 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_argparse); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 543, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_argparse); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 544, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_ArgumentParser); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 543, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_ArgumentParser); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 544, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_8 = 1;
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 1 : 0)] = {__pyx_t_2, NULL};
-      __pyx_t_4 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 543, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_MakeVectorcallBuilderKwds(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 544, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_description, __pyx_mstate_global->__pyx_kp_u_Overlay_translations_on_video_fr, __pyx_t_4, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 543, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_description, __pyx_mstate_global->__pyx_kp_u_Overlay_translations_on_video_fr, __pyx_t_4, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 544, __pyx_L1_error)
       __pyx_t_3 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_7, __pyx_callargs+__pyx_t_8, (1-__pyx_t_8) | (__pyx_t_8*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 543, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 544, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
-    if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_parser, __pyx_t_3) < (0)) __PYX_ERR(0, 543, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_parser, __pyx_t_3) < (0)) __PYX_ERR(0, 544, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":544
+    /* "video_translate_cython.pyx":545
  * if __name__ == "__main__":
  *     parser = argparse.ArgumentParser(description="Overlay translations on video frames with PARALLEL processing support.")
  *     parser.add_argument("--video", dest="video_path", required=True, help="Path to input video")             # <<<<<<<<<<<<<<
@@ -22218,29 +22216,29 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
  *     parser.add_argument("--fontSize", dest="font_size", default="35", help="Font size (int)")
 */
     __pyx_t_7 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 544, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 545, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 544, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 545, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_8 = 1;
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_7, __pyx_mstate_global->__pyx_kp_u_video};
-      __pyx_t_4 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 544, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 545, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_t_4, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 544, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_required, Py_True, __pyx_t_4, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 544, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Path_to_input_video, __pyx_t_4, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 544, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_t_4, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 545, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_required, Py_True, __pyx_t_4, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 545, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Path_to_input_video, __pyx_t_4, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 545, __pyx_L1_error)
       __pyx_t_3 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_2, __pyx_callargs+__pyx_t_8, (2-__pyx_t_8) | (__pyx_t_8*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_4);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 544, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 545, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":545
+    /* "video_translate_cython.pyx":546
  *     parser = argparse.ArgumentParser(description="Overlay translations on video frames with PARALLEL processing support.")
  *     parser.add_argument("--video", dest="video_path", required=True, help="Path to input video")
  *     parser.add_argument("--font", dest="font_path", default=None, help="Path to TTF font (optional)")             # <<<<<<<<<<<<<<
@@ -22248,29 +22246,29 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
  *     parser.add_argument("--out", dest="out_path", default=OUTPUT_PATH, help="Output video path")
 */
     __pyx_t_2 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 545, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 546, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 545, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 546, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_8 = 1;
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_2, __pyx_mstate_global->__pyx_kp_u_font};
-      __pyx_t_4 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 545, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 546, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_font_path, __pyx_t_4, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 545, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_default, Py_None, __pyx_t_4, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 545, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Path_to_TTF_font_optional, __pyx_t_4, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 545, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_font_path, __pyx_t_4, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 546, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_default, Py_None, __pyx_t_4, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 546, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Path_to_TTF_font_optional, __pyx_t_4, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 546, __pyx_L1_error)
       __pyx_t_3 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_7, __pyx_callargs+__pyx_t_8, (2-__pyx_t_8) | (__pyx_t_8*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 545, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 546, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":546
+    /* "video_translate_cython.pyx":547
  *     parser.add_argument("--video", dest="video_path", required=True, help="Path to input video")
  *     parser.add_argument("--font", dest="font_path", default=None, help="Path to TTF font (optional)")
  *     parser.add_argument("--fontSize", dest="font_size", default="35", help="Font size (int)")             # <<<<<<<<<<<<<<
@@ -22278,29 +22276,29 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
  *     parser.add_argument("--targetLang", dest="target_language", default="ch_sim", help="Target language for translation")
 */
     __pyx_t_7 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 546, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 547, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 546, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 547, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_8 = 1;
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_7, __pyx_mstate_global->__pyx_kp_u_fontSize};
-      __pyx_t_4 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 546, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 547, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_font_size, __pyx_t_4, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 546, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_default, __pyx_mstate_global->__pyx_kp_u_35, __pyx_t_4, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 546, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Font_size_int, __pyx_t_4, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 546, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_font_size, __pyx_t_4, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 547, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_default, __pyx_mstate_global->__pyx_kp_u_35, __pyx_t_4, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 547, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Font_size_int, __pyx_t_4, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 547, __pyx_L1_error)
       __pyx_t_3 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_2, __pyx_callargs+__pyx_t_8, (2-__pyx_t_8) | (__pyx_t_8*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_4);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 546, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 547, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":547
+    /* "video_translate_cython.pyx":548
  *     parser.add_argument("--font", dest="font_path", default=None, help="Path to TTF font (optional)")
  *     parser.add_argument("--fontSize", dest="font_size", default="35", help="Font size (int)")
  *     parser.add_argument("--out", dest="out_path", default=OUTPUT_PATH, help="Output video path")             # <<<<<<<<<<<<<<
@@ -22308,32 +22306,32 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
  *     parser.add_argument("--fontColor", dest="font_color", default="black", help="Font color for translation overlay")
 */
     __pyx_t_2 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 547, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 548, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 547, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 548, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_OUTPUT_PATH); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 547, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_OUTPUT_PATH); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 548, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_8 = 1;
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_2, __pyx_mstate_global->__pyx_kp_u_out};
-      __pyx_t_9 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 547, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 548, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_out_path, __pyx_t_9, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 547, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_default, __pyx_t_4, __pyx_t_9, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 547, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Output_video_path, __pyx_t_9, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 547, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_out_path, __pyx_t_9, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 548, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_default, __pyx_t_4, __pyx_t_9, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 548, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Output_video_path, __pyx_t_9, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 548, __pyx_L1_error)
       __pyx_t_3 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_7, __pyx_callargs+__pyx_t_8, (2-__pyx_t_8) | (__pyx_t_8*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_9);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 547, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 548, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":548
+    /* "video_translate_cython.pyx":549
  *     parser.add_argument("--fontSize", dest="font_size", default="35", help="Font size (int)")
  *     parser.add_argument("--out", dest="out_path", default=OUTPUT_PATH, help="Output video path")
  *     parser.add_argument("--targetLang", dest="target_language", default="ch_sim", help="Target language for translation")             # <<<<<<<<<<<<<<
@@ -22341,29 +22339,29 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
  *     parser.add_argument("--sourceLang", dest="source_language", default="english", help="Source language of the video")
 */
     __pyx_t_7 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 548, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 549, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 548, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 549, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __pyx_t_8 = 1;
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_7, __pyx_mstate_global->__pyx_kp_u_targetLang};
-      __pyx_t_9 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 548, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 549, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_target_language, __pyx_t_9, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 548, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_default, __pyx_mstate_global->__pyx_n_u_ch_sim, __pyx_t_9, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 548, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Target_language_for_translation, __pyx_t_9, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 548, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_target_language, __pyx_t_9, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 549, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_default, __pyx_mstate_global->__pyx_n_u_ch_sim, __pyx_t_9, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 549, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Target_language_for_translation, __pyx_t_9, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 549, __pyx_L1_error)
       __pyx_t_3 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_4, __pyx_callargs+__pyx_t_8, (2-__pyx_t_8) | (__pyx_t_8*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_9);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 548, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 549, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":549
+    /* "video_translate_cython.pyx":550
  *     parser.add_argument("--out", dest="out_path", default=OUTPUT_PATH, help="Output video path")
  *     parser.add_argument("--targetLang", dest="target_language", default="ch_sim", help="Target language for translation")
  *     parser.add_argument("--fontColor", dest="font_color", default="black", help="Font color for translation overlay")             # <<<<<<<<<<<<<<
@@ -22371,29 +22369,29 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
  *     parser.add_argument("--parallel", dest="use_parallel", action="store_true", default=True, help="Use parallel batch processing (default: True)")
 */
     __pyx_t_4 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 549, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 550, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 549, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 550, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __pyx_t_8 = 1;
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_4, __pyx_mstate_global->__pyx_kp_u_fontColor};
-      __pyx_t_9 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 549, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 550, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_font_color, __pyx_t_9, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 549, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_default, __pyx_mstate_global->__pyx_n_u_black, __pyx_t_9, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 549, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Font_color_for_translation_overl, __pyx_t_9, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 549, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_font_color, __pyx_t_9, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 550, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_default, __pyx_mstate_global->__pyx_n_u_black, __pyx_t_9, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 550, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Font_color_for_translation_overl, __pyx_t_9, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 550, __pyx_L1_error)
       __pyx_t_3 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_7, __pyx_callargs+__pyx_t_8, (2-__pyx_t_8) | (__pyx_t_8*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_9);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 549, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 550, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":550
+    /* "video_translate_cython.pyx":551
  *     parser.add_argument("--targetLang", dest="target_language", default="ch_sim", help="Target language for translation")
  *     parser.add_argument("--fontColor", dest="font_color", default="black", help="Font color for translation overlay")
  *     parser.add_argument("--sourceLang", dest="source_language", default="english", help="Source language of the video")             # <<<<<<<<<<<<<<
@@ -22401,29 +22399,29 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
  *     parser.add_argument("--sequential", dest="use_parallel", action="store_false", help="Use sequential processing (legacy mode)")
 */
     __pyx_t_7 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 550, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 551, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 550, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 551, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __pyx_t_8 = 1;
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_7, __pyx_mstate_global->__pyx_kp_u_sourceLang};
-      __pyx_t_9 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 550, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 551, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_t_9, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 550, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_default, __pyx_mstate_global->__pyx_n_u_english, __pyx_t_9, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 550, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Source_language_of_the_video, __pyx_t_9, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 550, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_t_9, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 551, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_default, __pyx_mstate_global->__pyx_n_u_english, __pyx_t_9, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 551, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Source_language_of_the_video, __pyx_t_9, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 551, __pyx_L1_error)
       __pyx_t_3 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_4, __pyx_callargs+__pyx_t_8, (2-__pyx_t_8) | (__pyx_t_8*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_9);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 550, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 551, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":551
+    /* "video_translate_cython.pyx":552
  *     parser.add_argument("--fontColor", dest="font_color", default="black", help="Font color for translation overlay")
  *     parser.add_argument("--sourceLang", dest="source_language", default="english", help="Source language of the video")
  *     parser.add_argument("--parallel", dest="use_parallel", action="store_true", default=True, help="Use parallel batch processing (default: True)")             # <<<<<<<<<<<<<<
@@ -22431,30 +22429,30 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
  *     args = parser.parse_args()
 */
     __pyx_t_4 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 551, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 551, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __pyx_t_8 = 1;
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 4 : 0)] = {__pyx_t_4, __pyx_mstate_global->__pyx_kp_u_parallel};
-      __pyx_t_9 = __Pyx_MakeVectorcallBuilderKwds(4); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 551, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_MakeVectorcallBuilderKwds(4); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 552, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_use_parallel, __pyx_t_9, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 551, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_action, __pyx_mstate_global->__pyx_n_u_store_true, __pyx_t_9, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 551, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_default, Py_True, __pyx_t_9, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 551, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Use_parallel_batch_processing_de, __pyx_t_9, __pyx_callargs+2, 3) < (0)) __PYX_ERR(0, 551, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_use_parallel, __pyx_t_9, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 552, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_action, __pyx_mstate_global->__pyx_n_u_store_true, __pyx_t_9, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 552, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_default, Py_True, __pyx_t_9, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 552, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Use_parallel_batch_processing_de, __pyx_t_9, __pyx_callargs+2, 3) < (0)) __PYX_ERR(0, 552, __pyx_L1_error)
       __pyx_t_3 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_7, __pyx_callargs+__pyx_t_8, (2-__pyx_t_8) | (__pyx_t_8*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_9);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 551, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 552, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":552
+    /* "video_translate_cython.pyx":553
  *     parser.add_argument("--sourceLang", dest="source_language", default="english", help="Source language of the video")
  *     parser.add_argument("--parallel", dest="use_parallel", action="store_true", default=True, help="Use parallel batch processing (default: True)")
  *     parser.add_argument("--sequential", dest="use_parallel", action="store_false", help="Use sequential processing (legacy mode)")             # <<<<<<<<<<<<<<
@@ -22462,29 +22460,29 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
  * 
 */
     __pyx_t_7 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 552, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 553, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 552, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_add_argument); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 553, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __pyx_t_8 = 1;
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 3 : 0)] = {__pyx_t_7, __pyx_mstate_global->__pyx_kp_u_sequential};
-      __pyx_t_9 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 552, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_MakeVectorcallBuilderKwds(3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 553, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_use_parallel, __pyx_t_9, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 552, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_action, __pyx_mstate_global->__pyx_n_u_store_false, __pyx_t_9, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 552, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Use_sequential_processing_legacy, __pyx_t_9, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 552, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_dest, __pyx_mstate_global->__pyx_n_u_use_parallel, __pyx_t_9, __pyx_callargs+2, 0) < (0)) __PYX_ERR(0, 553, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_action, __pyx_mstate_global->__pyx_n_u_store_false, __pyx_t_9, __pyx_callargs+2, 1) < (0)) __PYX_ERR(0, 553, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_help, __pyx_mstate_global->__pyx_kp_u_Use_sequential_processing_legacy, __pyx_t_9, __pyx_callargs+2, 2) < (0)) __PYX_ERR(0, 553, __pyx_L1_error)
       __pyx_t_3 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_4, __pyx_callargs+__pyx_t_8, (2-__pyx_t_8) | (__pyx_t_8*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_9);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 552, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 553, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":553
+    /* "video_translate_cython.pyx":554
  *     parser.add_argument("--parallel", dest="use_parallel", action="store_true", default=True, help="Use parallel batch processing (default: True)")
  *     parser.add_argument("--sequential", dest="use_parallel", action="store_false", help="Use sequential processing (legacy mode)")
  *     args = parser.parse_args()             # <<<<<<<<<<<<<<
@@ -22492,9 +22490,9 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
  *     function_overlaying_continuous(video_path=args.video_path, font_path=args.font_path, font_size=int(args.font_size), out_path=args.out_path, target_language=args.target_language, font_color=args.font_color, source_language=args.source_language, use_parallel=args.use_parallel)
 */
     __pyx_t_4 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 553, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_parser); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_parse_args); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 553, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_parse_args); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __pyx_t_8 = 1;
@@ -22503,13 +22501,13 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_7, __pyx_callargs+__pyx_t_8, (1-__pyx_t_8) | (__pyx_t_8*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET));
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 553, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 554, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
-    if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_args, __pyx_t_3) < (0)) __PYX_ERR(0, 553, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_args, __pyx_t_3) < (0)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":555
+    /* "video_translate_cython.pyx":556
  *     args = parser.parse_args()
  * 
  *     function_overlaying_continuous(video_path=args.video_path, font_path=args.font_path, font_size=int(args.font_size), out_path=args.out_path, target_language=args.target_language, font_color=args.font_color, source_language=args.source_language, use_parallel=args.use_parallel)             # <<<<<<<<<<<<<<
@@ -22517,64 +22515,64 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
  * # ------------------ Notes on nogil ------------------
 */
     __pyx_t_7 = NULL;
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_function_overlaying_continuous); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_function_overlaying_continuous); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_video_path); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_video_path); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_font_path); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_font_path); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_font_size); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_mstate_global->__pyx_n_u_font_size); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-    __pyx_t_9 = __Pyx_PyNumber_Int(__pyx_t_11); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyNumber_Int(__pyx_t_11); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_out_path); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_out_path); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_target_language); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_target_language); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_font_color); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_font_color); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_source_language); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_source_language); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_args); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_use_parallel); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 555, __pyx_L1_error)
+    __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_use_parallel); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 556, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_16);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __pyx_t_8 = 1;
     {
       PyObject *__pyx_callargs[2 + ((CYTHON_VECTORCALL) ? 8 : 0)] = {__pyx_t_7, NULL};
-      __pyx_t_11 = __Pyx_MakeVectorcallBuilderKwds(8); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 555, __pyx_L1_error)
+      __pyx_t_11 = __Pyx_MakeVectorcallBuilderKwds(8); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 556, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_video_path, __pyx_t_2, __pyx_t_11, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 555, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_path, __pyx_t_10, __pyx_t_11, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 555, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_size, __pyx_t_9, __pyx_t_11, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 555, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_out_path, __pyx_t_12, __pyx_t_11, __pyx_callargs+1, 3) < (0)) __PYX_ERR(0, 555, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_target_language, __pyx_t_13, __pyx_t_11, __pyx_callargs+1, 4) < (0)) __PYX_ERR(0, 555, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_color, __pyx_t_14, __pyx_t_11, __pyx_callargs+1, 5) < (0)) __PYX_ERR(0, 555, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_t_15, __pyx_t_11, __pyx_callargs+1, 6) < (0)) __PYX_ERR(0, 555, __pyx_L1_error)
-      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_use_parallel, __pyx_t_16, __pyx_t_11, __pyx_callargs+1, 7) < (0)) __PYX_ERR(0, 555, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_video_path, __pyx_t_2, __pyx_t_11, __pyx_callargs+1, 0) < (0)) __PYX_ERR(0, 556, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_path, __pyx_t_10, __pyx_t_11, __pyx_callargs+1, 1) < (0)) __PYX_ERR(0, 556, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_size, __pyx_t_9, __pyx_t_11, __pyx_callargs+1, 2) < (0)) __PYX_ERR(0, 556, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_out_path, __pyx_t_12, __pyx_t_11, __pyx_callargs+1, 3) < (0)) __PYX_ERR(0, 556, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_target_language, __pyx_t_13, __pyx_t_11, __pyx_callargs+1, 4) < (0)) __PYX_ERR(0, 556, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_font_color, __pyx_t_14, __pyx_t_11, __pyx_callargs+1, 5) < (0)) __PYX_ERR(0, 556, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_source_language, __pyx_t_15, __pyx_t_11, __pyx_callargs+1, 6) < (0)) __PYX_ERR(0, 556, __pyx_L1_error)
+      if (__Pyx_VectorcallBuilder_AddArg(__pyx_mstate_global->__pyx_n_u_use_parallel, __pyx_t_16, __pyx_t_11, __pyx_callargs+1, 7) < (0)) __PYX_ERR(0, 556, __pyx_L1_error)
       __pyx_t_3 = __Pyx_Object_Vectorcall_CallFromBuilder(__pyx_t_4, __pyx_callargs+__pyx_t_8, (1-__pyx_t_8) | (__pyx_t_8*__Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET), __pyx_t_11);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -22587,12 +22585,12 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
       __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 555, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 556, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "video_translate_cython.pyx":542
+    /* "video_translate_cython.pyx":543
  * 
  * # ------------------ CLI entrypoint ------------------
  * if __name__ == "__main__":             # <<<<<<<<<<<<<<
@@ -22601,132 +22599,132 @@ __Pyx_RefNannySetupContext("PyInit_video_translate_cython", 0);
 */
   }
 
-  /* "video_translate_cython.pyx":639
+  /* "video_translate_cython.pyx":640
  * # c_text_similarity in nogil. This keeps Python interaction minimal.
  * 
  * def py_c_text_similarity(str a, str b) -> float:             # <<<<<<<<<<<<<<
  *     cdef bytes ba = a.encode('utf8')
  *     cdef bytes bb = b.encode('utf8')
 */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 639, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 640, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_float) < (0)) __PYX_ERR(0, 639, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_29py_c_text_similarity, 0, __pyx_mstate_global->__pyx_n_u_py_c_text_similarity, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[19])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 639, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_float) < (0)) __PYX_ERR(0, 640, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_29py_c_text_similarity, 0, __pyx_mstate_global->__pyx_n_u_py_c_text_similarity, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[19])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 640, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_4, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_py_c_text_similarity, __pyx_t_4) < (0)) __PYX_ERR(0, 639, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_py_c_text_similarity, __pyx_t_4) < (0)) __PYX_ERR(0, 640, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "video_translate_cython.pyx":660
+  /* "video_translate_cython.pyx":661
  * # while still using the existing OCR and cache behavior.
  * 
  * @cython.locals(current_text=object, similarity=float)             # <<<<<<<<<<<<<<
  * def is_text_same_nogil(video_path: str, frame_index: int, reference_text: str,
  *                  similarity_threshold: float, source_language: str = "english") -> Optional[Tuple[bool, str, float]]:
 */
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 660, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 661, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 660, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_frame_index, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 660, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_reference_text, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 660, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_mstate_global->__pyx_n_u_float) < (0)) __PYX_ERR(0, 660, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 660, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_kp_u_Optional_Tuple_bool_str_float) < (0)) __PYX_ERR(0, 660, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_31is_text_same_nogil, 0, __pyx_mstate_global->__pyx_n_u_is_text_same_nogil, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[20])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 660, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 661, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_frame_index, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 661, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_reference_text, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 661, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_mstate_global->__pyx_n_u_float) < (0)) __PYX_ERR(0, 661, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 661, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_kp_u_Optional_Tuple_bool_str_float) < (0)) __PYX_ERR(0, 661, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_31is_text_same_nogil, 0, __pyx_mstate_global->__pyx_n_u_is_text_same_nogil, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[20])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 661, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_mstate_global->__pyx_tuple[2]);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_4);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_is_text_same_nogil, __pyx_t_3) < (0)) __PYX_ERR(0, 660, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_is_text_same_nogil, __pyx_t_3) < (0)) __PYX_ERR(0, 661, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":684
+  /* "video_translate_cython.pyx":685
  * # We'll add helper worker functions that can be submitted to ProcessPoolExecutor.
  * 
  * from concurrent.futures import ProcessPoolExecutor             # <<<<<<<<<<<<<<
  * 
  * 
 */
-  __pyx_t_3 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_ProcessPoolExecutor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyList_Pack(1, __pyx_mstate_global->__pyx_n_u_ProcessPoolExecutor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 685, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_concurrent_futures, __pyx_t_3, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Import(__pyx_mstate_global->__pyx_n_u_concurrent_futures, __pyx_t_3, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 685, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_ProcessPoolExecutor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_ProcessPoolExecutor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 685, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_ProcessPoolExecutor, __pyx_t_3) < (0)) __PYX_ERR(0, 684, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_ProcessPoolExecutor, __pyx_t_3) < (0)) __PYX_ERR(0, 685, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "video_translate_cython.pyx":687
+  /* "video_translate_cython.pyx":688
  * 
  * 
  * def _ocr_worker(args_tuple):             # <<<<<<<<<<<<<<
  *     """Runs in a separate process. Expected args: (video_path, frame_index, source_language)
  *     Imports happen inside the process so the main process remains untouched.
 */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_33_ocr_worker, 0, __pyx_mstate_global->__pyx_n_u_ocr_worker, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[21])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 687, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_33_ocr_worker, 0, __pyx_mstate_global->__pyx_n_u_ocr_worker, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[21])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 688, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_ocr_worker, __pyx_t_4) < (0)) __PYX_ERR(0, 687, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_ocr_worker, __pyx_t_4) < (0)) __PYX_ERR(0, 688, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "video_translate_cython.pyx":742
+  /* "video_translate_cython.pyx":743
  * 
  * # Convenience function: batch OCR frames using processes (safe, no GIL issues)
  * def batch_ocr_process(video_path: str, frame_indices: list, source_language: str = "english", max_workers: int = None) -> dict:             # <<<<<<<<<<<<<<
  *     """Returns a dict mapping frame_index -> extracted_text. Uses processes.
  *     Keep the API identical to the cached extractor by merging results into ocr_cache.
 */
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 742, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 743, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 742, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_frame_indices, __pyx_mstate_global->__pyx_n_u_list) < (0)) __PYX_ERR(0, 742, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 742, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_max_workers, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 742, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_dict) < (0)) __PYX_ERR(0, 742, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_35batch_ocr_process, 0, __pyx_mstate_global->__pyx_n_u_batch_ocr_process, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[22])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 742, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 743, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_frame_indices, __pyx_mstate_global->__pyx_n_u_list) < (0)) __PYX_ERR(0, 743, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 743, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_max_workers, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 743, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_dict) < (0)) __PYX_ERR(0, 743, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_35batch_ocr_process, 0, __pyx_mstate_global->__pyx_n_u_batch_ocr_process, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[22])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 743, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_mstate_global->__pyx_tuple[3]);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_4);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_batch_ocr_process, __pyx_t_3) < (0)) __PYX_ERR(0, 742, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_batch_ocr_process, __pyx_t_3) < (0)) __PYX_ERR(0, 743, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "video_translate_cython.pyx":785
+  /* "video_translate_cython.pyx":786
  * # exponential probe indices. It keeps the rest of the binary search behavior intact.
  * 
  * @cython.locals(cap=object, total_frames=int, start_text=object, frame_checks=int)             # <<<<<<<<<<<<<<
  * def find_text_change_optimal_batched(
  *     video_path: str,
 */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 785, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 786, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 785, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_start_frame_index, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 785, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 785, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_mstate_global->__pyx_n_u_float) < (0)) __PYX_ERR(0, 785, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 785, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_37find_text_change_optimal_batched, 0, __pyx_mstate_global->__pyx_n_u_find_text_change_optimal_batched, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[23])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 785, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_video_path, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 786, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_start_frame_index, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 786, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_source_language, __pyx_mstate_global->__pyx_n_u_str) < (0)) __PYX_ERR(0, 786, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_similarity_threshold, __pyx_mstate_global->__pyx_n_u_float) < (0)) __PYX_ERR(0, 786, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_mstate_global->__pyx_n_u_return, __pyx_mstate_global->__pyx_n_u_int) < (0)) __PYX_ERR(0, 786, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_22video_translate_cython_37find_text_change_optimal_batched, 0, __pyx_mstate_global->__pyx_n_u_find_text_change_optimal_batched, NULL, __pyx_mstate_global->__pyx_n_u_video_translate_cython, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[23])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 786, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_4, __pyx_mstate_global->__pyx_ptype_22video_translate_cython___pyx_defaults)) __PYX_ERR(0, 785, __pyx_L1_error)
+  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_4, __pyx_mstate_global->__pyx_ptype_22video_translate_cython___pyx_defaults)) __PYX_ERR(0, 786, __pyx_L1_error)
 
-  /* "video_translate_cython.pyx":790
+  /* "video_translate_cython.pyx":791
  *     start_frame_index: int,
  *     source_language: str = "english",
  *     similarity_threshold: float = SIMILARITY_THRESHOLD             # <<<<<<<<<<<<<<
  * ) -> int:
  *     cdef int i, n_probes, found_idx
 */
-  __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 790, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_mstate_global->__pyx_n_u_SIMILARITY_THRESHOLD); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 791, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_5 = __Pyx_PyFloat_AsDouble(__pyx_t_11); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 790, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyFloat_AsDouble(__pyx_t_11); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 791, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_CyFunction_Defaults(struct __pyx_defaults, __pyx_t_4)->arg0 = __pyx_t_5;
   __Pyx_CyFunction_SetDefaultsGetter(__pyx_t_4, __pyx_pf_22video_translate_cython_48__defaults__);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_4, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_find_text_change_optimal_batched, __pyx_t_4) < (0)) __PYX_ERR(0, 785, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_find_text_change_optimal_batched, __pyx_t_4) < (0)) __PYX_ERR(0, 786, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
   /* "video_translate_cython.pyx":1
@@ -22839,7 +22837,6 @@ static const __Pyx_StringTabEntry __pyx_string_tab[] = {
   {__pyx_k_SIMILARITY_THRESHOLD, sizeof(__pyx_k_SIMILARITY_THRESHOLD), 0, 1, 1}, /* PyObject cname: __pyx_n_u_SIMILARITY_THRESHOLD */
   {__pyx_k_Source_language_of_the_video, sizeof(__pyx_k_Source_language_of_the_video), 0, 1, 0}, /* PyObject cname: __pyx_kp_u_Source_language_of_the_video */
   {__pyx_k_Target_language_for_translation, sizeof(__pyx_k_Target_language_for_translation), 0, 1, 0}, /* PyObject cname: __pyx_kp_u_Target_language_for_translation */
-  {__pyx_k_ThreadPoolExecutor, sizeof(__pyx_k_ThreadPoolExecutor), 0, 1, 1}, /* PyObject cname: __pyx_n_u_ThreadPoolExecutor */
   {__pyx_k_TimeoutError, sizeof(__pyx_k_TimeoutError), 0, 1, 1}, /* PyObject cname: __pyx_n_u_TimeoutError */
   {__pyx_k_Tuple, sizeof(__pyx_k_Tuple), 0, 1, 1}, /* PyObject cname: __pyx_n_u_Tuple */
   {__pyx_k_Use_parallel_batch_processing_de, sizeof(__pyx_k_Use_parallel_batch_processing_de), 0, 1, 0}, /* PyObject cname: __pyx_kp_u_Use_parallel_batch_processing_de */
@@ -22865,6 +22862,7 @@ static const __Pyx_StringTabEntry __pyx_string_tab[] = {
   {__pyx_k_as_completed, sizeof(__pyx_k_as_completed), 0, 1, 1}, /* PyObject cname: __pyx_n_u_as_completed */
   {__pyx_k_asyncio_coroutines, sizeof(__pyx_k_asyncio_coroutines), 0, 1, 1}, /* PyObject cname: __pyx_n_u_asyncio_coroutines */
   {__pyx_k_attempt, sizeof(__pyx_k_attempt), 0, 1, 1}, /* PyObject cname: __pyx_n_u_attempt */
+  {__pyx_k_audioUtils, sizeof(__pyx_k_audioUtils), 0, 1, 1}, /* PyObject cname: __pyx_n_u_audioUtils */
   {__pyx_k_audio_path, sizeof(__pyx_k_audio_path), 0, 1, 1}, /* PyObject cname: __pyx_n_u_audio_path */
   {__pyx_k_b, sizeof(__pyx_k_b), 0, 1, 1}, /* PyObject cname: __pyx_n_u_b */
   {__pyx_k_ba, sizeof(__pyx_k_ba), 0, 1, 1}, /* PyObject cname: __pyx_n_u_ba */
@@ -23085,7 +23083,6 @@ static const __Pyx_StringTabEntry __pyx_string_tab[] = {
   {__pyx_k_u4e00_u9fff_s, sizeof(__pyx_k_u4e00_u9fff_s), 0, 1, 0}, /* PyObject cname: __pyx_kp_u_u4e00_u9fff_s */
   {__pyx_k_use_parallel, sizeof(__pyx_k_use_parallel), 0, 1, 1}, /* PyObject cname: __pyx_n_u_use_parallel */
   {__pyx_k_utf8, sizeof(__pyx_k_utf8), 0, 1, 1}, /* PyObject cname: __pyx_n_u_utf8 */
-  {__pyx_k_utils_audioUtils, sizeof(__pyx_k_utils_audioUtils), 0, 1, 1}, /* PyObject cname: __pyx_n_u_utils_audioUtils */
   {__pyx_k_utils_ocr_ocr_utils, sizeof(__pyx_k_utils_ocr_ocr_utils), 0, 1, 1}, /* PyObject cname: __pyx_n_u_utils_ocr_ocr_utils */
   {__pyx_k_utils_overlay_utils, sizeof(__pyx_k_utils_overlay_utils), 0, 1, 1}, /* PyObject cname: __pyx_n_u_utils_overlay_utils */
   {__pyx_k_utils_pattern, sizeof(__pyx_k_utils_pattern), 0, 1, 1}, /* PyObject cname: __pyx_n_u_utils_pattern */
@@ -23109,11 +23106,11 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry const *t, PyObject **target, c
 
 static int __Pyx_InitCachedBuiltins(__pyx_mstatetype *__pyx_mstate) {
   CYTHON_UNUSED_VAR(__pyx_mstate);
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_mstate->__pyx_n_u_range); if (!__pyx_builtin_range) __PYX_ERR(0, 117, __pyx_L1_error)
-  __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_mstate->__pyx_n_u_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(0, 129, __pyx_L1_error)
-  __pyx_builtin_OSError = __Pyx_GetBuiltinName(__pyx_mstate->__pyx_n_u_OSError); if (!__pyx_builtin_OSError) __PYX_ERR(0, 129, __pyx_L1_error)
-  __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_mstate->__pyx_n_u_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(0, 129, __pyx_L1_error)
-  __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_mstate->__pyx_n_u_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(0, 518, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_mstate->__pyx_n_u_range); if (!__pyx_builtin_range) __PYX_ERR(0, 118, __pyx_L1_error)
+  __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_mstate->__pyx_n_u_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_builtin_OSError = __Pyx_GetBuiltinName(__pyx_mstate->__pyx_n_u_OSError); if (!__pyx_builtin_OSError) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_mstate->__pyx_n_u_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_mstate->__pyx_n_u_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(0, 519, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -23125,47 +23122,47 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
   CYTHON_UNUSED_VAR(__pyx_mstate);
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "video_translate_cython.pyx":122
+  /* "video_translate_cython.pyx":123
  *             # If lock is available, use it; otherwise proceed (may cause contention but better than hanging)
  *             if lock is not None:
  *                 with lock:             # <<<<<<<<<<<<<<
  *                     frame = get_frame_at_index(video_path, frame_index)
  *             else:
 */
-  __pyx_mstate_global->__pyx_tuple[0] = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_mstate_global->__pyx_tuple[0])) __PYX_ERR(0, 122, __pyx_L1_error)
+  __pyx_mstate_global->__pyx_tuple[0] = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_mstate_global->__pyx_tuple[0])) __PYX_ERR(0, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_mstate_global->__pyx_tuple[0]);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_tuple[0]);
 
-  /* "video_translate_cython.pyx":104
+  /* "video_translate_cython.pyx":105
  * 
  * # ------------------ Safe frame reading with retry logic and serialization ------------------
  * def get_frame_at_index_safe(video_path: str, frame_index: int, max_retries: int = 3) -> object:             # <<<<<<<<<<<<<<
  *     """
  *     Safely read a frame from video with retry logic and serialized access.
 */
-  __pyx_mstate_global->__pyx_tuple[1] = PyTuple_Pack(1, ((PyObject*)__pyx_mstate_global->__pyx_int_3)); if (unlikely(!__pyx_mstate_global->__pyx_tuple[1])) __PYX_ERR(0, 104, __pyx_L1_error)
+  __pyx_mstate_global->__pyx_tuple[1] = PyTuple_Pack(1, ((PyObject*)__pyx_mstate_global->__pyx_int_3)); if (unlikely(!__pyx_mstate_global->__pyx_tuple[1])) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_mstate_global->__pyx_tuple[1]);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_tuple[1]);
 
-  /* "video_translate_cython.pyx":150
+  /* "video_translate_cython.pyx":151
  * 
  * # ------------------ OCR extraction ------------------
  * @cython.locals(results=object, text=object)             # <<<<<<<<<<<<<<
  * def extract_text_from_image(image, source_language: str = "english") -> str:
  *     """Extract text from image using existing OCR util."""
 */
-  __pyx_mstate_global->__pyx_tuple[2] = PyTuple_Pack(1, ((PyObject*)__pyx_mstate_global->__pyx_n_u_english)); if (unlikely(!__pyx_mstate_global->__pyx_tuple[2])) __PYX_ERR(0, 150, __pyx_L1_error)
+  __pyx_mstate_global->__pyx_tuple[2] = PyTuple_Pack(1, ((PyObject*)__pyx_mstate_global->__pyx_n_u_english)); if (unlikely(!__pyx_mstate_global->__pyx_tuple[2])) __PYX_ERR(0, 151, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_mstate_global->__pyx_tuple[2]);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_tuple[2]);
 
-  /* "video_translate_cython.pyx":742
+  /* "video_translate_cython.pyx":743
  * 
  * # Convenience function: batch OCR frames using processes (safe, no GIL issues)
  * def batch_ocr_process(video_path: str, frame_indices: list, source_language: str = "english", max_workers: int = None) -> dict:             # <<<<<<<<<<<<<<
  *     """Returns a dict mapping frame_index -> extracted_text. Uses processes.
  *     Keep the API identical to the cached extractor by merging results into ocr_cache.
 */
-  __pyx_mstate_global->__pyx_tuple[3] = PyTuple_Pack(2, ((PyObject*)__pyx_mstate_global->__pyx_n_u_english), Py_None); if (unlikely(!__pyx_mstate_global->__pyx_tuple[3])) __PYX_ERR(0, 742, __pyx_L1_error)
+  __pyx_mstate_global->__pyx_tuple[3] = PyTuple_Pack(2, ((PyObject*)__pyx_mstate_global->__pyx_n_u_english), Py_None); if (unlikely(!__pyx_mstate_global->__pyx_tuple[3])) __PYX_ERR(0, 743, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_mstate_global->__pyx_tuple[3]);
   __Pyx_GIVEREF(__pyx_mstate_global->__pyx_tuple[3]);
   __Pyx_RefNannyFinishContext();
@@ -23219,122 +23216,122 @@ static int __Pyx_CreateCodeObjects(__pyx_mstatetype *__pyx_mstate) {
   PyObject* tuple_dedup_map = PyDict_New();
   if (unlikely(!tuple_dedup_map)) return -1;
   {
-    const __Pyx_PyCode_New_function_description descr = {0, 0, 0, 3, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS|CO_GENERATOR), 156, 2};
+    const __Pyx_PyCode_New_function_description descr = {0, 0, 0, 3, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS|CO_GENERATOR), 157, 2};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_results, __pyx_mstate->__pyx_n_u_text, __pyx_mstate->__pyx_n_u__6};
     __pyx_mstate_global->__pyx_codeobj_tab[0] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_genexpr, __pyx_k__5, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[0])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {0, 0, 0, 3, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS|CO_VARARGS), 377, 19};
+    const __Pyx_PyCode_New_function_description descr = {0, 0, 0, 3, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS|CO_VARARGS), 378, 19};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_args, __pyx_mstate->__pyx_n_u_batch_size, __pyx_mstate->__pyx_n_u_num_workers};
     __pyx_mstate_global->__pyx_codeobj_tab[1] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_process_batch_with_lock, __pyx_k_A_q_Ba, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[1])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 3, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 411, 8};
+    const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 3, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 412, 8};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_x, __pyx_mstate->__pyx_n_u_batch_size, __pyx_mstate->__pyx_n_u_num_workers};
     __pyx_mstate_global->__pyx_codeobj_tab[2] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_lambda, __pyx_k_AQa, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[2])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {0, 0, 0, 2, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS|CO_GENERATOR), 731, 2};
+    const __Pyx_PyCode_New_function_description descr = {0, 0, 0, 2, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS|CO_GENERATOR), 732, 2};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_t, __pyx_mstate->__pyx_n_u__6};
     __pyx_mstate_global->__pyx_codeobj_tab[3] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_genexpr, __pyx_k_a_2, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[3])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 1, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 756, 18};
+    const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 1, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 757, 18};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_args_tuple};
     __pyx_mstate_global->__pyx_codeobj_tab[4] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_ocr_worker_with_lock, __pyx_k_A_q_1, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[4])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {0, 0, 0, 1, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 54, 33};
+    const __Pyx_PyCode_New_function_description descr = {0, 0, 0, 1, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 55, 33};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_extract_lines_with_boxes_2};
     __pyx_mstate_global->__pyx_codeobj_tab[5] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_get_ocr_extractor, __pyx_k_A_A_1, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[5])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {0, 0, 0, 0, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 74, 41};
+    const __Pyx_PyCode_New_function_description descr = {0, 0, 0, 0, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 75, 41};
     PyObject* const varnames[] = {0};
     __pyx_mstate_global->__pyx_codeobj_tab[6] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_get_frame_read_lock, __pyx_k_1_oXQ_e1_1, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[6])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 1, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 85, 10};
+    const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 1, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 86, 10};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_lock};
     __pyx_mstate_global->__pyx_codeobj_tab[7] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_init_frame_lock_shared, __pyx_k_q, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[7])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 2, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 91, 49};
+    const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 2, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 92, 49};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_text, __pyx_mstate->__pyx_n_u_clean_text};
     __pyx_mstate_global->__pyx_codeobj_tab[8] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_clean_extracted_text, __pyx_k_q_4q_t1_4q_a_1, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[8])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {3, 0, 0, 8, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 104, 228};
+    const __Pyx_PyCode_New_function_description descr = {3, 0, 0, 8, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 105, 228};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_video_path, __pyx_mstate->__pyx_n_u_frame_index, __pyx_mstate->__pyx_n_u_max_retries, __pyx_mstate->__pyx_n_u_time, __pyx_mstate->__pyx_n_u_lock, __pyx_mstate->__pyx_n_u_attempt, __pyx_mstate->__pyx_n_u_frame, __pyx_mstate->__pyx_n_u_e};
     __pyx_mstate_global->__pyx_codeobj_tab[9] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_get_frame_at_index_safe, __pyx_k_LXY_q_5_uG1_a_1_q_vWA_q_Y_7q_xr, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[9])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {2, 0, 0, 7, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 150, 62};
+    const __Pyx_PyCode_New_function_description descr = {2, 0, 0, 7, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 151, 62};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_image, __pyx_mstate->__pyx_n_u_source_language, __pyx_mstate->__pyx_n_u_results, __pyx_mstate->__pyx_n_u_text, __pyx_mstate->__pyx_n_u_extract_lines_with_boxes_2, __pyx_mstate->__pyx_n_u_genexpr, __pyx_mstate->__pyx_n_u_genexpr};
     __pyx_mstate_global->__pyx_codeobj_tab[10] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_extract_text_from_image, __pyx_k_44H_1_aq_2U_s_6_A_q_q, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[10])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {3, 0, 0, 6, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 163, 127};
+    const __Pyx_PyCode_New_function_description descr = {3, 0, 0, 6, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 164, 127};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_video_path, __pyx_mstate->__pyx_n_u_frame_index, __pyx_mstate->__pyx_n_u_source_language, __pyx_mstate->__pyx_n_u_cache_key, __pyx_mstate->__pyx_n_u_frame, __pyx_mstate->__pyx_n_u_text};
     __pyx_mstate_global->__pyx_codeobj_tab[11] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_extract_text_from_frame_cached, __pyx_k_A_FWWkkl_Q_z_A_y_1L_vS_q_q_aw_a, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[11])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {5, 0, 0, 8, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 188, 86};
+    const __Pyx_PyCode_New_function_description descr = {5, 0, 0, 8, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 189, 86};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_video_path, __pyx_mstate->__pyx_n_u_frame_index, __pyx_mstate->__pyx_n_u_reference_text, __pyx_mstate->__pyx_n_u_similarity_threshold, __pyx_mstate->__pyx_n_u_source_language, __pyx_mstate->__pyx_n_u_current_text, __pyx_mstate->__pyx_n_u_similarity, __pyx_mstate->__pyx_n_u_is_same};
     __pyx_mstate_global->__pyx_codeobj_tab[12] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_is_text_same, __pyx_k_DA_SST_1_m1_Cq_q_a_a_7q_k_A_I_1, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[12])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {4, 0, 0, 17, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 203, 323};
+    const __Pyx_PyCode_New_function_description descr = {4, 0, 0, 17, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 204, 323};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_video_path, __pyx_mstate->__pyx_n_u_start_frame_index, __pyx_mstate->__pyx_n_u_source_language, __pyx_mstate->__pyx_n_u_similarity_threshold, __pyx_mstate->__pyx_n_u_cap, __pyx_mstate->__pyx_n_u_total_frames, __pyx_mstate->__pyx_n_u_start_text, __pyx_mstate->__pyx_n_u_frame_checks, __pyx_mstate->__pyx_n_u_step, __pyx_mstate->__pyx_n_u_current_index, __pyx_mstate->__pyx_n_u_left, __pyx_mstate->__pyx_n_u_right, __pyx_mstate->__pyx_n_u_result_tuple, __pyx_mstate->__pyx_n_u_is_same, __pyx_mstate->__pyx_n_u_current_text, __pyx_mstate->__pyx_n_u_similarity, __pyx_mstate->__pyx_n_u_mid};
     __pyx_mstate_global->__pyx_codeobj_tab[13] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_find_text_change_optimal, __pyx_k_A_FWWX3_TTU_1_3as_as_xq_q_Oq_U, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[13])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {6, 0, 0, 12, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 262, 386};
+    const __Pyx_PyCode_New_function_description descr = {6, 0, 0, 12, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 263, 386};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_video_path, __pyx_mstate->__pyx_n_u_start_frame, __pyx_mstate->__pyx_n_u_end_frame, __pyx_mstate->__pyx_n_u_batch_id, __pyx_mstate->__pyx_n_u_source_language, __pyx_mstate->__pyx_n_u_similarity_threshold, __pyx_mstate->__pyx_n_u_segments, __pyx_mstate->__pyx_n_u_current_frame, __pyx_mstate->__pyx_n_u_change_frame, __pyx_mstate->__pyx_n_u_max_iterations, __pyx_mstate->__pyx_n_u_iterations, __pyx_mstate->__pyx_n_u_e};
     __pyx_mstate_global->__pyx_codeobj_tab[14] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_process_batch_segment, __pyx_k_88H_WX_FhNggh_q_A_j_r_nBj_Kr_q, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[14])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {4, 0, 0, 29, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 328, 452};
+    const __Pyx_PyCode_New_function_description descr = {4, 0, 0, 29, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 329, 452};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_video_path, __pyx_mstate->__pyx_n_u_total_frames, __pyx_mstate->__pyx_n_u_source_language, __pyx_mstate->__pyx_n_u_similarity_threshold, __pyx_mstate->__pyx_n_u_batch_size, __pyx_mstate->__pyx_n_u_num_workers, __pyx_mstate->__pyx_n_u_cpu_count, __pyx_mstate->__pyx_n_u_max_safe_workers, __pyx_mstate->__pyx_n_u_batches, __pyx_mstate->__pyx_n_u_i, __pyx_mstate->__pyx_n_u_batch_id, __pyx_mstate->__pyx_n_u_batch_start, __pyx_mstate->__pyx_n_u_batch_end, __pyx_mstate->__pyx_n_u_all_segments, __pyx_mstate->__pyx_n_u_FutureTimeoutError, __pyx_mstate->__pyx_n_u_time, __pyx_mstate->__pyx_n_u_shared_lock, __pyx_mstate->__pyx_n_u_process_batch_with_lock, __pyx_mstate->__pyx_n_u_process_batch_with_lock, __pyx_mstate->__pyx_n_u_executor, __pyx_mstate->__pyx_n_u_future_to_batch, __pyx_mstate->__pyx_n_u_future, __pyx_mstate->__pyx_n_u_batch_info, __pyx_mstate->__pyx_n_u_segments, __pyx_mstate->__pyx_n_u_e, __pyx_mstate->__pyx_n_u_merged_segments, __pyx_mstate->__pyx_n_u_batch_start, __pyx_mstate->__pyx_n_u_batch_end, __pyx_mstate->__pyx_n_u_batch_id};
     __pyx_mstate_global->__pyx_codeobj_tab[15] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_find_all_text_segments_parallel_3, __pyx_k_0C1_5Q_BB_AQ_2Q_a_z_7_Zr_Qm1_2Q, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[15])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {3, 0, 0, 9, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 416, 203};
+    const __Pyx_PyCode_New_function_description descr = {3, 0, 0, 9, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 417, 203};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_segments, __pyx_mstate->__pyx_n_u_video_path, __pyx_mstate->__pyx_n_u_source_language, __pyx_mstate->__pyx_n_u_merged, __pyx_mstate->__pyx_n_u_last_merged, __pyx_mstate->__pyx_n_u_last_text, __pyx_mstate->__pyx_n_u_current_text, __pyx_mstate->__pyx_n_u_similarity, __pyx_mstate->__pyx_n_u_current};
     __pyx_mstate_global->__pyx_codeobj_tab[16] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_merge_adjacent_segments, __pyx_k_88NhVW_t1_q_Qhaq_81A_fBa_7_3c_A, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[16])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {7, 0, 0, 22, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 448, 418};
+    const __Pyx_PyCode_New_function_description descr = {7, 0, 0, 22, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 449, 418};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_video_path, __pyx_mstate->__pyx_n_u_font_path, __pyx_mstate->__pyx_n_u_font_size, __pyx_mstate->__pyx_n_u_out_path, __pyx_mstate->__pyx_n_u_target_language, __pyx_mstate->__pyx_n_u_font_color, __pyx_mstate->__pyx_n_u_source_language, __pyx_mstate->__pyx_n_u_cap, __pyx_mstate->__pyx_n_u_fps, __pyx_mstate->__pyx_n_u_width, __pyx_mstate->__pyx_n_u_height, __pyx_mstate->__pyx_n_u_fourcc, __pyx_mstate->__pyx_n_u_out_2, __pyx_mstate->__pyx_n_u_start_frame, __pyx_mstate->__pyx_n_u_total_frames, __pyx_mstate->__pyx_n_u_change_frame, __pyx_mstate->__pyx_n_u_frame, __pyx_mstate->__pyx_n_u_extract_lines_with_boxes_2, __pyx_mstate->__pyx_n_u_lines, __pyx_mstate->__pyx_n_u_translated_lines, __pyx_mstate->__pyx_n_u_i, __pyx_mstate->__pyx_n_u_frame_with_overlay};
     __pyx_mstate_global->__pyx_codeobj_tab[17] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_function_overlaying_continuous_l, __pyx_k_6FFVVeekkl_LLXggxxy_a_1_T_Q_Cq, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[17])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {8, 0, 0, 26, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 495, 470};
+    const __Pyx_PyCode_New_function_description descr = {8, 0, 0, 26, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 496, 470};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_video_path, __pyx_mstate->__pyx_n_u_font_path, __pyx_mstate->__pyx_n_u_font_size, __pyx_mstate->__pyx_n_u_out_path, __pyx_mstate->__pyx_n_u_target_language, __pyx_mstate->__pyx_n_u_font_color, __pyx_mstate->__pyx_n_u_source_language, __pyx_mstate->__pyx_n_u_use_parallel, __pyx_mstate->__pyx_n_u_fps, __pyx_mstate->__pyx_n_u_width, __pyx_mstate->__pyx_n_u_height, __pyx_mstate->__pyx_n_u_total_frames, __pyx_mstate->__pyx_n_u_segments, __pyx_mstate->__pyx_n_u_out_2, __pyx_mstate->__pyx_n_u_cap, __pyx_mstate->__pyx_n_u_fourcc, __pyx_mstate->__pyx_n_u_extract_lines_with_boxes_2, __pyx_mstate->__pyx_n_u_seg_idx, __pyx_mstate->__pyx_n_u_start_frame, __pyx_mstate->__pyx_n_u_end_frame, __pyx_mstate->__pyx_n_u_frame, __pyx_mstate->__pyx_n_u_lines, __pyx_mstate->__pyx_n_u_translated_lines, __pyx_mstate->__pyx_n_u_frames_in_segment, __pyx_mstate->__pyx_n_u_i, __pyx_mstate->__pyx_n_u_frame_with_overlay};
     __pyx_mstate_global->__pyx_codeobj_tab[18] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_function_overlaying_continuous, __pyx_k_O_dde_44E_Q_qqr_1_t1_4A_KWaarr, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[18])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {2, 0, 0, 9, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 639, 85};
+    const __Pyx_PyCode_New_function_description descr = {2, 0, 0, 9, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 640, 85};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_a, __pyx_mstate->__pyx_n_u_b, __pyx_mstate->__pyx_n_u_ba, __pyx_mstate->__pyx_n_u_bb, __pyx_mstate->__pyx_n_u_apa, __pyx_mstate->__pyx_n_u_bpa, __pyx_mstate->__pyx_n_u_alen, __pyx_mstate->__pyx_n_u_blen, __pyx_mstate->__pyx_n_u_score};
     __pyx_mstate_global->__pyx_codeobj_tab[19] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_py_c_text_similarity, __pyx_k_AWAQ_AWAQ_1_1_3aq_3aq_vU_5, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[19])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {5, 0, 0, 8, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 660, 85};
+    const __Pyx_PyCode_New_function_description descr = {5, 0, 0, 8, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 661, 85};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_video_path, __pyx_mstate->__pyx_n_u_frame_index, __pyx_mstate->__pyx_n_u_reference_text, __pyx_mstate->__pyx_n_u_similarity_threshold, __pyx_mstate->__pyx_n_u_source_language, __pyx_mstate->__pyx_n_u_current_text, __pyx_mstate->__pyx_n_u_similarity, __pyx_mstate->__pyx_n_u_is_same};
     __pyx_mstate_global->__pyx_codeobj_tab[20] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_is_text_same_nogil, __pyx_k_55J_SST_1_m1_Cq_q_Q_6a_k_A_I_1, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[20])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 15, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 687, 258};
+    const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 15, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 688, 258};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_args_tuple, __pyx_mstate->__pyx_n_u_video_path, __pyx_mstate->__pyx_n_u_frame_index, __pyx_mstate->__pyx_n_u_source_language, __pyx_mstate->__pyx_n_u_time, __pyx_mstate->__pyx_n_u_lock, __pyx_mstate->__pyx_n_u_get_frame_at_index, __pyx_mstate->__pyx_n_u_frame, __pyx_mstate->__pyx_n_u_attempt, __pyx_mstate->__pyx_n_u_extract_lines_with_boxes_2, __pyx_mstate->__pyx_n_u_lines, __pyx_mstate->__pyx_n_u_text, __pyx_mstate->__pyx_n_u_e, __pyx_mstate->__pyx_n_u_genexpr, __pyx_mstate->__pyx_n_u_genexpr};
     __pyx_mstate_global->__pyx_codeobj_tab[21] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_ocr_worker, __pyx_k_q_1_KuAQ_5_q_2_q_a_1_6_82Q_at3h, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[21])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {4, 0, 0, 13, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 742, 143};
+    const __Pyx_PyCode_New_function_description descr = {4, 0, 0, 13, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 743, 143};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_video_path, __pyx_mstate->__pyx_n_u_frame_indices, __pyx_mstate->__pyx_n_u_source_language, __pyx_mstate->__pyx_n_u_max_workers, __pyx_mstate->__pyx_n_u_shared_lock, __pyx_mstate->__pyx_n_u_ocr_worker_with_lock, __pyx_mstate->__pyx_n_u_ocr_worker_with_lock, __pyx_mstate->__pyx_n_u_args, __pyx_mstate->__pyx_n_u_results, __pyx_mstate->__pyx_n_u_ex, __pyx_mstate->__pyx_n_u_frame_index, __pyx_mstate->__pyx_n_u_text, __pyx_mstate->__pyx_n_u_idx};
     __pyx_mstate_global->__pyx_codeobj_tab[22] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_batch_ocr_process, __pyx_k_6f_MM_kkzz_3a_a_a_2_t7_a_Q_XRt1, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[22])) goto bad;
   }
   {
-    const __Pyx_PyCode_New_function_description descr = {4, 0, 0, 37, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 785, 996};
+    const __Pyx_PyCode_New_function_description descr = {4, 0, 0, 37, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 786, 996};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_video_path, __pyx_mstate->__pyx_n_u_start_frame_index, __pyx_mstate->__pyx_n_u_source_language, __pyx_mstate->__pyx_n_u_similarity_threshold, __pyx_mstate->__pyx_n_u_cap, __pyx_mstate->__pyx_n_u_total_frames, __pyx_mstate->__pyx_n_u_start_text, __pyx_mstate->__pyx_n_u_frame_checks, __pyx_mstate->__pyx_n_u_i, __pyx_mstate->__pyx_n_u_n_probes, __pyx_mstate->__pyx_n_u_found_idx, __pyx_mstate->__pyx_n_u_sim, __pyx_mstate->__pyx_n_u_sim_mid, __pyx_mstate->__pyx_n_u_start_b, __pyx_mstate->__pyx_n_u_mid_b, __pyx_mstate->__pyx_n_u_start_ptr, __pyx_mstate->__pyx_n_u_mid_ptr, __pyx_mstate->__pyx_n_u_start_len, __pyx_mstate->__pyx_n_u_mid_len, __pyx_mstate->__pyx_n_u_ptrs, __pyx_mstate->__pyx_n_u_lens, __pyx_mstate->__pyx_n_u_probes, __pyx_mstate->__pyx_n_u_step, __pyx_mstate->__pyx_n_u_idx, __pyx_mstate->__pyx_n_u_left, __pyx_mstate->__pyx_n_u_right, __pyx_mstate->__pyx_n_u_probe_bytes_list, __pyx_mstate->__pyx_n_u_t, __pyx_mstate->__pyx_n_u_b, __pyx_mstate->__pyx_n_u_result, __pyx_mstate->__pyx_n_u_current_index, __pyx_mstate->__pyx_n_u_result_tuple, __pyx_mstate->__pyx_n_u_is_same, __pyx_mstate->__pyx_n_u_current_text, __pyx_mstate->__pyx_n_u_similarity, __pyx_mstate->__pyx_n_u_mid, __pyx_mstate->__pyx_n_u_mid_text};
     __pyx_mstate_global->__pyx_codeobj_tab[23] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_video_translate_cython_pyx, __pyx_mstate->__pyx_n_u_find_text_change_optimal_batched, __pyx_k_Q_Q_A_1_3as_as_xq_q_Oq_U_1_1_Q, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[23])) goto bad;
   }

@@ -354,12 +354,12 @@ Examples:
     estimate_processing_time(args.video_path)
     
     # Confirm before starting
-    print(f"\n{Colors.WARNING}Press Enter to start processing (Ctrl+C to cancel)...{Colors.ENDC}")
-    try:
-        input()
-    except KeyboardInterrupt:
-        print(f"\n{Colors.WARNING}Cancelled by user{Colors.ENDC}")
-        return 0
+    # print(f"\n{Colors.WARNING}Press Enter to start processing (Ctrl+C to cancel)...{Colors.ENDC}")
+    # try:
+    #     input()
+    # except KeyboardInterrupt:
+    #     print(f"\n{Colors.WARNING}Cancelled by user{Colors.ENDC}")
+    #     return 0
     
     # Start processing
     print(f"\n{Colors.HEADER}{'='*60}{Colors.ENDC}")
