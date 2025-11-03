@@ -4,7 +4,7 @@ import cv2
 from utils.overlay_utils import overlay_translated_lines_on_frame  
 from utils.translate_utils import translate_lines
 from utils.ocr.ocr_utils import extract_lines_with_boxes  
-from utils.audioUtils import extract_audio,combine_audio_with_video
+from audioUtils import extract_audio,combine_audio_with_video
 from utils.vision import get_frame_at_index
 from utils.pattern import text_similarity
 import argparse
@@ -338,6 +338,7 @@ def function_overlaying_continuous_legacy(video_path, font_path, font_size, out_
     """
     print(f"Processing video: {video_path}")
     extract_audio(video_path, AUDIO_PATH)
+    print(f"last 5 extract_audio Extracted audio from {video_path} to {AUDIO_PATH}")
     # Open video for reading
     cap = cv2.VideoCapture(video_path)
     fps = cap.get(cv2.CAP_PROP_FPS)

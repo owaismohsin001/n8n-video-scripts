@@ -5,18 +5,22 @@ def extract_audio(video_path: str, output_audio_path: str):
     """
     Extracts audio from a video using FFmpeg and saves it to the given path.
     """
+    print(f"11111 extract_audio Extracting audio from {video_path} to {output_audio_path}")
     try:
         # Ensure output directory exists
+        print(f"222222 extract_audio Ensuring output directory exists {os.path.dirname(output_audio_path)}")
         os.makedirs(os.path.dirname(output_audio_path), exist_ok=True)
-
+        print(f"33333extract_audio Output directory exists {os.path.dirname(output_audio_path)}")
         # FFmpeg command to extract audio
+
         cmd = [
             "ffmpeg", "-y", "-i", video_path,
             "-q:a", "0", "-map", "a",
             output_audio_path
         ]
+        print(f"77777777 ffmpeg command {cmd}")
         subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        print(f"Audio extracted successfully → {output_audio_path}")
+        print(f"444444 Audio extracted successfully → {output_audio_path}")
     except subprocess.CalledProcessError as e:
         print("Error extracting audio:", e.stderr.decode())
     except Exception as e:
