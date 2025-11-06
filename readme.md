@@ -4,8 +4,11 @@ activate on any terminal by running:
 venv\Scripts\activate
 
 pip install -r Configuration/requirements.txt
+venv\bin\python -m pip install -r Configuration/requirements.txt
 
-python main.py --video "input_videos/test_cut.mp4" --font "fonts/NotoSans-RegularEnglish.ttf" --fontSize 24 --out "output/translated.mp4" --targetLang "English" --fontColor "Red" --sourceLang "chinese" --parallel
+python optimal_latest.py --video "input_videos/test_cut.mp4" --font "fonts/NotoSans-RegularEnglish.ttf" --fontSize 24 --out "output/translated.mp4" --targetLang "English" --fontColor "Red" --sourceLang "chinese" --parallel
+
+venv\bin\python optimal_latest.py --video "input_videos/test_cut.mp4" --font "fonts/NotoSans-RegularEnglish.ttf" --fontSize 24 --out "output/translated.mp4" --targetLang "English" --fontColor "Red" --sourceLang "chinese" --parallel
 
 python run.py --video "input_videos/test_cut.mp4" --font "fonts/NotoSans-RegularEnglish.ttf" --fontSize 24 --out "output/translated.mp4" --targetLang "English" --fontColor "Red" --sourceLang "chinese" --parallel
 

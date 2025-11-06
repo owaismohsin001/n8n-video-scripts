@@ -602,19 +602,32 @@ if __name__ == "__main__":
     parser.add_argument("--targetLang", dest="target_language", default="ch_sim", help="Target language for translation")
     parser.add_argument("--fontColor", dest="font_color", default="black", help="Font color for translation overlay")
     parser.add_argument("--sourceLang", dest="source_language", default="english", help="Source language of the video")
+    # parser.add_argument(
+    #     "--parallel", 
+    #     dest="use_parallel", 
+    #     action="store_true", 
+    #     default=True,
+    #     help="Use parallel batch processing (default: True)"
+    # )
+    # parser.add_argument(
+    #     "--sequential", 
+    #     dest="use_parallel", 
+    #     action="store_false",
+    #     help="Use sequential processing (legacy mode)"
+    # )
     parser.add_argument(
-        "--parallel", 
-        dest="use_parallel", 
-        action="store_true", 
-        default=True,
-        help="Use parallel batch processing (default: True)"
+    "--parallel", 
+    dest="use_parallel", 
+    action="store_true",
+    help="Use parallel batch processing (default: True)"
     )
     parser.add_argument(
-        "--sequential", 
-        dest="use_parallel", 
-        action="store_false",
-        help="Use sequential processing (legacy mode)"
+    "--sequential", 
+    dest="use_parallel", 
+    action="store_false",
+    help="Use sequential processing (legacy mode)"
     )
+    parser.set_defaults(use_parallel=True)  # Set default here instead of in add_argument
     
     args = parser.parse_args()
     
