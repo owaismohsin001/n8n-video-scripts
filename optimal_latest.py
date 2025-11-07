@@ -6,27 +6,15 @@ from utils.translate_utils import translate_lines, translate_text
 from utils.ocr.ocr_utils import extract_lines_with_boxes  
 from audioUtils import extract_audio,combine_audio_with_video
 from utils.vision import get_frame_at_index
-from utils.pattern import text_similarity
+from utils.pattern import text_similarity, clean_extracted_text,  get_concatenated_text_from_lines
 import argparse
-import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Dict, Tuple, Optional
 from constants.index import SIMILARITY_THRESHOLD
 from constants.paths import OUTPUT_PATH, AUDIO_PATH
 from utils.system_resources import calculate_optimal_batch_config
 
-def clean_extracted_text(text):
-    """
-    Cleans OCR-extracted text.
-    - Keeps only Chinese characters (and spaces)
-    - Removes English letters, digits, and symbols
-    - Normalizes whitespace
-    """
-    # Remove everything except Chinese characters and spaces
-    clean_text = re.sub(r'[^\u4e00-\u9fff\s]', '', text)
-    # Normalize multiple spaces
-    clean_text = re.sub(r'\s+', ' ', clean_text).strip()
-    return clean_text
+
 
 
 # ============================================================================
@@ -51,6 +39,11 @@ def extract_lines_from_frame_cached(video_path: str, frame_index: int, source_la
     if cache_key in ocr_cache:
         print(f"✓ Cache HIT for frame {frame_index}")
         return ocr_cache[cache_key]
+
+    # save the frame key whose value is missing or to say empty array in / logs/missing_frames.txt
+    if cache_key not in ocr_cache:
+        with open("logs/missing_frames.txt", "a") as f:
+            f.write(f"{frame_index}\n")
     
     # Cache miss - perform OCR
     print(f"⚙ Cache MISS for frame {frame_index} - performing OCR and cache...")
@@ -64,24 +57,6 @@ def extract_lines_from_frame_cached(video_path: str, frame_index: int, source_la
     print(f"   Extracted {len(lines)} lines from frame {frame_index}")
     ocr_cache[cache_key] = lines
     return lines
-
-
-def get_concatenated_text_from_lines(lines: list) -> str:
-    """
-    Helper function to get concatenated text from lines for similarity comparison.
-    
-    Args:
-        lines: List of (text, box) tuples
-    
-    Returns:
-        Concatenated text string (all whitespace removed)
-    """
-    if not lines:
-        return ""
-    text = ''.join(''.join(text.split()) for text, _ in lines)
-    return text
-
-
 
 
 def is_text_same(video_path: str, frame_index: int, reference_text: str, 
@@ -99,9 +74,7 @@ def is_text_same(video_path: str, frame_index: int, reference_text: str,
     
     # Convert lines to concatenated text for similarity comparison
     current_text = get_concatenated_text_from_lines(lines)
-    
-    print(f"   Frame {frame_index}: {len(lines)} lines, text: '{current_text[:50]}...'")
-    
+
     if current_text is None or current_text == "":
         return None
     
@@ -147,7 +120,13 @@ def find_text_change_optimal(video_path, start_frame_index, source_language="eng
     print("\n=== Phase 1: Exponential Search ===")
     step = 1
     current_index = start_frame_index + step
-    
+
+
+    """
+    Here we will do exponential search for rough estimation of the frame where the text changes
+    """
+
+    # define boundaries for binary search , for both left and right, this is exponential search
     while current_index < total_frames:
         result_tuple = is_text_same(video_path, current_index, start_text, similarity_threshold, source_language)
         frame_checks += 1
@@ -157,7 +136,7 @@ def find_text_change_optimal(video_path, start_frame_index, source_language="eng
         
         # Unpack result - NO DUPLICATE OCR!
         is_same, current_text, similarity = result_tuple
-        print(f"Frame {current_index} (step={step}): {'SAME' if is_same else 'DIFFERENT'} (similarity={similarity:.3f})")
+        # print(f"Frame {current_index} (step={step}): {'SAME' if is_same else 'DIFFERENT'} (similarity={similarity:.3f})")
         
         if not is_same:  # Found different text
             # The change is between (current_index - step) and current_index
@@ -173,6 +152,11 @@ def find_text_change_optimal(video_path, start_frame_index, source_language="eng
         # No change found
         print(f"No text change found. Total frames checked: {frame_checks}")
         return -1
+
+    """
+    Here we will do binary search within the range to find the exact frame where the text changes
+    this is the most optimal way to find the exact frame where the text changes, to avoid duplicate OCR calls, and for more accuracy
+    """
     
     # Phase 2: Binary search within the range
     print(f"\n=== Phase 2: Binary Search [{left}, {right}] ===")
@@ -200,6 +184,8 @@ def find_text_change_optimal(video_path, start_frame_index, source_language="eng
     print(f"Total frames checked: {frame_checks}")
     print(f"💾 Cache size: {len(ocr_cache)} frames")
     return left
+
+# ============================= END TEXT SEARCHING MECHANISMS===============================
 
 
 # ============================================================================
@@ -249,6 +235,7 @@ def process_batch_segment(
             
             # Find all consecutive frames without text
             while current_frame < end_frame:
+                # here 
                 next_lines = extract_lines_from_frame_cached(video_path, current_frame, source_language)
                 next_text = get_concatenated_text_from_lines(next_lines)
                 if next_text and next_text != "":
@@ -286,19 +273,30 @@ def process_batch_segment(
     batch_output_path = os.path.join(output_dir, f"batch_{batch_id}.mp4")
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     out = cv2.VideoWriter(batch_output_path, fourcc, fps, (width, height))
+    # here ******* out ****** is an object that hold the memory access of that video batch, and for handling that file
     
     # Step 3: Process each segment (translate and overlay)
+    # here segments looks like this: [(0, 100), (100, 200), (200, 300)]
+    # enumerate(segments, 1) makes it looks like this: (1, (0, 100)), (2, (100, 200)), (3, (200, 300))
     for seg_idx, (seg_start, seg_end) in enumerate(segments, 1):
+
+        # here seg_idx is the index of the segment, and (seg_start, seg_end) is the start and end frame of the segment
         print(f"   [Batch {batch_id}] Segment {seg_idx}/{len(segments)}: frames {seg_start}-{seg_end}")
         
         # Get lines from cache (already extracted during segment detection)
         lines = extract_lines_from_frame_cached(video_path, seg_start, source_language)
         
         print(f"   [Batch {batch_id}] Retrieved {len(lines)} lines from cache")
+
+        # here lines looks like this: [('Hello', (x, y, w, h)), ('World', (x, y, w, h))]
+        # enumerate(lines, 1) makes it looks like this: (1, ('Hello upside', (x, y, w, h))), (2, ('World down side', (x, y, w, h)))
+        # here text is in other laguage like chinese, japanese, etc or any other source language for example it can be in english, french, german, etc.
+        # most of the cases we are detecting two types of lines from up and down side of the screen
+        # in future we will detect more than two types of lines from the screen, by adding more patterns to the pattern.py file's get_lines_with_boxes function
         for idx, (text, box) in enumerate(lines, 1):
             print(f"      Cached Line {idx}: '{text}' at position {box}")
         
-        # Check if there's any text to translate
+        # Check if there's any text to translate, if not then we will write the original frames without overlaying any content on it as it does not contain the text on it
         if not lines or len(lines) == 0:
             print(f"   [Batch {batch_id}] No text found in segment - writing frames as-is")
             # No text, write original frames without overlay
@@ -306,17 +304,27 @@ def process_batch_segment(
                 frame = get_frame_at_index(video_path, i)
                 if frame is None:
                     continue
-                out.write(frame)  # Write original frame without overlay
+                out.write(frame)    # Write original frame without overlay
+                # we have pushed the frame into ram memory of that batch video ** without overlaying any content on it as it does not contain the text on it **
             continue  # Skip to next segment
 
         # Translate each line INDIVIDUALLY to avoid context mixing
-        print(f"   [Batch {batch_id}] Translating {len(lines)} lines individually...")
-        translated_lines = []
+        translated_lines = [] # we will store the translated lines here in this array
+
+        # here lines looks like this: [('Hello', (x, y, w, h)), ('World', (x, y, w, h))]
+        # here text is in other laguage like chinese, japanese, etc or any other source language for example it can be in english, french, german, etc.
+        # enumerate(lines, 1) makes it looks like this: (1, ('Hello', (x, y, w, h))), (2, ('World', (x, y, w, h)))
+
         for idx, (text, box) in enumerate(lines, 1):
-            print(f"      Line {idx}/{len(lines)} - Original: '{text}'")
+            # print(f"      Line {idx}/{len(lines)} - Original: '{text}'")
             translated_text = translate_text(text, target_language=target_language)
-            print(f"      Line {idx}/{len(lines)} - Translated: '{translated_text}'")
+            # print(f"      Line {idx}/{len(lines)} - Translated: '{translated_text}'")
             translated_lines.append((translated_text, box))
+
+        # translated_lines looks like this: [('Hello upside', (x, y, w, h)), ('World down side', (x, y, w, h))]
+        # here text is in target language like chinese, japanese, etc or any other target language for example it can be in english, french, german, etc.
+        # we will overlay the translated text on the original frames in the range of seg_start to seg_end
+        
         
         print(f"   [Batch {batch_id}] ✓ Completed translating {len(lines)} lines")
         print(f"   [Batch {batch_id}] Translated lines with boxes: {translated_lines}")
@@ -325,8 +333,16 @@ def process_batch_segment(
         for i in range(seg_start, seg_end):
             frame = get_frame_at_index(video_path, i)
             if frame is None:
+                # very exceptional case, here in case if no frame, then save it in , logs/missed_frames_for_overlay.txt, we will save that frame count and batch number , and also save that in folder, logs/missed_frames_for_overlay_batch_number/batch_number
+                with open("logs/missed_frames_for_overlay.txt", "a") as f:
+                    f.write(f"{i}\n")
+                os.makedirs(f"logs/missed_frames_for_overlay_batch_{batch_id}", exist_ok=True)
+                with open(f"logs/missed_frames_for_overlay_batch_{batch_id}/missed_frames_for_overlay.txt", "a") as f:
+                    f.write(f"{i}\n")
                 continue
-                
+
+
+            # overlay the translated text on the original frame,    
             frame_with_overlay = overlay_translated_lines_on_frame(
                 frame,
                 translated_lines,
@@ -334,8 +350,15 @@ def process_batch_segment(
                 font_size=font_size,
                 font_color=font_color
             )
+
+            
+            #  and we have pushed the frame into ram memory of that batch video ** with overlaying the content on it **
             out.write(frame_with_overlay)
     
+    # congragulations, we have successfully processed the batch video,
+    # and we have pushed the frame into ram memory of that batch video ** with overlaying the content on it **
+
+    # lets release the memory access of that batch video, and save it to the disk
     out.release()
     print(f"✅ [Batch {batch_id}] Completed and saved to {batch_output_path}")
     return batch_output_path
@@ -411,6 +434,8 @@ def process_video_parallel(
                 print(f"❌ Batch {batch_id} failed with error: {e}")
                 import traceback
                 traceback.print_exc()
+
+    print(f"batch_videos: {batch_videos}")
     
     # Sort by batch_id to maintain order
     batch_videos.sort(key=lambda x: x[0])
@@ -437,11 +462,18 @@ def merge_video_chunks(batch_video_paths: list, output_path: str, fps: float, wi
     print(f"\n🔗 Merging {len(batch_video_paths)} video chunks...")
     
     # Create output video writer
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-    out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
+    four_character_code = cv2.VideoWriter_fourcc(*'mp4v')
+
+    # out is out is an object that hold the memory access of that final output video, 
+    # and for handling that file, and performing different operations on it, 
+    # related to i/o operations, and for writing the frames into the file
+    out = cv2.VideoWriter(output_path, four_character_code, fps, (width, height))
     
     total_frames_written = 0
     
+    # now we will merge the batch videos into the final output video 
+    # by reading the frames from the batch videos and writing them into the final output video
+    # enumerate(batch_video_paths, 1) makes it looks like this: (1, 'batch_0.mp4'), (2, 'batch_1.mp4'), (3, 'batch_2.mp4')
     for idx, batch_path in enumerate(batch_video_paths, 1):
         print(f"   Merging chunk {idx}/{len(batch_video_paths)}: {batch_path}")
         

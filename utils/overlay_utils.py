@@ -10,22 +10,7 @@ from collections import Counter, deque
 _last_translation_buffer = deque(maxlen=10)
 
 
-def overlay_translated_lines_on_frame(
-     frame_bgr,
-    translated_lines,
-    font_path=None,
-    font_size=20,
-    font_color="black",
-    fill_bg="white",
-    auto_detect_size=True,
-    persistence_frames=10 
-):
-    """
-    Draw translated text on each (x, y, w, h) box with intelligent font size detection
-    that accounts for different font characteristics.
-    """
-    
-    def analyze_font_metrics(font_path, test_size=100):
+def analyze_font_metrics(font_path, test_size=100):
         """
         Analyze the actual rendering characteristics of a font.
         Returns metrics that help us understand how this font renders.
@@ -40,18 +25,20 @@ def overlay_translated_lines_on_frame(
         
         try:
             font = ImageFont.truetype(font_path, test_size)
+            # create a dummy image of size 2000x500 with white background, on top of that we will write the text "ABCDEFGH" in black color
             dummy = Image.new("RGB", (2000, 500), (255, 255, 255))
             draw = ImageDraw.Draw(dummy)
+            # here draw is the ImageDraw object, and we will use it to write the text "ABCDEFGH" in black color
             
-            # Test with capital letters (cap height)
+            # Test with capital letters (cap height), to find possible required area
             cap_bbox = draw.textbbox((0, 0), "ABCDEFGH", font=font)
             cap_height = cap_bbox[3] - cap_bbox[1]
             
-            # Test with lowercase (x-height)
+            # Test with lowercase (x-height), to find possible required area along x-axis
             lower_bbox = draw.textbbox((0, 0), "abcdefgh", font=font)
             x_height = lower_bbox[3] - lower_bbox[1]
             
-            # Test with descenders
+            # Test with descenders, to find possible required area along y-axis
             desc_bbox = draw.textbbox((0, 0), "gjpqy", font=font)
             full_height = desc_bbox[3] - desc_bbox[1]
             
@@ -69,21 +56,40 @@ def overlay_translated_lines_on_frame(
                 'avg_char_width': avg_width / test_size,
                 'actual_height': full_height  # Real pixel height at test_size
             }
-            
-          
             return metrics
             
         except Exception as e:
             print(f"[Font Analysis] Error analyzing font: {e}")
-            return {
+            result = {
                 'cap_height_ratio': 0.70,
                 'x_height_ratio': 0.50,
                 'full_height_ratio': 0.75,
                 'baseline_ratio': 0.20,
                 'avg_char_width': 0.5
-            }
-    
-    def estimate_font_size_from_boxes(boxes, frame_height, font_metrics):
+            }    
+            return result
+
+def estimate_text_density(text):
+        """
+        Estimate how 'dense' the text is (wide chars vs narrow chars).
+        Helps adjust width calculations.
+        """
+        if not text:
+            return 1.0
+        
+        wide_chars = sum(1 for c in text if c.isupper() or c in 'MWmw@#%&')
+        narrow_chars = sum(1 for c in text if c in 'iljI!|.,;:')
+        total = len(text)
+        
+        if total == 0:
+            return 1.0
+        
+        # Density factor: higher = wider text
+        density = 1.0 + (wide_chars / total * 0.2) - (narrow_chars / total * 0.15)
+        return density
+
+
+def estimate_font_size_from_boxes(boxes, frame_height, font_metrics):
         """
         Estimate the original font size based on bounding box heights,
         accounting for actual font rendering characteristics.
@@ -116,8 +122,9 @@ def overlay_translated_lines_on_frame(
         # print(f"[Font Analysis] Box height: {median_height}px → Estimated font: {estimated_size}pt")
         
         return max(12, min(estimated_size, 200))
-    
-    def fit_font_to_box_precise(
+
+
+def fit_font_to_box_precise(
         text, font_path, box_w, box_h, base_size, font_metrics,
         width_safety=0.95, height_safety=0.88
     ):
@@ -141,14 +148,16 @@ def overlay_translated_lines_on_frame(
         # Quick check: does base size fit?
         font = ImageFont.truetype(font_path, current_size) if font_path else ImageFont.load_default()
         bbox = draw.textbbox((0, 0), text, font=font)
-        tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
-        
+        tw = bbox[2] - bbox[0]
+        th = bbox[3] - bbox[1]
+
         if tw <= target_w and th <= target_h:
             # Try to go larger (but cautiously)
             for try_size in range(current_size + 1, current_size + 10):
                 font = ImageFont.truetype(font_path, try_size) if font_path else ImageFont.load_default()
                 bbox = draw.textbbox((0, 0), text, font=font)
-                tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+                tw = bbox[2] - bbox[0]
+                th = bbox[3] - bbox[1]
                 
                 if tw <= target_w and th <= target_h:
                     current_size = try_size
@@ -156,7 +165,7 @@ def overlay_translated_lines_on_frame(
                     break
             return current_size
         
-        # Size too large, use binary search to find optimal
+        # Size too large, use binary search to find optimal font size
         lo, hi = 8, current_size - 1
         best = lo
         
@@ -164,7 +173,8 @@ def overlay_translated_lines_on_frame(
             mid = (lo + hi) // 2
             font = ImageFont.truetype(font_path, mid) if font_path else ImageFont.load_default()
             bbox = draw.textbbox((0, 0), text, font=font)
-            tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+            tw = bbox[2] - bbox[0]
+            th = bbox[3] - bbox[1]
             
             if tw <= target_w and th <= target_h:
                 best = mid
@@ -173,26 +183,21 @@ def overlay_translated_lines_on_frame(
                 hi = mid - 1
         
         return best
-    
-    def estimate_text_density(text):
-        """
-        Estimate how 'dense' the text is (wide chars vs narrow chars).
-        Helps adjust width calculations.
-        """
-        if not text:
-            return 1.0
-        
-        wide_chars = sum(1 for c in text if c.isupper() or c in 'MWmw@#%&')
-        narrow_chars = sum(1 for c in text if c in 'iljI!|.,;:')
-        total = len(text)
-        
-        if total == 0:
-            return 1.0
-        
-        # Density factor: higher = wider text
-        density = 1.0 + (wide_chars / total * 0.2) - (narrow_chars / total * 0.15)
-        return density
 
+def overlay_translated_lines_on_frame(
+     frame_bgr,
+    translated_lines,
+    font_path=None,
+    font_size=20,
+    font_color="black",
+    fill_bg="white",
+    auto_detect_size=True,
+    persistence_frames=10 
+):
+    """
+    Draw translated text on each (x, y, w, h) box with intelligent font size detection
+    that accounts for different font characteristics.
+    """
     # Convert frame to PIL
         # If this frame has no text, reuse previous one if recent enough
     global _last_translation_buffer

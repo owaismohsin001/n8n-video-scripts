@@ -7,8 +7,8 @@ import easyocr
 from difflib import SequenceMatcher # returns np array frame
 # Initialize reader once globally to avoid reloading models
 from overlay_utils import overlay_translated_lines_on_frame  
-from translate_utils import translate_lines
-from ocr_utils import extract_lines_with_boxes  
+from utils.translate_utils import translate_lines
+from utils.ocr.ocr_utils import extract_lines_with_boxes  
 from audioUtils import extract_audio,combine_audio_with_video
 import argparse
 import re
@@ -30,6 +30,7 @@ def clean_extracted_text(text):
 
 reader = None
 
+# initilize ocr
 def get_reader():
     """Get or create EasyOCR reader instance"""
     global reader
