@@ -479,6 +479,13 @@ def merge_video_chunks(batch_video_paths: list, output_path: str, fps: float, wi
         
         if not os.path.exists(batch_path):
             print(f"   ⚠️ Warning: {batch_path} not found, skipping...")
+            # very exceptional case, here in case if batch video path not found, then skip the batch video
+            # we will save it in , logs/missing_batch_videos.txt, we will save that batch video path and batch number, and also save that in folder, logs/missing_batch_videos_batch_number/batch_number
+            with open("logs/missing_batch_videos.txt", "a") as f:
+                f.write(f"{batch_path}\n")
+            os.makedirs(f"logs/missing_batch_videos_batch_{idx}", exist_ok=True)
+            with open(f"logs/missing_batch_videos_batch_{idx}/missing_batch_videos.txt", "a") as f:
+                f.write(f"{batch_path}\n")
             continue
         
         # Read batch video and copy frames
@@ -486,7 +493,10 @@ def merge_video_chunks(batch_video_paths: list, output_path: str, fps: float, wi
         batch_frames = 0
         
         while True:
-            ret, frame = cap.read()
+            # ret is boolean value tells either, we got the frame , this will be used for stopping the loop
+            # frame is the frame object, that we got from the batch video, this will be used for writing the frame into the final output video
+            # here frame is a numpy array of shape (height, width, 3)
+            ret, frame = cap.read() 
             if not ret:
                 break
             out.write(frame)

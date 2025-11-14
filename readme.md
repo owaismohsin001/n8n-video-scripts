@@ -41,3 +41,5 @@ python run.py --video "input_videos/test_cut.mp4" --font "fonts/NotoSans-Regular
 
 run setup to convert .pyx files to .c files, and window specific buil
 python setup.py build_ext --inplace
+
+python utils/ocr/ocr_utils.py

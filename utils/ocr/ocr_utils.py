@@ -1,4 +1,3 @@
-
 from dotenv import load_dotenv
 
 # from utils.overlay_utils import overlay_translated_lines_on_frame
@@ -6,7 +5,14 @@ from dotenv import load_dotenv
 # from utils.process_frame import extract_frame_from_video
 import easyocr
 import re
-from constants.ocr import HAN_RE, LATIN_LETTER_RE, VOWEL_RE, ALNUM_OR_HAN_RE, SYMBOL_ONLY_RE, PUNCT_SIMPLE_RE
+from constants.ocr import (
+    HAN_RE,
+    LATIN_LETTER_RE,
+    VOWEL_RE,
+    ALNUM_OR_HAN_RE,
+    SYMBOL_ONLY_RE,
+    PUNCT_SIMPLE_RE,
+)
 import re
 from dataclasses import dataclass
 from typing import List, Tuple
@@ -18,28 +24,33 @@ load_dotenv()
 reader = None
 
 
-
 # ------------- Script / char classes -------------
+
 
 # ------------- Config -------------
 @dataclass
 class CleanConfig:
-    min_total_len: int = 2                # drop super short lines
-    min_alnum_or_han: int = 2             # need at least 2 "meaningful" chars
-    max_symbol_ratio: float = 0.5         # if >50% are symbols/punct, drop
-    max_mixed_scripts_tiny: bool = True   # drop lines that mix scripts but are tiny
-    keep_numeric_units: bool = True       # keep things like "50%", "x2", "3.0", etc.
-    min_han_ratio_for_cjk: float = 0.6    # if line has any Han, require it's mostly Han
+    min_total_len: int = 2  # drop super short lines
+    min_alnum_or_han: int = 2  # need at least 2 "meaningful" chars
+    max_symbol_ratio: float = 0.5  # if >50% are symbols/punct, drop
+    max_mixed_scripts_tiny: bool = True  # drop lines that mix scripts but are tiny
+    keep_numeric_units: bool = True  # keep things like "50%", "x2", "3.0", etc.
+    min_han_ratio_for_cjk: float = 0.6  # if line has any Han, require it's mostly Han
     allow_single_word_caps: bool = False  # drop single ALLCAP short shards like "MA"
-    min_latin_word_len: int = 2           # require at least one latin word of length >= 2
-    require_vowel_for_latin: bool = True  # latin lines need at least one vowel (English-ish)
+    min_latin_word_len: int = 2  # require at least one latin word of length >= 2
+    require_vowel_for_latin: bool = (
+        True  # latin lines need at least one vowel (English-ish)
+    )
     debug: bool = False
+
 
 def _ratio(n, d):
     return 0 if d == 0 else (n / d)
 
+
 def _is_symbol_only(s: str) -> bool:
     return bool(SYMBOL_ONLY_RE.match(s))
+
 
 def _punct_ratio(s: str) -> float:
     # Try broad punct class; fall back to simple
@@ -47,9 +58,11 @@ def _punct_ratio(s: str) -> float:
     punct = sum(1 for ch in s if PUNCT_SIMPLE_RE.match(ch))
     return _ratio(punct, len(s))
 
+
 def _has_units_like_number(s: str) -> bool:
     # "50%", "3.0", "x2", "$5", "5k", etc.
     return bool(re.search(r"(\d[\d.,]*\s*[%%kKxX]|[\$€£]\s*\d|[xX]\s*\d)", s))
+
 
 def _script_counts(s: str):
     han = sum(1 for ch in s if HAN_RE.match(ch))
@@ -57,6 +70,7 @@ def _script_counts(s: str):
     digits = sum(1 for ch in s if ch.isdigit())
     alnum_or_han = sum(1 for ch in s if ALNUM_OR_HAN_RE.match(ch))
     return han, latin, digits, alnum_or_han
+
 
 def _looks_like_legit_latin(s: str, cfg: CleanConfig) -> bool:
     # Needs at least one latin word length >= min_latin_word_len
@@ -67,6 +81,7 @@ def _looks_like_legit_latin(s: str, cfg: CleanConfig) -> bool:
         return False
     return True
 
+
 def _looks_like_legit_cjk(s: str, cfg: CleanConfig) -> bool:
     # For Chinese-like lines, require that majority are Han chars
     han, latin, digits, alnum_or_han = _script_counts(s)
@@ -75,6 +90,7 @@ def _looks_like_legit_cjk(s: str, cfg: CleanConfig) -> bool:
     # If there is Han, require it's the majority of meaningful chars
     return _ratio(han, max(1, alnum_or_han)) >= cfg.min_han_ratio_for_cjk
 
+
 def _is_mixed_scripts_weird_and_tiny(s: str) -> bool:
     han, latin, digits, alnum_or_han = _script_counts(s)
     # "weird tiny mix": both han and latin present but very few letters overall
@@ -82,12 +98,14 @@ def _is_mixed_scripts_weird_and_tiny(s: str) -> bool:
         return True
     return False
 
+
 def _is_all_caps_short_shard(s: str) -> bool:
     # E.g., "MA.", "OK", "X.", "LM" -> often OCR shards if very short
     letters = re.findall(r"[A-Za-z]", s)
     if 1 <= len(letters) <= 3 and "".join(letters).isupper():
         return True
     return False
+
 
 def _should_keep(text: str, cfg: CleanConfig) -> bool:
     s = text.strip()
@@ -98,7 +116,9 @@ def _should_keep(text: str, cfg: CleanConfig) -> bool:
 
     han, latin, digits, alnum_or_han = _script_counts(s)
     # If almost nothing meaningful
-    if alnum_or_han < cfg.min_alnum_or_han and not (cfg.keep_numeric_units and _has_units_like_number(s)):
+    if alnum_or_han < cfg.min_alnum_or_han and not (
+        cfg.keep_numeric_units and _has_units_like_number(s)
+    ):
         return False
 
     # Excessive punctuation / symbol ratio
@@ -131,9 +151,10 @@ def _should_keep(text: str, cfg: CleanConfig) -> bool:
 
     return True
 
+
 def clean_extracted_lines(
     lines: List[Tuple[str, Tuple[int, int, int, int]]],
-    config: CleanConfig = CleanConfig()
+    config: CleanConfig = CleanConfig(),
 ) -> List[Tuple[str, Tuple[int, int, int, int]]]:
     """
     Filters out garbage OCR lines (symbol-only, high-punctuation, tiny mixed-script shards,
@@ -166,10 +187,10 @@ def clean_extracted_lines(
 
     return kept
 
+
 # ---------------- Example usage ----------------
 # raw_lines = extract_lines_with_boxes(frame)  # -> [(text, (x,y,w,h)), ...]
 # filtered = clean_extracted_lines(raw_lines, CleanConfig(debug=True))
-
 
 
 def get_reader():
@@ -179,16 +200,21 @@ def get_reader():
     """
     global reader
     if reader is None:
-        print("Initializing OCR reader (this may take a moment on first run)...", flush=True)
+        print(
+            "Initializing OCR reader (this may take a moment on first run)...",
+            flush=True,
+        )
         try:
-            reader = easyocr.Reader(['ch_sim','en'], gpu=False)
-            print("OCR reader loaded successfully", flush=True) 
+            reader = easyocr.Reader(["ch_sim", "en"], gpu=False)
+            print("OCR reader loaded successfully", flush=True)
         except Exception as e:
             print(f"Error loading OCR: {e}", flush=True)
             raise
     return reader
 
-    # 
+    #
+
+
 # import threading
 
 # _thread_local = threading.local()
@@ -208,7 +234,8 @@ def get_reader():
 #             print(f"Error loading OCR: {e}", flush=True)
 #             raise
 #     return _thread_local.reader
-    # 
+#
+
 
 def extract_lines_with_boxes(
     frame_bgr,
@@ -216,7 +243,7 @@ def extract_lines_with_boxes(
     min_width=20,
     min_height=30,
     min_characters=2,
-    source_language="english"
+    source_language="english",
 ):
     """
     Accepts a BGR frame (NumPy array) directly.
@@ -224,10 +251,12 @@ def extract_lines_with_boxes(
     """
     # EasyOCR expects RGB
     # print(f"frame_bgr ==    {frame_bgr}")
-    reader=get_reader()
-    processed_frame = frame_bgr # preprocess_frame_for_better_precision(frame_bgr)
+    reader = get_reader()
+    processed_frame = frame_bgr  # preprocess_frame_for_better_precision(frame_bgr)
     # frame_rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
-    results = reader.readtext(processed_frame)  # returns list of (bbox, text, confidence)
+    results = reader.readtext(
+        processed_frame
+    )  # returns list of (bbox, text, confidence)
     lines = []
 
     for bbox, text, conf in results:
@@ -246,12 +275,17 @@ def extract_lines_with_boxes(
         h = int(max(y_coords) - y)
 
         if w >= min_width and h >= min_height:
-            print(f"🟡 Text: '{clean_text}' | Confidence: {conf:.2f} | Box: ({x}, {y}, {w}, {h})")
+            print(
+                f"🟡 Text: '{clean_text}' | Confidence: {conf:.2f} | Box: ({x}, {y}, {w}, {h})"
+            )
             lines.append((clean_text, (x, y, w, h)))
-    lines=clean_extracted_lines(lines, CleanConfig(debug=True))
+    lines = clean_extracted_lines(lines, CleanConfig(debug=True))
     return lines
 
 
-# import os
-# frame_path = os.path.join(os.path.dirname(__file__), "frame_290.jpg")
-# print(f"extract_lines_with_boxes ==    {extract_lines_with_boxes(cv2.imread(frame_path))}")
+import os
+
+frame_path = os.path.join(os.path.dirname(__file__), "image.png")
+print(
+    f"extract_lines_with_boxes ==    {extract_lines_with_boxes(cv2.imread(frame_path))}"
+)
