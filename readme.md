@@ -1,7 +1,5 @@
-venv\bin\activate
-
-activate on any terminal by running:
-venv\Scripts\activate.ps1
+python -m venv venv
+source venv/Scripts/activate
 
 ## Windows Installation Notes
 
